@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-container {
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            aspect-ratio: 16 / 9;
+            background: #3a3a3a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .game-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Hide default placeholder text */
+        .game-content > p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+
+        .game-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .game-title {
+            font-size: 32px;
+            font-weight: 500;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8);
+            pointer-events: none;
+        }
+
+        .fullscreen-btn {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 20px;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            pointer-events: all;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(0, 0, 0, 0.85);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+        }
+
+        .fullscreen-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Fullscreen styles */
+        .game-container:-webkit-full-screen {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            border-radius: 0 !important;
+            aspect-ratio: unset !important;
+        }
+
+        .game-container:-moz-full-screen {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            border-radius: 0 !important;
+            aspect-ratio: unset !important;
+        }
+
+        .game-container:fullscreen {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: none !important;
+            border-radius: 0 !important;
+            aspect-ratio: unset !important;
+        }
+
+        /* Ensure iframe scales properly in fullscreen */
+        .game-container:-webkit-full-screen .game-content,
+        .game-container:-moz-full-screen .game-content,
+        .game-container:fullscreen .game-content {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .game-container:-webkit-full-screen .game-iframe,
+        .game-container:-moz-full-screen .game-iframe,
+        .game-container:fullscreen .game-iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Hide UI elements when hovering over game in fullscreen */
+        .game-container:fullscreen .game-footer {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .game-container:fullscreen:hover .game-footer,
+        .game-container:fullscreen .game-footer:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container" id="gameContainer">
+        <div class="game-content" id="gameContent"></div>
+
+        <div class="game-footer">
+            <div class="game-title" id="gameTitle">Game</div>
+            <button class="fullscreen-btn" id="fullscreenBtn">
+                <svg class="fullscreen-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+                <span id="fullscreenText">Fullscreen</span>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Fullscreen Controller Class
+        class FullscreenController {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                if (!this.container) {
+                    console.error(`Container with id "${containerId}" not found`);
+                    return;
+                }
+                this.init();
+            }
+
+            init() {
+                document.addEventListener('fullscreenchange', () => this.onFullscreenChange());
+                document.addEventListener('mozfullscreenchange', () => this.onFullscreenChange());
+                document.addEventListener('webkitfullscreenchange', () => this.onFullscreenChange());
+                document.addEventListener('msfullscreenchange', () => this.onFullscreenChange());
+            }
+
+            toggleFullscreen() {
+                if (!this.isFullscreen()) {
+                    this.enterFullscreen();
+                } else {
+                    this.exitFullscreen();
+                }
+            }
+
+            enterFullscreen() {
+                if (this.container.requestFullscreen) {
+                    this.container.requestFullscreen();
+                } else if (this.container.mozRequestFullScreen) {
+                    this.container.mozRequestFullScreen();
+                } else if (this.container.webkitRequestFullscreen) {
+                    this.container.webkitRequestFullscreen();
+                } else if (this.container.msRequestFullscreen) {
+                    this.container.msRequestFullscreen();
+                }
+            }
+
+            exitFullscreen() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+
+            isFullscreen() {
+                return !!(document.fullscreenElement || 
+                          document.mozFullScreenElement || 
+                          document.webkitFullscreenElement || 
+                          document.msFullscreenElement);
+            }
+
+            onFullscreenChange() {
+                // Override this or handle externally
+            }
+        }
+
+        // Initialize
+        const fullscreen = new FullscreenController('gameContainer');
+
+        // Button click handler
+        document.getElementById('fullscreenBtn').addEventListener('click', () => {
+            fullscreen.toggleFullscreen();
+        });
+
+        // Update button text on fullscreen change
+        fullscreen.onFullscreenChange = function() {
+            const btnText = document.getElementById('fullscreenText');
+            if (btnText) {
+                btnText.textContent = this.isFullscreen() ? 'Exit Fullscreen' : 'Fullscreen';
+            }
+        };
+
+        // F11 key support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'F11') {
+                e.preventDefault();
+                fullscreen.toggleFullscreen();
+            }
+        });
+
+        // Parse URL parameters
+        function getParams(){
+          var s=location.search.substring(1), out={};
+          s.split('&').forEach(function(kv){
+            var p=kv.split('=');
+            if(p[0]) out[decodeURIComponent(p[0])]=decodeURIComponent((p[1]||'').replace(/\+/g,' '));
+          });
+          return out;
+        }
+        
+        var params=getParams();
+        var src=params.src||'';
+        var title=params.title||'';
+        
+        if(title){
+          var t=document.getElementById('gameTitle');
+          if(t) t.textContent=title;
+        }
+        
+        if(src){
+          const iframe = document.createElement('iframe');
+          iframe.className = 'game-iframe';
+          iframe.src = src;
+          iframe.allowFullscreen = true;
+          iframe.scrolling = 'no';
+          
+          // Add sandbox with all permissions to avoid restrictions
+          iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock allow-orientation-lock allow-modals');
+          
+          document.getElementById('gameContent').appendChild(iframe);
+          
+          // Try to detect and scale the game after it loads
+          iframe.onload = function() {
+            try {
+              // Give the game time to initialize
+              setTimeout(() => {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const canvas = iframeDoc.querySelector('canvas');
+                
+                if (canvas) {
+                  // Force canvas to fill container
+                  const style = document.createElement('style');
+                  style.textContent = `
+                    body, html { 
+                      margin: 0 !important; 
+                      padding: 0 !important; 
+                      width: 100% !important; 
+                      height: 100% !important; 
+                      overflow: hidden !important;
+                    }
+                    canvas { 
+                      width: 100% !important; 
+                      height: 100% !important; 
+                      max-width: 100% !important;
+                      max-height: 100% !important;
+                      display: block !important;
+                      object-fit: contain !important;
+                    }
+                  `;
+                  iframeDoc.head.appendChild(style);
+                }
+              }, 500);
+            } catch (e) {
+              // Cross-origin restrictions prevent this, but that's okay
+              console.log('Cannot access iframe content (cross-origin)');
+            }
+          };
+        } else {
+          document.getElementById('gameContent').innerHTML = '<p>No game source provided</p>';
+        }
+    </script>
+</body>
+</html>
