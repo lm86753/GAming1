@@ -18,6 +18,8 @@
             margin: 0;
             overflow-x: hidden;
         }
+
+        /* Utility Classes */
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
             backdrop-filter: blur(10px); 
@@ -28,49 +30,86 @@
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
+        .btn-purple {
+            background: #b625cc;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        .btn-purple:hover {
+            background: #d436ec;
+            transform: translateY(-2px);
+        }
+
+        /* Navbar Styles */
         .navbar {
-            background-color: #2b2d31;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             display: flex;
             align-items: center;
-            padding: 12px 25px;
-            border-radius: 50px;
-            width: fit-content;
-            min-width: 400px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             position: fixed;
-            top: 20px;
+            top: 25px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
+            width: auto;
+            min-width: 420px;
         }
-        input::placeholder { color: rgba(255,255,255,0.3); }
-        .btn-purple { background-color: #b625cc; transition: all 0.2s; }
-        .btn-purple:hover { background-color: #a11eb5; transform: translateY(-2px); }
-        .btn-green { background-color: #22c55e; transition: all 0.2s; }
-        .btn-green:hover { background-color: #1bad50; transform: translateY(-2px); }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link:hover {
+            color: #60a5fa;
+            transform: translateY(-1px);
+        }
+
+        .nav-link i { color: #3b82f6; }
+
+        .logo-box {
+            width: 38px;
+            height: 38px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
 <body class="selection:bg-blue-500/30">
 
-    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
-
     <nav class="navbar">
-        <div class="flex items-center">
-            <a href="/index.html" class="flex items-center">
-                <div class="w-10 h-10 bg-white rounded-xl overflow-hidden">
-                    <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
-                </div>
-            </a>
-        </div>
-        <div class="flex gap-10 flex-grow justify-center">
-            <a href="/projects.html" class="text-white font-bold no-underline hover:opacity-80 transition-opacity flex items-center gap-2">
+        <a href="/index.html" class="flex items-center hover:opacity-80 transition-opacity">
+            <div class="logo-box">
+                <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
+            </div>
+        </a>
+
+        <div class="flex gap-8 px-6">
+            <a href="/projects.html" class="nav-link">
                 <i class="fa-solid fa-gamepad"></i> Games
             </a>
-            <a href="/misc.html" class="text-white font-bold no-underline hover:opacity-80 transition-opacity flex items-center gap-2">
+            <a href="/misc.html" class="nav-link">
                 <i class="fa-solid fa-cog"></i> Settings
             </a>
         </div>
-        <div class="w-10"></div>
+
+        <div style="width: 38px;"></div>
     </nav>
 
     <section class="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center">
@@ -127,8 +166,8 @@
                         <button onclick="resetTabSettings();" class="glass py-3 rounded-xl font-bold text-sm hover:bg-white/5 transition-all">Reset</button>
                     </div>
                 </div>
-            
-    </section>
+            </div>
+        </div> </section>
 
     <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
         &copy; 2025 Penguin Labs. All rights reserved.
