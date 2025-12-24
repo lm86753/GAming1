@@ -1,127 +1,140 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google-adsense-account" content="ca-pub-3247199358459206">
-    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+<html lang="en-US" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Miscellaneous | Penguin Labs</title>
+    
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="/js/cmp.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-      .text-center {
-        text-align: center;
-      }
-      /* Navbar Styles */
-      .navbar {
-        background-color: #2b2d31;
-        display: flex;
-        align-items: center;
-        padding: 12px 25px;
-        border-radius: 50px;
-        width: fit-content;
-        min-width: 400px;
-        margin: 20px auto;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      }
-      .logo-container {
-        display: flex;
-        align-items: center;
-      }
-      .logo-placeholder {
-        width: 40px;
-        height: 40px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-      .logo-placeholder img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .menu-items {
-        display: flex;
-        gap: 40px;
-        flex-grow: 1;
-        justify-content: center;
-      }
-      .nav-link {
-        text-decoration: none;
-        color: white;
-        font-weight: 700;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: opacity 0.2s;
-      }
-      .nav-link:hover {
-        opacity: 0.8;
-      }
-      .logo-link {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-      }
-      .spacer-right {
-        width: 40px;
-      }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            color: white; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+        .gradient-text { 
+            background: linear-gradient(90deg, #3b82f6, #60a5fa); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .navbar {
+            background-color: #2b2d31;
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            width: fit-content;
+            min-width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        input::placeholder { color: rgba(255,255,255,0.3); }
+        .btn-purple { background-color: #b625cc; transition: all 0.2s; }
+        .btn-purple:hover { background-color: #a11eb5; transform: translateY(-2px); }
+        .btn-green { background-color: #22c55e; transition: all 0.2s; }
+        .btn-green:hover { background-color: #1bad50; transform: translateY(-2px); }
     </style>
-  </head>
-  <body style="background-color: #121212; color: #ffffff; font-family: sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; padding-top: 20px;">
-    <div class="navbar">
-      <div class="logo-container">
-        <a href="/index.html" class="logo-link">
-          <div class="logo-placeholder">
-            <img src="logo.ico" alt="Logo"> 
-          </div>
-        </a>
-      </div>
-      <div class="menu-items">
-        <a href="/projects.html" class="nav-link">
-          <i class="fa-solid fa-gamepad"></i> Games
-        </a>
-        <a href="/misc.html" class="nav-link">
-          <i class="fa-solid fa-cog"></i> Settings
-        </a>
-      </div>
-      <div class="spacer-right"></div>
-    </div>
-    <h2 style="text-align: center; font-size: 2em; margin-bottom: 1em; margin-top: 20px;">Miscellaneous stuff</h2>
-    <div style="width: 100%; max-width: 600px; margin-bottom: 2em;">
-      <div>
-        <h1>about:blank</h1>
-        <div>
-          <p>Enter a URL you want to be opened in a about:blank page below:</p>
-          <p><input id="url-target" type="url" pattern="https://.*" placeholder="Enter a website URL" autocomplete="on" style="width: 100%; padding: 10px; border: none; border-radius: 10px; background-color: #2c2c2c; color: #ffffff;" /></p>
-          <p>Note this will not work with some websites, but you can copy the link of this website and put it in for extra privacy.</p>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
+
+    <nav class="navbar">
+        <div class="flex items-center">
+            <a href="/index.html" class="flex items-center">
+                <div class="w-10 h-10 bg-white rounded-xl overflow-hidden">
+                    <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
+                </div>
+            </a>
         </div>
-      </div>
-      <div style="display: flex; justify-content: space-between; margin-top: 1em;">
-        <button id="create" style="padding: 10px 20px; border: none; border-radius: 10px; background-color: #b625cc; color: #ffffff;">Create page</button>
-      </div>
-    </div>
-    <div style="width: 100%; max-width: 600px;">
-      <div>
-        <h1>Tab Cloaker</h1>
-        <p>Enter a new tab title or a image URL below. What you set will be used on the whole site.</p>
-        <p>
-          <input id="userinput" type="url" placeholder="Enter a title or image URL" autocomplete="on" style="width: 100%; padding: 10px; border: none; border-radius: 10px; background-color: #2c2c2c; color: #ffffff;" />
-        </p>
-        <p id="console-output"></p>
-      </div>
-      <div class="button-wrapper" style="display: flex; justify-content: space-between; margin-top: 1em;">
-        <button onclick="changeTabTitle();" style="padding: 10px 20px; border: none; border-radius: 10px; background-color: #b625cc; color: #ffffff;">Set Title</button>
-        <button onclick="changeTabIcon();" style="padding: 10px 20px; border: none; border-radius: 10px; background-color: #b625cc; color: #ffffff;">Set Icon</button>
-        <button onclick="resetTabSettings();" style="padding: 10px 20px; border: none; border-radius: 10px; background-color: #b625cc; color: #ffffff;">Reset</button>
-    <p style="text-align: center; margin-top: 2em;">
-      <a href="/index.html" style="text-decoration: none;">
-        <button style="cursor: pointer; background-color: #22c55e; border: none; color: white; padding: 15px 32px; text-decoration: none; display: inline-block; font-size: 16px; border-radius: 20px; margin-top: 5px;">
-          Go to the homepage
-        </button>
-      </a>
-    </p>
+        <div class="flex gap-10 flex-grow justify-center">
+            <a href="/projects.html" class="text-white font-bold no-underline hover:opacity-80 transition-opacity flex items-center gap-2">
+                <i class="fa-solid fa-gamepad"></i> Games
+            </a>
+            <a href="/misc.html" class="text-white font-bold no-underline hover:opacity-80 transition-opacity flex items-center gap-2">
+                <i class="fa-solid fa-cog"></i> Settings
+            </a>
+        </div>
+        <div class="w-10"></div>
+    </nav>
+
+    <section class="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+                <span class="gradient-text">Miscellaneous</span> Tools
+            </h1>
+            <p class="text-gray-400 max-w-lg mx-auto italic">Customize your experience and enhance your privacy.</p>
+        </header>
+
+        <div class="max-w-2xl w-full space-y-8">
+            
+            <div class="glass p-8 rounded-[2.5rem] shadow-2xl">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-3 bg-blue-500/20 rounded-2xl text-blue-400">
+                        <i class="fa-solid fa-mask text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">about:blank</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-gray-400 text-sm">Enter a URL to open in an about:blank frame for extra privacy.</p>
+                    <input id="url-target" type="url" placeholder="https://example.com" 
+                        class="w-full p-4 glass rounded-2xl outline-none border border-white/10 focus:border-blue-500/50 transition-all" />
+                    <p class="text-xs text-gray-500">Note: This may not work with all websites due to security policies.</p>
+                    
+                    <div class="pt-2">
+                        <button id="create" class="btn-purple w-full py-4 rounded-2xl font-bold shadow-lg shadow-purple-500/20">
+                            Create Private Page
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-[2.5rem] shadow-2xl">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-3 bg-blue-500/20 rounded-2xl text-blue-400">
+                        <i class="fa-solid fa-eye-slash text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Tab Cloaker</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-gray-400 text-sm">Change the tab title or icon to hide your browsing activity.</p>
+                    <input id="userinput" type="text" placeholder="Enter title or Image URL" 
+                        class="w-full p-4 glass rounded-2xl outline-none border border-white/10 focus:border-blue-500/50 transition-all" />
+                    
+                    <p id="console-output" class="text-xs text-blue-400 italic"></p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                        <button onclick="changeTabTitle();" class="btn-purple py-3 rounded-xl font-bold text-sm">Set Title</button>
+                        <button onclick="changeTabIcon();" class="btn-purple py-3 rounded-xl font-bold text-sm">Set Icon</button>
+                        <button onclick="resetTabSettings();" class="glass py-3 rounded-xl font-bold text-sm hover:bg-white/5 transition-all">Reset</button>
+                    </div>
+                </div>
+            
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        &copy; 2025 Penguin Labs. All rights reserved.
+    </footer>
+
     <script src="/js/misc.js"></script>
     <script src="/js/main.js"></script>
-  </body>
+</body>
 </html>
