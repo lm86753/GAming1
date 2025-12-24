@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Penguin Labs</title>
+    
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            color: white; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+
+        .gradient-text { 
+            background: linear-gradient(90deg, #3b82f6, #60a5fa); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            min-width: 420px;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .nav-link:hover { color: #60a5fa; transform: translateY(-1px); }
+        .nav-link i { color: #3b82f6; }
+
+        .logo-box {
+            width: 38px; height: 38px;
+            background: white; border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Form Styling */
+        input, textarea, select {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+            outline: none;
+        }
+
+        /* FIX: Dropdown White-on-White Issue */
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2360a5fa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        select option {
+            background-color: #121212; /* Dark background for the list */
+            color: white;
+            padding: 10px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(90deg, #3b82f6, #2563eb);
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
+
+    <nav class="navbar">
+        <a href="/index.html" class="flex items-center hover:opacity-80 transition-opacity">
+            <div class="logo-box">
+                <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
+            </div>
+        </a>
+        <div class="flex gap-8 px-6">
+            <a href="/projects.html" class="nav-link">
+                <i class="fa-solid fa-gamepad"></i> Games
+            </a>
+            <a href="/misc.html" class="nav-link">
+                <i class="fa-solid fa-cog"></i> Settings
+            </a>
+        </div>
+        <div style="width: 38px;"></div>
+    </nav>
+
+    <main class="min-h-screen pt-40 pb-20 px-6 flex flex-col items-center">
+        <div class="max-w-xl w-full">
+            
+            <header class="text-center mb-10">
+                <h1 class="text-5xl font-bold tracking-tight mb-4">
+                    Send <span class="gradient-text">Feedback</span>
+                </h1>
+                <p class="text-gray-400">Found a bug or have a suggestion? We're listening.</p>
+            </header>
+
+            <div class="glass p-8 md:p-10 rounded-[3rem] shadow-2xl">
+                <form action="https://formspree.io/f/xgowbdry" method="POST" class="space-y-6">
+                    
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-400 ml-2">Topic</label>
+                        <select name="type" class="w-full p-4 rounded-2xl cursor-pointer pr-10">
+                            <option value="Game Request">Request a Game</option>
+                            <option value="Bug Report">Report a Bug</option>
+                            <option value="General Feedback">General Feedback</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-400 ml-2">Email (Optional)</label>
+                        <input type="email" name="email" placeholder="penguin@labs.com" 
+                            class="w-full p-4 rounded-2xl" />
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-semibold text-gray-400 ml-2">Your Message</label>
+                        <textarea name="message" required rows="5" placeholder="Tell us more..."
+                            class="w-full p-4 rounded-2xl resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit w-full py-4 rounded-2xl font-bold text-lg shadow-lg">
+                        Send Message
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-10 border-t border-white/5 text-center text-gray-600 text-sm">
+        &copy; 2025 Penguin Labs. All rights reserved.
+    </footer>
+
+</body>
+</html>
