@@ -1,122 +1,158 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <link rel="icon" type="image/x-icon" href="/logo.ico" />
-    <meta name="keywords" content="front-end web developer, unblocked, games, google sites, unblocked games mom, ublocked, code, coding, programmer, development, javascript, jquery, bootstrap, sass, less, git" />
-    <meta property="og:title" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
-    <meta property="og:site_name" content="3kh0.github.io" />
-    <meta property="og:description" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
-    <meta name="description" content="Welcome to 3kh0 lite, a lightweight, fast, and clean game site." />
-    <meta name="author" content="3kh0" />
+<html lang="en-US" class="scroll-smooth">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-adsense-account" content="ca-pub-7665998102047773">
     <title>3kh0 lite</title>
+    
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="/js/cmp.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-      html, body { margin: 0; height: 100%; overflow: hidden; }
-      main, #desmos, #desmos iframe { width: 100vw; height: 100vh; display: block; border: 0; }
-      footer nav { position: fixed; bottom: 20px; left: 20px; display: flex; gap: 10px; z-index: 10; }
-      button { cursor: pointer; background-color: #22c55e; border: none; color: white; padding: 10px 16px; border-radius: 16px; font-size: 14px; }
-      
-      /* Navbar Styles */
-      .navbar {
-        background-color: #2b2d31;
-        display: flex;
-        align-items: center;
-        padding: 12px 25px;
-        border-radius: 50px;
-        width: fit-content;
-        min-width: 400px;
-        margin: 20px auto 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        position: fixed;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
-      }
-      .logo-container {
-        display: flex;
-        align-items: center;
-      }
-      .logo-placeholder {
-        width: 40px;
-        height: 40px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-      .logo-placeholder img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .menu-items {
-        display: flex;
-        gap: 40px;
-        flex-grow: 1;
-        justify-content: center;
-      }
-      .nav-link {
-        text-decoration: none;
-        color: white;
-        font-weight: 700;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: opacity 0.2s;
-      }
-      .nav-link:hover {
-        opacity: 0.8;
-      }
-      .logo-link {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-      }
-      .spacer-right {
-        width: 40px;
-      }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            color: white; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .update-card { border-left: 4px solid #3b82f6; }
+        
+        .navbar {
+            background-color: #2b2d31;
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            width: fit-content;
+            min-width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body class="selection:bg-blue-500/30">
 
-    <div class="navbar">
-      <div class="logo-container">
-        <a href="/index.html" class="logo-link">
-          <div class="logo-placeholder">
-            <img src="logo.ico" alt="Logo">
-          </div>
-        </a>
-      </div>
-      <div class="menu-items">
-        <a href="/projects.html" class="nav-link">
-          <i class="fa-solid fa-gamepad"></i> Games
-        </a>
-        <a href="/misc.html" class="nav-link">
-          <i class="fa-solid fa-cog"></i> Settings
-        </a>
-      </div>
-      <div class="spacer-right"></div>
-    </div>
+    <nav class="navbar">
+        <div class="flex items-center">
+            <a href="/index.html" class="flex items-center">
+                <div class="w-10 h-10 bg-white rounded-xl overflow-hidden">
+                    <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
+                </div>
+            </a>
+        </div>
+        <div class="flex gap-10 flex-grow justify-center">
+            <a href="/projects.html" class="text-white font-bold no-underline hover:opacity-80 transition-opacity flex items-center gap-2">
+                <i class="fa-solid fa-gamepad"></i> Games
+            </a>
+            <a href="/misc.html" class="text-white font-bold no-underline hover:opacity-80 transition-opacity flex items-center gap-2">
+                <i class="fa-solid fa-cog"></i> Settings
+            </a>
+        </div>
+        <div class="w-10"></div>
+    </nav>
 
-    <main>
-      <section id="desmos">
-        <iframe src="https://www.desmos.com/calculator" allowfullscreen></iframe>
-      </section>
-    </main>
+    <section class="relative min-h-screen flex flex-col items-center justify-center p-6">
+        <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/20 blur-[120px] rounded-full -z-10"></div>
+        
+        <main class="max-w-4xl w-full text-center space-y-8">
+            <div class="inline-block p-3 rounded-2xl glass mb-4">
+                <svg class="w-12 h-12 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight">
+                Penguin <span class="gradient-text">Labs</span>
+            </h1>
+            
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+                The best place to play browser games. With many games being added based on user feedback every week.
+            </p>
 
-    <footer>
-      <nav>
-        <a href="/misc.html"><button>Misc</button></a>
-        <a href="/projects.html"><button>Projects</button></a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+                <button class="px-8 py-4 bg-blue-600 hover:bg-blue-500 transition-all rounded-full font-semibold text-white shadow-lg shadow-blue-500/20 w-full sm:w-auto">
+                    Launch App
+                </button>
+                <a href="#updates" class="px-8 py-4 glass hover:bg-white/10 transition-all rounded-full font-semibold flex items-center gap-2 w-full sm:w-auto justify-center">
+                    <span>Give Feedback</span>
+                </a>
+            </div>
+        </main>
 
-      </nav>
+        <div class="absolute bottom-10 left-0 w-full flex justify-center pointer-events-none">
+            <a href="#updates" class="pointer-events-auto flex flex-col items-center gap-2 text-gray-500 animate-bounce no-underline">
+                <span class="text-xs uppercase tracking-widest font-bold">Scroll for updates</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="updates" class="max-w-4xl mx-auto px-6 py-24 space-y-16">
+        
+        <div class="glass p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-10">
+                <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16C10.9124 16 10.017 16.8954 10.017 18L10.017 21H4.01703V11C4.01703 6.58172 7.59875 3 12.017 3C16.4353 3 20.017 6.58172 20.017 11V21H14.017Z"/></svg>
+            </div>
+            <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                <span class="p-2 bg-blue-500/20 rounded-lg text-blue-400 text-sm">Dev Note</span>
+                A word from the team
+            </h2>
+            <p class="text-gray-300 leading-relaxed text-lg italic">
+                "I beleve that this one of the best webites for browser gaming. I believe that this will become bigger and better than any other website. Even though that this is still a passion project, I am committed to making the website the best it can be."
+            </p>
+            <div class="mt-8 flex items-center gap-4">
+                <img src="logo.ico" alt="Logo" class="w-10 h-10"> 
+                <div>
+                    <p class="font-bold">Chief Penguin</p>
+                    <p class="text-sm text-gray-500">Lead Developer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Latest Updates</h2>
+            
+            <div class="space-y-6">
+                <div class="update-card glass p-6 rounded-2xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">v1.1 - Current</span>
+                        <span class="text-gray-500 text-sm">Dec 24, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">New updated UI</h3>
+                    <ul class="text-gray-400 space-y-2 text-sm list-disc list-inside">
+                        <li>Added new nav bar for improved user experience.</li>
+                        <li>New homepage design with a focus on user engagement.</li>
+                        <li>Added halow knight to the game page.</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-6 rounded-2xl opacity-60 grayscale hover:grayscale-0 transition-all border-none">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-gray-500/20 text-gray-400 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">v1</span>
+                        <span class="text-gray-500 text-sm">Nov 12, 2025</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Base website and quality improvements</h3>
+                    <p class="text-gray-500 text-sm">created base website and created bacic systems.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
+        &copy; 2025 Penguin Labs. All rights reserved.
     </footer>
-  </body>
-</html>
 
+</body>
+</html>
