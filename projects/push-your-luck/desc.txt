@@ -1,0 +1,15 @@
+"Push Your Luck" is a strategic and suspenseful game where players constantly weigh risk against reward to maximize their gains. The core mechanic involves making a series of decisions to continue an action (e.g., drawing cards, rolling dice, collecting resources) that increases potential rewards but also escalates the risk of losing everything. The objective is to know when to stop and "bank" your current winnings before a negative outcome (e.g., rolling a specific number, drawing a losing card) occurs, which would result in losing all progress for that turn. The game features a blend of probability, psychology, and strategic decision-making, where players must gauge their odds and their opponents' intentions (if multiplayer). Its simple rules often lead to tense moments and exciting reversals, making it a highly engaging experience for those who enjoy gambling with consequences, albeit in a digital, risk-free environment.
+
+Controls:
+- Mouse (Left Click): Primary interaction for making decisions (e.g., "Push Your Luck," "Bank"), interacting with game elements, and navigating UI.
+- Keyboard (Spacebar/Enter): May be used as an alternative for confirming decisions.
+
+Special Features:
+- Risk-Reward Mechanics: Core gameplay revolves around deciding when to continue for higher stakes or secure current gains.
+- Probability & Decision-Making: Players must assess odds and make strategic choices under pressure.
+- Suspenseful Gameplay: Each decision to "push your luck" builds tension and excitement.
+- Simple Rules, Deep Strategy: Easy to learn, but offers significant strategic depth in reading the game and opponents (if applicable).
+- Varied Game Forms: Can be implemented with cards, dice, resource gathering, or other randomized elements.
+- High Replayability: The blend of chance and strategy ensures no two games are exactly alike.
+- Psychological Element: Reading opponents' intentions or managing one's own greed adds another layer.
+- Quick Rounds: Often designed for fast-paced play, allowing for multiple games in a session.

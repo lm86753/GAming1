@@ -1,0 +1,21 @@
+"Minecraft Classic" represents the very early, foundational version of the globally acclaimed sandbox game. It offers a nostalgic look back at the game's origins, primarily focusing on its pure creative building aspects without many of the survival elements, complex crafting, or hostile mobs found in later versions. Players are given an infinite supply of blocks and the freedom to build anything their imagination can conceive in a blocky, procedurally generated world. The objective is simply to create, experiment, and collaborate with others in a multiplayer environment. This version is characterized by its simplicity, limited block types, and raw charm, serving as a digital canvas for endless construction projects. It lacks features like inventory management, hunger, or combat, distilling the Minecraft experience down to its most fundamental and celebrated element: creative construction.
+
+Controls:
+- WASD Keys: Move character (Forward, Left, Backward, Right).
+- Spacebar: Jump.
+- Left Mouse Button: Destroy block.
+- Right Mouse Button: Place block.
+- Number Keys (1-9): Select block type from hotbar.
+- B Key: Open block selection menu.
+- R Key: Restore position to spawn.
+- T Key: Open chat.
+- F Key: Toggle fog distance.
+
+Special Features:
+- Pure Creative Mode: Unlimited blocks and no survival pressures, focusing solely on building.
+- Nostalgic Experience: A glimpse into the early development stages of one of gaming's biggest titles.
+- Multiplayer Sandbox: Collaborate with others in real-time to build massive structures.
+- Simplified Mechanics: Lacks complex crafting, inventory, and hostile mobs, making it very accessible.
+- Limited Block Palette: Focuses creativity within a smaller set of foundational block types.
+- Procedural Generation: Unique world seeds ensure variety in terrain for each new map.
+- Basic Physics: Simple block physics for stacking and breaking.

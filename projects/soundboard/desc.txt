@@ -1,0 +1,15 @@
+A "Soundboard" is not a game in the traditional sense, but rather an interactive utility or application designed for instant playback of a collection of audio clips, sound effects, or short musical pieces. The objective is to provide users with a customizable and easily accessible interface to trigger specific sounds on demand. It can be used for various purposes: entertainment (prank sounds, funny quotes), content creation (adding sound effects to streams/videos), educational tools (language learning, musical notes), or even accessibility. Users typically interact with a grid of buttons, each corresponding to a unique sound. Many soundboards allow for customization, enabling users to upload their own sounds, organize them into categories, and assign them to specific buttons or hotkeys. Its appeal lies in the immediate gratification of sound playback and the creative potential it offers for personal expression and interaction.
+
+Controls:
+- Mouse (Left Click): Click on a button to play the associated sound.
+- Keyboard (Customizable Hotkeys): Users can often assign specific keys to trigger sounds for quicker access.
+
+Special Features:
+- Instant Audio Playback: Trigger sound clips with a simple click or keypress.
+- Customizable Sound Library: Users can typically add, remove, and organize their own sound files.
+- Categorization & Tagging: Organize large collections of sounds for easy retrieval.
+- Hotkeys & Shortcuts: Assign keyboard shortcuts for rapid, non-visual sound activation.
+- Volume Control (Individual/Master): Adjust playback volume for single sounds or the entire board.
+- Looping & Stopping Mechanisms: Options to loop sounds or stop currently playing audio.
+- Variety of Uses: Applicable for entertainment, content creation, education, and accessibility.
+- User-Friendly Interface: Designed for easy navigation and intuitive sound triggering.

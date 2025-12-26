@@ -1,0 +1,18 @@
+"Moto X3M Winter" is a festive, snow-themed installment of the popular physics-based motocross racing series. It transports the exhilarating stunt-filled action of Moto X3M to a frosty, winter wonderland. Players control a dirt bike rider through a series of icy, snow-covered tracks, featuring giant snowmen, sharp icicles, festive lights, and various holiday-themed contraptions. The objective remains consistent with the series: complete each level as quickly as possible, performing spectacular flips and tricks to earn bonus time and achieve a perfect three-star rating. The game maintains its signature exaggerated physics, allowing for incredible aerial maneuvers and amusing, snow-plowing crashes. Its bright, yet chilly aesthetic, coupled with responsive controls and satisfying progression, makes "Moto X3M Winter" an engaging and often humorously challenging experience for fans of stunt racing and platforming, perfect for the holiday season.
+
+Controls:
+- Up Arrow Key / W Key: Accelerate.
+- Down Arrow Key / S Key: Brake / Reverse.
+- Left Arrow Key / A Key: Lean left (controls bike rotation in air).
+- Right Arrow Key / D Key: Lean right (controls bike rotation in air).
+
+Special Features:
+- Winter Holiday Theme: Frosty, snow-covered tracks with unique Christmas and winter-inspired obstacles.
+- Physics-Based Motocross: Exaggerated but consistent physics for dynamic stunts and gameplay.
+- Extreme Tracks: Levels packed with snowmen, icicles, festive lights, and creative winter contraptions.
+- Stunt System: Perform front flips and backflips to reduce your total time for a level.
+- Star Rating System: Encourages replayability to achieve perfect three-star scores on all levels.
+- Unlockable Bikes: Earn stars to unlock new, often more powerful or unique winter-themed bikes.
+- Fast-Paced Action: High-speed racing and quick decision-making are key to success.
+- Responsive Controls: Tight controls allow for precise maneuvering and stunt execution.
+- Addictive Gameplay Loop: The challenge of mastering each track and improving times keeps players engaged.

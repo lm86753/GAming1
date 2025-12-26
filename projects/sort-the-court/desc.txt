@@ -1,0 +1,17 @@
+"Sort The Court!" is a charming and often humorous kingdom management simulation game where players assume the role of a newly crowned monarch. Each day, various subjects, petitioners, and bizarre characters approach the throne with requests, problems, or propositions. The objective is to make decisions (usually a simple "Yes" or "No" by swiping left or right) that balance the kingdom's resources (gold, population, happiness) and maintain stability. Each decision has consequences, sometimes immediate, sometimes long-term, affecting the kingdom's wealth, the loyalty of its people, and the overall happiness of the realm. The game's charm comes from its witty writing, quirky characters, and the moral dilemmas presented. It's a game about consequence and resource management under the guise of an amusing daily monarchy simulator, offering high replayability as different choices lead to varied outcomes and new challenges.
+
+Controls:
+- Mouse (Left Click): Primary interaction for selecting options, usually "Yes" or "No" responses to petitioners.
+- Mouse (Left Click & Drag / Swipe): Can also be used to swipe left for "No" and right for "Yes" in some implementations.
+- Arrow Keys (Left/Right): Alternative for selecting "Yes" or "No".
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Kingdom Management Simulation: Balance gold, population, and happiness through daily decisions.
+- Daily Decision-Making: Respond to a stream of diverse characters and their requests.
+- Consequence-Driven Gameplay: Every choice has an impact on the kingdom's well-being, sometimes with unforeseen results.
+- Witty Writing & Humorous Characters: Engaging dialogue and quirky personalities add to the game's charm.
+- Resource Balancing: Manage gold, population, and public opinion to keep the kingdom stable.
+- High Replayability: Different playthroughs lead to varied outcomes and new challenges.
+- Minimalist Art Style: Simple, charming visuals that focus on character and dialogue.
+- Moral Dilemmas: Some decisions present difficult ethical choices with no clear "right" answer.

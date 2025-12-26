@@ -1,0 +1,15 @@
+"Slope" is a fast-paced, 3D endless runner game that challenges players with navigating a rolling ball down an infinitely procedurally generated, sloped track. The objective is to keep the ball on the track for as long as possible, avoiding falling off the edges or colliding with various obstacles like moving barriers and red blocks. Players control the ball's left and right movement, requiring precise steering and quick reflexes to adapt to the track's unpredictable twists, turns, and sudden changes in elevation. The game features a minimalist, neon-infused aesthetic that enhances the sense of speed and focuses attention on the immediate path ahead. With its increasing speed and complexity, "Slope" offers an addictive and highly replayable experience, designed to test players' agility, foresight, and ability to react under pressure in a visually striking environment.
+
+Controls:
+- Left Arrow Key / A Key: Move the ball left.
+- Right Arrow Key / D Key: Move the ball right.
+
+Special Features:
+- Endless Runner: Continuously generated track ensures a unique experience every play.
+- Fast-Paced 3D Action: High-speed gameplay that demands quick reflexes and precise control.
+- Procedural Generation: The track's layout is dynamically created, leading to infinite variations and challenges.
+- Minimalist Neon Aesthetic: Vibrant, clean visuals that enhance the sense of speed and focus.
+- Progressive Difficulty: The game gradually increases in speed and introduces more complex obstacles.
+- High Score Chasing: Designed for replayability, with players striving to beat their personal best distances.
+- Responsive Controls: Simple two-button control scheme offers immediate and accurate ball manipulation.
+- Challenging Obstacles: Various types of barriers and traps to avoid on the sloped track.

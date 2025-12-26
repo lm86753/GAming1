@@ -1,0 +1,17 @@
+"Just One Boss" is an intense, single-boss combat game where players are pitted against a formidable and complex adversary with multiple phases, attack patterns, and environmental interactions. The objective is singular: defeat the boss. The game strips away exploration, leveling, and typical RPG elements to focus purely on the thrill and challenge of a prolonged boss fight. Players must learn the boss's movements, identify weaknesses, and master their character's limited but effective toolkit to survive and ultimately triumph. Each phase of the boss fight introduces new mechanics, escalating the difficulty and requiring adaptive strategies. The game typically features tight controls, clear visual tells for attacks, and a sense of accomplishment that comes from overcoming a truly difficult opponent through skill and pattern recognition. It's designed for players who crave focused, high-stakes combat encounters without the filler.
+
+Controls:
+- Arrow Keys / WASD: Move character.
+- Z Key / Left Click: Primary attack / Light attack.
+- X Key / Right Click: Secondary attack / Heavy attack / Special ability.
+- C Key / Spacebar: Dodge / Jump / Defensive maneuver.
+- V Key / Shift Key: Use item / Activate temporary buff.
+
+Special Features:
+- Single-Boss Focus: The entire game is dedicated to mastering and defeating one intricately designed boss.
+- Multi-Phase Combat: The boss transforms or changes tactics multiple times throughout the fight, introducing new challenges.
+- Pattern Recognition: Success hinges on learning and reacting to the boss's complex attack sequences.
+- Tight Controls & Precision: Demanding gameplay that requires accurate inputs and timing.
+- High Difficulty & Rewarding Challenge: Designed to be difficult but fair, offering a strong sense of achievement upon victory.
+- Minimalist Design: Focuses on the core combat experience, with minimal narrative or extraneous elements.
+- Strategic Depth: Despite limited mechanics, offers deep tactical choices in managing resources and exploiting openings.

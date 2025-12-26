@@ -1,0 +1,15 @@
+"The Impossible Quiz" is a notoriously difficult and unconventional online quiz game designed to trick and frustrate players with its absurd logic, misleading questions, and reliance on lateral thinking rather than factual knowledge. The objective is to answer a series of questions, each more outlandish than the last, without running out of lives. The game often features wordplay, visual gags, unexpected interactions, and even requires players to manipulate the game interface itself. Its charm lies in its deliberate subversion of traditional quiz game rules, forcing players to think completely outside the box. Success requires patience, a willingness to experiment, and an ability to laugh at one's own failures. It's a game that delights in breaking expectations and revels in its own brand of chaotic humor, making it a cult classic among those who enjoy brain-teasing and unconventional challenges.
+
+Controls:
+- Mouse (Left Click): Select answers, interact with on-screen elements.
+- Keyboard (Spacebar): May be used for skipping certain segments or activating specific in-game events (contextual).
+- Escape Key: Pause menu (if available) or sometimes a trick in itself.
+
+Special Features:
+- Absurd & Unconventional Questions: Challenges players with questions that defy traditional logic and often involve wordplay, puns, or visual gags.
+- Trickery & Misdirection: Designed to intentionally mislead players with false clues and unexpected solutions.
+- Limited Lives/Skips: Players have a finite number of attempts, adding pressure and consequence to mistakes.
+- Interactive Interface: Some puzzles require players to interact with the game's UI in unconventional ways.
+- Lateral Thinking Required: Success often depends on thinking "outside the box" rather than relying on general knowledge.
+- Humorous Tone: The game's difficulty is balanced by its comedic elements and self-aware absurdity.
+- Sudden Death Mechanics: Incorrect answers can lead to immediate failure or a humorous punishment.

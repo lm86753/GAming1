@@ -1,0 +1,15 @@
+"Missiles" is a minimalist arcade-style defense game where players are tasked with protecting a set of vulnerable targets (often cities or bases) from an endless onslaught of incoming missiles. The objective is to intercept and destroy all enemy projectiles before they reach their targets. Players typically control a stationary or limited-movement defense system, launching their own interceptor missiles to create explosions that clear sections of the sky. The challenge escalates rapidly as the number and speed of incoming missiles increase, requiring quick thinking, precise aiming, and efficient resource management (as interceptor missiles might be limited). The game usually features simple graphics that prioritize clarity of the action, focusing on the intense, strategic gameplay loop of identifying threats and coordinating defenses. It's a test of reflexes, pattern recognition, and tactical decision-making under pressure.
+
+Controls:
+- Mouse (Left Click): Launch an interceptor missile towards the clicked location.
+- Mouse (Move): Aim the launch trajectory.
+
+Special Features:
+- Arcade-Style Defense: Fast-paced, engaging gameplay focused on protecting targets.
+- Minimalist Design: Simple graphics and clear visual cues for incoming threats.
+- Progressive Difficulty: The number and speed of enemy missiles increase over time, providing a constant challenge.
+- Strategic Interception: Requires careful aim and timing to maximize explosion radii and clear multiple threats.
+- Resource Management: Often involves managing a limited supply of interceptor missiles.
+- High Score Chasing: Designed for replayability, with players striving to defend for as long as possible and achieve a top score.
+- Pattern Recognition: Learning missile trajectories and spawn patterns is key to survival.
+- Intense Pressure: The relentless onslaught creates a high-pressure environment for decision-making.

@@ -1,0 +1,16 @@
+"NS-Shaft" is a classic, vertically scrolling platformer that challenges players with rapid descent through a never-ending shaft filled with platforms, traps, and enemies. The objective is to fall as far as possible without being crushed by the scrolling screen above, falling off the bottom, or succumbing to hazards. Players control a small character who must strategically jump between platforms to find safe landing spots, collect power-ups, and avoid various dangers. The game is known for its intense pace, requiring quick reflexes and precise platforming skills. As players descend deeper, the difficulty escalates with faster scrolling, more complex platform layouts, and new types of enemies or traps. Its minimalist graphics and addictive "just one more try" gameplay loop make it a timeless arcade experience that tests endurance and agility in a constant battle against gravity and time.
+
+Controls:
+- Left Arrow Key / A Key: Move character left.
+- Right Arrow Key / D Key: Move character right.
+- Spacebar / Up Arrow Key: Jump.
+
+Special Features:
+- Vertically Scrolling Endless Fall: Continuous descent gameplay with increasing difficulty.
+- Fast-Paced Platforming: Demands quick reflexes and precise jumps.
+- Procedurally Generated Levels: Ensures a unique experience with each playthrough (or at least highly varied platform layouts).
+- Power-Ups & Collectibles: Items to aid survival or boost scores.
+- High Score Chasing: Designed for replayability, with the goal of achieving the deepest descent.
+- Minimalist Graphics: Focuses on clear gameplay mechanics without visual clutter.
+- Challenging Hazards: Various traps and enemies to avoid or overcome during descent.
+- Addictive Gameplay Loop: Simple to learn but hard to master, encouraging continuous attempts.

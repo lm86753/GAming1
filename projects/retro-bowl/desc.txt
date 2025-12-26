@@ -1,0 +1,17 @@
+"Retro Bowl" is a highly addictive American football simulation game with a charming pixel-art aesthetic that harkens back to classic 8-bit sports titles. Players take on the role of a general manager and coach for a professional football team, making decisions both on and off the field. The objective is to lead your team to victory in the Retro Bowl championship. Gameplay involves managing your roster, handling player morale and contracts, making draft picks, and critically, controlling the offensive plays during games. On-field action focuses on passing, running, and managing the clock, with a simplified but engaging control scheme that emphasizes strategic decision-making and timing. It captures the essence of American football in a pick-up-and-play format, offering a satisfying blend of simulation and arcade-style gameplay that appeals to both casual players and seasoned football fans looking for a nostalgic, yet challenging experience.
+
+Controls:
+- Mouse (Left Click & Drag): Primary interaction for menus, management decisions.
+- Mouse (Click & Drag for gameplay): During offense, draw a line for pass trajectory, release to throw. Swipe for running.
+- WASD Keys / Arrow Keys: For precise movement during running plays or after receiving a pass.
+- Spacebar: Confirm selection / Hike ball (on offense).
+
+Special Features:
+- Retro Pixel Art Graphics: Charming 8-bit visual style that evokes nostalgia.
+- General Manager & Coaching Roles: Manage team roster, player morale, contracts, and make draft picks.
+- Simplified On-Field Gameplay: Focuses on key offensive plays (passing, running) with intuitive controls.
+- Addictive Season & Playoff Structure: Lead your team through multiple seasons to the Retro Bowl championship.
+- Player Development: Train and improve your players over time.
+- Dynamic Storylines: Experience random events, player grievances, and media interactions that add depth.
+- Offline Play: Enjoy the full game without an internet connection.
+- Highly Accessible: Easy to pick up and play, yet offers strategic depth.

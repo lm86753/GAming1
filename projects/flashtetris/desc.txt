@@ -1,0 +1,15 @@
+Flash Tetris is a classic puzzle game where players manipulate falling blocks (tetrominoes) to create complete horizontal lines without any gaps. The objective is to clear as many lines as possible to prevent the blocks from stacking up and reaching the top of the playing field. As lines are cleared, the game speeds up, increasing the challenge. The game features simple graphics and addictive gameplay that has captivated players for decades. The goal is to achieve the highest score by strategically placing and rotating the falling blocks to form solid lines, which then disappear and award points. If the blocks pile up and touch the top of the screen, the game ends.
+
+Controls:
+- Left Arrow Key: Move the falling block left.
+- Right Arrow Key: Move the falling block right.
+- Down Arrow Key: Soft drop (increase the speed of the falling block).
+- Up Arrow Key / Z Key: Rotate the falling block clockwise.
+- Spacebar: Hard drop (instantly drop the block to the lowest possible position).
+- P Key: Pause the game.
+
+Special Features:
+- Classic Gameplay: Authentic Tetris experience with traditional rules.
+- Increasing Difficulty: The game progressively speeds up as more lines are cleared.
+- High Score Tracking: Players can aim to beat their previous best scores.
+- Simple Interface: Easy-to-understand visual design focusing on gameplay.

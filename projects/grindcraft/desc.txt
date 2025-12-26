@@ -1,0 +1,13 @@
+"Grindcraft" is an addictive incremental crafting game that combines elements of popular crafting and idle games. Players start with basic resources like wood and stone, and through a series of crafting recipes and automated production, they progress to create increasingly complex items, tools, and structures. The primary objective is to unlock new resources, discover new recipes, and expand your crafting empire. Gameplay involves clicking to gather initial resources, then using those resources to craft items that either unlock new crafting options or automate the gathering process. As players advance, they gain access to more advanced technologies, magical elements, and even new lands to exploit. The game thrives on a loop of continuous progression, where every crafted item contributes to unlocking the next tier of possibilities, culminating in a vast and intricate crafting tree.
+
+Controls:
+- Mouse (Left Click): Primary interaction for gathering resources, crafting items, and interacting with UI elements.
+- Mouse (Hover): View tooltips and information about resources and recipes.
+
+Special Features:
+- Incremental / Idle Gameplay: Progress continues even with minimal active input, encouraging long-term engagement.
+- Vast Crafting Tree: Hundreds of recipes and resources to discover and utilize, from simple tools to complex magical artifacts.
+- Automation: Unlock and upgrade various structures and workers to automate resource gathering and crafting processes.
+- Exploration & Expansion: Discover new biomes and areas that provide unique resources and challenges.
+- Research & Development: Invest in research to unlock advanced technologies and crafting tiers.
+- Resource Management: Strategic allocation and management of resources are crucial for efficient progression.

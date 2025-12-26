@@ -1,0 +1,19 @@
+"Super Mario 64" is a revolutionary 3D platformer that redefined the genre and set a new standard for video games upon its release. Players control Mario in a vast, open 3D castle and its surrounding grounds, which serve as a hub world to access various painting-portals leading to diverse levels. The primary objective is to collect Power Stars by completing challenges within these levels, ultimately using these stars to unlock new areas and rescue Princess Peach from Bowser. Gameplay involves acrobatic platforming, exploration, puzzle-solving, and boss battles, all rendered in groundbreaking 3D graphics for its time. Mario's expansive move set, including triple jumps, wall jumps, and ground pounds, provided unprecedented freedom of movement in a 3D environment. Its innovative camera system, fluid controls, and imaginative level design made it an enduring masterpiece that heavily influenced subsequent 3D games.
+
+Controls:
+- Analog Stick (or WASD/Arrow Keys on emulators/ports): Move Mario.
+- A Button (or Spacebar): Jump (tap for small jump, hold for high jump).
+- B Button (or Z/Left Click): Attack / Dive / Pick up items.
+- Z Button (or Ctrl/Right Click): Crouch / Ground Pound / Long Jump (while running).
+- C Buttons (or Camera Controls): Adjust camera perspective.
+- Start Button (or Escape): Pause game / Access menu.
+
+Special Features:
+- Groundbreaking 3D Platforming: Pioneered and perfected 3D character movement and camera control.
+- Open-Ended Level Design: Players have freedom to explore and complete objectives in various orders.
+- Expansive Move Set: Mario's wide array of acrobatic moves allows for complex and satisfying traversal.
+- Hub World Exploration: Peach's Castle serves as a central area with hidden secrets and level access.
+- Power Star Collection: Main objective involves collecting stars by completing diverse challenges.
+- Iconic Characters & Music: Features beloved Mario characters and a memorable, influential soundtrack.
+- Innovative Camera System: Provided unprecedented control over the in-game camera.
+- Timeless Appeal: Remains a highly influential and beloved title, often considered one of the greatest video games ever made.

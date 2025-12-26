@@ -1,0 +1,14 @@
+"Hextris" is a fast-paced, color-matching puzzle game that puts a unique spin on the classic falling-block genre. Instead of a traditional rectangular well, players interact with a central hexagonal column. Colored blocks fall from the edges of the screen towards this central hexagon. The objective is to prevent the blocks from stacking up and overflowing beyond a critical line around the central hexagon. Players achieve this by rotating the central hexagon to match three or more blocks of the same color, causing them to disappear and score points. The game rapidly increases in speed and complexity, demanding quick thinking and agile rotations. Its minimalist design, vibrant colors, and addictive challenge make it a popular choice for quick, engaging puzzle-solving sessions that test spatial reasoning and reaction time.
+
+Controls:
+- Left Arrow Key / A Key: Rotate the central hexagon counter-clockwise.
+- Right Arrow Key / D Key: Rotate the central hexagon clockwise.
+- Mouse (Left Click & Drag): Can also be used to rotate the central hexagon by dragging left or right.
+
+Special Features:
+- Unique Hexagonal Playfield: A fresh take on falling-block puzzles with a central rotating hexagon.
+- Fast-Paced Color Matching: Requires quick reflexes and strategic rotations to clear blocks.
+- Progressive Difficulty: The game speeds up, and more complex block patterns appear as score increases.
+- Minimalist Visuals: Clean and vibrant design that emphasizes gameplay clarity.
+- Addictive Gameplay Loop: Simple to learn, but difficult to master, encouraging repeated play to improve high scores.
+- Spatial Puzzle Solving: Challenges players to visualize rotations and color matches under pressure.

@@ -1,0 +1,18 @@
+"Moto X3M Spooky Land" is a thrilling Halloween-themed installment of the popular physics-based motocross racing series. It takes the exhilarating stunt-filled action of Moto X3M and plunges it into a dark, eerie, and often comical spooky setting. Players control a dirt bike rider through a series of haunted tracks, featuring giant spiders, swinging axes, spooky pumpkins, skeletal obstacles, and ghastly contraptions. The objective remains consistent with the series: complete each level as quickly as possible, performing spectacular flips and tricks to earn bonus time and achieve a perfect three-star rating. The game maintains its signature exaggerated physics, allowing for incredible aerial maneuvers and amusing, frightful crashes. Its dark, yet vibrant aesthetic, coupled with responsive controls and a satisfying progression, makes "Moto X3M Spooky Land" an engaging and often humorously terrifying experience for fans of stunt racing and platforming challenges, perfect for the Halloween season.
+
+Controls:
+- Up Arrow Key / W Key: Accelerate.
+- Down Arrow Key / S Key: Brake / Reverse.
+- Left Arrow Key / A Key: Lean left (controls bike rotation in air).
+- Right Arrow Key / D Key: Lean right (controls bike rotation in air).
+
+Special Features:
+- Spooky Halloween Theme: Dark, eerie, and humorously haunted tracks with unique Halloween-inspired obstacles.
+- Physics-Based Motocross: Exaggerated but consistent physics for dynamic stunts and gameplay.
+- Extreme Tracks: Levels packed with giant spiders, swinging axes, spooky pumpkins, skeletal hazards, and creative contraptions.
+- Stunt System: Perform front flips and backflips to reduce your total time for a level.
+- Star Rating System: Encourages replayability to achieve perfect three-star scores on all levels.
+- Unlockable Bikes: Earn stars to unlock new, often more powerful or unique Halloween-themed bikes.
+- Fast-Paced Action: High-speed racing and quick decision-making are key to success.
+- Responsive Controls: Tight controls allow for precise maneuvering and stunt execution.
+- Addictive Gameplay Loop: The challenge of mastering each track and improving times keeps players engaged.

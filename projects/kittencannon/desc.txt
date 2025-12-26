@@ -1,0 +1,15 @@
+"Kitten Cannon" is a hilariously absurd and addictive launch distance game where players launch a small, unfortunate kitten from a cannon with the objective of making it travel as far as possible. The game combines elements of physics-based trajectory and incremental upgrades. After launching the kitten, players can often interact with it mid-air, using various explosive or propulsion items to extend its flight, bounce it off obstacles, or activate power-ups. Points are awarded based on distance covered and multipliers from hitting specific objects. The game's charm comes from its dark humor, exaggerated physics, and the sheer satisfaction of sending the kitten soaring across the landscape. The goal is to continuously beat previous high scores, unlocking new items and upgrades to achieve ever-greater distances and more spectacular (and often brutal) flights.
+
+Controls:
+- Mouse (Left Click): Primary interaction for setting cannon power/angle (if adjustable), launching the kitten, and activating mid-air items/power-ups.
+- Mouse (Click & Hold): May be used for charging power or continuous activation of some items.
+- Spacebar: May be used as an alternative to mouse click for launching or activating items.
+
+Special Features:
+- Launch Distance Gameplay: Core objective is to maximize the distance traveled by the kitten.
+- Physics-Based Trajectory: Realistic (or humorously exaggerated) physics govern the kitten's flight path.
+- Mid-Air Interactions: Use various items like bombs, trampolines, or jetpacks to extend flight.
+- Upgrades System: Earn currency to unlock and improve cannons, launch power, and mid-air items.
+- Dark Humor & Absurdity: The premise and execution are deliberately over-the-top and comical.
+- High Score Chasing: Endless replayability as players strive to beat their personal best distances.
+- Simple Yet Addictive: Easy to understand mechanics lead to highly engaging and repetitive gameplay.

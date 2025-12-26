@@ -1,0 +1,14 @@
+"Stack" is a minimalist and highly addictive arcade game that tests players' precision and timing. The objective is to build the tallest possible tower by perfectly aligning falling blocks on top of each other. A block continuously moves back and forth across the screen. When the player clicks, the moving part of the block is cut, and the remaining portion drops onto the stack below. Any part of the block that extends beyond the previous layer is removed, making the base for subsequent blocks smaller. The game ends when a block is placed imperfectly and a significantly small piece remains, or when it misses entirely. Its clean, geometric aesthetic and simple one-button control scheme make it easy to learn but incredibly challenging to master, offering an endless pursuit of a higher score and a satisfying test of reflexes and focus.
+
+Controls:
+- Mouse (Left Click) / Spacebar / Any Key: Drop the current moving block onto the stack.
+
+Special Features:
+- One-Button Gameplay: Extremely simple and intuitive control scheme.
+- Minimalist Aesthetic: Clean, geometric visuals focusing on clarity and precision.
+- Precision & Timing: Core gameplay revolves around accurate placement of falling blocks.
+- Endless High Score Chasing: The game continues indefinitely, challenging players to build the tallest tower.
+- Progressive Difficulty: The speed of the falling blocks may increase, or the starting size of blocks may decrease over time.
+- Addictive Gameplay Loop: The constant drive to improve one's score and achieve perfect placements is highly engaging.
+- Zen-like Focus: The repetitive yet challenging nature encourages a focused and almost meditative state.
+- Satisfying Visual Feedback: Perfectly aligned blocks provide a rewarding visual and auditory cue.

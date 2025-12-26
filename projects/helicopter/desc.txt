@@ -1,0 +1,12 @@
+"Helicopter" is a classic, side-scrolling avoidance game renowned for its deceptively simple premise and brutally challenging gameplay. Players control a small helicopter that continuously flies forward through a narrow, horizontally scrolling cave or tunnel. The objective is to navigate the helicopter through the confined space without colliding with the cave walls (top or bottom) or any obstacles that may appear. The game employs a simple one-button control scheme, where pressing and holding the button makes the helicopter ascend, and releasing it causes it to descend due to gravity. Success hinges on precise timing and quick reflexes to maintain a delicate balance and avoid imminent crashes. The game offers endless replayability as players strive to beat their high scores, making each attempt a test of endurance and skill in a minimalist, yet highly addictive environment.
+
+Controls:
+- Left Mouse Click / Spacebar / Any Key: Press and hold to make the helicopter ascend; release to make it descend.
+
+Special Features:
+- One-Button Gameplay: Extremely simple and intuitive control scheme, making it easy to pick up but difficult to master.
+- Endless Runner / Scroller: The game continues indefinitely, challenging players to achieve the highest possible score.
+- Progressive Difficulty: The helicopter's speed or the complexity of the cave often increases over time, demanding quicker reactions.
+- Minimalist Graphics: A clean, uncluttered visual style that focuses attention purely on the gameplay.
+- High Score Tracking: Encourages competitive play and replayability as players aim to surpass their previous bests.
+- Addictive Challenge: The constant threat of collision and the desire to improve lead to a highly engaging and often frustratingly fun experience.

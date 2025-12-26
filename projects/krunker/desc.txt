@@ -1,0 +1,22 @@
+"Krunker.io" is a fast-paced, pixelated first-person shooter (FPS) that brings arena-style combat directly to your web browser. Players drop into vibrant, blocky maps and engage in intense, twitch-shooter gunfights against other players. The objective typically revolves around team deathmatch, free-for-all, or other objective-based modes, where quick reflexes, accurate aim, and strategic movement are key to victory. The game features a wide array of weapons, from assault rifles and snipers to revolvers and rocket launchers, each with distinct playstyles. Its low-poly aesthetic and optimized performance allow it to run smoothly on various devices, making it highly accessible. Krunker.io is known for its fluid movement, including advanced techniques like "slidehopping" that allow players to maintain momentum and move rapidly across maps, adding a layer of skill and depth to its otherwise simple premise.
+
+Controls:
+- WASD Keys: Move character (Forward, Left, Backward, Right).
+- Left Mouse Click: Shoot.
+- Right Mouse Click: Aim Down Sights (ADS) / Scope.
+- Spacebar: Jump.
+- Shift Key: Crouch / Slide (while moving and pressing C or Ctrl for slidehopping).
+- R Key: Reload weapon.
+- Q Key / E Key: Switch weapon / melee (contextual).
+- F Key: Inspect weapon (cosmetic).
+- C Key / Ctrl Key: Crouch / Slide.
+
+Special Features:
+- Fast-Paced FPS Action: Intense, high-octane gunplay designed for quick matches.
+- Browser-Based Accessibility: Playable directly in a web browser without downloads.
+- Pixelated / Low-Poly Graphics: Distinctive visual style that also aids performance.
+- Fluid Movement System: Includes advanced techniques like slidehopping for rapid traversal.
+- Variety of Weapons & Classes: Choose from numerous weapons, each supporting different combat roles.
+- Multiple Game Modes: Offers various competitive modes to keep gameplay fresh.
+- Community Map Editor: Allows players to create and share custom maps.
+- Active Community & Esport Scene: Popular among casual players and competitive enthusiasts alike.

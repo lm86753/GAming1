@@ -1,0 +1,19 @@
+"Smoking Barrels" is a gritty, retro-styled Western-themed shooter that plunges players into the heart of a classic cowboy showdown. The objective is to outdraw, outshoot, and outwit opponents in fast-paced gunfights, often against multiple adversaries or within challenging environments. The game typically features a distinct pixel-art or hand-drawn aesthetic, reminiscent of old arcade games or graphic novels, emphasizing atmosphere and quick reflexes. Gameplay involves precise aiming, strategic use of cover, and often a unique reload mechanic that adds a layer of tension. Players progress through various scenarios, from saloon shootouts to desert duels, earning upgrades for their weapons or new abilities. It delivers an authentic Spaghetti Western feel with its distinct visual style, impactful sound design, and challenging, skill-based combat that rewards mastery of its shooting mechanics.
+
+Controls:
+- WASD Keys / Arrow Keys: Move character (often in a limited 2D plane).
+- Mouse (Left Click): Fire weapon.
+- Mouse (Move): Aim weapon.
+- R Key: Reload weapon (often a timed or interactive mechanic).
+- Spacebar: Take cover / Dodge roll.
+- E Key / F Key: Interact with objects (e.g., pick up ammo, open doors).
+
+Special Features:
+- Retro Western Theme: Immersive atmosphere inspired by classic cowboy movies and arcade aesthetics.
+- Skill-Based Shooting: Emphasizes precise aim and timing for impactful gunfights.
+- Unique Reload Mechanic: Often adds a mini-game or timing challenge to reloading, increasing tension.
+- Pixel Art / Stylized Graphics: Distinctive visual style that enhances the game's retro appeal.
+- Variety of Weapons: Classic Western firearms like revolvers, shotguns, and rifles.
+- Strategic Cover System: Utilize environmental elements for defense and tactical positioning.
+- Challenging Opponents: AI adversaries that require quick thinking and precise execution to defeat.
+- Atmospheric Sound Design: Authentic sound effects that contribute to the Western showdown feel.

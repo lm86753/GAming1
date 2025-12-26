@@ -1,0 +1,17 @@
+"Polybranch" is a visually minimalist and intellectually stimulating puzzle game that challenges players to guide a branching line (or "polybranch") through a series of increasingly complex mazes. The objective is to connect specific points on the grid without overlapping existing lines or colliding with obstacles. The core mechanic involves growing the polybranch by choosing directions at various nodes, often with limited moves or specific branching rules. The game emphasizes spatial reasoning, forward planning, and a trial-and-error approach to discovery. Its clean, geometric aesthetic and often serene background music provide a calming yet engaging experience, allowing players to focus intensely on solving each intricate puzzle. Polybranch rewards patience and methodical thinking, offering a satisfying sense of accomplishment as each elegant solution is uncovered.
+
+Controls:
+- Arrow Keys / WASD: Extend the polybranch in a chosen direction (usually one step at a time).
+- Mouse (Left Click): Select nodes, confirm direction, or interact with UI elements.
+- R Key: Restart current puzzle.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Minimalist Puzzle Design: Elegant and clean visual presentation focusing solely on the puzzle.
+- Branching Line Mechanics: Unique gameplay revolves around guiding and growing a dynamic line.
+- Spatial Reasoning Challenge: Tests players' ability to visualize paths and plan ahead in complex grids.
+- Progressive Difficulty: Puzzles become more intricate and require more advanced strategies.
+- Trial-and-Error Exploration: Encourages experimentation to discover the correct branching paths.
+- Calm & Meditative Atmosphere: Often features a soothing soundtrack and visual style, promoting focus.
+- High Satisfaction: Uncovering elegant solutions to challenging puzzles provides a strong sense of achievement.
+- Unlimited Undos (common): Many puzzle games of this type offer an undo feature to encourage experimentation without penalty.

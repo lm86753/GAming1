@@ -1,0 +1,12 @@
+"Hackertype" is a unique and engaging typing game designed to simulate the experience of a hacker. Unlike traditional typing tutors, it immerses players in a narrative where rapid and accurate typing of code snippets is essential to perform various "hacking" tasks, such as bypassing security systems, decrypting data, or launching cyber attacks. The objective is to type the presented code segments correctly and quickly, often under pressure from a timer or an in-game adversary. The game features a pseudo-terminal interface with scrolling code and visual feedback that creates an authentic hacking atmosphere. It serves as both an entertaining game and an unconventional way to improve typing speed and accuracy, particularly with programming syntax, while feeling like a digital operative.
+
+Controls:
+- Keyboard: All gameplay is controlled via typing on the keyboard. Players must accurately type the displayed characters, words, or lines of code.
+
+Special Features:
+- Hacking Simulation Theme: Immersive experience mimicking a cyber-security operative or hacker.
+- Code-Based Typing Challenges: Focuses on typing accuracy and speed for programming-like syntax rather than standard prose.
+- Narrative Progression: Often includes a story or mission-based structure that gives context to the typing tasks.
+- Visual & Audio Feedback: Realistic terminal interface, scrolling text, and sound effects enhance the atmosphere.
+- Typing Skill Improvement: Designed to improve typing speed and accuracy in a fun, engaging context.
+- Difficulty Levels: Adaptable challenges suitable for different typing proficiencies.

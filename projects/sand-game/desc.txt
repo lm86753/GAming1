@@ -1,0 +1,19 @@
+"The Sand Game," often referred to as a "Falling Sand Game," is a captivating and meditative cellular automaton simulation. Players interact with a grid-based world by "drawing" various elements onto it, such as sand, water, fire, oil, plants, and more. Each element has its own set of behaviors and interacts realistically (or humorously realistically) with others. Sand falls, water flows, fire spreads, plants grow, and various chemical reactions occur. The objective is not typically a defined "win" state, but rather to experiment, create intricate Rube Goldberg-like contraptions, observe complex emergent behaviors, and design elaborate self-sustaining or destructive systems. It's an open-ended sandbox that encourages creativity, scientific curiosity, and a sense of wonder at the simulated natural world. Its appeal lies in the endless possibilities for experimentation and the calming, often mesmerizing, visual feedback of the interacting elements.
+
+Controls:
+- Mouse (Left Click): Draw or place selected element onto the grid.
+- Mouse (Right Click): Erase elements.
+- Mouse (Scroll Wheel): Cycle through available elements.
+- Number Keys (1-9): Quickly select specific elements.
+- C Key: Clear the entire canvas.
+- P Key / Spacebar: Pause / Unpause the simulation.
+
+Special Features:
+- Cellular Automaton / Particle Simulation: Realistic (or stylized) physics and interactions for numerous elements.
+- Open-Ended Sandbox: No defined goals, encouraging freeform experimentation and creativity.
+- Variety of Elements: A wide range of interactive elements (sand, water, fire, plants, acid, etc.) with unique properties.
+- Emergent Behavior: Simple rules lead to complex and fascinating interactions and systems.
+- Meditative & Relaxing: Calming visual feedback and experimental gameplay.
+- Creative & Destructive Potential: Build intricate machines or unleash chaotic forces.
+- High Replayability: Endless possibilities for experimentation ensures long-term engagement.
+- Simple Interface: Easy to pick up and play, with intuitive controls for drawing and manipulating elements.

@@ -1,0 +1,14 @@
+"Pandemic 2" is a strategic simulation game where players design and evolve a deadly pathogen (virus, bacteria, or parasite) with the ultimate objective of eradicating humanity. Starting with a single infected patient in a chosen country, players must strategically upgrade their disease's transmission vectors (e.g., air, water, livestock), symptoms (e.g., cough, fever, nausea), and resistances (e.g., drug resistance, cold resistance). The challenge lies in balancing the pathogen's lethality with its infectivity, as a disease that kills too quickly might be contained before it spreads globally, while a too-mild disease might not cause enough concern. Governments worldwide will react by closing borders, developing cures, and implementing quarantines, requiring players to adapt their disease's evolution to overcome these defenses. It's a dark, thought-provoking game that tests strategic thinking, resource management, and understanding of epidemiological principles.
+
+Controls:
+- Mouse (Left Click): Primary interaction for navigating menus, selecting countries, upgrading disease traits, and viewing information.
+- Mouse (Hover): View statistics, upgrade descriptions, and country information.
+
+Special Features:
+- Pathogen Evolution & Customization: Choose between virus, bacteria, or parasite, and upgrade various attributes.
+- Global Simulation: Realistic world map with country-specific defenses and climates.
+- Strategic Disease Management: Balance infectivity, severity, and lethality to achieve global eradication.
+- AI Counter-Measures: Governments and scientists react to the pandemic, developing cures and implementing containment strategies.
+- Random Events: Unpredictable events can influence the spread and impact of the disease.
+- Replayability: Multiple pathogen types, starting locations, and strategic approaches offer high replay value.
+- Dark & Thought-Provoking Theme: Explores the complexities of disease spread and societal responses.

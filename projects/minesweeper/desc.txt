@@ -1,0 +1,15 @@
+"Minesweeper" is a classic single-player puzzle video game where the objective is to clear a rectangular board containing hidden "mines" without detonating any of them, with the help of clues about the number of neighboring mines in each field. Players start with a grid of concealed squares. Clicking on a square reveals its content: if it's a mine, the game ends; if it's empty, it often reveals a number (from 1 to 8) indicating how many mines are adjacent to that square. If an empty square with no adjacent mines is revealed, it automatically uncovers all surrounding squares. The challenge lies in using logical deduction based on these numbers to identify safe squares and mark the locations of mines. The game is highly addictive due to its blend of logic, strategy, and a touch of chance, making it a timeless test of intellect and patience.
+
+Controls:
+- Mouse (Left Click): Uncover a square.
+- Mouse (Right Click): Place a flag on a square suspected of containing a mine. A second right-click might place a question mark (in some versions), and a third removes it.
+- Mouse (Left & Right Click simultaneously on a numbered square): If the correct number of flags have been placed around a numbered square, simultaneously clicking both mouse buttons on it will automatically clear all unflagged adjacent squares.
+
+Special Features:
+- Logical Deduction Puzzle: Relies purely on logical reasoning to deduce mine locations.
+- Variable Difficulty: Offers different grid sizes and mine densities (e.g., beginner, intermediate, expert) to suit all skill levels.
+- Flagging System: Allows players to mark suspected mine locations, aiding in strategy.
+- Timer: Tracks the time taken to complete a board, encouraging speed and efficiency.
+- High Score Tracking: Records best times for different difficulty levels, fostering replayability.
+- Simple Interface: A clean, grid-based layout that prioritizes gameplay over elaborate graphics.
+- Touch of Chance (especially on first move): While primarily logic-based, sometimes the initial clicks require a bit of luck, particularly in denser minefields.

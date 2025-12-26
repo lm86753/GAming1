@@ -1,0 +1,23 @@
+"Minecraft" is a groundbreaking sandbox video game that allows players to build, explore, and survive in a vast, procedurally generated 3D world composed entirely of block-like voxels. The core gameplay revolves around collecting resources, crafting tools and items, and constructing structures, limited only by the player's imagination. In Survival mode, the objective is to gather resources, build shelter, craft weapons to defend against hostile mobs that appear at night, and eventually defeat the Ender Dragon. Creative mode, on the other hand, provides unlimited resources and the ability to fly, empowering players to focus purely on construction and artistic expression. The game fosters creativity, problem-solving, and exploration, offering unparalleled freedom to shape and interact with its blocky universe. Its iconic aesthetic, open-ended gameplay, and robust multiplayer features have made it a global phenomenon and one of the best-selling video games of all time.
+
+Controls:
+- WASD Keys: Move character (Forward, Left, Backward, Right).
+- Spacebar: Jump.
+- Left Mouse Button: Mine / Attack.
+- Right Mouse Button: Place block / Use item.
+- E Key: Open Inventory.
+- Q Key: Drop item.
+- Number Keys (1-9): Select hotbar slot.
+- Shift Key: Sneak (prevents falling off blocks).
+- Ctrl Key: Sprint.
+- F3 Key: Debug screen (shows coordinates, biome, etc.).
+
+Special Features:
+- Open-World Sandbox: Unparalleled freedom to explore, build, and modify a procedurally generated world.
+- Resource Gathering & Crafting: Core mechanics involve collecting materials and crafting a vast array of items and tools.
+- Survival & Creative Modes: Offers distinct gameplay experiences for combat/resource management and pure creative building.
+- Procedural Generation: Every new world is unique, offering endless exploration.
+- Multiplayer & Community: Robust online features for cooperative building, competitive play, and sharing creations.
+- Moddability: Extensive support for user-created modifications, vastly extending gameplay possibilities.
+- Iconic Blocky Aesthetic: A distinctive visual style that is instantly recognizable.
+- Hostile & Passive Mobs: Encounter a variety of creatures, some friendly, some dangerous, adding depth to survival.

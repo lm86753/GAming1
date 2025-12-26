@@ -1,0 +1,12 @@
+"Google Snake" is the classic, minimalist arcade game reimagined within the Google search engine, offering a straightforward yet endlessly addictive experience. Players control a "snake" (represented by a chain of colored blocks) that continuously moves across a grid. The objective is to guide the snake to eat "food" items (typically represented by a colored dot) that appear randomly on the screen. Each time the snake eats food, it grows longer, making navigation more challenging. The game ends if the snake collides with the boundaries of the grid or with its own body. Its simple graphics, intuitive controls, and escalating difficulty make it a perfect casual game for quick breaks, testing reflexes and spatial reasoning. The charm lies in its pure, unadulterated arcade fun, embodying the timeless appeal of the original Snake game.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Change the direction of the snake's movement. The snake cannot reverse directly into itself.
+
+Special Features:
+- Classic Arcade Gameplay: A faithful rendition of the iconic Snake game.
+- Simple & Intuitive: Easy to learn, with controls limited to directional input.
+- Progressive Difficulty: The snake grows longer with each food item, and often its speed increases, demanding quicker reactions.
+- High Score Tracking: Encourages players to beat their personal best scores.
+- Variety of Modes/Maps (In some versions): While the basic game is singular, some Google Snake iterations offer different grid sizes, food types, or even visual themes to customize the experience.
+- Easter Egg / Hidden Game: Often found as an interactive element within Google products, adding a playful surprise.

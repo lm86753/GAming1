@@ -1,0 +1,14 @@
+"Gimme The Airpod" is a light-hearted, physics-based puzzle game with a simple yet engaging premise. Players are tasked with retrieving a lost Airpod (or similar small, valuable object) from various precarious and often absurd locations. Each level presents a unique environmental puzzle where players must utilize a limited set of tools, objects, and environmental interactions to manipulate the Airpod's movement and guide it safely to the retrieval zone. The game often relies on creative problem-solving and understanding basic physics principles, offering both straightforward solutions and more elaborate, Rube Goldberg-esque approaches. Its charming, casual aesthetic and often humorous scenarios make it an enjoyable experience for players looking for a relaxed yet stimulating challenge.
+
+Controls:
+- Mouse (Left Click & Drag): Interact with objects, move elements, or apply force.
+- Arrow Keys / WASD: May be used for camera movement or specific character/tool control in certain levels.
+- R Key: Restart the current level.
+- Escape Key: Pause menu.
+
+Special Features:
+- Physics-Based Puzzles: Core gameplay revolves around realistic (or humorously exaggerated) physics interactions.
+- Creative Problem Solving: Encourages players to think outside the box to solve puzzles with diverse solutions.
+- Varying Environments: Each level presents a new setting and unique challenges, from household rooms to fantastical landscapes.
+- Casual & Humorous Tone: Light-hearted scenarios and charming visuals provide a relaxed gaming experience.
+- Tool & Object Interaction: Utilize a range of in-game items and environmental elements to achieve objectives.

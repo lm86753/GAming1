@@ -1,0 +1,18 @@
+"Polytrack" is a futuristic racing game, likely in a 3D environment, where players pilot high-speed vehicles across geometrically abstract tracks. The objective is to outmaneuver opponents (AI or other players) and navigate complex courses filled with twists, turns, and elevation changes to reach the finish line first. The game emphasizes speed, precise steering, and often includes features like boosts, power-ups, or environmental interactions that can be strategically used to gain an advantage. The "Poly" in its name suggests a clean, low-poly aesthetic, focusing on vibrant colors and fluid motion without excessive detail, which contributes to a sense of speed and clarity. As version 0.4.1, it suggests an early access or development build, indicating ongoing refinement but still delivering a core racing experience with a focus on fast, skill-based gameplay.
+
+Controls:
+- WASD Keys / Arrow Keys: Steer vehicle (Left/Right), Accelerate (Up/Forward), Brake/Reverse (Down/Backward).
+- Spacebar: Boost / Handbrake / Special ability.
+- Shift Key: Drift / Power slide.
+- R Key: Reset vehicle to track.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Futuristic Racing: High-speed combat and racing in a sci-fi setting.
+- Low-Poly / Geometric Aesthetic: Clean, vibrant visuals that emphasize speed and track design.
+- Dynamic Tracks: Courses with complex layouts, loops, jumps, and environmental hazards.
+- Power-Ups & Boosts: Strategic use of in-game items to gain an advantage.
+- Responsive Controls: Precise handling for high-speed maneuvers.
+- Time Trial & Race Modes: Compete against the clock or AI/multiplayer opponents.
+- Ongoing Development: As indicated by the version number, potentially features community feedback and continuous updates.
+- Exhilarating Speed: Designed to convey a strong sense of velocity and adrenaline.

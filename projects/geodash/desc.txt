@@ -1,0 +1,12 @@
+"GeoDash" is an electrifying rhythm-based platformer that challenges players to navigate a geometric character through a series of treacherous levels filled with spikes, saws, and other deadly obstacles. The game's core lies in its precise timing and synchronization with an energetic electronic music soundtrack. Players must jump, fly, and flip their way through each level, memorizing patterns and executing flawless movements to avoid instant death. The objective is to complete each level from start to finish, often with a growing sense of satisfaction as complex sequences are mastered. Its vibrant, minimalist art style and pulse-pounding soundtrack contribute to an intensely focused and addictive gameplay experience, demanding quick reflexes and meticulous pattern recognition.
+
+Controls:
+- Spacebar / Up Arrow Key / Mouse Click / Tap: Jump (as cube), fly (as ship), or flip gravity (as ball/UFO/wave). The action changes based on the player's current vehicle/form. Holding down the input will often extend the jump or flight duration.
+
+Special Features:
+- Rhythm-Based Gameplay: Levels are intricately designed to sync with the musical beat, making timing crucial.
+- Multiple Game Modes/Vehicles: Players transform into various forms (cube, ship, ball, UFO, wave, robot, spider) each with unique movement mechanics.
+- Level Editor: Allows players to create and share their own custom levels, fostering a vast community-driven content ecosystem.
+- Difficulty Progression: Levels range from easy to extremely challenging, providing a steep but rewarding learning curve.
+- Practice Mode: Enables players to set checkpoints within levels to practice difficult sections without restarting from the beginning.
+- Vibrant Visuals and Soundtrack: Features a distinct geometric art style and an adrenaline-pumping electronic music score.

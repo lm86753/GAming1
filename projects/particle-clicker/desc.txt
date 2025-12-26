@@ -1,0 +1,15 @@
+"Particle Clicker" is a unique incremental idle game that cleverly blends the addictive mechanics of clicker games with a scientific theme, specifically particle physics and the operation of a massive particle collider. Players start by manually "colliding" particles with clicks, generating "energy" or "money." This resource is then invested into various upgrades, including automating collisions, improving research facilities, hiring scientists, and unlocking new and more exotic particles to discover. The objective is to advance through scientific milestones, unlock new research tiers, and ultimately discover the secrets of the universe through ever-increasing particle collision rates. The game features a pseudo-scientific aesthetic, with elements resembling particle detectors and research labs. It provides a satisfying loop of passive progression and strategic upgrades, appealing to players who enjoy idle games with a unique theme and a constant sense of growth and discovery.
+
+Controls:
+- Mouse (Left Click): Primary interaction for clicking the main collider button, purchasing upgrades, and navigating UI menus.
+- Mouse (Hover): View descriptions of upgrades, research, and particle discoveries.
+
+Special Features:
+- Idle / Incremental Gameplay: Progress and generate resources even when not actively playing.
+- Particle Physics Theme: Unique scientific theme centered around operating a particle collider.
+- Extensive Upgrade Trees: A wide array of upgrades for collider efficiency, research speed, and automation.
+- Research & Discovery: Unlock new particles, scientific milestones, and advanced theoretical physics concepts.
+- Automation: Purchase and upgrade systems that automatically generate collisions and research points.
+- Pseudo-Scientific Aesthetic: Visuals and terminology are inspired by real-world particle physics experiments.
+- Offline Earnings: Accumulate resources even when the game is closed.
+- Satisfying Progression: The continuous growth of collision power and scientific discovery provides a rewarding experience.

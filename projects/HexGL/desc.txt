@@ -1,0 +1,18 @@
+"HexGL" is a futuristic, high-speed racing game inspired by classics like Wipeout and F-Zero. Players pilot an anti-gravity spaceship through a neon-drenched, hexagonal tunnel course, focusing on precision steering and blistering speeds. The objective is to complete laps in the fastest possible time, outmaneuver opponents (if in a competitive mode), and avoid crashing into the track's glowing barriers. The game's visual style is a vibrant blend of cyberpunk and minimalist aesthetics, emphasizing speed and fluid motion. Tracks are often characterized by sharp turns, loops, and sudden drops, requiring quick reflexes and a keen sense of spatial awareness. HexGL is a showcase for modern web browser capabilities, delivering a console-like racing experience directly within a browser window, complete with exhilarating speed effects and responsive controls.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Steer the spaceship left and right.
+- Arrow Key (Up) / W Key: Accelerate (often automatic, but can be boost).
+- Arrow Key (Down) / S Key: Brake / Airbrake.
+- Spacebar: Boost / Activate special ability (if available).
+- R Key: Reset vehicle to track.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- High-Speed Anti-Gravity Racing: Experience incredibly fast races in futuristic settings.
+- Visually Stunning Aesthetics: Neon-soaked hexagonal tracks with a cyberpunk/minimalist design.
+- Responsive Controls: Precise steering and handling for intense racing action.
+- Browser-Based 3D Graphics: A technical marvel for its time, demonstrating advanced browser capabilities.
+- Time Trial & Race Modes: Compete against the clock or AI opponents (depending on implementation).
+- Dynamic Track Design: Features challenging turns, loops, and elevation changes.
+- Exhilarating Speed Effects: Visual and auditory cues that enhance the sense of velocity.

@@ -1,0 +1,20 @@
+"Matrix Rampage" is a high-octane, action-packed shooter inspired by the iconic bullet-time and martial arts sequences of "The Matrix" film series. Players dive into a digital world where they control a skilled protagonist capable of slow-motion combat, acrobatic maneuvers, and devastating gunplay. The objective is to eliminate waves of agents and other digital adversaries while navigating complex environments, often involving wall-runs, flips, and cinematic dodges. The game emphasizes stylish action and strategic use of "bullet time" mechanics to gain an advantage in overwhelming firefights. Levels typically involve clearing rooms, defending objectives, or escaping pursuit, all while showcasing impressive visual effects that emulate the film's signature style. It offers a thrilling experience for fans of fast-paced, stylized combat, allowing them to feel like a true hero within a digital battleground.
+
+Controls:
+- WASD Keys: Move character (Forward, Left, Backward, Right).
+- Mouse (Left Click): Fire weapon.
+- Mouse (Right Click): Enter/Exit Bullet Time (slow motion) / Aim.
+- Spacebar: Jump / Wall Run (when near a wall).
+- Shift Key: Dash / Dodge / Perform acrobatic roll.
+- E Key / F Key: Interact / Pick up weapon.
+- R Key: Reload weapon.
+- Q Key: Switch weapon.
+
+Special Features:
+- Bullet Time Mechanic: Slow down time to dodge bullets and perform cinematic attacks, central to gameplay.
+- Acrobatic Combat: Wall-running, flips, and dives for stylish and dynamic engagements.
+- Dynamic Gunplay: Wide array of firearms with satisfying firing and impact effects.
+- The Matrix-Inspired Aesthetics: Replicates the iconic digital look, green hues, and visual flair of the films.
+- Fast-Paced Action: High-octane firefights and constant movement.
+- Environmental Interaction: Utilize surroundings for cover, traversal, and tactical advantage.
+- Objective-Based Missions: Progress through levels with varied goals, keeping gameplay fresh.

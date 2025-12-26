@@ -1,0 +1,15 @@
+"HBA" is a fast-paced, action-oriented game that challenges players' reflexes and situational awareness within a dynamic environment. The core gameplay revolves around navigating a character or entity through a series of rapidly changing obstacles, often requiring precise movements, quick decision-making, and pattern recognition. The objective is to survive for as long as possible, achieve a high score, or complete a series of increasingly difficult levels. The theme typically involves abstract visuals, vibrant colors, or a minimalist design, often accompanied by an energetic soundtrack that dictates the pace or provides auditory cues. Success in HBA hinges on mastering the movement mechanics and anticipating incoming threats, making each playthrough a test of agility and focus.
+
+Controls:
+- Arrow Keys / WASD: Move the character/entity (e.g., left, right, up, down, jump).
+- Spacebar / Left Mouse Click: Primary action (e.g., jump, shoot, activate ability).
+- Shift Key: Dash / Special movement (if applicable).
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Dynamic Obstacle Courses: Levels are generated or designed to continuously challenge player reflexes.
+- Fast-Paced Action: High-speed gameplay demands constant attention and quick reactions.
+- Rhythm or Audio Integration: Gameplay elements might be synchronized with the music or rely on sound cues.
+- Progressive Difficulty: Challenges intensify with time or as players advance through stages.
+- Minimalist or Abstract Visuals: Focus on clear gameplay mechanics without excessive visual clutter.
+- High Score Focus: Designed for replayability with an emphasis on improving personal bests.

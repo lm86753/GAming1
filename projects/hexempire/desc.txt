@@ -1,0 +1,15 @@
+"HexEmpire" is a turn-based strategy game reminiscent of classic board games like Risk, but played on a hexagonal grid. The objective is to conquer a map by strategically deploying and moving armies to capture enemy territories and defend your own. Players start with a limited number of territories and units, then expand their empire by attacking adjacent enemy hexagons. Combat is typically resolved through simple calculations based on unit numbers, with elements of chance. The game emphasizes tactical positioning, resource management (usually in the form of unit production or gold), and diplomatic decisions (though often simplified or absent in some versions). Its charm lies in its accessibility, allowing for quick, engaging strategic battles without overwhelming complexity, making it ideal for both casual and more focused strategy enthusiasts. The goal is complete domination of the map, eliminating all rival factions.
+
+Controls:
+- Mouse (Left Click): Select territories, select armies, initiate attacks, confirm actions, interact with UI.
+- Mouse (Right Click): Deselect, cancel actions, or view information in some implementations.
+- Keyboard (Enter/Spacebar): End turn (common in turn-based games).
+
+Special Features:
+- Turn-Based Strategy: Players take turns to plan and execute their moves.
+- Hexagonal Grid Map: Offers more nuanced movement and adjacency compared to square grids.
+- Territory Conquest: Core objective involves expanding control over the map.
+- Simple Combat Mechanics: Easy-to-understand rules for engaging enemy units.
+- Strategic Depth: Despite simple rules, offers depth in army placement, attack vectors, and defense.
+- Resource Management (Units/Gold): Manage resources to produce new armies and strengthen defenses.
+- Scalable Maps: Can feature various map sizes and layouts, affecting game duration and strategy.

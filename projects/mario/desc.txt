@@ -1,0 +1,16 @@
+"Mario" (referring to the classic platforming adventures) is a beloved and iconic video game franchise starring the titular Italian plumber, Mario. The core gameplay revolves around side-scrolling platforming, where players navigate Mario through vibrant, imaginative levels filled with obstacles, enemies, and power-ups. The primary objective is typically to rescue Princess Peach from the villainous Bowser, traversing diverse environments like Mushroom Kingdoms, castles, underwater worlds, and icy landscapes. Along the way, Mario must jump over gaps, stomp on Goombas and Koopa Troopas, collect coins, and discover hidden secrets. The game is celebrated for its precise controls, innovative level design, memorable characters, and catchy music. It set the standard for the platforming genre, offering a blend of accessible gameplay for newcomers and challenging secrets for veteran players, making it a timeless classic that continues to define video gaming.
+
+Controls:
+- Arrow Keys (Left/Right): Move Mario left and right.
+- Z Key / Spacebar: Jump. (Often also used for selecting menu options).
+- X Key / Ctrl Key: Run / Hold item / Fire projectile (if power-up like Fire Flower is active).
+- Down Arrow Key: Crouch / Enter pipes.
+
+Special Features:
+- Iconic Platforming Gameplay: Defined the genre with precise jumping, enemy stomping, and secret discovery.
+- Power-Ups: Introduces various abilities like the Super Mushroom (grow larger), Fire Flower (shoot fireballs), Starman (invincibility), and more.
+- Memorable Characters: Features an iconic cast including Mario, Luigi, Princess Peach, Bowser, Goombas, and Koopa Troopas.
+- Imaginative Level Design: Creative and varied levels with distinct themes, challenges, and hidden passages.
+- Catchy Music & Sound Effects: Recognizable and beloved soundtrack that enhances the gaming experience.
+- Accessibility & Depth: Easy for new players to pick up, but offers depth and secrets for experienced players.
+- Timeless Appeal: Remains one of the most influential and enduring video game franchises.

@@ -1,0 +1,19 @@
+"Portal Flash Version" is a 2D puzzle-platformer inspired by Valve's critically acclaimed Portal series, adapted for a browser-based experience. Players control Chell (or a similar silent protagonist) armed with a portal gun, which can create two inter-connected portals on designated surfaces. The primary objective is to navigate through a series of test chambers by cleverly placing these portals to overcome obstacles, transport objects, bypass laser grids, and ultimately reach the exit of each level. The game features the iconic "thinking with portals" mechanic, requiring players to understand how momentum, gravity, and object trajectory are conserved when passing through portals. While simplifying the 3D environment to a 2D plane, it retains the core physics-based puzzle-solving and often includes elements of dark humor and minimalist aesthetics reminiscent of the original game's Aperture Science labs.
+
+Controls:
+- WASD Keys: Move character (Left, Right, Jump/Up, Down for crouching/interacting).
+- Mouse (Left Click): Fire primary portal (usually blue).
+- Mouse (Right Click): Fire secondary portal (usually orange).
+- E Key: Interact with objects (e.g., press buttons, pick up cubes).
+- R Key: Reset portals.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- 2D Portal Gun Mechanics: Adapts the innovative portal physics to a 2D side-scrolling environment.
+- Physics-Based Puzzles: Utilizes momentum, gravity, and spatial reasoning for challenging puzzles.
+- Test Chamber Design: A series of isolated levels, each presenting unique challenges to solve with portals.
+- Minimalist Aesthetic: Clean visuals that highlight puzzle elements, reminiscent of Aperture Science labs.
+- Dark Humor: Often incorporates the wry, sarcastic tone found in the original Portal games.
+- Problem-Solving Focus: Emphasizes creative and logical thinking to find solutions.
+- Accessibility: Playable directly in a web browser, making it easily accessible to a wide audience.
+- Momentum Conservation: Core mechanic where speed gained entering one portal is maintained when exiting another.

@@ -1,0 +1,18 @@
+"Snow Battle" is a cheerful and chaotic winter-themed arcade game that pits players in a snowball fight against various opponents, often in a cartoonish and humorous setting. The objective is to outmaneuver and eliminate rival snow fighters by pelting them with snowballs while avoiding being hit yourself. Gameplay typically involves aiming, throwing, and strategic movement to take cover, collect power-ups, and outflank opponents. The game often features a simple, vibrant art style and bouncy sound effects that contribute to its lighthearted, fun atmosphere. Levels might include interactive elements like snow forts, trees for cover, or even giant snow creatures. "Snow Battle" is designed for quick, engaging rounds, making it an ideal casual game for all ages, emphasizing quick reflexes, tactical positioning, and the sheer joy of a digital snowball fight.
+
+Controls:
+- WASD Keys / Arrow Keys: Move character.
+- Mouse (Left Click): Throw snowball.
+- Mouse (Move): Aim snowball trajectory.
+- Spacebar: Take cover / Dodge roll (if applicable).
+- Shift Key: Dash / Run.
+
+Special Features:
+- Winter/Snowball Fight Theme: Cheerful, lighthearted combat set in a snowy landscape.
+- Arcade Action: Fast-paced, responsive gameplay for quick, engaging rounds.
+- Power-Ups: Collect various items like multi-snowballs, ice shields, or faster movement to gain an advantage.
+- Humorous Gameplay: Often features comical character animations, sound effects, and exaggerated physics.
+- Interactive Environments: Levels with elements like snow forts, trees, or hidden passages for strategic play.
+- Multiplayer (Potential): Some versions may feature local or online multiplayer for competitive fun.
+- Simple & Accessible: Easy-to-learn controls and mechanics for players of all ages.
+- Score Chasing: Designed for replayability, encouraging players to achieve high scores or win streaks.

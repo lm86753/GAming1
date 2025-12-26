@@ -1,0 +1,19 @@
+"Soldier Legend" is a classic side-scrolling action-platformer that puts players in the boots of a heroic soldier battling through hordes of enemies and challenging environments. The objective is to advance through various levels, defeat powerful bosses, and ultimately complete a mission to save the world, a princess, or avenge a wrong. Gameplay typically involves precise jumping, shooting, and dodging, often with a variety of weapons and upgrades to acquire. The game features a retro aesthetic, reminiscent of 8-bit or 16-bit arcade titles, with vibrant pixel art and energetic chiptune music. Each level presents unique challenges, from enemy patterns to environmental hazards, requiring quick reflexes and strategic use of the soldier's abilities. "Soldier Legend" offers a challenging yet rewarding experience for fans of classic arcade action, emphasizing skill, persistence, and a nostalgic sense of heroism.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Move soldier left/right.
+- Up Arrow Key / W Key: Jump.
+- Down Arrow Key / S Key: Crouch / Drop through platforms.
+- Z Key / J Key / Left Click: Shoot / Primary attack.
+- X Key / K Key / Spacebar: Jump / Special ability (e.g., grenade, melee).
+- C Key / L Key: Change weapon / Activate power-up.
+
+Special Features:
+- Classic Side-Scrolling Action: Run, jump, and shoot through visually distinct levels.
+- Variety of Weapons & Upgrades: Collect and utilize different firearms and power-ups to enhance combat capabilities.
+- Challenging Boss Battles: Epic encounters with unique attack patterns and weaknesses.
+- Retro Pixel Art Graphics: Nostalgic visual style that evokes classic arcade games.
+- Platforming & Combat Blend: Combines precise jumping with intense shooting mechanics.
+- Progressive Difficulty: Levels introduce new enemy types, hazards, and mechanics as the game advances.
+- Energetic Soundtrack: Upbeat chiptune or orchestral music that complements the action.
+- Heroic Narrative: A simple yet compelling story of a lone soldier against overwhelming odds.

@@ -1,0 +1,18 @@
+"Interactive Buddy" is a classic sandbox physics simulation game where players can unleash a variety of tools, weapons, and natural phenomena upon a hapless ragdoll figure, the "Buddy." The objective isn't traditional victory, but rather experimentation, creative destruction, and often, generating as much chaos and points as possible. Players are given an array of items, from simple weights and ropes to explosives, firearms, and even elemental forces like fire and water. The game's charm comes from its realistic (for its time) physics engine, allowing for satisfying chain reactions and endless scenarios of cause and effect. It's a stress-reliever, a creative outlet, and a humorous playground for those who enjoy manipulating a digital puppet in increasingly elaborate ways. Points are typically awarded for damage inflicted and various interactions, encouraging players to discover new, more destructive combinations.
+
+Controls:
+- Mouse (Left Click): Select tools/weapons from the inventory, drag and drop items, interact with the Buddy.
+- Mouse (Right Click): Access context menus or change tool properties (e.g., weapon firing mode).
+- Mouse (Scroll Wheel): Zoom in/out or cycle through inventory items.
+- Keyboard (Spacebar): Pause/unpause physics (common in some versions).
+- R Key: Reset the Buddy or the entire scene.
+- Number Keys (1-9): Quickly select different tool categories or items.
+
+Special Features:
+- Physics Sandbox: A highly interactive environment governed by a robust physics engine.
+- Ragdoll Character: A resilient and endlessly manipulable "Buddy" to experiment on.
+- Vast Arsenal of Tools: Wide variety of weapons, explosives, natural forces, and interactive objects.
+- Creative Destruction: Encourages players to devise elaborate and destructive scenarios.
+- Stress Relief & Entertainment: Provides a humorous outlet for cathartic digital chaos.
+- Score Tracking: Awards points for damage and interactions, fostering a sense of achievement in destruction.
+- Replayability: Endless combinations and scenarios ensure long-term engagement.

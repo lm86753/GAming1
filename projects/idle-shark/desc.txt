@@ -1,0 +1,14 @@
+"Idle Shark" is an aquatic-themed idle clicker game where players assume the role of a hungry shark, evolving from a small predator to the apex of the ocean food chain. The objective is to consume everything in sight – fish, other marine life, and even humans – to generate "coins" or "biomass." These resources are then used to upgrade the shark's abilities, unlock new shark species (each with unique traits), and expand its hunting grounds. Gameplay typically starts with active clicking to catch initial prey, but quickly transitions into an automated process where the shark hunts independently, allowing for passive income generation. Players invest in improvements like increased speed, bite strength, health, and special abilities, constantly striving to maximize their hunting efficiency and grow into an unstoppable underwater force. The game offers a satisfying loop of growth, collection, and strategic upgrades within a vibrant marine environment.
+
+Controls:
+- Mouse (Left Click): Primary interaction for actively clicking on prey, purchasing upgrades, and navigating UI menus.
+- Mouse (Hover): View statistics and descriptions for upgrades, sharks, and prey.
+
+Special Features:
+- Idle / Incremental Gameplay: Progress and earn resources even when not actively playing, making it suitable for passive engagement.
+- Evolution & Upgrades: Evolve your shark through multiple stages, unlocking powerful abilities and new species with distinct advantages.
+- Vast Ocean Ecosystem: Explore diverse hunting grounds filled with various types of marine life and potential prey.
+- Resource Management: Strategically allocate earned resources to maximize hunting efficiency and shark power.
+- Automation: Unlock and upgrade systems that allow the shark to hunt and generate income autonomously.
+- Collection Elements: Discover and collect new shark species and unique items.
+- Prestige System (common in idle games): Potentially reset progress for powerful, permanent bonuses to accelerate future playthroughs.

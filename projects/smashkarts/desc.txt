@@ -1,0 +1,18 @@
+"Smash Karts" is a vibrant and action-packed multiplayer kart combat game that brings high-octane racing and explosive arena battles directly to your web browser. Players control customizable karts equipped with an array of wacky weapons and power-ups, competing in diverse 3D arenas. The objective is to eliminate opponents, capture flags, or outscore rivals within a set time limit. Gameplay combines driving mechanics with frantic projectile dodging and strategic weapon deployment. Each arena is filled with ramps, hazards, and hidden power-up boxes, encouraging aggressive driving and tactical combat. With its colorful graphics, responsive controls, and accessible multiplayer action, "Smash Karts" offers a thrilling and competitive experience that's easy to pick up but challenging to master. It's designed for quick, intense matches that provide endless fun for players looking for fast-paced kart combat.
+
+Controls:
+- WASD Keys / Arrow Keys: Drive kart (Forward, Backward, Turn Left, Turn Right).
+- Spacebar: Use item / Fire weapon.
+- Shift Key: Drift (for sharper turns and potential boosts).
+- E Key / Q Key: Change camera perspective (if applicable).
+- Mouse (Left Click): Navigate menus.
+
+Special Features:
+- Multiplayer Kart Combat: Compete in real-time against other players in explosive arena battles.
+- Wide Array of Weapons & Power-ups: From missiles and bombs to shields and speed boosts, adding strategic depth to combat.
+- Customizable Karts & Characters: Personalize your kart and driver with various skins and accessories.
+- Dynamic 3D Arenas: Multiple maps with unique layouts, ramps, hazards, and interactive elements.
+- Fast-Paced Action: Quick, intense rounds that keep players engaged and on their toes.
+- Responsive Driving Mechanics: Intuitive controls for drifting, boosting, and precise movement.
+- Accessible Gameplay: Easy to learn for newcomers, but with enough depth for skilled players to master.
+- Leaderboards & Progression: Track your stats and climb the ranks to become the ultimate kart champion.

@@ -1,0 +1,16 @@
+"Rolly Vortex" is a fast-paced, high-reflex arcade game that challenges players to navigate a ball through an ever-spinning, procedurally generated tunnel filled with gaps and obstacles. The objective is to survive for as long as possible and achieve the highest score by avoiding collisions with the tunnel walls and various incoming barriers. Players control the ball's horizontal movement, shifting it left or right to find safe passages in the rapidly rotating vortex. The game's minimalist aesthetic, vibrant colors, and intense electronic soundtrack combine to create an immersive and adrenaline-pumping experience. It demands extreme focus, quick decision-making, and precise timing as the speed and complexity of the vortex increase continuously. "Rolly Vortex" is an endless runner that provides a pure test of reaction time and pattern recognition, making it highly addictive for those seeking a challenging arcade experience.
+
+Controls:
+- Left Arrow Key / A Key: Move the ball left.
+- Right Arrow Key / D Key: Move the ball right.
+- Mouse (Left Click & Drag): Drag left or right to move the ball horizontally.
+
+Special Features:
+- Fast-Paced Arcade Action: Intense, high-speed gameplay requiring constant attention.
+- Procedurally Generated Tunnel: Ensures a unique and unpredictable experience with each playthrough.
+- Spinning Vortex Mechanic: The constantly rotating tunnel adds a unique layer of challenge and disorientation.
+- High Reflex & Precision Demands: Requires extremely quick reactions and accurate movements to survive.
+- Minimalist & Vibrant Visuals: Clean aesthetic with bright colors that enhance the sense of speed.
+- Addictive Endless Runner: Designed for high scores and continuous play, with increasing difficulty.
+- Responsive Controls: Tight and immediate controls are crucial for navigating the vortex.
+- Electronic Soundtrack: Energetic music that complements the fast-paced gameplay and immerses the player.

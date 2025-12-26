@@ -1,0 +1,18 @@
+"Moto X3M Pool Party" is a summer-themed installment of the popular physics-based motocross racing series. It takes all the exhilarating stunt-filled action of the original Moto X3M and transports it to a vibrant, aquatic environment. Players control a dirt bike rider through a series of water park-inspired tracks, featuring giant slides, inflatable obstacles, water traps, and sun-drenched loops. The objective remains the same: complete each level as quickly as possible, performing daring flips and tricks to shave off time and earn a perfect three-star rating. The game maintains the series' exaggerated physics, allowing for spectacular aerial maneuvers and amusing, splashy crashes. Its bright, colorful aesthetic, coupled with the responsive controls and satisfying progression, makes "Moto X3M Pool Party" a refreshing and engaging experience for fans of stunt racing and platforming challenges, adding a sunny twist to the familiar formula.
+
+Controls:
+- Up Arrow Key / W Key: Accelerate.
+- Down Arrow Key / S Key: Brake / Reverse.
+- Left Arrow Key / A Key: Lean left (controls bike rotation in air).
+- Right Arrow Key / D Key: Lean right (controls bike rotation in air).
+
+Special Features:
+- Pool Party Theme: Vibrant summer and water park inspired tracks with unique obstacles.
+- Physics-Based Motocross: Exaggerated but consistent physics for dynamic stunts and gameplay.
+- Extreme Tracks: Levels packed with water slides, inflatable hazards, and innovative water-themed challenges.
+- Stunt System: Perform front flips and backflips to reduce your total time for a level.
+- Star Rating System: Encourages replayability to achieve perfect three-star scores on all levels.
+- Unlockable Bikes: Earn stars to unlock new, often more powerful or unique bikes.
+- Fast-Paced Action: High-speed racing and quick decision-making are key to success.
+- Responsive Controls: Tight controls allow for precise maneuvering and stunt execution.
+- Addictive Gameplay Loop: The challenge of mastering each track and improving times keeps players engaged.

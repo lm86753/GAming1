@@ -1,0 +1,17 @@
+"Mini Putt" is a charming and accessible miniature golf game that focuses on precision, strategy, and understanding physics. Players guide a golf ball through a series of whimsical courses, each filled with unique obstacles, slopes, and traps. The objective is to sink the ball into the hole in as few strokes as possible, aiming for a low score across all holes. Gameplay involves setting the direction and power of each shot, often requiring careful consideration of angles, gravity, and the various environmental hazards like water hazards, sand traps, and moving platforms. The game typically features a simple, cartoonish art style, making it inviting for players of all ages. It's a relaxing yet engaging puzzle experience that rewards patience, careful planning, and a good eye for trajectories, offering a satisfying blend of casual fun and strategic challenge.
+
+Controls:
+- Mouse (Left Click & Drag): Primary interaction. Click and drag away from the ball to set power and direction. Release to hit the ball.
+- Mouse (Click & Hold): May be used to fine-tune aim or power before releasing.
+- Spacebar: Confirm shot / Skip animations (if applicable).
+- R Key: Restart hole (common in some versions).
+
+Special Features:
+- Physics-Based Golf Gameplay: Accurate (or exaggerated for fun) physics govern the ball's movement.
+- Creative Course Design: Whimsical and challenging miniature golf courses with unique obstacles.
+- Precision & Strategy: Requires careful aim, power control, and planning to achieve par or a hole-in-one.
+- Casual & Relaxing: A laid-back gaming experience suitable for all ages.
+- Variable Environments: Courses can feature different themes and interactive elements.
+- Score Tracking: Tracks strokes per hole and overall score, encouraging improvement.
+- Replayability: Players can replay courses to master them and achieve better scores.
+- Simple & Intuitive Interface: Easy to learn controls and clear visual feedback.

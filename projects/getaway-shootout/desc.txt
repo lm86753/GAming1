@@ -1,0 +1,18 @@
+"Getaway Shootout" is a chaotic and physics-based multiplayer platform shooter designed for quick, frantic matches. The objective is to outmaneuver and outgun your opponents to reach an escape vehicle before they do. Players control ragdoll-like characters, making movement hilariously clumsy and unpredictable, which adds to the game's unique charm and challenge. Levels are filled with various weapons, power-ups, and environmental hazards that can be used to gain an advantage or create spectacular failures. The game shines in its local multiplayer mode, where up to four players can battle it out, leading to laugh-out-loud moments of slapstick combat and intense competition. It's an ideal game for casual fun with friends, emphasizing quick reactions and tactical use of the environment and physics.
+
+Controls:
+- W Key / Up Arrow Key: Jump / Move upwards (e.g., climbing ladders).
+- A Key / Left Arrow Key: Move left.
+- D Key / Right Arrow Key: Move right.
+- S Key / Down Arrow Key: Duck / Interact (e.g., pick up weapons, enter vehicles).
+- Left Mouse Click / J Key: Shoot weapon.
+- Right Mouse Click / K Key: Throw weapon / Use item.
+- E Key / L Key: Boost / Special ability (contextual).
+
+Special Features:
+- Ragdoll Physics: Hilariously unpredictable character movement and combat.
+- Local Multiplayer: Supports up to four players on a single keyboard/controller for frantic fun.
+- Variety of Weapons & Power-ups: From pistols to rocket launchers, each offering unique ways to wreak havoc.
+- Dynamic Environments: Interactive levels with moving platforms, traps, and destructible elements.
+- Fast-Paced Action: Quick rounds and constant engagement, perfect for short gaming sessions.
+- Humorous Gameplay: The chaotic physics and unpredictable outcomes lead to many funny moments.

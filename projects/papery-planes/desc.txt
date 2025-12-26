@@ -1,0 +1,18 @@
+"Papery Planes" is a charming and physics-driven arcade game where players control a paper airplane navigating through a beautifully stylized, often minimalistic, environment. The objective is typically to guide the paper plane through various checkpoints, collect stars or rings, and land safely, all while avoiding obstacles and utilizing air currents. The game often features a unique control scheme that mimics the delicate balance and aerodynamic properties of a paper plane, requiring subtle adjustments rather than direct, powerful commands. Its visuals are usually clean, crisp, and evoke a sense of calm or nostalgic wonder, often with gentle music that complements the serene gameplay. "Papery Planes" is a test of delicate control, spatial awareness, and patience, offering a relaxing yet engaging experience that rewards graceful maneuvers and precision.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Tilt the paper plane left or right to steer.
+- Up Arrow Key / W Key: Increase thrust / dive gently (depending on physics model).
+- Down Arrow Key / S Key: Decrease thrust / ascend gently (depending on physics model).
+- Spacebar: Deploy a burst of speed or special ability (if applicable).
+- Mouse (Left Click): May be used for launching the plane or interacting with UI.
+
+Special Features:
+- Physics-Based Flight Simulation: Delicate and realistic (or artfully exaggerated) aerodynamics for paper planes.
+- Minimalist & Stylized Art: Beautiful, clean visuals that often create serene or imaginative landscapes.
+- Gentle & Relaxing Gameplay: Focuses on careful navigation rather than high-octane action.
+- Precision Control: Requires subtle and accurate adjustments to maintain flight and steer.
+- Environmental Interactions: Utilize wind currents, thermals, and avoid obstacles in the environment.
+- Objective-Based Levels: Each level presents specific goals like collecting items or reaching a landing zone.
+- Unlockable Customizations: Personalize your paper plane with different designs or abilities.
+- Calm Soundtrack: Soothing music enhances the tranquil flying experience.

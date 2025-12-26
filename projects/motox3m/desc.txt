@@ -1,0 +1,17 @@
+"Moto X3M" is an exhilarating and highly addictive physics-based motocross racing game that combines extreme stunts, challenging obstacles, and fast-paced gameplay. Players control a dirt bike rider through a series of increasingly complex and treacherous tracks filled with loops, jumps, explosives, and other elaborate contraptions. The objective is to complete each level as quickly as possible, performing spectacular flips and tricks along the way to earn bonus time and achieve a perfect three-star rating. The game's charm comes from its exaggerated physics, allowing for incredible aerial maneuvers and often hilarious crashes. It demands precise timing, quick reflexes, and an understanding of momentum to navigate the demanding courses. With its vibrant graphics, responsive controls, and a satisfying sense of progression, Moto X3M offers an engaging and often frustratingly fun experience for fans of stunt racing and platforming challenges.
+
+Controls:
+- Up Arrow Key / W Key: Accelerate.
+- Down Arrow Key / S Key: Brake / Reverse.
+- Left Arrow Key / A Key: Lean left (controls bike rotation in air).
+- Right Arrow Key / D Key: Lean right (controls bike rotation in air).
+
+Special Features:
+- Physics-Based Motocross: Exaggerated but consistent physics allow for incredible stunts and dynamic gameplay.
+- Extreme Tracks: Levels are packed with loops, ramps, explosives, and other creative hazards.
+- Stunt System: Perform front flips and backflips to reduce your total time for a level.
+- Star Rating System: Encourages replayability to achieve perfect three-star scores on all levels.
+- Unlockable Bikes: Earn stars to unlock new, often more powerful or unique bikes.
+- Fast-Paced Action: High-speed racing and quick decision-making are key to success.
+- Responsive Controls: Tight controls allow for precise maneuvering and stunt execution.
+- Addictive Gameplay Loop: The challenge of mastering each track and improving times keeps players engaged.

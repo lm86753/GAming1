@@ -1,0 +1,15 @@
+"Game Inside" is a unique meta-puzzle platformer where the game world is constantly shifting and adapting based on the player's interactions and perspectives. The core concept revolves around breaking the fourth wall, as players navigate not just a character within a level, but also manipulate elements of the game's interface and underlying code. The objective often involves solving puzzles that require thinking outside the traditional game box, such as moving UI elements to reveal hidden paths or altering on-screen text to change game logic. The theme is self-referential and explores the nature of video games themselves, often with humorous or philosophical undertones. It challenges players to question the boundaries of what a game can be.
+
+Controls:
+- Arrow Keys / WASD: Move the character (left, right, jump).
+- Mouse (Left Click): Interact with on-screen elements, move UI components, or select options.
+- Mouse (Drag): Manipulate certain game elements or parts of the interface.
+- Escape Key: Pause menu or exit meta-game segments.
+- Contextual (Varies): Specific puzzles may introduce temporary, unique control schemes, often hinted at through in-game text or visual cues.
+
+Special Features:
+- Meta-Puzzle Gameplay: Puzzles that involve manipulating the game's interface or understanding its underlying structure.
+- Fourth Wall Breaking: Direct interaction with elements that are typically outside the game world, creating a unique and often humorous experience.
+- Shifting Realities: The game world and its rules can change dynamically based on player actions.
+- Philosophical/Humorous Narrative: Explores themes about the nature of games and reality in an engaging way.
+- Innovative Design: Challenges conventional gaming tropes and encourages creative problem-solving.

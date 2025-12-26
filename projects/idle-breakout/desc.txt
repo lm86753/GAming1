@@ -1,0 +1,15 @@
+"Idle Breakout" is an addictive incremental idle game that merges the classic arcade game Breakout with idle clicker mechanics. Players start with a simple paddle and a ball, breaking bricks to earn money. The core objective is to passively generate income and invest it into various upgrades, automation, and additional balls/paddles to accelerate brick-breaking and money accumulation. Initially, manual clicking is required, but quickly players can purchase auto-launchers, upgrade ball speed and damage, acquire special balls with unique properties, and even unlock prestige mechanics to further boost progression. The game features an endless loop of breaking, earning, upgrading, and repeating, providing a satisfying sense of continuous growth and optimization. It's designed for casual play, allowing progress even when the player is away, making it a perfect game for those who enjoy seeing numbers go up.
+
+Controls:
+- Mouse (Left Click): Manually launch balls (if not automated), click on bricks for direct damage, and interact with all UI elements for upgrades and purchases.
+- Mouse (Hover): View tooltips and information on upgrades and stats.
+
+Special Features:
+- Idle / Incremental Gameplay: Progress and earn resources even when not actively playing.
+- Breakout-Style Core: Familiar brick-breaking mechanics at its heart.
+- Extensive Upgrade System: A vast array of upgrades for balls, paddles, and automation to continuously boost income and efficiency.
+- Automation: Purchase and enhance launchers to automatically clear bricks.
+- Special Balls: Unlock and upgrade different types of balls with unique effects (e.g., multi-ball, explosive, piercing).
+- Prestige System: Reset progress for powerful permanent bonuses, encouraging long-term engagement and even faster future progression.
+- Offline Earnings: Accumulate resources while the game is closed.
+- Satisfying Progression: The continuous growth of power and wealth provides a rewarding experience.

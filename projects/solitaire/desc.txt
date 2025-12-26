@@ -1,0 +1,18 @@
+"Solitaire," most commonly referring to Klondike Solitaire, is a classic single-player card game played with a standard 52-card deck. The objective is to move all cards to four foundation piles, one for each suit, in ascending order from Ace to King. Players start with a tableau of seven columns of cards, with the top card of each column face-up. The remaining cards form the stock and waste piles. Gameplay involves strategically moving cards between tableau columns (building down in alternating colors), from the stock/waste to the tableau, and eventually to the foundations. Success requires careful planning, foresight, and a bit of luck, as not all games are winnable. It's a timeless game praised for its ability to provide a relaxing yet mentally stimulating experience, perfect for passing time and exercising logical thinking.
+
+Controls:
+- Mouse (Left Click): Select a card or pile, move a card to a valid position, draw from the stock pile.
+- Mouse (Double Click): Automatically move a card to the foundation pile if a valid move exists.
+- Mouse (Drag & Drop): Click and drag a card or a sequence of cards to move them to a new valid location.
+- Undo Button: Take back the last move.
+- New Game Button: Start a new game.
+
+Special Features:
+- Classic Card Gameplay: Authentic rules of Klondike Solitaire.
+- Single-Player Focus: Designed for individual play and mental stimulation.
+- Relaxing & Meditative: Provides a calm yet engaging puzzle-solving experience.
+- Strategic Planning: Requires careful thought to make optimal moves and uncover hidden cards.
+- Undo Functionality: Allows players to experiment with moves without permanent consequences.
+- Variable Difficulty (draw 1 or draw 3): Some versions offer variations in how cards are drawn from the stock pile.
+- Score Tracking: Keep track of game scores and win/loss statistics.
+- High Replayability: Endless combinations of card layouts ensure each game is unique.

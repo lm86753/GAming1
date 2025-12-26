@@ -1,0 +1,15 @@
+"Papa's Pizzeria" is a classic time-management and cooking simulation game where players take on the role of a pizza chef at Papa Louie's bustling pizzeria. The objective is to flawlessly prepare, cook, and serve pizzas to a continuous stream of demanding customers, ensuring their orders are accurate and delivered promptly. Gameplay involves a multi-station workflow: taking orders at the Order Station, adding toppings at the Topping Station, baking the pizza to perfection at the Bake Station, and finally slicing it correctly at the Cut Station. Each customer has unique preferences for toppings, cooking time, and slicing patterns, and their satisfaction directly impacts tips and overall score. The game is known for its escalating difficulty, requiring players to multitask and manage their time efficiently as more complex orders and impatient customers arrive. It's an addictive and charming game that tests observation skills, speed, and precision in a fast-paced culinary environment.
+
+Controls:
+- Mouse (Left Click): Primary interaction for selecting ingredients, dragging toppings, placing pizzas in ovens, slicing pizzas, and interacting with all UI elements.
+- Mouse (Drag): Used for accurately spreading toppings, moving pizzas, and precise slicing.
+
+Special Features:
+- Time Management Gameplay: Juggle multiple tasks and customer orders simultaneously to maximize efficiency and tips.
+- Cooking Simulation: Realistic (and sometimes exaggerated for gameplay) steps for making and serving pizzas.
+- Multi-Station Workflow: Players manage distinct stations (Order, Topping, Bake, Cut), each with unique mechanics.
+- Customer Personalities & Preferences: Each customer has specific demands, adding variety and challenge.
+- Upgrades & Customization: Earn money to purchase kitchen upgrades, decorations, and new ingredients.
+- Score & Tip System: Performance is directly tied to customer satisfaction, tips, and daily scores.
+- Addictive Progression: Unlock new customers, ingredients, and upgrades as you master the art of pizza making.
+- Charming Art Style: Features a distinctive cartoonish art style and memorable characters.

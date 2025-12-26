@@ -1,0 +1,17 @@
+"Learn To Fly" is a charming and addictive physics-based launch distance game with incremental upgrade mechanics. Players take on the role of a determined penguin whose goal is to learn how to fly by launching itself off a ramp and gliding as far as possible. The core objective is to improve the penguin's flight capabilities through a series of upgrades, including gliders, rockets, boosters, and payloads, to achieve ever-greater distances and altitudes. Each launch provides currency based on performance, which is then used to purchase new equipment or enhance existing ones. The game features a humorous narrative, often involving a skeptical audience or rivals, and a satisfying loop of launching, analyzing performance, upgrading, and launching again. The ultimate goal is to break flight records and defy gravity, proving that even a penguin can soar.
+
+Controls:
+- Arrow Keys (Left/Right): Adjust launch angle (before launch) or control flight pitch/roll (mid-flight, if equipped with gliders/wings).
+- Spacebar: Activate boosters or deploy special items (mid-flight).
+- Up Arrow Key: Launch (at start).
+- Mouse (Left Click): Navigate menus and purchase upgrades.
+
+Special Features:
+- Physics-Based Launch: Realistic (and often comically exaggerated) physics govern the penguin's flight.
+- Extensive Upgrade System: A wide array of gliders, boosters, rockets, and payloads to unlock and improve.
+- Incremental Progression: Continuous improvement of flight capabilities through earned currency and upgrades.
+- Humorous Narrative: Engaging story about a penguin's quest for flight with a lighthearted tone.
+- Replayability: Endless attempts to optimize launches and break personal distance records.
+- Achievements & Challenges: Specific goals and challenges to complete for bonus rewards.
+- Stat Tracking: Detailed statistics on flight performance to aid in strategic upgrading.
+- Variety of Stages/Environments: Progress through different launching areas or atmospheric conditions.

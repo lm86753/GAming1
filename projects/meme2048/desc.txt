@@ -1,0 +1,14 @@
+"Meme 2048" is a humorous and often culturally relevant variation of the popular 2048 puzzle game, where the numbered tiles are replaced with images of internet memes, pop culture references, or other themed graphics. The core gameplay remains identical to the original: players slide tiles on a grid to combine identical ones, doubling their value (or in this case, advancing to the next meme in a sequence). The objective is to reach a specific "ultimate meme" tile, typically the 2048 tile equivalent, or simply to achieve the highest possible score before the grid fills up and no more moves are possible. This version capitalizes on the engaging mechanics of 2048 while adding a layer of comedic appeal and recognition for those familiar with internet culture. Each successful merge reveals a new, often funnier or more significant meme, providing a visual reward that enhances the addictive puzzle-solving experience.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Swipe the tiles across the grid in the chosen direction. All tiles with the same value that are moving towards each other will merge.
+- Mouse (Swipe/Drag): Some implementations allow for mouse-based swiping in the desired direction.
+
+Special Features:
+- Meme-Themed Graphics: Replaces standard numbers with a sequence of popular internet memes or themed images, adding humor and visual interest.
+- Classic 2048 Gameplay: Retains the addictive slide-and-merge mechanics of the original 2048 puzzle game.
+- Culturally Relevant: Appeals to players familiar with internet culture and specific meme references.
+- Satisfying Progression: Unlocking new, often funnier memes with each merge provides a visual and comedic reward.
+- High Score Chasing: Encourages players to achieve the highest possible score or reach the ultimate meme tile.
+- Simple & Accessible: Easy-to-understand rules and controls make it playable by a wide audience.
+- Casual Puzzle Solving: Perfect for quick, brain-teasing sessions.

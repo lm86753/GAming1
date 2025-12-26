@@ -1,0 +1,21 @@
+"Hollow Knight" is a critically acclaimed 2D Metroidvania action-adventure game celebrated for its atmospheric world, intricate lore, challenging combat, and vast interconnected map. Players embody the silent protagonist, the Knight, a diminutive insectoid warrior, on a quest to uncover the mysteries of the fallen kingdom of Hallownest. The objective is to explore the decaying ruins, lush caverns, and fungal wastes, battling corrupted creatures, defeating powerful bosses, and acquiring new abilities and charms to overcome increasingly difficult challenges. The game excels in its environmental storytelling, hand-drawn art style, and haunting orchestral soundtrack, creating a deep sense of melancholic discovery. It features demanding but fair combat, rewarding exploration with secrets and upgrades, and a non-linear progression that encourages players to forge their own path through its expansive world.
+
+Controls:
+- Arrow Keys / WASD: Move the Knight (Left, Right, Up for looking/interacting, Down for looking/pogoing).
+- Z Key / J Key / Left Click: Attack (Nail swing).
+- X Key / K Key / Right Click: Jump.
+- C Key / L Key: Focus Soul / Heal.
+- V Key / Semi-colon Key: Quick Cast Spell (Requires Soul).
+- A Key / Shift Key: Dash.
+- S Key / Ctrl Key: Super Dash (Requires specific ability).
+- Q Key / Tab Key: Open Map.
+- Escape Key: Pause / Open Menu.
+
+Special Features:
+- Expansive Metroidvania World: A huge, interconnected map filled with hidden paths, secrets, and distinct biomes.
+- Challenging Soulslike Combat: Demanding boss battles and enemy encounters requiring precise movement and timing.
+- Deep Lore & Environmental Storytelling: A rich, melancholic narrative conveyed through exploration and subtle clues.
+- Beautiful Hand-Drawn Art: Striking visual style with detailed character designs and atmospheric environments.
+- Charms System: Customize the Knight's abilities and playstyle with a wide array of equippable charms.
+- Non-Linear Progression: Players have significant freedom to explore and tackle challenges in their preferred order.
+- Haunting Soundtrack: An acclaimed orchestral score that perfectly complements the game's atmosphere.

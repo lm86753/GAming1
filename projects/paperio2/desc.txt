@@ -1,0 +1,14 @@
+"Paper.io 2" is a highly addictive multiplayer .io game where players compete to conquer as much territory as possible on a shared playing field. Each player controls a colored block, leaving a trail of their color behind them. The objective is to expand your territory by drawing lines and connecting them back to your owned area, effectively "claiming" the enclosed space. The catch is that while extending your line, you are vulnerable: if an opponent crosses your trail before you connect it, you are eliminated. Similarly, you can eliminate opponents by crossing their vulnerable trails. The game blends strategic territorial expansion with fast-paced, high-risk maneuvers. It's a test of spatial awareness, quick reflexes, and aggressive-yet-calculated tactics, offering a thrilling and competitive experience against other real-time players. The goal is to dominate the map and become the largest player.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right) / WASD Keys: Move your colored block in the desired direction.
+
+Special Features:
+- Massively Multiplayer Online (.io game): Compete in real-time against numerous other players for territorial supremacy.
+- Territorial Conquest: Core gameplay involves expanding and defending your owned area on the map.
+- Vulnerability Mechanic: Players are exposed and can be eliminated while drawing new territory lines.
+- Strategic & Aggressive Gameplay: Requires a balance of cautious expansion and aggressive attacks on opponents.
+- Simple Controls: Easy to learn directional movement allows for immediate engagement.
+- Fast-Paced Action: Quick rounds and constant threat keep the gameplay exciting.
+- Visual Progression: Watch your color spread across the map as you gain territory, providing satisfying feedback.
+- High Score & Leaderboard: Compete for the top spot on the in-game leaderboard.

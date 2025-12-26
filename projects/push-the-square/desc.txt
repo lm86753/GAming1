@@ -1,0 +1,18 @@
+"Push The Square" is a deceptively simple yet intellectually challenging puzzle game where players manipulate a square block within a grid-based environment. The primary objective is to push the square (or a set of squares) to a designated target area, often a highlighted goal tile. The challenge arises from environmental obstacles, limited moves, and the fact that the square can typically only be pushed, not pulled or freely moved, and will continue to slide until it hits another object or wall. Levels are intricately designed to require clever planning, spatial reasoning, and foresight to navigate the square around various traps, gaps, and other movable blocks. The game often features a clean, minimalist aesthetic that focuses purely on the puzzle elements, providing a satisfying blend of casual accessibility and brain-teasing complexity. It rewards methodical thinking and an understanding of block-pushing mechanics.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right) / WASD Keys: Move the player character (if applicable) or push the square in the corresponding direction.
+- Mouse (Left Click): May be used to select which square to push, or for menu interactions.
+- R Key: Restart current level.
+- Z Key / Ctrl+Z: Undo last move.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Grid-Based Puzzles: Classic "sokoban"-style block-pushing mechanics on a grid.
+- Minimalist Design: Clean visuals that emphasize the puzzle elements without distractions.
+- Spatial Reasoning: Challenges players to visualize movements and consequences several steps ahead.
+- Progressive Difficulty: Levels become increasingly complex, introducing new obstacles and mechanics.
+- Undo System: Encourages experimentation and learning from mistakes without harsh penalties.
+- Brain-Teasing Complexity: Simple rules lead to surprisingly deep and challenging puzzles.
+- High Satisfaction: Solving a particularly tricky puzzle provides a strong sense of accomplishment.
+- Intuitive Controls: Easy-to-learn movement and interaction mechanics.

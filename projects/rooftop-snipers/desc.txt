@@ -1,0 +1,20 @@
+"Rooftop Snipers" is a chaotic and humorous 2-player physics-based fighting game where players battle it out on rooftops with an array of ridiculous weapons. The objective is to knock your opponent off the roof before they knock you off. The game features exaggerated ragdoll physics, making every movement and shot hilariously unpredictable. Players control their character's jump, aim, and shoot with a minimalist control scheme that adds to the challenge and comedic effect. Each round introduces different weapons, from pistols and shotguns to baseball bats and even flying saucers, leading to unique and often absurd combat scenarios. Its simple premise and focus on local multiplayer make it an ideal party game, generating endless laughter and intense, unpredictable showdowns as players struggle to maintain balance and land a decisive blow.
+
+Controls:
+- Player 1 Controls:
+    - W Key: Jump.
+    - E Key: Shoot / Melee.
+- Player 2 Controls:
+    - I Key: Jump.
+    - O Key: Shoot / Melee.
+- Mouse (Left Click): Drag to aim (often not available in 2-player modes, or a shared aim for single-player).
+
+Special Features:
+- 2-Player Local Multiplayer: Designed for direct head-to-head chaotic fun on the same keyboard.
+- Physics-Based Combat: Exaggerated ragdoll physics lead to unpredictable and humorous movements and interactions.
+- Absurd Weapon Variety: Wide range of comical and unexpected weapons, each with unique effects.
+- Simple Controls: Easy to learn, but difficult to master due to the physics, adding to the challenge and fun.
+- Humorous Gameplay: The chaotic nature, ragdoll effects, and ridiculous weapons create constant laughter.
+- Quick Rounds: Fast-paced matches perfect for short, intense showdowns.
+- Rooftop Arenas: Simple, elevated platforms that emphasize knocking opponents off.
+- Addictive Showdowns: The unpredictability keeps players coming back for "just one more round."

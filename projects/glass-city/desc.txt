@@ -1,0 +1,18 @@
+"Glass City" is a visually stunning and strategically deep city-building simulation game set in a futuristic world where all structures are crafted from advanced, transparent materials. Players are tasked with designing, constructing, and managing a sprawling metropolis made entirely of glass, focusing on aesthetics, efficiency, and sustainability. The objective extends beyond mere population growth; it involves creating a harmonious urban ecosystem where citizens thrive amidst a delicate balance of resource production, energy management, and environmental impact. The unique "glass" aesthetic isn't just cosmetic; it influences gameplay through challenges like light reflection, structural integrity, and the need for innovative architectural solutions to maintain privacy and comfort within transparent buildings. Players must meticulously plan their city's layout, infrastructure, and services to create a utopian society.
+
+Controls:
+- Mouse (Left Click): Select buildings, place structures, interact with UI elements.
+- Mouse (Right Click): Deselect, cancel current action, or open context menus.
+- Mouse (Scroll Wheel): Zoom in/out on the city.
+- WASD Keys / Arrow Keys: Pan the camera across the city map.
+- Q / E Keys: Rotate camera or selected structures.
+- Tab Key: Cycle through different overlay views (e.g., energy grid, pollution, traffic).
+- Escape Key: Open game menu / pause.
+
+Special Features:
+- Unique Transparent Aesthetic: All buildings are made of glass, creating a distinct visual style and influencing gameplay.
+- Complex Resource Management: Balance intricate production chains, energy demands, and waste management in a futuristic setting.
+- Environmental Challenges: Manage light reflection, heat absorption, and structural integrity unique to glass architecture.
+- Advanced Infrastructure: Design intricate transport networks, energy grids, and public services for a future city.
+- Citizen Happiness & AI: Monitor and cater to the needs of a diverse populace with advanced AI behaviors.
+- Strategic Planning: Emphasizes long-term planning and adaptive strategy to overcome evolving urban challenges.

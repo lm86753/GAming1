@@ -1,0 +1,17 @@
+"OM-Bounce" is a mesmerizing and minimalist physics-based puzzle game where players guide a bouncing object (often a sphere or simple shape) through a series of increasingly intricate levels. The objective is to direct the object to a designated target or exit point, utilizing various environmental elements like platforms, gravity changers, portals, and bumpers. Players typically cannot directly control the bouncing object's movement once launched; instead, they manipulate the environment or apply directional impulses at strategic moments. The game emphasizes planning, trajectory prediction, and understanding how physics interact with the level design. Its clean aesthetic, often accompanied by a calm and meditative soundtrack, provides a relaxing yet intellectually stimulating experience. OM-Bounce challenges players to think several steps ahead, making it a satisfying test of spatial reasoning and precise timing.
+
+Controls:
+- Mouse (Left Click): Primary interaction for placing/activating environmental elements, launching the object, or applying directional impulses.
+- Mouse (Drag): May be used for adjusting angles or strengths of certain elements.
+- R Key: Restart level.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Physics-Based Puzzles: Core gameplay revolves around accurate (or stylized) physics and trajectory prediction.
+- Minimalist Visuals: Clean and uncluttered aesthetic, focusing on clarity of puzzle elements.
+- Indirect Control: Players manipulate the environment rather than directly controlling the bouncing object.
+- Strategic Planning: Requires careful thought and foresight to set up successful pathways.
+- Progressive Difficulty: Levels gradually introduce new mechanics and become more complex.
+- Calm & Meditative Atmosphere: Often features a soothing soundtrack and visual style.
+- Precision & Timing: Success depends on exact placement and perfectly timed activations.
+- High Replayability: Mastering levels and finding optimal solutions offers lasting engagement.

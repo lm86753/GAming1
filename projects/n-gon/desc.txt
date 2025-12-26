@@ -1,0 +1,16 @@
+"N-Gon" is a minimalist and challenging arcade puzzle game that centers around the manipulation of a multi-sided polygon (the "N-Gon") within a confined space. The objective is to navigate the N-Gon through a series of increasingly complex mazes and obstacles without colliding with the walls or hazards. The game often features a unique mechanic where the N-Gon can change its number of sides (e.g., from a triangle to a square, then a pentagon, etc.), altering its collision shape and how it fits through narrow passages. This requires players to strategically adapt their N-Gon's form to solve spatial puzzles and overcome environmental challenges. Its clean, geometric aesthetic and precise physics create an intensely focused experience that demands spatial reasoning, quick reflexes, and forward planning. Success comes from mastering the N-Gon's transformations and timing movements perfectly.
+
+Controls:
+- Arrow Keys / WASD: Move the N-Gon (e.g., up, down, left, right).
+- Spacebar / X Key: Change the number of sides/form of the N-Gon.
+- R Key: Restart level.
+- Escape Key: Pause game / Access menu.
+
+Special Features:
+- Dynamic Geometric Transformations: The ability to change the N-Gon's number of sides, directly impacting gameplay.
+- Minimalist Aesthetic: Clean, geometric visuals that focus on clarity and gameplay mechanics.
+- Physics-Based Puzzle Platforming: Challenging levels that combine precise movement with spatial puzzle-solving.
+- Progressive Difficulty: Levels become increasingly intricate and demanding, requiring advanced planning and execution.
+- Precision Control: Demands accurate inputs and careful timing for successful navigation.
+- Spatial Reasoning Challenge: Tests players' ability to visualize and manipulate shapes in a confined environment.
+- High Replayability: Mastering levels and achieving optimal routes provides lasting engagement.
