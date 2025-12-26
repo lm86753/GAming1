@@ -25,8 +25,16 @@
             backdrop-filter: blur(10px); 
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: all 0.3s ease; /* Smooth transition for the glow */
         }
         
+        /* New Glow Effect */
+        .hover-glow:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+            transform: translateY(-2px);
+        }
+
         .gradient-text { 
             background: linear-gradient(90deg, #3b82f6, #60a5fa); 
             -webkit-background-clip: text; 
@@ -50,7 +58,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             
-            <div class="glass p-8 rounded-[2.5rem] border-blue-500/20">
+            <div class="glass hover-glow p-8 rounded-[2.5rem] border-blue-500/20">
                 <div class="flex flex-col items-center text-center space-y-4">
                     <div class="w-24 h-24 rounded-2xl overflow-hidden border border-blue-500/40">
                         <img src="logo.ico" alt="Lead Penguin" class="w-full h-full object-cover">
@@ -65,23 +73,23 @@
                 </div>
             </div>
 
-            <div class="glass p-8 rounded-[2.5rem]">
+            <div class="glass hover-glow p-8 rounded-[2.5rem] border-blue-500/20">
                 <div class="flex flex-col items-center text-center space-y-4">
-                    <div class="w-24 h-24 rounded-2xl overflow-hidden border border-white/10 grayscale">
+                    <div class="w-24 h-24 rounded-2xl overflow-hidden border border-blue-500/40">
                         <img src="logo2.png" alt="Developer" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <h2 class="text-2xl font-bold uppercase tracking-tight">Lead <span class="text-gray-400">Penguin</span></h2>
-                        <p class="text-gray-500 text-xs font-bold tracking-widest mt-1">PARTNER & DESIGN</p>
+                        <h2 class="text-2xl font-bold uppercase tracking-tight">Lead <span class="text-blue-500">Penguin</span></h2>
+                        <p class="text-blue-400 text-xs font-bold tracking-widest mt-1">PARTNER & DESIGN</p>
                     </div>
-                    <p class="text-gray-400x text-sm">
+                    <p class="text-gray-400 text-sm">
                         "when all else fails be stupid like me and chief penguin thinks the correct stuffs" -Lead Penguin
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="glass p-10 rounded-[2.5rem] mb-8">
+        <div class="glass hover-glow p-10 rounded-[2.5rem] mb-8">
             <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
                 <i class="fa-solid fa-book-open text-blue-500 text-xl"></i> Our Story
             </h3>
@@ -91,24 +99,24 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="glass p-6 rounded-3xl">
+            <div class="glass hover-glow p-6 rounded-3xl">
                 <i class="fa-solid fa-code text-blue-500 mb-3 block text-xl"></i>
                 <h4 class="font-bold mb-2">Frontend</h4>
                 <p class="text-xs text-gray-500 leading-relaxed">Built with HTML5, Tailwind CSS, and optimized JavaScript for instant responsiveness.</p>
             </div>
-            <div class="glass p-6 rounded-3xl">
+            <div class="glass hover-glow p-6 rounded-3xl">
                 <i class="fa-solid fa-bolt text-blue-500 mb-3 block text-xl"></i>
                 <h4 class="font-bold mb-2">Performance</h4>
                 <p class="text-xs text-gray-500 leading-relaxed">We utilize lightweight iframe containers and lazy-loading to keep game latency at an absolute minimum.</p>
             </div>
-            <div class="glass p-6 rounded-3xl">
+            <div class="glass hover-glow p-6 rounded-3xl">
                 <i class="fa-solid fa-shield-virus text-blue-500 mb-3 block text-xl"></i>
                 <h4 class="font-bold mb-2">Security</h4>
                 <p class="text-xs text-gray-500 leading-relaxed">Safe sandboxing is used for all external game content to ensure user data remains protected.</p>
             </div>
         </div>
 
-        <div class="glass p-10 rounded-[2.5rem]">
+        <div class="glass hover-glow p-10 rounded-[2.5rem]">
             <h3 class="text-2xl font-bold mb-6">Frequently Asked Questions</h3>
             <div class="space-y-6">
                 <div>
