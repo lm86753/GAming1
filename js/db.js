@@ -11,16 +11,29 @@ const firebaseConfig = {
     appId: "1:2741037904:web:7e5ef7a989962fe41d5a55"
 };
 
-// Initialize Firebase
 let app, db;
-try {
-    app = firebase.initializeApp(firebaseConfig);
-    db = firebase.database();
-    console.log("Firebase initialized");
-    try { document.dispatchEvent(new Event('firebase-ready')); } catch(e){}
-} catch (e) {
-    console.error("Firebase init failed. Make sure you updated firebaseConfig in js/db.js");
+let __initAttempts = 0;
+function __initFirebase(){
+    if (typeof firebase === 'undefined') {
+        __initAttempts++;
+        if (__initAttempts < 20) setTimeout(__initFirebase, 1000);
+        return;
+    }
+    try {
+        if (firebase.apps && firebase.apps.length) {
+            app = firebase.app();
+        } else {
+            app = firebase.initializeApp(firebaseConfig);
+        }
+        db = firebase.database();
+        console.log("Firebase initialized");
+        try { document.dispatchEvent(new Event('firebase-ready')); } catch(e){}
+    } catch (e) {
+        __initAttempts++;
+        if (__initAttempts < 20) setTimeout(__initFirebase, Math.min(5000, 500 * __initAttempts));
+    }
 }
+__initFirebase();
 
 // --- GLOBAL TRACKING FUNCTIONS ---
 

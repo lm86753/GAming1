@@ -169,26 +169,33 @@ document.addEventListener('click', (e) => {
 });
 
 (function() {
-    if (!document.querySelector('script[src*="firebase-app-compat"]')) {
-        const appScript = document.createElement('script');
-        appScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js";
-        document.head.appendChild(appScript);
-        
-        const dbScript = document.createElement('script');
-        dbScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js";
-        document.head.appendChild(dbScript);
-        
-        dbScript.onload = function() {
-            const myDbScript = document.createElement('script');
-            myDbScript.src = "/js/db.js";
-            document.head.appendChild(myDbScript);
-        };
-    } else {
-        if (!document.querySelector('script[src="/js/db.js"]')) {
-            const myDbScript = document.createElement('script');
-            myDbScript.src = "/js/db.js";
-            document.head.appendChild(myDbScript);
+    function load(src, cb){
+        const s = document.createElement('script');
+        s.src = src;
+        if (cb) s.onload = cb;
+        document.head.appendChild(s);
+    }
+    const hasApp = !!document.querySelector('script[src*="firebase-app-compat"]');
+    const hasDb = !!document.querySelector('script[src*="firebase-database-compat"]');
+    function ensureDbThenInit(){
+        if (!hasDb) {
+            load("https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js", function(){
+                if (!document.querySelector('script[src="/js/db.js"]')) {
+                    load("/js/db.js");
+                }
+            });
+        } else {
+            if (!document.querySelector('script[src="/js/db.js"]')) {
+                load("/js/db.js");
+            }
         }
+    }
+    if (!hasApp) {
+        load("https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js", function(){
+            ensureDbThenInit();
+        });
+    } else {
+        ensureDbThenInit();
     }
 })();
 
