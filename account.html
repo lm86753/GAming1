@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account | Penguin Labs</title>
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; margin: 0; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-24">
+        <header class="flex justify-between items-end mb-12">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    Your <span class="gradient-text">Account</span>
+                </h1>
+                <p class="text-gray-400 mt-2">Secure email/password login with real-time stats.</p>
+            </div>
+            <div>
+                <button id="signOutBtn" class="glass px-4 py-2 rounded-xl text-sm font-bold hover:bg-white/10 hidden">Sign out</button>
+            </div>
+        </header>
+
+        <section id="authSection" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="glass p-8 rounded-[2.5rem]">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-user-plus text-blue-500"></i> Create Account</h3>
+                <div class="space-y-3">
+                    <input id="regEmail" type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <input id="regPassword" type="password" placeholder="Password" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <button id="registerBtn" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold">Sign up</button>
+                    <p id="regError" class="text-red-500 text-sm hidden"></p>
+                </div>
+            </div>
+            <div class="glass p-8 rounded-[2.5rem]">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-3"><i class="fa-solid fa-right-to-bracket text-blue-500"></i> Sign In</h3>
+                <div class="space-y-3">
+                    <input id="logEmail" type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <input id="logPassword" type="password" placeholder="Password" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3">
+                    <button id="loginBtn" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold">Sign in</button>
+                    <p id="logError" class="text-red-500 text-sm hidden"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="statsSection" class="hidden space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-gray-400 font-bold uppercase tracking-wider text-sm mb-2">Total Time</h4>
+                    <p id="totalTime" class="text-3xl font-black">–</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-gray-400 font-bold uppercase tracking-wider text-sm mb-2">Pages Visited</h4>
+                    <p id="pagesCount" class="text-3xl font-black">–</p>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <h4 class="text-gray-400 font-bold uppercase tracking-wider text-sm mb-2">Feedback Posts</h4>
+                    <p id="feedbackCount" class="text-3xl font-black">–</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="glass rounded-[2.5rem] p-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3"><i class="fa-solid fa-gamepad text-blue-500"></i> Time by Game</h3>
+                    <div id="gamesTimeList" class="space-y-3"></div>
+                </div>
+                <div class="glass rounded-[2.5rem] p-8">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3"><i class="fa-solid fa-comments text-blue-500"></i> Your Feedback</h3>
+                    <div id="userFeedbackList" class="space-y-4"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/nav.js"></script>
+    <script src="/js/db.js"></script>
+    <script>
+        function fmt(ms) {
+            const s = Math.floor(ms / 1000);
+            const h = Math.floor(s / 3600);
+            const m = Math.floor((s % 3600) / 60);
+            return h > 0 ? (h + 'h ' + m + 'm') : (m + 'm');
+        }
+
+        function bindAuthUI() {
+            const regEmail = document.getElementById('regEmail');
+            const regPassword = document.getElementById('regPassword');
+            const registerBtn = document.getElementById('registerBtn');
+            const regError = document.getElementById('regError');
+            const logEmail = document.getElementById('logEmail');
+            const logPassword = document.getElementById('logPassword');
+            const loginBtn = document.getElementById('loginBtn');
+            const logError = document.getElementById('logError');
+            const signOutBtn = document.getElementById('signOutBtn');
+
+            registerBtn.onclick = () => {
+                regError.classList.add('hidden');
+                signUp(regEmail.value, regPassword.value)
+                    .catch(e => { regError.textContent = e.message; regError.classList.remove('hidden'); });
+            };
+            loginBtn.onclick = () => {
+                logError.classList.add('hidden');
+                signIn(logEmail.value, logPassword.value)
+                    .catch(e => { logError.textContent = e.message; logError.classList.remove('hidden'); });
+            };
+            signOutBtn.onclick = () => {
+                signOut().catch(()=>{});
+            };
+        }
+
+        function onUser(user) {
+            const authSection = document.getElementById('authSection');
+            const statsSection = document.getElementById('statsSection');
+            const signOutBtn = document.getElementById('signOutBtn');
+            if (!user) {
+                authSection.classList.remove('hidden');
+                statsSection.classList.add('hidden');
+                signOutBtn.classList.add('hidden');
+                return;
+            }
+            authSection.classList.add('hidden');
+            statsSection.classList.remove('hidden');
+            signOutBtn.classList.remove('hidden');
+
+            const uid = user.uid;
+            const dbRef = firebase.database().ref;
+
+            dbRef(`users/${uid}/metrics/time_spent/total_ms`).on('value', snap => {
+                document.getElementById('totalTime').textContent = fmt(snap.val() || 0);
+            });
+            dbRef(`users/${uid}/metrics/pages`).on('value', snap => {
+                const data = snap.val() || {};
+                document.getElementById('pagesCount').textContent = Object.keys(data).length;
+            });
+            dbRef(`users/${uid}/metrics/games`).on('value', snap => {
+                const data = snap.val() || {};
+                const list = Object.entries(data).sort((a,b)=> (b[1].ms||0)-(a[1].ms||0)).map(([k,v]) => `
+                    <div class="flex items-center justify-between p-3 bg-white/5 rounded-xl border border-white/5">
+                        <span class="font-bold">${k.replace(/_/g,' ')}</span>
+                        <span class="text-blue-400 text-sm font-mono">${fmt(v.ms||0)}</span>
+                    </div>
+                `).join('');
+                document.getElementById('gamesTimeList').innerHTML = list || '<p class="text-gray-500">No game time yet.</p>';
+            });
+            dbRef(`user_feedback/${uid}`).on('value', snap => {
+                const keys = Object.keys(snap.val() || {});
+                if (keys.length === 0) {
+                    document.getElementById('userFeedbackList').innerHTML = '<p class="text-gray-500">No feedback yet.</p>';
+                    return;
+                }
+                const items = [];
+                const feedbackRef = firebase.database().ref('feedback');
+                keys.forEach(k => {
+                    feedbackRef.child(k).once('value').then(s => {
+                        const f = s.val();
+                        if (!f) return;
+                        items.push(`
+                            <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-blue-400 font-bold text-sm uppercase tracking-wider">${f.type || 'Feedback'}</span>
+                                    <span class="text-xs text-gray-500">${f.timestamp ? new Date(f.timestamp).toLocaleDateString() : ''}</span>
+                                </div>
+                                <p class="text-gray-300 text-sm leading-relaxed">${f.message}</p>
+                                ${f.email ? `<p class="text-xs text-gray-600 mt-2 block truncate">${f.email}</p>` : ''}
+                            </div>
+                        `);
+                        document.getElementById('userFeedbackList').innerHTML = items.join('');
+                    });
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            bindAuthUI();
+            if (typeof firebase !== 'undefined' && firebase.auth) {
+                firebase.auth().onAuthStateChanged(onUser);
+            }
+        });
+    </script>
+</body>
+</html>

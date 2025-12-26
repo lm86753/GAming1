@@ -12,10 +12,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-let app, db;
+let app, db, auth;
 try {
     app = firebase.initializeApp(firebaseConfig);
     db = firebase.database();
+    auth = firebase.auth();
     console.log("Firebase initialized");
 } catch (e) {
     console.error("Firebase init failed. Make sure you updated firebaseConfig in js/db.js");
@@ -69,10 +70,16 @@ function submitFeedback(data) {
     if (!db) return;
     const feedbackRef = db.ref('feedback');
     const newPostRef = feedbackRef.push();
-    newPostRef.set({
+    const uid = (auth && auth.currentUser) ? auth.currentUser.uid : null;
+    const payload = {
         ...data,
-        timestamp: firebase.database.ServerValue.TIMESTAMP
-    });
+        timestamp: firebase.database.ServerValue.TIMESTAMP,
+        uid: uid || null
+    };
+    newPostRef.set(payload);
+    if (uid) {
+        db.ref(`user_feedback/${uid}/${newPostRef.key}`).set(true);
+    }
 }
 
 // --- DASHBOARD LOGIC (For dev.html) ---
@@ -151,19 +158,82 @@ function initDashboard() {
     });
 }
 
+// --- AUTH ---
+function initAuth() {
+    if (!auth) return;
+    auth.onAuthStateChanged((user) => {
+        if (user) {
+            db.ref(`users/${user.uid}/profile`).update({
+                email: user.email || null,
+                lastLoginAt: firebase.database.ServerValue.TIMESTAMP
+            });
+        }
+    });
+}
+
+function signUp(email, password) {
+    if (!auth) return Promise.reject(new Error('No auth'));
+    return auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        db.ref(`users/${cred.user.uid}/profile`).set({
+            email: cred.user.email,
+            createdAt: firebase.database.ServerValue.TIMESTAMP
+        });
+        return cred;
+    });
+}
+
+function signIn(email, password) {
+    if (!auth) return Promise.reject(new Error('No auth'));
+    return auth.signInWithEmailAndPassword(email, password);
+}
+
+function signOut() {
+    if (!auth) return Promise.reject(new Error('No auth'));
+    return auth.signOut();
+}
+
+// --- SESSION TIME TRACKING ---
+let __sessionStart = null;
+let __currentGameTitle = null;
+
+function initSessionTracking() {
+    if (!db || !auth) return;
+    __sessionStart = Date.now();
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const t = params.get('title');
+        if (t) {
+            __currentGameTitle = t.replace(/[.#$/[\]]/g, '_');
+        }
+    } catch(e){}
+    window.addEventListener('beforeunload', persistSessionTime);
+}
+
+function persistSessionTime() {
+    if (!db || !auth || !auth.currentUser || !__sessionStart) return;
+    const uid = auth.currentUser.uid;
+    const deltaMs = Date.now() - __sessionStart;
+    const totalRef = db.ref(`users/${uid}/metrics/time_spent/total_ms`);
+    totalRef.transaction((v) => (v || 0) + deltaMs);
+    const pageRef = db.ref(`users/${uid}/metrics/pages/${location.pathname.replace(/[.#$/[\]]/g,'_')}/ms`);
+    pageRef.transaction((v) => (v || 0) + deltaMs);
+    if (__currentGameTitle) {
+        const gameRef = db.ref(`users/${uid}/metrics/games/${__currentGameTitle}/ms`);
+        gameRef.transaction((v) => (v || 0) + deltaMs);
+    }
+    __sessionStart = null;
+}
+
 // --- AUTO-INIT ON LOAD ---
-// This runs on every page to ensure tracking works
 function initGlobalTracking() {
-    // Check if Firebase is loaded
     if (typeof firebase !== 'undefined') {
         trackPresence();
-        
-        // Only track visit once per session to avoid inflation? 
-        // For now, simple page load tracking is "actual stuff".
         if (!sessionStorage.getItem('visited')) {
             trackVisit();
             sessionStorage.setItem('visited', 'true');
         }
+        initAuth();
+        initSessionTracking();
     }
 }
 

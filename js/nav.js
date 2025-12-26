@@ -140,7 +140,9 @@ const navbarHTML = `
             </div>
         </div>
 
-        <div style="width: 38px;"></div>
+        <a href="/account.html" class="nav-item" style="width:38px;height:38px;border-radius:9999px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15)" title="Account">
+            <i class="fa-solid fa-user"></i>
+        </a>
     </div>
 `;
 
@@ -167,7 +169,11 @@ document.addEventListener('click', (e) => {
         dbScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js";
         document.head.appendChild(dbScript);
         
-        dbScript.onload = function() {
+        const authScript = document.createElement('script');
+        authScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js";
+        document.head.appendChild(authScript);
+        
+        authScript.onload = function() {
             const myDbScript = document.createElement('script');
             myDbScript.src = "/js/db.js";
             document.head.appendChild(myDbScript);
