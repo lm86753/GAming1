@@ -13,14 +13,30 @@ const firebaseConfig = {
 
 // Initialize Firebase
 let app, db, auth;
-try {
-    app = firebase.initializeApp(firebaseConfig);
-    db = firebase.database();
-    auth = firebase.auth();
-    console.log("Firebase initialized");
-} catch (e) {
-    console.error("Firebase init failed. Make sure you updated firebaseConfig in js/db.js");
+function waitForAuthInit(cb) {
+    const t = setInterval(() => {
+        if (typeof firebase !== 'undefined' && firebase.app && firebase.auth) {
+            try {
+                if (!firebase.apps || !firebase.apps.length) {
+                    app = firebase.initializeApp(firebaseConfig);
+                } else {
+                    app = firebase.app();
+                }
+            } catch(e) { try { app = firebase.app(); } catch(_) {} }
+            db = firebase.database();
+            auth = firebase.auth();
+            clearInterval(t);
+            if (cb) cb();
+        }
+    }, 100);
 }
+waitForAuthInit(() => {
+    if (!sessionStorage.getItem('visited')) {
+        trackVisit();
+        sessionStorage.setItem('visited', 'true');
+    }
+    trackPresence();
+});
 
 // --- GLOBAL TRACKING FUNCTIONS ---
 
