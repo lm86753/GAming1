@@ -124,6 +124,17 @@
                 </div>
                 <div class="h-px bg-white/5 mt-12 w-full"></div>
             </div>
+            
+            <div id="popular-section" class="hidden mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-2 bg-yellow-500/20 rounded-lg text-yellow-400">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Popular Now</h2>
+                </div>
+                <div id="popular-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                <div class="h-px bg-white/5 mt-12 w-full"></div>
+            </div>
 
             <div id="game-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 </div>
@@ -161,6 +172,7 @@
             renderGames(games);
             document.getElementById("loader").style.display = "none";
             loadRecentGames();
+            initPopularGames();
         })
         .catch((error) => console.error("Error:", error));
 
@@ -215,6 +227,41 @@
                     }
                 }
             } catch(e) { console.error("Recent games error:", e); }
+        }
+        
+        function initPopularGames() {
+            if (typeof firebase === 'undefined') return;
+            const database = firebase.database();
+            const section = document.getElementById('popular-section');
+            const grid = document.getElementById('popular-grid');
+            const byTitle = {};
+            games.forEach(g => { byTitle[(g.title||'').toUpperCase()] = g; });
+            database.ref('stats/games').on('value', (snap) => {
+                const data = snap.val() || {};
+                const arr = Object.values(data).sort((a,b) => (b.count||0) - (a.count||0)).slice(0,4);
+                if (arr.length === 0) return;
+                section.classList.remove('hidden');
+                grid.innerHTML = arr.map(item => {
+                    const p = byTitle[(item.title||'').toUpperCase()];
+                    if (!p) return '';
+                    const raw = p.link || '';
+                    const isExternal = /^https?:\/\//.test(raw);
+                    const link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
+                    const wrapper = encodeURIComponent('fullscreen_system (1).html');
+                    const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(p.title||'');
+                    return `
+                        <a href="${href}" class="game-card glass p-4 rounded-[2rem] block no-underline group">
+                            <div class="relative aspect-square rounded-2xl overflow-hidden mb-4">
+                                <img src="${p.imgSrc}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                            </div>
+                            <p class="text-xl font-bold text-center mb-2 truncate px-2">${p.title}</p>
+                            <div class="text-center">
+                                <span class="text-[10px] uppercase tracking-widest text-yellow-400 font-bold opacity-0 group-hover:opacity-100 transition-opacity">Popular</span>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+            });
         }
 
         function renderGames(gameList) {
