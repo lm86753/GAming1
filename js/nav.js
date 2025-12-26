@@ -179,10 +179,23 @@ document.addEventListener('click', (e) => {
             document.head.appendChild(myDbScript);
         };
     } else {
-        if (!document.querySelector('script[src="/js/db.js"]')) {
-             const myDbScript = document.createElement('script');
-            myDbScript.src = "/js/db.js";
-            document.head.appendChild(myDbScript);
+        if (!document.querySelector('script[src*="firebase-auth-compat"]')) {
+            const authScript = document.createElement('script');
+            authScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js";
+            document.head.appendChild(authScript);
+            authScript.onload = function() {
+                if (!document.querySelector('script[src="/js/db.js"]')) {
+                    const myDbScript = document.createElement('script');
+                    myDbScript.src = "/js/db.js";
+                    document.head.appendChild(myDbScript);
+                }
+            };
+        } else {
+            if (!document.querySelector('script[src="/js/db.js"]')) {
+                const myDbScript = document.createElement('script');
+                myDbScript.src = "/js/db.js";
+                document.head.appendChild(myDbScript);
+            }
         }
     }
 })();
