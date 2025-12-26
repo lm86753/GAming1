@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dev Panel | Penguin Labs</title>
+    
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #050505; 
+            color: white; 
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        .glass { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+        
+        .gradient-text { 
+            background: linear-gradient(90deg, #3b82f6, #60a5fa); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md">
+        <div class="glass p-10 rounded-3xl w-full max-w-md text-center space-y-6">
+            <h1 class="text-3xl font-bold">Developer Access</h1>
+            <p class="text-gray-400">Please enter the security PIN to access real-time data.</p>
+            
+            <input type="password" id="pin-input" placeholder="Enter PIN" 
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-center text-xl tracking-widest focus:outline-none focus:border-blue-500 transition-all">
+            
+            <button id="unlock-btn" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold transition-all shadow-lg shadow-blue-500/20">
+                Unlock Panel
+            </button>
+            
+            <p id="error-msg" class="text-red-500 hidden font-bold">Access Denied</p>
+        </div>
+    </div>
+
+    <main id="dashboard" class="max-w-6xl mx-auto px-6 pt-32 pb-24 hidden">
+        
+        <header class="flex justify-between items-end mb-12">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight">
+                    Dev <span class="gradient-text">Panel</span>
+                </h1>
+                <p class="text-gray-400 mt-2">Real-time metrics from global users.</p>
+            </div>
+            <div class="flex items-center gap-2 text-green-400 bg-green-500/10 px-4 py-2 rounded-full border border-green-500/20">
+                <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-sm font-bold">Live Connection</span>
+            </div>
+        </header>
+
+        <!-- KPI Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Active Users -->
+            <div class="glass p-8 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-users text-6xl"></i>
+                </div>
+                <h3 class="text-gray-400 font-bold uppercase tracking-wider text-sm mb-2">Active Users</h3>
+                <p id="live-users" class="text-5xl font-black text-white">Loading...</p>
+                <p class="text-green-400 text-sm mt-2 flex items-center gap-1">
+                    <i class="fa-solid fa-arrow-trend-up"></i> Real-time
+                </p>
+            </div>
+
+            <!-- Total Visits/Updates -->
+            <div class="glass p-8 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-globe text-6xl"></i>
+                </div>
+                <h3 class="text-gray-400 font-bold uppercase tracking-wider text-sm mb-2">Total Site Visits</h3>
+                <p id="total-visits" class="text-5xl font-black text-white">Loading...</p>
+                <p class="text-blue-400 text-sm mt-2">Global Traffic</p>
+            </div>
+
+            <!-- Most Popular Game -->
+            <div class="glass p-8 rounded-3xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-trophy text-6xl"></i>
+                </div>
+                <h3 class="text-gray-400 font-bold uppercase tracking-wider text-sm mb-2">Top Game</h3>
+                <p id="top-game-name" class="text-3xl font-black text-white truncate">Loading...</p>
+                <p id="top-game-count" class="text-yellow-400 text-sm mt-2 font-mono">0 plays</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Popular Games List -->
+            <div class="glass rounded-[2.5rem] p-8 h-[500px] flex flex-col">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-gamepad text-blue-500"></i> Most Popular Games
+                </h3>
+                <div id="games-list" class="overflow-y-auto pr-2 space-y-3 flex-1">
+                    <p class="text-center text-gray-500 py-10">Connecting to database...</p>
+                </div>
+            </div>
+
+            <!-- Feedback Feed -->
+            <div class="glass rounded-[2.5rem] p-8 h-[500px] flex flex-col">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-comments text-blue-500"></i> User Feedback
+                </h3>
+                <div id="feedback-list" class="overflow-y-auto pr-2 space-y-4 flex-1">
+                    <p class="text-center text-gray-500 py-10">Connecting to database...</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="/nav.js"></script>
+    <script src="/js/db.js"></script> <!-- New DB Logic -->
+
+    <script>
+        // Password Logic
+        const pinInput = document.getElementById('pin-input');
+        const unlockBtn = document.getElementById('unlock-btn');
+        const errorMsg = document.getElementById('error-msg');
+        const loginOverlay = document.getElementById('login-overlay');
+        const dashboard = document.getElementById('dashboard');
+
+        function checkPin() {
+            if (pinInput.value === '2468') {
+                loginOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loginOverlay.style.display = 'none';
+                    dashboard.classList.remove('hidden');
+                    initDashboard(); // Function from db.js (to be created)
+                }, 500);
+            } else {
+                errorMsg.classList.remove('hidden');
+                pinInput.classList.add('border-red-500');
+            }
+        }
+
+        unlockBtn.addEventListener('click', checkPin);
+        pinInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') checkPin();
+        });
+    </script>
+
+</body>
+</html>

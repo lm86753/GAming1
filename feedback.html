@@ -145,23 +145,28 @@
     
 
     <script>
-        // Intercept form submission to save locally for Dev Panel
+        // Intercept form submission to save to Real DB for Dev Panel
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function(e) {
+                // e.preventDefault(); // Uncomment if you want to stop Formspree submission
+
                 const formData = new FormData(this);
-                const feedback = {
+                const feedbackData = {
                     type: formData.get('type'),
                     email: formData.get('email'),
-                    message: formData.get('message'),
-                    date: new Date().toISOString()
+                    message: formData.get('message')
                 };
                 
-                const existing = JSON.parse(localStorage.getItem('dev_feedback') || '[]');
-                existing.unshift(feedback);
-                // Keep only last 20
-                if (existing.length > 20) existing.pop();
-                localStorage.setItem('dev_feedback', JSON.stringify(existing));
+                // Use global function from db.js (injected via nav.js)
+                if (typeof submitFeedback === 'function') {
+                    submitFeedback(feedbackData);
+                } else {
+                    console.warn("DB not connected, saving locally as backup");
+                    const existing = JSON.parse(localStorage.getItem('dev_feedback') || '[]');
+                    existing.unshift({...feedbackData, date: new Date().toISOString()});
+                    localStorage.setItem('dev_feedback', JSON.stringify(existing));
+                }
             });
         }
     </script>
