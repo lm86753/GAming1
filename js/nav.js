@@ -205,5 +205,33 @@ document.addEventListener('click', (e) => {
         if (title && typeof trackGameClick === 'function') {
             trackGameClick(title);
         }
+
+        // Save to Recently Played (Local Storage)
+        if (title) {
+            let imgSrc = '';
+            if (card) {
+                const img = card.querySelector('img');
+                if (img) imgSrc = img.src;
+            }
+
+            if (imgSrc) {
+                const recentGame = {
+                    title: title,
+                    href: href,
+                    img: imgSrc,
+                    timestamp: Date.now()
+                };
+                
+                let recent = JSON.parse(localStorage.getItem('recentlyPlayed') || '[]');
+                // Remove duplicates
+                recent = recent.filter(g => g.title !== title);
+                // Add to front
+                recent.unshift(recentGame);
+                // Limit to 4
+                if (recent.length > 4) recent.pop();
+                
+                localStorage.setItem('recentlyPlayed', JSON.stringify(recent));
+            }
+        }
     }
 });

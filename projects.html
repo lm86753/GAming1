@@ -108,6 +108,20 @@
                 <div class="loader"></div>
             </div>
 
+            <!-- Recently Played Section -->
+            <div id="recent-section" class="hidden mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="p-2 bg-blue-500/20 rounded-lg text-blue-400">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Jump Back In</h2>
+                </div>
+                <div id="recent-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Injected via JS -->
+                </div>
+                <div class="h-px bg-white/5 mt-12 w-full"></div>
+            </div>
+
             <div id="game-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 </div>
 
@@ -143,8 +157,34 @@
             games = data;
             renderGames(games);
             document.getElementById("loader").style.display = "none";
+            loadRecentGames();
         })
         .catch((error) => console.error("Error:", error));
+
+        function loadRecentGames() {
+            try {
+                const recent = JSON.parse(localStorage.getItem('recentlyPlayed') || '[]');
+                if (recent.length === 0) return;
+
+                const section = document.getElementById('recent-section');
+                const grid = document.getElementById('recent-grid');
+                
+                section.classList.remove('hidden');
+                grid.innerHTML = recent.map(game => `
+                    <a href="${game.href}" class="glass p-3 rounded-2xl block no-underline group hover:bg-white/10 transition-all border border-blue-500/30">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-black/20">
+                                <img src="${game.img}" alt="${game.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <p class="font-bold truncate text-sm text-gray-100">${game.title}</p>
+                                <p class="text-[10px] uppercase tracking-wider text-blue-400 mt-1 font-bold">Resume</p>
+                            </div>
+                        </div>
+                    </a>
+                `).join('');
+            } catch(e) { console.error("Recent games error:", e); }
+        }
 
         function renderGames(gameList) {
             const container = document.getElementById("game-container");
