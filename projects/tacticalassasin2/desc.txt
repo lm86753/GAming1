@@ -1,0 +1,20 @@
+"Tactical Assassin 2" is a tense, first-person sniper game that places players in the role of a professional hitman, tasked with eliminating specific targets from a distance. The objective in each mission is to identify and neutralize the designated target using strategic planning, keen observation, and precise marksmanship, often under strict conditions or time limits. Gameplay focuses heavily on realism (or a stylized version of it) for ballistics, wind, and target movement, requiring players to account for environmental factors before taking a shot. Missions often involve puzzle-like elements, where players must analyze the scene, identify the correct target among a crowd, and find the opportune moment for the kill while minimizing collateral damage. Its mature theme, challenging gameplay, and emphasis on stealth and precision make it a compelling experience for fans of sniper simulations and strategic shooting.
+
+Controls:
+- Mouse (Move): Aim sniper rifle.
+- Mouse (Left Click): Fire weapon.
+- Mouse (Right Click): Zoom in/out (scope control).
+- Spacebar: Hold breath (for increased stability and accuracy).
+- R Key: Reload weapon.
+- Q / E Keys: Switch weapon (if multiple available).
+- Escape Key: Pause game / Access mission briefing.
+
+Special Features:
+- Realistic Sniper Mechanics: Account for wind, bullet drop, and target movement for precise shots.
+- Mission-Based Gameplay: A series of contracts with specific targets and challenging scenarios.
+- Strategic Planning: Players must observe environments and plan their approach to each assassination.
+- Puzzle-Like Elements: Identifying the correct target and the opportune moment often requires deduction.
+- Emphasis on Precision & Stealth: Rewards accurate shots and avoiding detection or collateral damage.
+- Tense Atmosphere: Creates a high-stakes environment where every shot counts.
+- Variety of Scenarios: Missions take place in diverse locations with different challenges.
+- Upgrades & Customization: Earn money to purchase new rifles, scopes, and equipment.

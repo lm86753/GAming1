@@ -1,0 +1,19 @@
+"Storm The House 2" is an intense, action-packed tower defense/shooter game where players must defend their house from endless waves of stick-figure invaders. The objective is to survive for as many days as possible, strategically building defenses, upgrading weapons, and managing resources to repel increasingly formidable enemy attacks. Players control a character inside the house, firing various weapons (pistols, shotguns, machine guns, grenades, etc.) at incoming stick figures. Between waves, resources earned from defeating enemies can be used to repair the house, purchase new weapons, upgrade existing ones, or build defensive structures like barricades and turrets. The game features a simple, yet effective stick-figure aesthetic, focusing on the frantic action and strategic decision-making. It's a challenging and highly addictive experience that rewards quick reflexes, careful resource management, and effective defensive planning.
+
+Controls:
+- Mouse (Left Click): Fire weapon.
+- Mouse (Move): Aim weapon.
+- WASD Keys / Arrow Keys: Move character (limited movement, often only left/right for aiming, or to interact with defenses).
+- R Key: Reload weapon.
+- Spacebar: Deploy special ability / Switch weapon (if applicable).
+- Number Keys (1-9): Select different weapons or defensive options.
+
+Special Features:
+- Wave-Based Defense: Face escalating waves of enemies, testing strategic planning and reflexes.
+- Tower Defense / Shooter Hybrid: Combines active shooting gameplay with strategic base building and upgrades.
+- Resource Management: Earn money to purchase weapons, repairs, and defenses, requiring careful allocation.
+- Extensive Weapon Arsenal: A wide variety of firearms and explosives to choose from and upgrade.
+- Defensive Upgrades: Build barricades, turrets, and other structures to fortify your house.
+- Stick Figure Graphics: Simple yet effective visual style that focuses on the action.
+- Progressive Difficulty: Enemies become tougher and more numerous with each passing day.
+- High Score & Survival Focus: Designed for replayability, with players striving to survive for the longest time.

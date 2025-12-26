@@ -1,0 +1,17 @@
+"Stick War" is a popular real-time strategy (RTS) game where players command an army of stick figures to defeat enemy stick figure nations. The objective is to destroy the enemy's statue while defending your own. Gameplay involves a unique blend of mining gold to produce units, training various types of stick figure soldiers (archers, swordsmen, spearmen, giants), and strategically deploying them in battle. Players directly control their army's formation and actions (attack, defend, retreat) with a minimalist interface that belies the strategic depth. Each unit type has strengths and weaknesses, requiring players to build balanced armies and adapt to enemy tactics. The game features a simple, yet iconic stick figure art style, making it accessible and engaging. It offers a satisfying progression of unlocking new units, upgrades, and facing increasingly challenging AI opponents.
+
+Controls:
+- Mouse (Left Click): Select units, select formations, issue commands, interact with UI elements (e.g., mine gold, train units).
+- WASD Keys / Arrow Keys: Pan camera across the battlefield.
+- Number Keys (1-9): Select specific unit types or groups.
+- Spacebar: Select all units / Advance formation.
+
+Special Features:
+- Real-Time Strategy (RTS): Build and command an army in dynamic battles.
+- Stick Figure Aesthetics: Iconic and recognizable minimalist art style.
+- Unit Production & Management: Mine gold, train diverse units, and manage your army.
+- Strategic Combat: Deploy various unit types (archers, swordsmen, spearmen, giants) with unique abilities.
+- Direct Army Control: Manually control your army's formation and actions on the battlefield.
+- Upgrades & Research: Enhance your units and unlock new technologies.
+- Progressive Campaign: Face increasingly difficult enemy nations and bosses.
+- Unique Economy System: Balanced resource gathering (mining) and unit creation.

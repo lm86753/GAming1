@@ -1,0 +1,16 @@
+"Swerve" is a fast-paced, high-reflex arcade game that challenges players to navigate a constantly moving object (often a line or a snake-like entity) through an increasingly dense and intricate maze of obstacles. The objective is to survive for as long as possible without colliding with any of the environmental hazards or one's own trail (if applicable). Players typically control the object's direction with simple left/right inputs, constantly needing to "swerve" to avoid immediate dangers. The game features a minimalist aesthetic, often with vibrant colors and geometric shapes, that emphasizes clarity and speed. As the game progresses, the speed increases, the obstacles become more complex, and the reaction windows shrink, creating an intense and highly addictive experience. "Swerve" is an endless runner that provides a pure test of agility, foresight, and the ability to react under extreme pressure.
+
+Controls:
+- Left Arrow Key / A Key: Swerve/turn left.
+- Right Arrow Key / D Key: Swerve/turn right.
+- Mouse (Left Click & Drag): Some versions may allow mouse-based swerving.
+
+Special Features:
+- Fast-Paced Arcade Action: Intense, high-speed gameplay that demands constant attention.
+- Procedurally Generated Levels: Ensures a unique and unpredictable experience with each playthrough.
+- High Reflex & Precision Demands: Requires extremely quick reactions and accurate movements to survive.
+- Minimalist & Vibrant Visuals: Clean aesthetic with bright colors that enhance the sense of speed and focus.
+- Progressive Difficulty: The game gradually increases in speed and introduces more complex obstacles and patterns.
+- Endless Runner: Designed for high scores and continuous play, with the goal of surviving for the longest time.
+- Responsive Controls: Simple two-button control scheme offers immediate and accurate manipulation.
+- Addictive Gameplay Loop: The constant threat and the drive to improve one's score make it highly engaging.

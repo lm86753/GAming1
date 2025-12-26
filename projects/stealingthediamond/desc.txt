@@ -1,0 +1,14 @@
+"Stealing the Diamond" is an interactive animated adventure game, part of the popular Henry Stickmin series, known for its choose-your-own-adventure style gameplay and hilarious, often absurd, outcomes. Players guide Henry Stickmin through his attempt to steal a massive, priceless diamond from a highly secured museum. The objective is to successfully acquire the diamond and escape, which is achieved by making a series of critical choices at various points in the narrative. Each choice leads to a different animated sequence, ranging from brilliant successes to catastrophic and comically failed attempts. The game's charm lies in its diverse array of options, the unpredictable and often fourth-wall-breaking humor of its failures, and the satisfaction of finding the "right" path to victory. It's a game about experimentation, laughter, and enjoying the journey, no matter how many times Henry might spectacularly fail.
+
+Controls:
+- Mouse (Left Click): Primary interaction for selecting choices from the on-screen options presented at decision points.
+
+Special Features:
+- Choose-Your-Own-Adventure Gameplay: Narrative progression driven by player choices with multiple branching paths and endings.
+- Humorous Failures: The game is famous for its wide variety of comedic and unexpected failure animations.
+- Fourth-Wall Breaking Comedy: Frequent self-referential jokes and direct addresses to the player.
+- Minimalist Art Style: Simple, expressive stick-figure animations that convey humor and action effectively.
+- Quick Replayability: Short, distinct paths encourage players to try all options and discover every outcome.
+- Unlockable Endings/Achievements: Encourages exploration of all choices to find hidden successes and failures.
+- Narrative Focus: Strong emphasis on storytelling and comedic timing.
+- Simple Controls: Easy to pick up and play, focusing entirely on decision-making.

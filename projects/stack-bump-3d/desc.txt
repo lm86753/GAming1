@@ -1,0 +1,14 @@
+"Stack Bump 3D" is a vibrant and addictive arcade game that combines elements of a falling ball game with a destructive twist. Players guide a bouncing ball through a series of colorful, rotating platform stacks. The objective is to smash through the colored sections of the stacks while avoiding the black or designated "safe" sections. The game typically features a one-touch control scheme: players press and hold to make the ball descend rapidly, breaking through platforms, and release to stop the descent. The challenge comes from timing the descent to avoid the critical black sections and strategically breaking through multiple colored layers for combos and speed boosts. Its visually engaging 3D graphics, satisfying haptic feedback (on mobile), and fast-paced action create an intense and highly replayable experience, designed to test reflexes, pattern recognition, and quick decision-making.
+
+Controls:
+- Mouse (Left Click) / Spacebar / Tap (on mobile): Press and hold to make the ball descend and smash through platforms. Release to stop the ball's descent.
+
+Special Features:
+- One-Touch/Click Gameplay: Extremely simple and intuitive control scheme, easy to pick up.
+- Vibrant 3D Graphics: Colorful rotating stacks and satisfying visual effects for destruction.
+- Addictive Destruction Mechanics: Smashing through platforms provides immediate and rewarding feedback.
+- Precision & Timing: Requires quick reflexes and accurate timing to avoid dangerous sections.
+- Progressive Difficulty: Stacks become more complex, rotate faster, and safe zones become smaller as levels advance.
+- Combo System: Destroying multiple colored layers in quick succession often yields higher scores or temporary invincibility.
+- High Score Chasing: Designed for replayability, encouraging players to achieve the highest possible score.
+- Fast-Paced Action: Quick rounds and continuous movement keep the gameplay exciting.

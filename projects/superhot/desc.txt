@@ -1,0 +1,19 @@
+"SUPERHOT" is a groundbreaking first-person shooter (FPS) celebrated for its innovative mechanic: time only moves when you move. This unique design transforms traditional FPS gameplay into a tactical puzzle, where every step and action must be carefully considered. The objective is to eliminate all red, crystal-like enemies in a stark, minimalist environment using various firearms, melee weapons, or even environmental objects. The game's narrative is abstract and compelling, delivered through cryptic messages and a meta-narrative that blurs the line between game and reality. Its crisp, white-and-red aesthetic, combined with the slow-motion gunplay, creates a visually striking and intensely satisfying experience. Each level is a complex, balletic dance of bullets and movement, forcing players to strategize in real-time while executing precise, time-bending maneuvers. It's a game that challenges perception and rewards thoughtful, deliberate action over frantic shooting.
+
+Controls:
+- WASD Keys: Move character. (Time moves only when you move).
+- Mouse (Left Click): Fire weapon / Perform melee attack.
+- Mouse (Right Click): Throw current weapon.
+- Spacebar: Jump.
+- Shift Key: Dash / Dodge.
+- E Key: Pick up weapon / Interact.
+
+Special Features:
+- Time Moves Only When You Move: Revolutionary core mechanic that redefines FPS gameplay into a tactical puzzle.
+- Minimalist Aesthetic: Striking white, red, and black visuals that enhance clarity and style.
+- Tactical First-Person Shooter: Every action requires careful planning and execution.
+- Abstract Narrative: Engaging, cryptic storyline that unfolds through gameplay and meta-elements.
+- Variety of Weapons: Use pistols, shotguns, assault rifles, melee weapons, and throwable objects.
+- Cinematic Slow-Motion Action: Execute precise maneuvers and watch the action unfold in dramatic slow motion.
+- Challenging Puzzle Elements: Levels require strategic thinking to overcome enemy placement and environmental hazards.
+- High Replayability: Mastering levels for faster completion times or perfect runs.

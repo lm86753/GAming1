@@ -1,0 +1,24 @@
+"Tank Trouble 2" is a fast-paced, top-down multiplayer tank battle game, often played locally with up to three players on a single keyboard. The objective is to outmaneuver and destroy opponent tanks within a procedurally generated maze-like arena. Players control a small tank, firing bouncy projectiles that ricochet off walls, creating chaotic and unpredictable trajectories. The challenge comes from predicting shot paths, dodging incoming fire, and trapping opponents. Each round is quick and intense, emphasizing quick reflexes, spatial awareness, and a bit of luck. The game's minimalist graphics focus on clear visual feedback, making it easy to understand the action even amidst the bullet hell. Its accessible controls and frantic multiplayer action make it an ideal party game for friends looking for a simple yet highly competitive and entertaining experience.
+
+Controls:
+- Player 1:
+    - E Key: Move Forward.
+    - S Key: Turn Left.
+    - D Key: Turn Right.
+    - Q Key: Fire.
+- Player 2:
+    - Arrow Keys (Up, Left, Right): Move Forward (Up), Turn Left (Left), Turn Right (Right).
+    - M Key / Numpad 0: Fire.
+- Player 3 (if applicable):
+    - Mouse (Move): Turn.
+    - Mouse (Left Click): Fire.
+
+Special Features:
+- Local Multiplayer Chaos: Designed for frantic battles with 2 or 3 players on one keyboard.
+- Bouncing Projectiles: Shots ricochet off walls, leading to unpredictable and strategic gameplay.
+- Procedurally Generated Mazes: Each arena is unique, ensuring fresh challenges every round.
+- Fast-Paced Action: Quick, intense rounds that demand rapid reflexes and decision-making.
+- Minimalist Graphics: Clear visual design prioritizes gameplay over elaborate details.
+- Easy to Learn, Hard to Master: Simple controls but deep strategic possibilities due to projectile physics.
+- Power-Ups (common in some versions): Collect items like triple shot, laser, or rapid fire for temporary advantages.
+- High Replayability: The unpredictable nature and quick rounds ensure endless fun.

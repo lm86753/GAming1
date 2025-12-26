@@ -1,0 +1,17 @@
+"Tanuki Sunset" is a stylish, arcade-style longboarding game that blends fluid movement with a serene, retro-synthwave aesthetic. Players control a tanuki (raccoon dog) on a skateboard, cruising down winding, procedurally generated coastal roads as the sun sets. The objective is to achieve the highest score by performing tricks, drifts, and near-misses with traffic and environmental hazards, all while enjoying the chill vibes. The game emphasizes a sense of flow and rhythm, encouraging players to chain together maneuvers for combo points. Its distinctive visual style features vibrant neon colors, an ethereal sunset backdrop, and a relaxing synthwave soundtrack that perfectly complements the smooth gameplay. "Tanuki Sunset" offers a meditative yet engaging experience, rewarding skill in carving turns, mastering drifts, and maintaining speed, making it an excellent game for unwinding and chasing high scores.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Steer the longboard left/right.
+- Down Arrow Key / S Key: Brake / Initiate a drift.
+- Up Arrow Key / W Key: Accelerate (if not automatic) / Boost (if available).
+- Spacebar: Jump / Perform tricks (depending on context).
+
+Special Features:
+- Retro-Synthwave Aesthetic: Stunning visual and auditory style inspired by 80s arcade culture and vaporwave.
+- Procedurally Generated Roads: Ensures a unique and endless longboarding experience with each play.
+- Fluid Drifting & Tricks: Core gameplay mechanics focused on smooth movement, stylish drifts, and air tricks.
+- Chill & Relaxing Atmosphere: Serene visuals and a synthwave soundtrack create a meditative gaming experience.
+- High Score Chasing: Designed for replayability, with players striving to achieve the highest possible score through combos and skill.
+- Dynamic Day-Night Cycle (or Sunset focus): The beautiful sunset environment is a central visual element.
+- Responsive Controls: Intuitive and precise controls allow for satisfying longboarding maneuvers.
+- Endless Runner with Objectives: Continuous gameplay with specific challenges or milestones to achieve.
