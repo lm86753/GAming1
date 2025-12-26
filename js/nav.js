@@ -221,13 +221,13 @@ document.addEventListener('click', (e) => {
                 let recent = JSON.parse(localStorage.getItem('recentlyPlayed') || '[]');
                 // Remove duplicates
                 recent = recent.filter(g => g.title !== title);
-                // Add to front
-                recent.unshift(recentGame);
-                // Limit to 4
-                if (recent.length > 4) recent.pop();
-                
-                localStorage.setItem('recentlyPlayed', JSON.stringify(recent));
-            }
-        }
-    }
+                 // Add to front
+                 recent.unshift(recentGame);
+                // Limit stored history
+                recent = recent.slice(0, 50);
+                 
+                 localStorage.setItem('recentlyPlayed', JSON.stringify(recent));
+             }
+         }
+     }
 });
