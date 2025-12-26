@@ -136,6 +136,9 @@ const navbarHTML = `
                     <a href="/privacy.html" class="dropdown-item">
                         <i class="fa-solid fa-shield-halved"></i> Privacy
                     </a>
+                    <a href="#" class="dropdown-item" id="randomGame">
+                        <i class="fa-solid fa-dice"></i> Random Game
+                    </a>
                 </div>
             </div>
         </div>
@@ -202,3 +205,38 @@ document.addEventListener('click', (e) => {
         }
     }
 });
+
+(function(){
+    function computeRepoRoot(){
+        var parts = location.pathname.split('/');
+        return (parts.length > 2 && parts[1]) ? ('/' + parts[1] + '/') : '/';
+    }
+    function goToRandomGame(){
+        var repoRoot = computeRepoRoot();
+        fetch(repoRoot + "config/games.json?v=" + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+            if (!Array.isArray(list) || list.length === 0) return;
+            var idx = Math.floor(Math.random() * list.length);
+            var g = list[idx] || {};
+            var raw = g.link || '';
+            var isExternal = /^https?:\/\//.test(raw);
+            var link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
+            var wrapper = encodeURIComponent('fullscreen_system (1).html');
+            var href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(g.title||'');
+            try {
+                if (g.title && typeof trackGameClick === 'function') {
+                    trackGameClick(g.title);
+                }
+            } catch(e){}
+            window.location.href = href;
+        })
+        .catch(function(){});
+    }
+    document.addEventListener('click', function(e){
+        var btn = e.target.closest('#randomGame');
+        if (!btn) return;
+        e.preventDefault();
+        goToRandomGame();
+    });
+})();
