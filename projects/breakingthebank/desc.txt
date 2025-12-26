@@ -1,0 +1,13 @@
+"Breaking the Bank" is a humorous and interactive narrative game, part of the popular Henry Stickmin series. The objective is to successfully break into a highly secured bank and steal its valuables. However, the path to riches is fraught with peril and often leads to hilariously disastrous outcomes, depending entirely on the choices you make. This game is renowned for its branching story paths, witty writing, and cartoonish animations that accompany both successful and failed attempts.
+
+The gameplay is a choose-your-own-adventure style. At critical junctures, you are presented with a selection of options on how Henry Stickmin will attempt to bypass security. These choices can range from the cunning and elaborate to the utterly absurd and incompetent. Each decision leads down a different path, culminating in either a successful (and often comical) heist or a spectacular failure. The fun lies in exploring all the possible outcomes, discovering the various ways Henry can succeed or, more often, spectacularly fail.
+
+Controls:
+- Mouse: Click on the choice buttons presented on screen.
+
+Special Features:
+- Branching Story Paths: Multiple choices lead to diverse and often hilarious outcomes.
+- Witty Writing & Humor: Enjoy the game's comedic dialogue and situations.
+- Cartoon Animations: Engaging and expressive animations accompany every success and failure.
+- Henry Stickmin Series: Part of a beloved series known for its unique interactive storytelling.
+- High Replayability: Encourages players to explore all possible choices and their consequences.

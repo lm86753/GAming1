@@ -1,0 +1,13 @@
+"Flappy Bird" is a notorious and incredibly addictive mobile game that gained massive popularity for its deceptively simple yet brutally challenging gameplay. Players control a small, pixelated bird attempting to fly horizontally through a series of narrow gaps between green pipes. The objective is to navigate as far as possible without colliding with any pipes or the ground, aiming to achieve the highest possible score. Its minimalist graphics and unforgiving difficulty are hallmarks of its design.
+
+The gameplay involves a single, repetitive input: tapping or clicking the screen to make the bird flap its wings and ascend slightly. Gravity constantly pulls the bird downwards, so precise timing of taps is crucial to maintain altitude and guide it through the pipe openings. Each successful passage through a pipe earns a single point. The game's difficulty comes from the combination of the bird's momentum, the narrowness of the gaps, and the unforgiving nature of collisions, making every single point a hard-earned victory. Despite its simplicity, or perhaps because of it, "Flappy Bird" became a cultural phenomenon, renowned for its frustration-inducing but highly engaging nature.
+
+Controls:
+- Spacebar / Left Mouse Click / Tap: Make the bird flap its wings and ascend.
+
+Special Features:
+- Simple One-Touch Control: Easy to learn, difficult to master.
+- Brutally Challenging: High difficulty level demands precision and patience.
+- Endless Runner: The game continues indefinitely until a collision occurs.
+- Minimalist Pixel Art: Charming retro visuals contribute to its unique appeal.
+- Highly Addictive: Frustratingly fun gameplay that encourages repeated attempts to beat high scores.

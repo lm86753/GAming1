@@ -1,0 +1,13 @@
+"Flappy 2048" is an innovative and highly addictive mashup game that ingeniously combines the challenging mechanics of "Flappy Bird" with the strategic tile-merging puzzles of "2048." The result is a unique experience that demands both quick reflexes and thoughtful planning. Players control a flapping tile, much like the bird in Flappy Bird, navigating through an endless series of gaps. However, these gaps are not just empty spaces; they are filled with 2048-style numbered tiles that must be merged.
+
+The core objective is dual: avoid colliding with the pipes (or obstacles) that define the gaps, and simultaneously merge numbered tiles by flying into identical ones. When two identical tiles touch, they combine into a single tile with their summed value, just like in 2048. As you successfully merge tiles, new tiles appear, forcing you to constantly adapt your strategy. The game ends if you hit an obstacle or if the screen fills up with tiles you can no longer merge effectively. "Flappy 2048" is a true test of multitasking and quick decision-making, offering a fresh, challenging, and often frustratingly fun experience.
+
+Controls:
+- Spacebar / Left Mouse Click / Tap: Make the flapping tile "jump" or gain altitude.
+
+Special Features:
+- Genre Mashup: Combines the addictive endless runner of Flappy Bird with the strategic puzzles of 2048.
+- Dual Objectives: Avoid obstacles while simultaneously merging tiles for a high score.
+- Reflex and Strategy: Demands both quick reactions and careful planning.
+- Endless Gameplay: The game continues as long as you can survive and merge tiles.
+- Progressive Challenge: Difficulty increases as the game progresses with faster speeds and denser tile layouts.
