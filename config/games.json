@@ -773,13 +773,15 @@
     "link": "projects/you-are-bezos/index.html",
     "imgSrc": "projects/you-are-bezos/img/banner.png",
     "title": "You Are Jeff Bezos"
-  }
-  ,{
+  },
+  {
     "link": "projects/YoHoHo.io/index.html",
     "imgSrc": "projects/YoHoHo.io/favicon/apple-touch-icon.png",
     "title": "YoHoHo"
+  },
+  {
+    "link": "projects/steal-brain/index.html",
+    "imgSrc": "projects/steal-brain/logo.png",
+    "title": "Steal a Brainrot"
   }
-  
-
-  
-  ]
+]
