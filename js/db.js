@@ -153,7 +153,7 @@ function initDashboard() {
 
 // --- AUTO-INIT ON LOAD ---
 // This runs on every page to ensure tracking works
-document.addEventListener('DOMContentLoaded', () => {
+function initGlobalTracking() {
     // Check if Firebase is loaded
     if (typeof firebase !== 'undefined') {
         trackPresence();
@@ -165,4 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
             sessionStorage.setItem('visited', 'true');
         }
     }
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGlobalTracking);
+} else {
+    // DOM already loaded (which happens when injected via nav.js)
+    initGlobalTracking();
+}
