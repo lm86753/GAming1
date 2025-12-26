@@ -2,31 +2,57 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Steal a Brainrot</title>
+    <title>Steal a Brainrot - Unblocked</title>
     <style>
         body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        #unity-container { width: 100%; height: 100%; }
-        #unity-canvas { width: 100%; height: 100%; background: #231f20; }
+        #unity-canvas { width: 100%; height: 100%; background: #000; }
     </style>
+
+    <script>
+        // 1. Fake the Yandex SDK so the game doesn't hang on a black screen
+        window.ysdk = {
+            features: {
+                LoadingAPI: { ready: () => console.log("SDK Ready Bypass") },
+                GameplayAPI: { start: () => {}, stop: () => {} }
+            },
+            adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
+        };
+        window.initYSDK = true;
+        
+        // 2. Fake the Environment Data the engine is looking for
+        window.cloudSaves = "{}";
+        window.playerData = "{}";
+        window.paymentsData = "{}";
+        window.environmentData = JSON.stringify({
+            language: "en",
+            deviceType: "desktop",
+            payload: ""
+        });
+
+        // 3. Fix the "Domain Lock"
+        // This makes the browser think '8games.net' is always in the URL
+        const originalIndexOf = String.prototype.indexOf;
+        String.prototype.indexOf = function(s) {
+            if (s === "8games.net") return 0; 
+            return originalIndexOf.apply(this, arguments);
+        };
+    </script>
 </head>
 <body>
-    <div id="unity-container">
-        <canvas id="unity-canvas"></canvas>
-    </div>
+    <canvas id="unity-canvas"></canvas>
+
     <script src="build/StealBrainrot.loader.js"></script>
     <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "build/data.data",
+            dataUrl: "build/d6ccccaf266bab16bf58f5725e76504e.data.br",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
-            codeUrl: "build/code.wasm",
+            codeUrl: "build/b7cf28e445ff2ecea47d5697909bb345.wasm.br",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
         }).then((unityInstance) => {
-            console.log("Game Loaded Successfully");
-        }).catch((message) => {
-            alert(message);
+            console.log("Game successfully bypassed and loaded!");
         });
     </script>
 </body>
