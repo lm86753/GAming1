@@ -101,11 +101,13 @@
             registerBtn.onclick = () => {
                 regError.classList.add('hidden');
                 signUp(regEmail.value, regPassword.value)
+                    .then(() => { /* auth state listener will update UI */ })
                     .catch(e => { regError.textContent = e.message; regError.classList.remove('hidden'); });
             };
             loginBtn.onclick = () => {
                 logError.classList.add('hidden');
                 signIn(logEmail.value, logPassword.value)
+                    .then(() => { /* auth state listener will update UI */ })
                     .catch(e => { logError.textContent = e.message; logError.classList.remove('hidden'); });
             };
             signOutBtn.onclick = () => {
@@ -176,9 +178,16 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            bindAuthUI();
-            if (typeof firebase !== 'undefined' && firebase.auth) {
-                firebase.auth().onAuthStateChanged(onUser);
+            const start = () => {
+                bindAuthUI();
+                if (typeof firebase !== 'undefined' && firebase.auth) {
+                    firebase.auth().onAuthStateChanged(onUser);
+                }
+            };
+            if (typeof signUp !== 'function') {
+                document.addEventListener('db-ready', start, { once: true });
+            } else {
+                start();
             }
         });
     </script>

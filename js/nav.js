@@ -176,6 +176,7 @@ document.addEventListener('click', (e) => {
         authScript.onload = function() {
             const myDbScript = document.createElement('script');
             myDbScript.src = "/js/db.js";
+            myDbScript.onload = function() { document.dispatchEvent(new Event('db-ready')); };
             document.head.appendChild(myDbScript);
         };
     } else {
@@ -185,10 +186,13 @@ document.addEventListener('click', (e) => {
             document.head.appendChild(authScript);
             authScript.onload = function() {
                 if (!document.querySelector('script[src="/js/db.js"]')) {
-                    const myDbScript = document.createElement('script');
-                    myDbScript.src = "/js/db.js";
-                    document.head.appendChild(myDbScript);
-                }
+             const myDbScript = document.createElement('script');
+            myDbScript.src = "/js/db.js";
+            myDbScript.onload = function() { document.dispatchEvent(new Event('db-ready')); };
+            document.head.appendChild(myDbScript);
+        } else {
+            document.dispatchEvent(new Event('db-ready'));
+        }
             };
         } else {
             if (!document.querySelector('script[src="/js/db.js"]')) {

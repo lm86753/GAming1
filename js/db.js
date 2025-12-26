@@ -36,6 +36,8 @@ waitForAuthInit(() => {
         sessionStorage.setItem('visited', 'true');
     }
     trackPresence();
+    initAuth();
+    initSessionTracking();
 });
 
 // --- GLOBAL TRACKING FUNCTIONS ---
