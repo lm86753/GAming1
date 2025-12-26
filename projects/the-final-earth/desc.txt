@@ -1,0 +1,19 @@
+"The Final Earth" is a charming and contemplative city-building and resource management game set in a post-apocalyptic future where humanity has been forced to abandon Earth and seek refuge in space. Players are tasked with constructing and managing a new, self-sustaining colony on an alien planet or asteroid, facing the challenges of limited resources, harsh environments, and the remnants of their past. The objective is to expand the colony, provide for the needs of its inhabitants, research new technologies, and ultimately ensure the long-term survival and prosperity of humanity. Gameplay involves careful planning of infrastructure, balancing production chains, managing power and water, and exploring for new resources. Its minimalist pixel-art aesthetic and focus on thoughtful decision-making create a unique blend of strategic depth and a somber yet hopeful narrative about humanity's future.
+
+Controls:
+- Mouse (Left Click): Select buildings, place structures, interact with UI elements.
+- Mouse (Right Click): Deselect, cancel current action, or open context menus.
+- Mouse (Scroll Wheel): Zoom in/out on the colony.
+- WASD Keys / Arrow Keys: Pan the camera across the map.
+- Number Keys (1-9): Select different building categories or tools.
+- Escape Key: Open game menu / pause.
+
+Special Features:
+- Post-Apocalyptic City-Building: Construct a new civilization in a challenging, resource-scarce environment.
+- Complex Resource Management: Balance intricate production, consumption, and waste management systems.
+- Exploration & Expansion: Discover new areas for resources and expand your colony's footprint.
+- Research & Technology Tree: Unlock advanced buildings, tools, and efficiencies.
+- Minimalist Pixel Art: Charming and effective visual style that conveys the setting and mood.
+- Thoughtful Narrative: A compelling story about humanity's survival and rebuilding.
+- Environmental Challenges: Adapt to harsh planetary conditions and resource limitations.
+- Satisfying Progression: Watch your small colony grow into a thriving, self-sufficient city.

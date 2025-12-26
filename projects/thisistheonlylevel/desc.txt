@@ -1,0 +1,16 @@
+"This Is The Only Level" is a deceptively simple yet highly ingenious puzzle-platformer that plays on player expectations. The core premise is that there is indeed "only one level" – a single screen with a simple platforming layout. However, the objective isn't to complete the level in a straightforward manner, but rather to find various, increasingly unconventional ways to interact with the environment and the game's mechanics to progress. Each "stage" of the game presents a new rule or twist that alters how the player character (often a small elephant) or the environment behaves, forcing players to rethink their approach to the same physical space. The game's charm comes from its clever subversion of traditional platformer tropes, its witty design, and the constant "aha!" moments as players discover how each new rule changes the game. It's a game that rewards creative problem-solving and an open mind, proving that simplicity can hide profound depth and endless fun.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Move character left/right.
+- Spacebar / Up Arrow Key: Jump.
+- Mouse (Left Click): May be used for activating certain level modifiers or UI interactions.
+
+Special Features:
+- Single-Level Design with Evolving Rules: The entire game takes place on one screen, but the rules and mechanics change with each stage.
+- Meta-Puzzle Gameplay: Players must understand how the game's rules are being manipulated to solve puzzles.
+- Creative Problem Solving: Encourages "outside the box" thinking to overcome obstacles.
+- Humorous Subversion: Witty design that constantly plays on and breaks traditional platformer expectations.
+- Minimalist Aesthetic: Clean visuals that focus on clarity of the changing mechanics.
+- Progressive Difficulty: Stages introduce increasingly complex and abstract rules.
+- High Replayability: The unique twists and turns make each attempt to solve the "only level" fresh.
+- Elephant Protagonist: A charming and memorable character adds to the game's quirky appeal.

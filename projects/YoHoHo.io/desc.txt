@@ -1,0 +1,18 @@
+"Yohoho.io" is a swashbuckling multiplayer battle royale game set in a vibrant, pirate-themed arena. Players control a pirate character, growing in size and power by collecting coins scattered across the island and eliminating other players. The objective is to be the last pirate standing, or the largest, by skillfully wielding various melee weapons and outmaneuvering rivals. Gameplay involves a constant push and pull between aggressive attacks and strategic retreats, as players try to land blows while avoiding the attacks of others. The game features a minimalist, top-down perspective with colorful, cartoonish graphics that are both charming and functional, clearly indicating player and item positions. As players grow, they unlock new, more powerful characters and abilities. The ever-shrinking play area (a common battle royale mechanic) keeps matches fast-paced and forces confrontations, making "Yohoho.io" a thrilling and highly addictive experience for those who enjoy competitive, accessible multiplayer action with a pirate twist.
+
+Controls:
+- WASD Keys / Arrow Keys: Move pirate character.
+- Mouse (Left Click): Attack with equipped weapon.
+- Mouse (Move): Aim attack direction.
+- Spacebar: Use special ability (if applicable).
+
+Special Features:
+- Multiplayer Battle Royale: Compete in real-time against numerous other players in a shrinking arena.
+- Pirate Theme: Charming swashbuckling setting with cartoonish pirate characters and islands.
+- Grow & Conquer: Grow in size and power by collecting coins and defeating enemies.
+- Melee Combat: Focus on close-quarters combat with various pirate weapons.
+- Shrinking Play Area: Forces players into confrontations, increasing tension.
+- Unlockable Characters & Abilities: Progress to unlock new pirates with unique skills.
+- Simple & Accessible: Easy-to-learn controls allow for immediate engagement.
+- Fast-Paced Action: Quick, intense rounds that keep players engaged.
+- High Score & Leaderboard: Compete for top spots on global and local leaderboards.

@@ -1,0 +1,16 @@
+"Vex 6" is the latest installment in the acclaimed, ultra-challenging stick-figure platformer series, pushing the boundaries of precision, timing, and quick reflexes to an extreme. Players command a nimble stick figure through an entirely new collection of incredibly intricate and treacherous "acts," each masterfully designed with an expanded and even more cunning array of deadly obstacles, including advanced spikes, rapidly rotating mechanisms, complex laser grids, and highly dynamic environmental traps. The core objective remains to conquer each act with absolute minimal deaths, skillfully navigating the most complex layouts yet using a further polished repertoire of acrobatic jumps, wall-slides, and climbs. "Vex 6" solidifies the series' reputation for unforgiving difficulty, demanding meticulous planning, split-second timing, and flawless execution from beginning to end. Its clean, minimalist visual style continues to prioritize clarity for action and hazards, now with more evolved level designs and interactive elements. It delivers an extraordinarily satisfying sense of accomplishment upon mastering its brutal challenges, making it the ultimate test for players who live for demanding platforming and conquering the most extreme obstacle courses.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Move character left/right.
+- Up Arrow Key / W Key: Jump / Climb.
+- Down Arrow Key / S Key: Crouch / Slide / Descend ropes.
+
+Special Features:
+- Ultimate Challenging Platforming: Features the most intricate, difficult, and cunning level designs to date in the series.
+- Vastly Expanded Deadly Obstacle Courses: Introduces innovative, highly complex, and dynamic hazards and environmental traps.
+- Hyper-Refined Acrobatic Movements: Even more polished and fluid wall-jumping, wall-sliding, and climbing mechanics for unmatched precision.
+- Minimalist Stick-Figure Graphics: Clear visual style that ensures absolute focus on gameplay amidst extreme complexity.
+- Steep Progressive Difficulty Curve: Each new act presents incredibly sophisticated mechanics and blindingly fast, intricate obstacles.
+- Time Trials & Achievements: Strongly encourages high-speed completion, deep exploration for secrets, and absolute mastery of every challenge.
+- Unrivaled Responsive Controls: Maintains the tightest and most accurate controls crucial for executing perfect platforming maneuvers under immense pressure.
+- Profoundly Rewarding Sense of Accomplishment: Conquering the game's most brutal acts provides an unparalleled feeling of ultimate mastery and achievement.

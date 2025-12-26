@@ -1,0 +1,16 @@
+"Toss The Turtle" is a darkly humorous and highly addictive launch distance game that combines elements of physics-based trajectory with incremental upgrades. Players launch a turtle from a cannon, aiming to make it travel as far as possible across a bizarre landscape filled with explosives, trampolines, cannons, and various creatures. The objective is to achieve maximum distance, score, and collect money to purchase a wide array of upgrades for the cannon, various projectiles (the turtle can be replaced or enhanced), and mid-air boost items. Gameplay involves careful aiming and power selection at launch, followed by strategic activation of in-air items to extend flight, bounce off objects, and avoid hazards. The game's charm comes from its exaggerated physics, over-the-top violence (cartoonish, of course), and the sheer satisfaction of sending the turtle (or other projectiles) soaring across the screen. It's a game about continuous improvement, unlocking more powerful tools, and creating increasingly spectacular and destructive flights.
+
+Controls:
+- Mouse (Left Click): Primary interaction for setting cannon power/angle, launching the projectile, and activating mid-air items/power-ups.
+- Mouse (Click & Hold): May be used for charging power or continuous activation of some items.
+- Spacebar: May be used as an alternative to mouse click for launching or activating items.
+
+Special Features:
+- Launch Distance Gameplay: Core objective is to maximize the distance traveled by the projectile.
+- Physics-Based Trajectory: Realistic (or humorously exaggerated) physics govern the projectile's flight path.
+- Mid-Air Interactions: Use various items like bombs, jetpacks, and other propulsion devices to extend flight.
+- Extensive Upgrade System: Earn currency to unlock and improve cannons, launch power, various projectiles (including replacing the turtle), and mid-air items.
+- Dark Humor & Absurdity: The premise and execution are deliberately over-the-top and comically violent.
+- High Score Chasing: Endless replayability as players strive to beat their personal best distances and scores.
+- Simple Yet Addictive: Easy to understand mechanics lead to highly engaging and repetitive gameplay.
+- Variety of Projectiles: Beyond the turtle, unlock and launch other bizarre objects.

@@ -1,0 +1,16 @@
+"Tunnel Rush" is a fast-paced, high-reflex arcade game that challenges players to navigate a constantly moving object (often a ball or a simple geometric shape) through an infinitely procedurally generated 3D tunnel filled with gaps and static or moving obstacles. The objective is to survive for as long as possible and achieve the highest score by avoiding collisions with the tunnel walls and various barriers. Players typically control the object's left and right movement, needing quick and precise steering to find safe passages in the rapidly rotating or shifting tunnel. The game's minimalist aesthetic, vibrant neon colors, and intense electronic soundtrack combine to create an immersive and adrenaline-pumping experience. It demands extreme focus, quick decision-making, and precise timing as the speed and complexity of the tunnel increase continuously. "Tunnel Rush" is an endless runner that provides a pure test of reaction time and pattern recognition, making it highly addictive for those seeking a challenging arcade experience.
+
+Controls:
+- Left Arrow Key / A Key: Move the object left.
+- Right Arrow Key / D Key: Move the object right.
+- Mouse (Left Click & Drag): Drag left or right to move the object horizontally.
+
+Special Features:
+- Fast-Paced Arcade Action: Intense, high-speed gameplay requiring constant attention.
+- Procedurally Generated Tunnel: Ensures a unique and unpredictable experience with each playthrough.
+- Rotating/Shifting Tunnel Mechanic: The dynamic environment adds a unique layer of challenge and disorientation.
+- High Reflex & Precision Demands: Requires extremely quick reactions and accurate movements to survive.
+- Minimalist & Vibrant Visuals: Clean aesthetic with bright neon colors that enhance the sense of speed.
+- Addictive Endless Runner: Designed for high scores and continuous play, with increasing difficulty.
+- Responsive Controls: Tight and immediate controls are crucial for navigating the tunnel.
+- Electronic Soundtrack: Energetic music that complements the fast-paced gameplay and immerses the player.

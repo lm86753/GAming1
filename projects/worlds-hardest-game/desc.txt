@@ -1,0 +1,14 @@
+"The World's Hardest Game" is an infamous and aptly named puzzle-platformer known for its brutally unforgiving difficulty and minimalist design. Players control a small red square, navigating it through a series of maze-like levels filled with constantly moving blue circles (enemies) and static blue walls. The objective is to collect all yellow circles in each level and then move to the green exit zone, all without touching any blue objects. The game features a simple, clean aesthetic, but every pixel of movement and timing is critical. Dying is frequent and expected, often hundreds of times per level, but the game provides immediate respawns and clear visual feedback, encouraging persistent trial-and-error. Its charm lies in its pure, unadulterated challenge and the immense satisfaction of finally conquering a seemingly impossible level. It's a test of extreme patience, precision, and quick reflexes, designed for players who relish overcoming monumental digital obstacles.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Move the red square.
+
+Special Features:
+- Brutally High Difficulty: Known for being exceptionally challenging, pushing players to their limits.
+- Precision Platforming: Every movement requires extreme accuracy and perfect timing.
+- Minimalist Design: Clean, simple visuals (red square, blue circles, green zone) that focus entirely on gameplay.
+- Trial-and-Error Gameplay: Expect frequent deaths, but quick respawns encourage learning from mistakes.
+- Addictive Challenge: The desire to overcome seemingly impossible levels keeps players engaged.
+- Clear Objectives: Simple, straightforward goals (collect yellow, reach green).
+- Immediate Feedback: Instant restarts after death, clear visual cues for success/failure.
+- Rewarding Sense of Accomplishment: Conquering a difficult level provides immense satisfaction.

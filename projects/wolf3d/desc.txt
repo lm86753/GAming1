@@ -1,0 +1,21 @@
+"Wolfenstein 3D" is a seminal first-person shooter (FPS) that is widely credited with popularizing the genre. Players assume the role of B.J. Blazkowicz, an Allied spy, attempting to escape from the Nazi stronghold of Castle Wolfenstein and ultimately thwart Hitler's plans. The objective is to navigate maze-like levels, collect weapons and ammunition, find treasure, and eliminate Nazi soldiers, guard dogs, and various bosses. Gameplay is characterized by fast-paced shooting, exploration of secret passages, and a frantic search for keys to unlock new areas. Its groundbreaking 3D graphics (though technically 2.5D with ray-casting) and immersive perspective created an unprecedented sense of presence for its time. "Wolfenstein 3D" set the template for countless FPS games that followed, offering a thrilling and visceral experience of escaping a heavily guarded enemy fortress, filled with iconic enemies and memorable sound effects.
+
+Controls:
+- Arrow Keys (Up/Down): Move forward/backward.
+- Arrow Keys (Left/Right): Turn left/right.
+- Ctrl Key: Fire weapon.
+- Alt Key: Strafe left/right.
+- Spacebar: Open doors / Activate pushwalls.
+- Shift Key: Run.
+- Tab Key: View map (in some versions).
+- Esc Key: Pause game / Access menu.
+
+Special Features:
+- Groundbreaking First-Person Shooter: Pioneered the genre and set many of its conventions.
+- Maze-Like Level Design: Encourages exploration for secret passages and hidden treasures.
+- Fast-Paced Action: Constant combat and movement.
+- Iconic Enemies & Bosses: Battle Nazi soldiers, guard dogs, and memorable bosses like Mecha-Hitler.
+- Simple Yet Effective Graphics: Groundbreaking pseudo-3D visuals for its era.
+- Arsenal of Weapons: Pistol, machine gun, chain gun, and later a flamethrower.
+- Secret Areas: Discover hidden rooms containing extra health, ammo, and treasure.
+- Immersive Sound Design: Distinctive sound effects for gunshots, enemy barks, and dialogue.

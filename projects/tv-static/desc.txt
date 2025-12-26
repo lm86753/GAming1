@@ -1,0 +1,15 @@
+"TV Static" is likely not a game in the traditional interactive sense, but rather a digital simulation or minimalist artistic experience designed to replicate the visual and auditory effect of television static or "snow." The objective, if one exists, is often to create a calming, nostalgic, or even unsettling atmosphere through the randomized visual noise and accompanying white noise audio. It might offer subtle interactive elements, such as changing the "signal strength" or introducing brief, distorted images/sounds. Its theme leans into retro media aesthetics, ASMR (Autonomous Sensory Meridian Response), or simply providing a unique background experience. This type of digital static can evoke a sense of analog media, old televisions, or even serve as a backdrop for meditation or focus. Its charm lies in its simplicity and its ability to trigger specific sensory responses or nostalgic feelings.
+
+Controls:
+- Mouse (Left Click): May toggle between different static patterns, adjust intensity, or mute/unmute audio.
+- Keyboard (Any Key): Could be used for subtle interactions, changing modes, or triggering anomalies.
+
+Special Features:
+- Realistic Static Simulation: Replicates the visual "snow" and auditory white noise of an untuned television.
+- Minimalist Design: Focuses purely on the aesthetic and atmospheric effect.
+- Nostalgic & Retro Media Aesthetic: Evokes feelings of old-school television and analog media.
+- Atmospheric & Relaxing: Can serve as background noise for focus, meditation, or sleep.
+- Subtle Interactivity (Optional): May include options to adjust static intensity, color, or introduce periodic distortions.
+- Audio Focus: Emphasizes the calming or intriguing properties of white noise.
+- Unique Digital Art: A non-traditional "game" that explores sensory experiences.
+- Customizable Parameters (Optional): Users might be able to tweak settings for different static appearances.

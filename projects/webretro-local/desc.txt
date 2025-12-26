@@ -1,0 +1,17 @@
+"Webretro Local" is a web-based emulator frontend designed to play classic retro video games directly within a browser environment, likely configured for local access or personal ROM libraries. It is not a game itself, but a platform that allows users to revisit nostalgic titles from various console generations (e.g., NES, SNES, Genesis, Game Boy). The objective for the user is to load their favorite retro game ROMs and experience them with modern conveniences, often including save states, fast-forward options, and customizable controls. It aims to provide a seamless and accessible retro gaming experience without the need for dedicated software installations, focusing on ease of use and preserving the classic gameplay of beloved titles. This "local" version implies it is set up to run on a user's machine, perhaps serving as a personal arcade or game hub.
+
+Controls:
+- Keyboard (Configurable): Typically maps standard keyboard keys to emulated controller buttons (e.g., Arrow Keys for D-pad, Z/X/C/V for A/B/X/Y buttons, Shift/Ctrl for Select/Start).
+- Gamepad (Configurable): Support for connecting and mapping physical gamepads.
+- Mouse (Left Click): Navigate the frontend interface, select ROMs, adjust settings.
+
+Special Features:
+- Multi-System Emulation: Supports a wide range of classic gaming consoles and handhelds.
+- Browser-Based Gameplay: Play retro games directly in a web browser, no dedicated app required.
+- Local ROM Support: Designed to load game ROMs from the user's local storage.
+- Save States: Save and load game progress at any point, not just at in-game save points.
+- Fast-Forward Option: Speed up gameplay for tedious sections or grinding.
+- Customizable Controls: Map keyboard keys or gamepad buttons to suit personal preference.
+- Cheat Code Support (Potential): Some emulators offer the ability to input cheat codes.
+- User-Friendly Interface: A clean and intuitive frontend for managing and playing games.
+- Retro Gaming Preservation: Provides a way to experience classic games in a modern context.

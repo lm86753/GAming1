@@ -1,0 +1,16 @@
+"Vex 3" is a highly challenging and addictive stick-figure platformer that emphasizes precision, timing, and quick reflexes. Players control a nimble stick figure through a series of intricate and dangerous "acts," each filled with an array of deadly obstacles like spikes, buzzsaws, laser beams, and crumbling platforms. The objective is to reach the end of each act without dying excessively, navigating complex layouts with acrobatic jumps, wall-slides, and climbs. The game is known for its unforgiving difficulty, rewarding meticulous planning and flawless execution. It features a clean, minimalist visual style that keeps focus squarely on the action and hazards. "Vex 3" offers a satisfying sense of accomplishment upon conquering its tough challenges, making it a popular choice for players who enjoy demanding platforming and mastering complex obstacle courses.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Move character left/right.
+- Up Arrow Key / W Key: Jump / Climb.
+- Down Arrow Key / S Key: Crouch / Slide / Descend ropes.
+
+Special Features:
+- Challenging Platforming: Intricate level design with high difficulty, requiring precise movements.
+- Deadly Obstacle Courses: Features a wide variety of hazards like spikes, buzzsaws, lasers, and moving platforms.
+- Acrobatic Movements: Wall-jumping, wall-sliding, and climbing add depth to character movement.
+- Minimalist Stick-Figure Graphics: Clean visual style that focuses on gameplay clarity.
+- Progressive Difficulty: Levels become increasingly complex and demanding, introducing new mechanics and faster obstacles.
+- Time Trials & Achievements: Encourages replayability to achieve faster completion times and unlock secrets.
+- Responsive Controls: Tight and accurate controls for precise platforming.
+- Rewarding Sense of Accomplishment: Overcoming difficult acts provides a strong feeling of achievement.

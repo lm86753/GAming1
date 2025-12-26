@@ -1,0 +1,18 @@
+"Temple Run 2" is a highly popular and addictive endless runner game that continues the thrilling adventure of escaping demonic monkeys from an ancient temple. Players control an intrepid explorer who automatically runs forward along treacherous, procedurally generated paths filled with environmental hazards like cliffs, ziplines, mines, and waterfalls. The objective is to survive for as long as possible, collecting coins and power-ups while avoiding obstacles and making split-second decisions to swipe, jump, or slide. The game features improved graphics, more dynamic environments, and additional character abilities compared to its predecessor. Its simple touch-based controls, combined with escalating difficulty and a satisfying progression system (upgrades, new characters), create an intense and highly replayable experience. "Temple Run 2" is a test of reflexes, timing, and quick thinking, offering endless hours of heart-pounding escape and high-score chasing.
+
+Controls:
+- Mouse (Left Click & Swipe Up): Jump.
+- Mouse (Left Click & Swipe Down): Slide / Duck.
+- Mouse (Left Click & Swipe Left): Turn left.
+- Mouse (Left Click & Swipe Right): Turn right.
+- Mouse (Tilt Left/Right - if supported): Tilt character to collect coins on edges (on mobile, tilt device).
+
+Special Features:
+- Endless Runner Gameplay: Continuously generated paths provide infinite replayability.
+- Dynamic & Varied Environments: Explore new locations like forests, mines, and waterfalls with unique challenges.
+- Improved Graphics & Visuals: Enhanced 3D graphics create a more immersive and visually appealing experience.
+- Power-Ups & Abilities: Collect and upgrade various power-ups (shields, coin magnets, boosts) and unique character abilities.
+- Character Customization: Unlock and play with different characters, each with their own special powers.
+- Missions & Objectives: Complete specific in-game challenges to earn rewards.
+- Escalating Difficulty: The game speeds up and introduces more complex obstacles as players progress.
+- High Score & Coin Collection: Designed for chasing high scores and accumulating vast amounts of in-game currency.

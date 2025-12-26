@@ -1,0 +1,15 @@
+"You Are Bezos!" is an satirical idle/incremental game that puts players in the shoes of a billionaire tech mogul, specifically mimicking the journey and controversies surrounding Jeff Bezos. The objective is to accumulate unimaginable wealth, expand a global empire (often at the expense of workers or the environment), and engage in various philanthropic or eccentric billionaire activities. Gameplay typically starts with simple clicks to generate initial income, which is then invested into automating processes, acquiring new businesses, launching rockets into space, or funding personal vanity projects. The game often features a humorous take on real-world economic and social issues associated with extreme wealth, presenting players with moral dilemmas and comical challenges. It's a game about exponential growth, strategic investment, and exploring the (often absurd) power that comes with being one of the richest people on Earth, all within a lighthearted, satirical framework.
+
+Controls:
+- Mouse (Left Click): Primary interaction for generating initial income, purchasing upgrades, and interacting with UI menus.
+- Mouse (Hover): View statistics, upgrade descriptions, and various satirical news feeds or events.
+
+Special Features:
+- Satirical Idle Gameplay: Humorous take on the idle/incremental genre, with a focus on extreme wealth accumulation.
+- Billionaire Simulation: Experience the (often controversial) journey of building and managing a global empire.
+- Extensive Upgrade Trees: Invest in automation, new ventures, and various projects to generate exponential income.
+- Humorous Narrative & Events: Features satirical news, moral dilemmas, and comical events related to modern billionaires.
+- Global Empire Building: Expand influence across various industries and geographical locations.
+- Automation & Passive Income: Establish systems to generate wealth even when not actively playing.
+- Prestige System (common): Potentially reset progress for powerful, permanent bonuses that accelerate future playthroughs.
+- Exaggerated Wealth & Power: Explore the absurdities of extreme capitalism and personal influence.

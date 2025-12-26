@@ -1,0 +1,21 @@
+"Tube Jumpers" is a fast-paced, chaotic local multiplayer arcade game designed for quick, intense competitive rounds. Players control small, colorful characters (often with ragdoll physics) in a cylindrical arena, or "tube," that constantly rotates or generates obstacles. The objective is to be the last player standing by knocking opponents off the tube while avoiding hazards and the ever-present danger of falling off. Gameplay typically involves simple one-button controls for jumping or a limited set of actions, making it easy to pick up but difficult to master due to the unpredictable physics and the dynamic environment. Each round is short and frantic, leading to constant laughter and shouting among players. "Tube Jumpers" excels as a party game, providing endless replayability and unpredictable outcomes, perfect for casual fun with friends.
+
+Controls:
+- Player 1:
+    - Up Arrow Key: Jump.
+- Player 2:
+    - W Key: Jump.
+- Player 3 (if applicable):
+    - I Key: Jump.
+- Player 4 (if applicable):
+    - T Key: Jump.
+
+Special Features:
+- Local Multiplayer: Designed for competitive fun with multiple players on a single keyboard.
+- Physics-Based Chaos: Ragdoll physics and dynamic environments lead to hilarious and unpredictable outcomes.
+- Simple One-Button Controls: Easy to learn, allowing anyone to jump in immediately.
+- Fast-Paced Rounds: Quick matches keep the action intense and engaging.
+- Dynamic Tube Arenas: Constantly rotating or obstacle-generating cylindrical levels.
+- Competitive Objective: Be the last player standing by knocking others off.
+- Humorous Interactions: The chaotic physics often result in comical character movements and eliminations.
+- High Replayability: The unpredictable nature ensures each game is fresh and exciting.

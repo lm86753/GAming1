@@ -1,0 +1,16 @@
+"There Is No Game: Wrong Dimension" is a highly innovative and humorous meta-puzzle adventure game that constantly breaks the fourth wall, actively engaging players in a dialogue with a sarcastic, sentient Game Announcer. The core premise is that the "game" actively tries to prevent you from playing it, claiming to be "no game at all." The objective is to defy the Announcer, overcome its various attempts to stop you, and uncover the truth behind its existence and the nature of games themselves. Gameplay involves solving unconventional puzzles that often require manipulating the game's interface, files, and even the operating system (within the game's simulated environment). It's a comedic journey filled with witty banter, unexpected twists, and a wide array of genre parodies, blending point-and-click adventure with puzzle-solving and a profound exploration of interactive media. Every interaction is a surprise, making it a truly unique and memorable experience.
+
+Controls:
+- Mouse (Left Click): Primary interaction for selecting objects, dragging elements, and solving puzzles.
+- Mouse (Right Click): Contextual actions (e.g., examining objects, opening menus) or sometimes a hidden trick.
+- Keyboard (Contextual): Specific keys may be used for particular puzzles or interactions as prompted by the game.
+
+Special Features:
+- Fourth-Wall Breaking Narrative: The game actively communicates with and attempts to thwart the player, leading to highly creative and humorous interactions.
+- Meta-Puzzle Gameplay: Puzzles often involve manipulating the game's interface, code, or simulated operating system.
+- Sarcastic & Sentient Narrator: A constantly present, witty AI voice guides (and misguides) the player.
+- Genre Parody: Humorously references and subverts tropes from various video game genres.
+- Unconventional Problem Solving: Requires players to think entirely outside the box, as traditional game logic rarely applies.
+- Witty Dialogue & Story: Engaging narrative filled with jokes, plot twists, and philosophical musings on games.
+- High Replayability: Discovering all the hidden gags, references, and alternative solutions.
+- Unique Art Style: A blend of minimalistic graphics, pixel art, and diverse visual styles that change dynamically.

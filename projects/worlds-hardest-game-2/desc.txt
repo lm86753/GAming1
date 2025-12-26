@@ -1,0 +1,15 @@
+"The World's Hardest Game 2" doubles down on the legendary difficulty of its predecessor, delivering an even more infuriatingly challenging and addictive puzzle-platformer experience. Players again control the familiar small red square, but now navigate through a fresh set of exquisitely brutal maze-like levels. These levels are packed with an expanded array of constantly moving blue circles (enemies), more intricate blue walls, and new, cunning environmental traps designed to test the limits of player patience and skill. The core objective remains: collect all yellow circles in each level and then safely reach the green exit zone, all while meticulously avoiding contact with any blue hazards. The game retains its minimalist aesthetic, but each pixel of movement and timing is now even more critical. Dying frequently is not just expected, it's a rite of passage, yet the game's instant respawns and clear feedback loop foster relentless persistence. Its notorious difficulty is its charm, offering immense satisfaction upon conquering what truly feels like impossible levels. It's the ultimate test of extreme patience, superhuman precision, and lightning-fast reflexes, designed for masochistic players who crave the purest, most monumental digital obstacles.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Move the red square.
+
+Special Features:
+- Legendary High Difficulty: Even more brutally challenging than the original, pushing player limits to the extreme.
+- Enhanced Precision Platforming: Demands superhuman accuracy and flawless timing.
+- Minimalist Design: Clean, simple visuals (red square, blue circles, green zone) with added complexity in level layout.
+- Expanded Trial-and-Error Gameplay: Frequent, expected deaths are part of the learning curve; instant respawns encourage persistence.
+- Hyper-Addictive Challenge: The relentless drive to conquer seemingly impossible levels keeps players hooked.
+- Clear Objectives: Straightforward goals (collect yellow, reach green), but execution is anything but simple.
+- Immediate Feedback: Instant restarts after death, crystal-clear visual cues for success/failure.
+- Profoundly Rewarding Sense of Accomplishment: Conquering a level provides an unparalleled feeling of triumph against immense odds.
+- New Obstacle Variations: Introduces more complex enemy patterns and environmental traps.

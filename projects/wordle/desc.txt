@@ -1,0 +1,18 @@
+"Wordle" is a highly popular and addictive daily word puzzle game that challenges players to guess a five-letter word in six attempts or fewer. The objective is to deduce the secret word of the day using strategic guesses and feedback from each attempt. After every guess, players receive color-coded clues: green indicates a letter is correct and in the right position; yellow means a letter is correct but in the wrong position; and grey signifies the letter is not in the word at all. This feedback guides subsequent guesses, narrowing down the possibilities. The game's charm lies in its simplicity, accessibility, and the shared global experience of a single daily puzzle. It encourages logical deduction, vocabulary skills, and a bit of luck, providing a satisfying mental exercise that is often shared and discussed among friends and on social media.
+
+Controls:
+- Keyboard: Type five-letter words.
+- Enter Key: Submit guess.
+- Backspace Key: Delete letter.
+- Mouse (Left Click): Interact with on-screen keyboard (if applicable) and UI elements.
+
+Special Features:
+- Daily Single Puzzle: A new, unique puzzle is available every 24 hours, creating a shared global experience.
+- Simple & Intuitive Gameplay: Easy to learn, with clear rules and immediate feedback.
+- Color-Coded Feedback: Green, yellow, and grey squares provide clear clues for each guess.
+- Logical Deduction: Players must use the feedback to strategically narrow down possible words.
+- Vocabulary & Spelling Challenge: Tests word knowledge and ability to form valid words.
+- Accessibility: Playable directly in a web browser without downloads.
+- Social Sharing: Easy to share results (without revealing the word) on social media, fostering community.
+- Streak Tracking: Encourages consistent play by tracking win streaks.
+- Hard Mode (Optional): An optional setting that requires revealed hints to be used in subsequent guesses.

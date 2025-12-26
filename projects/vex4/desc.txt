@@ -1,0 +1,16 @@
+"Vex 4" continues the legacy of the highly challenging and addictive stick-figure platformer series, pushing the boundaries of precision, timing, and quick reflexes even further. Players control a nimble stick figure through a new series of intricate and dangerous "acts," each packed with an expanded array of deadly obstacles, including new types of spikes, rotating blades, laser grids, and dynamic environmental traps. The core objective remains to reach the end of each act without excessive deaths, navigating complex layouts with an enhanced repertoire of acrobatic jumps, wall-slides, and climbs. "Vex 4" maintains the series' reputation for unforgiving difficulty, rewarding meticulous planning and flawless execution. Its clean, minimalist visual style continues to keep focus squarely on the action and hazards, while introducing new visual flourishes and more complex level designs. It offers a deeply satisfying sense of accomplishment upon conquering its tough challenges, solidifying its place as a top choice for players who crave demanding platforming and mastering extreme obstacle courses.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Move character left/right.
+- Up Arrow Key / W Key: Jump / Climb.
+- Down Arrow Key / S Key: Crouch / Slide / Descend ropes.
+
+Special Features:
+- Enhanced Challenging Platforming: More intricate level designs and even higher difficulty than previous installments.
+- Expanded Deadly Obstacle Courses: Introduces new and more complex hazards and environmental traps.
+- Refined Acrobatic Movements: Fluid wall-jumping, wall-sliding, and climbing mechanics.
+- Minimalist Stick-Figure Graphics: Clean visual style that ensures clarity amidst complex challenges.
+- Progressive Difficulty: Each new act presents increasingly complex mechanics and faster obstacles.
+- Time Trials & Achievements: Encourages replayability, speedrunning, and uncovering all secrets.
+- Responsive Controls: Maintained tight and accurate controls crucial for precise platforming.
+- Rewarding Sense of Accomplishment: Overcoming the game's brutal acts provides a strong feeling of achievement and mastery.

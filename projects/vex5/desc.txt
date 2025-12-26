@@ -1,0 +1,16 @@
+"Vex 5" builds upon the acclaimed, challenging stick-figure platformer series, further refining its precision, timing, and reflex-testing gameplay. Players once again guide a nimble stick figure through an all-new collection of intricate and perilous "acts," each meticulously designed with an expanded arsenal of deadly obstacles, including advanced spikes, rotating mechanisms, laser grids, and innovative environmental traps. The core objective remains to conquer each act with minimal deaths, skillfully navigating complex layouts using a polished repertoire of acrobatic jumps, wall-slides, and climbs. "Vex 5" upholds the series' reputation for unforgiving difficulty, demanding meticulous planning and flawless execution. Its clean, minimalist visual style continues to prioritize clarity for action and hazards, while introducing even more sophisticated level designs and dynamic elements. It delivers an immensely satisfying sense of accomplishment upon mastering its brutal challenges, cementing its status as a premier choice for players who thrive on demanding platforming and conquering extreme obstacle courses.
+
+Controls:
+- Arrow Keys (Left/Right) / A/D Keys: Move character left/right.
+- Up Arrow Key / W Key: Jump / Climb.
+- Down Arrow Key / S Key / S Key: Crouch / Slide / Descend ropes.
+
+Special Features:
+- Further Enhanced Challenging Platforming: Features the most intricate and difficult level designs yet in the series.
+- New & Advanced Deadly Obstacle Courses: Introduces innovative and complex hazards and environmental traps.
+- Refined Acrobatic Movements: Polished and fluid wall-jumping, wall-sliding, and climbing mechanics for ultimate precision.
+- Minimalist Stick-Figure Graphics: Clear visual style that ensures focus on gameplay amidst heightened complexity.
+- Progressive Difficulty Curve: Each new act presents increasingly sophisticated mechanics and faster, more intricate obstacles.
+- Time Trials & Achievements: Encourages high-speed completion, exploration for secrets, and mastery of every challenge.
+- Ultra-Responsive Controls: Retains the tight and accurate controls crucial for executing perfect platforming maneuvers.
+- Deeply Rewarding Sense of Accomplishment: Conquering the game's most brutal acts provides an unparalleled feeling of mastery and achievement.

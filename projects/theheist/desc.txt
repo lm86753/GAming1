@@ -1,0 +1,21 @@
+"The Heist" is a thrilling action-stealth game that immerses players in the high-stakes world of elaborate robberies and daring infiltrations. The objective is to successfully execute complex heists, which typically involve breaking into secure locations, acquiring valuable targets (e.g., jewels, data, artifacts), and escaping undetected. Gameplay often combines elements of stealth (avoiding guards, cameras, lasers), puzzle-solving (disabling security systems, cracking safes), and action (if stealth fails, engaging in firefights). Players must meticulously plan their approach, utilize gadgets, disguise themselves, and coordinate with a team (if applicable) to overcome security measures. The game emphasizes strategic thinking, timing, and problem-solving, creating a tense and rewarding experience for those who enjoy outsmarting their adversaries. Success is measured not just by acquiring the target, but by the elegance and efficiency of the execution.
+
+Controls:
+- WASD Keys / Arrow Keys: Move character.
+- Mouse (Left Click): Primary action (shoot, interact, hack).
+- Mouse (Right Click): Aim / Use gadget.
+- Spacebar: Jump / Climb / Vault.
+- Shift Key: Sprint / Sneak / Take cover.
+- E Key / F Key: Interact / Pick up items.
+- Q Key / Tab Key: Switch gadgets / Weapons.
+- Ctrl Key / C Key: Crouch / Go prone.
+
+Special Features:
+- Stealth-Action Gameplay: Blend of covert infiltration, tactical evasion, and engaging action sequences.
+- Elaborate Heist Planning: Meticulous mission design that encourages strategic thinking and pre-planning.
+- Gadgets & Tools: Wide array of high-tech devices, lock-picking tools, and hacking devices to aid in infiltration.
+- Dynamic Security Systems: Guards with patrols, cameras, laser grids, and alarm systems that react to player actions.
+- Puzzle-Solving Elements: Disabling security, cracking safes, and navigating complex environments.
+- Multiple Approaches: Levels often allow for various solutions, from pure stealth to more direct action.
+- Tense Atmosphere: High stakes and the constant threat of discovery create a thrilling experience.
+- Customization & Upgrades: Enhance character abilities, acquire new gear, or upgrade existing tools.
