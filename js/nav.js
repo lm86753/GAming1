@@ -73,7 +73,7 @@ const navbarHTML = `
             border-radius: 1.5rem;
             padding: 10px;
             min-width: 160px;
-            display: none; /* Hidden by default */
+            display: none; 
             flex-direction: column;
             gap: 5px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.6);
@@ -124,7 +124,7 @@ const navbarHTML = `
             
             <div class="nav-dropdown">
                 <button class="nav-item" id="menuBtn">
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="dropdown-menu" id="navDropdown">
                     <a href="/dev.html" class="dropdown-item">
@@ -132,9 +132,6 @@ const navbarHTML = `
                     </a>
                     <a href="/privacy.html" class="dropdown-item">
                         <i class="fa-solid fa-shield-halved"></i> Privacy
-                    </a>
-                    <a href="https://github.com/your-repo" target="_blank" class="dropdown-item">
-                        <i class="fa-brands fa-github"></i> Source Code
                     </a>
                 </div>
             </div>
@@ -144,10 +141,8 @@ const navbarHTML = `
     </div>
 `;
 
-// Inject Navbar
 document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-// Dropdown Toggle Script
 document.addEventListener('click', (e) => {
     const menuBtn = document.getElementById('menuBtn');
     const dropdown = document.getElementById('navDropdown');
@@ -159,7 +154,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// --- GLOBAL TRACKING SCRIPT INJECTION (REMAINS UNCHANGED) ---
 (function() {
     if (!document.querySelector('script[src*="firebase-app-compat"]')) {
         const appScript = document.createElement('script');
@@ -184,7 +178,6 @@ document.addEventListener('click', (e) => {
     }
 })();
 
-// Game Click Tracking Logic
 document.addEventListener('click', (e) => {
     const link = e.target.closest('a');
     if (!link) return;
@@ -205,5 +198,6 @@ document.addEventListener('click', (e) => {
         if (title && typeof trackGameClick === 'function') {
             trackGameClick(title);
         }
+        
     }
 });
