@@ -2,39 +2,93 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <script>
-        // The "Master" Bypass: Intercepts all attempts to read the URL
-        const domainBypass = "8games.net";
-        Object.defineProperty(document, 'domain', { get: () => domainBypass });
-        Object.defineProperty(location, 'hostname', { get: () => domainBypass });
-        Object.defineProperty(location, 'href', { get: () => "https://" + domainBypass + "/" });
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Steal a Brainrot - Fixed</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: #000; overflow: hidden; width: 100vw; height: 100vh; }
+        #unity-canvas { width: 100%; height: 100%; display: block; }
+    </style>
 
-        // Fake Yandex SDK Objects
+    <script>
+        // --- STEP 1: THE ULTIMATE DOMAIN SPOOFER ---
+        // We create a fake 'location' object and try to trick the engine
+        const fakeDomain = "8games.net";
+        
+        try {
+            // Overriding at the prototype level is often more effective
+            Object.defineProperty(window, 'location', {
+                value: new Proxy(window.location, {
+                    get: (target, prop) => {
+                        if (prop === 'hostname' || prop === 'host') return fakeDomain;
+                        if (prop === 'origin') return `https://${fakeDomain}`;
+                        if (prop === 'href') return `https://${fakeDomain}/`;
+                        return target[prop];
+                    }
+                }),
+                configurable: true
+            });
+        } catch (e) {
+            console.warn("Standard location override failed, applying fallback...");
+        }
+
+        // --- STEP 2: YANDEX SDK MOCKING ---
+        // This ensures the game doesn't hang waiting for Yandex servers
         window.ysdk = {
             features: {
-                LoadingAPI: { ready: () => {} },
+                LoadingAPI: { ready: () => console.log("Unity: Game Ready Signal Received") },
                 GameplayAPI: { start: () => {}, stop: () => {} }
             },
-            adv: { showFullscreenAdv: (o) => { if(o.callbacks) o.callbacks.onClose(true); } }
+            adv: { showFullscreenAdv: (o) => { if(o && o.callbacks) o.callbacks.onClose(true); } },
+            getStorage: () => Promise.resolve({}),
+            getPlayer: () => Promise.resolve({ getName: () => "User", getPhoto: () => "" })
         };
+        
+        // Setup global environment variables the framework code looks for
         window.initYSDK = true;
         window.cloudSaves = "{}"; 
         window.playerData = "{}"; 
         window.paymentsData = "{}";
-        window.environmentData = JSON.stringify({language: "en", deviceType: "desktop"});
+        window.environmentData = JSON.stringify({
+            language: "en", 
+            deviceType: "desktop",
+            isMobile: false,
+            isDesktop: true,
+            browser: "Chrome"
+        });
+
+        // Forced bypass for the .indexOf check
+        const originalIndexOf = String.prototype.indexOf;
+        String.prototype.indexOf = function(val) {
+            if (val === "8games.net") return 0;
+            return originalIndexOf.apply(this, arguments);
+        };
     </script>
 </head>
 <body>
-    <canvas id="unity-canvas" style="width: 100vw; height: 100vh; background: #000;"></canvas>
+    <canvas id="unity-canvas"></canvas>
+
     <script src="build/StealBrainrot.loader.js"></script>
+
     <script>
-        createUnityInstance(document.querySelector("#unity-canvas"), {
+        // --- STEP 3: INITIALIZE UNITY ---
+        const canvas = document.querySelector("#unity-canvas");
+        const config = {
             dataUrl: "build/d6ccccaf266bab16bf58f5725e76504e.data.br",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/b7cf28e445ff2ecea47d5697909bb345.wasm.br",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
+            productVersion: "1.0",
+        };
+
+        createUnityInstance(canvas, config, (progress) => {
+            // Loading progress can be handled here
+        }).then((unityInstance) => {
+            console.log("Unity Instance Created Successfully");
+            window.unityInstance = unityInstance;
+        }).catch((message) => {
+            alert("Error loading game: " + message);
         });
     </script>
 </body>
