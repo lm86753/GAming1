@@ -127,6 +127,9 @@ const navbarHTML = `
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="dropdown-menu" id="navDropdown">
+                    <a href="/feedback.html" class="dropdown-item">
+                        <i class="fa-solid fa-comment-dots"></i> Feedback
+                    </a>
                     <a href="/dev.html" class="dropdown-item">
                         <i class="fa-solid fa-terminal"></i> Dev Panel
                     </a>
@@ -198,6 +201,33 @@ document.addEventListener('click', (e) => {
         if (title && typeof trackGameClick === 'function') {
             trackGameClick(title);
         }
-        
-    }
+
+        // Save to Recently Played (Local Storage)
+        if (title) {
+            let imgSrc = '';
+            if (card) {
+                const img = card.querySelector('img');
+                if (img) imgSrc = img.src;
+            }
+
+            if (imgSrc) {
+                const recentGame = {
+                    title: title,
+                    href: href,
+                    img: imgSrc,
+                    timestamp: Date.now()
+                };
+                
+                let recent = JSON.parse(localStorage.getItem('recentlyPlayed') || '[]');
+                // Remove duplicates
+                recent = recent.filter(g => g.title !== title);
+                 // Add to front
+                 recent.unshift(recentGame);
+                // Limit stored history
+                recent = recent.slice(0, 50);
+                 
+                 localStorage.setItem('recentlyPlayed', JSON.stringify(recent));
+             }
+         }
+     }
 });
