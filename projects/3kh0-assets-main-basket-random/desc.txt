@@ -1,0 +1,17 @@
+Game Title: Basket Random
+
+Description:
+Basket Random is a quirky and unpredictable physics-based basketball game. Players control two ragdoll-like characters on a minimalist court, attempting to score baskets against an opponent. The objective is simple: be the first to reach a set number of points to win the match. The game emphasizes chaotic and often hilarious gameplay due to its unique physics engine, where characters flop and flail in unexpected ways, making every shot and movement a challenge. It's a lighthearted sports game perfect for quick, entertaining matches.
+
+Controls:
+The controls are typically very simple, designed for quick pick-up-and-play action.
+- Player 1: Often uses the 'W' key or 'Up Arrow' to jump/interact.
+- Player 2: Often uses the 'Up Arrow' key or 'W' to jump/interact.
+(Specific controls can vary; usually, a single action button per player controls both movement and shooting in a physics-driven manner.)
+
+Special Features and Mechanics:
+- Physics-Based Ragdoll Characters: The core of the game's humor and challenge comes from the unpredictable movements of the characters.
+- One-Button Gameplay: Simplified controls make it easy to learn but hard to master due to the physics.
+- Local Multiplayer: Often supports two players on the same keyboard, fostering competitive fun.
+- Randomness: The "Random" in the title often refers to various elements like changing courts, ball types, or character appearances that can occur between rounds or matches, adding to the replayability and unpredictable nature.
+- Quick Matches: Games are typically short and fast-paced, making it ideal for casual play sessions.
