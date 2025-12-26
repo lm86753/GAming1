@@ -1,0 +1,14 @@
+"CTR" is a thrilling web-based arcade racing game, drawing inspiration from classic kart racers. Players take control of a vibrant character and compete in fast-paced races across a variety of imaginative tracks filled with twists, turns, and shortcuts. The core objective is to outmaneuver opponents, utilize power-ups strategically, and cross the finish line first to claim victory in tournaments or single races. Its colorful graphics and accessible gameplay make it an enjoyable experience for casual and competitive players alike.
+
+The gameplay combines traditional racing mechanics with fun, arcade-style elements. Tracks often feature jumps, hazards, and item boxes that provide offensive and defensive power-ups, such as missiles to stun opponents or shields to protect yourself. Mastering the art of drifting around corners can provide speed boosts, adding a layer of skill to the otherwise straightforward racing. Whether you're battling against AI opponents or challenging friends (if multiplayer features are available), CTR delivers an energetic and competitive racing experience focused on quick reflexes and clever use of items.
+
+Controls:
+- Arrow Keys (or WASD): Steer and accelerate/brake.
+- Spacebar (or other designated key): Use power-ups, jump, or activate special abilities.
+
+Special Features:
+- Arcade Racing Action: Fast-paced races with a focus on fun and excitement.
+- Power-ups and Items: Collect and deploy various items to gain an advantage or hinder opponents.
+- Diverse Tracks: Race across a selection of colorful and challenging circuits.
+- Drifting Mechanics: Master drifts for speed boosts and tactical cornering.
+- Engaging Visuals: Bright and appealing graphics that enhance the arcade feel.

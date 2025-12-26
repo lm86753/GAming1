@@ -1,0 +1,14 @@
+"Duck Life 2: World Champion" is the enhanced sequel to the popular duck training and racing simulation game, building upon the addictive mechanics of its predecessor with new features, mini-games, and a grander scale. Your journey begins anew with a fresh duckling, destined for greatness in the world of professional duck racing. The core objective remains to train your duck in four essential skills – running, flying, swimming, and climbing – to compete in increasingly challenging races across different environments and ultimately become the world champion.
+
+The gameplay expands on the established formula with more varied training mini-games, each designed to hone a specific skill. These mini-games are interactive and require timing and precision to maximize your duck's stat gains. Winning races against AI opponents across diverse tracks is crucial for earning money, which you'll use to buy nutritious food (to replenish energy), better training equipment, and cosmetic upgrades for your duck. "Duck Life 2" introduces more complex training regimens and a clearer progression path towards becoming the ultimate champion, offering deeper engagement and longer-term goals than the original.
+
+Controls:
+- Mouse: Primarily used for navigating menus, purchasing items, and interacting with the training mini-games.
+- Keyboard: Simple key presses (e.g., arrow keys, spacebar) are used for specific actions during training mini-games and races.
+
+Special Features:
+- Expanded Training: New and improved mini-games for running, flying, swimming, and climbing.
+- World Championship Journey: Progress through leagues and tournaments to become the world's best duck.
+- Enhanced Progression: Deeper upgrade paths and more varied items for your duck.
+- Diverse Environments: Race across different landscapes, each with unique challenges.
+- Addictive Simulation: A compelling cycle of training, racing, and upgrading with improved visuals and mechanics.

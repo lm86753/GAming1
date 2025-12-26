@@ -1,0 +1,13 @@
+"Factory Balls" is a highly acclaimed and intellectually stimulating puzzle game series that challenges players to replicate complex ball designs. Set in a charmingly mechanical factory, the objective of each level is to create a specific patterned or colored ball using a limited set of tools and processes. You start with a plain white ball and must strategically apply various actions – such as dipping in paint, adding stickers, cutting shapes, or using conveyor belts – in the correct order to match the target design.
+
+The gameplay is a pure test of logic and foresight. Each tool in the factory performs a specific action, and understanding how these actions combine and interact is crucial. What looks like a simple pattern can often require a surprisingly intricate sequence of steps. The game presents a series of increasingly complex puzzles, forcing players to think several steps ahead and visualize the outcome of each process. "Factory Balls" is celebrated for its elegant design, satisfying "aha!" moments, and its ability to provide a genuinely brain-teasing experience without relying on fast reflexes or random luck.
+
+Controls:
+- Mouse: Used for all interactions, including dragging and dropping balls, clicking on factory machines to activate them, and selecting actions from available tools.
+
+Special Features:
+- Ingenious Logic Puzzles: Solve a wide array of puzzles that require creative and logical thinking.
+- Unique Factory Mechanics: Utilize a variety of tools and processes to transform plain balls into complex designs.
+- Progressive Difficulty: Levels gradually introduce new mechanics and challenges, keeping the gameplay fresh.
+- Minimalist Visuals: Clean and intuitive art style that focuses attention on the puzzle elements.
+- Satisfying "Aha!" Moments: Experience the joy of cracking a tricky puzzle with a clever sequence of actions.

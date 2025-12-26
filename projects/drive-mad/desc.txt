@@ -1,0 +1,15 @@
+"Drive Mad" is a chaotic and highly entertaining physics-based driving game that challenges players to navigate various courses in a realistically simulated vehicle. The objective is to reach the finish line of each level without completely destroying your car, often requiring precise control, careful balancing, and a bit of luck to conquer the outrageously designed tracks. It's a game where over-the-top crashes are not just possible, but often inevitable and part of the fun.
+
+The gameplay revolves around its robust and often humorous physics engine. Your vehicle will bounce, flip, and tumble in response to every bump, jump, and collision. Levels are packed with bizarre obstacles, steep ramps, precarious ledges, and other contraptions designed to test your driving skills (and patience). Success often comes from learning how to effectively control your car's momentum, throttle, and braking to maintain balance and avoid catastrophic damage. Each level presents a new, unique driving puzzle, and the satisfaction of finally conquering a particularly brutal course is immense.
+
+Controls:
+- Arrow Keys (Up/Down): Accelerate/Brake (or reverse).
+- Arrow Keys (Left/Right): Tilt the vehicle (useful for landing jumps and preventing flips).
+- WASD Keys: (Alternative) W for accelerate, S for brake/reverse, A/D for tilting.
+
+Special Features:
+- Realistic & Exaggerated Physics: Enjoy dynamic and often comical vehicle behavior.
+- Challenging Levels: Navigate increasingly difficult tracks filled with creative obstacles.
+- Vehicle Destruction: Experience satisfying (and sometimes frustrating) car damage and explosions.
+- Skill-Based Driving: Requires precision and balance to master the controls.
+- Endless Replayability: Experiment with different approaches to conquer each challenging level.

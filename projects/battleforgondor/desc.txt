@@ -1,0 +1,12 @@
+"Battle for Gondor" is an engaging and strategic Flash tower defense game set in the iconic universe of The Lord of the Rings. As the commander of Gondor's defenses, your primary objective is to protect the great city from relentless waves of Orcs, Trolls, and other monstrous creatures pouring forth from Mordor. You must strategically place and upgrade a variety of defensive units and towers along the enemy's path to prevent them from reaching and breaching the city gates.
+
+The gameplay combines tactical planning with real-time action. You start with a limited amount of resources, which you'll use to build your initial defenses. As you defeat enemies, you earn more gold, allowing you to construct new towers, upgrade existing ones, and unlock special abilities. Each defensive unit has unique strengths and weaknesses, requiring you to adapt your strategy to the different types of enemies you face. From archers and soldiers to powerful mages and siege weapons, building a balanced and effective defense is key to Gondor's survival. The fate of Middle-earth rests on your ability to defend the white city!
+
+Controls:
+- Mouse: Select and place defensive units, interact with upgrade menus, and activate special abilities.
+
+Special Features:
+- Classic tower defense gameplay: Strategically build and upgrade towers to defend against waves of enemies.
+- Lord of the Rings theme: Immerse yourself in the epic world of Tolkien, defending one of its most iconic cities.
+- Variety of units and enemies: Deploy different types of defenders and face a diverse array of monstrous foes.
+- Resource management: Earn gold by defeating enemies and wisely invest in your defenses.

@@ -1,0 +1,23 @@
+Breaking the Bank is a short, comedic point-and-click adventure that introduces the Henry Stickmin series. The game centers on Henry, a stick-figure thief attempting to break into a heavily guarded bank vault using a variety of questionable tools and plans. The core gameplay revolves around trial and error: players choose from different options, each leading to a unique animated outcome. Most choices result in humorous failures, while only one leads to success. The objective is simple—break into the bank—but the fun comes from exploring every possible wrong way to do it.
+
+The game has a lighthearted cartoon theme with exaggerated animations, slapstick humor, and unexpected references. There is no timer, no combat, and no complex mechanics, making it accessible to players of all ages. Progression is linear, but replayability is high because each option unlocks a different gag or scenario. The game encourages curiosity and experimentation rather than skill-based play.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Select options, interact with menus, and advance dialogue
+
+Mouse Cursor – Navigate choices and hover over selectable items
+
+Keyboard – Not required for gameplay
+
+Space / Enter (in some versions) – Advance text or cutscenes
+
+Special Features & Mechanics
+
+Multiple endings based on player choices
+
+Instant retries after failure, encouraging experimentation
+
+Fully animated outcomes for every decision
+
+Comedy-driven design with visual and situational humor

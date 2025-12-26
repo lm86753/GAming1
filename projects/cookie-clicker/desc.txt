@@ -1,0 +1,13 @@
+"Cookie Clicker" is the quintessential incremental idle game that popularized the genre. The premise is deceptively simple: you start by clicking a giant cookie to earn cookies. However, this seemingly mundane action quickly spirals into an addictive cycle of production and exponential growth. As you accumulate more cookies, you can spend them on various upgrades and buildings that automatically generate even more cookies per second, such as cursors, grandmas, farms, factories, and even interdimensional portals.
+
+The gameplay loop is built around constant progression and delayed gratification. You begin with active clicking, but as your empire of cookie-producing assets grows, the game transitions into an "idle" experience, where your cookies accumulate even when you're away. The sheer number of upgrades, achievements, and unlockable content ensures a long-term engagement. "Cookie Clicker" is known for its satirical humor, surprising depth, and the satisfying feeling of building an absurdly vast cookie empire from humble beginnings. It's a game that provides endless dopamine hits as numbers relentlessly increase.
+
+Controls:
+- Mouse: Primarily used for clicking the large cookie, purchasing upgrades, and interacting with the various menus and buildings.
+
+Special Features:
+- Incremental Gameplay: Start small and grow exponentially, creating a massive cookie empire.
+- Idle Mechanics: Cookies are generated automatically, even when you're not actively playing.
+- Vast Upgrade System: Unlock hundreds of upgrades, buildings, and special abilities.
+- Achievements: A multitude of humorous and challenging achievements to strive for.
+- Endless Progression: The game never truly ends, offering continuous growth and new milestones.

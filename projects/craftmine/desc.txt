@@ -1,0 +1,16 @@
+"Craftmine" is an engaging web-based survival and crafting game heavily inspired by the popular sandbox genre, particularly Minecraft. The game plunges you into a blocky, procedurally generated world where your primary objectives are to explore, mine resources, craft tools and items, and build structures to survive. It combines elements of resource gathering, creative building, and basic survival mechanics to offer an accessible and fun experience for players who enjoy open-ended gameplay.
+
+The gameplay loop is centered around collecting raw materials like wood, stone, and various ores by mining the environment. These resources are then used in a crafting system to create essential tools (pickaxes, axes), weapons, armor, and building blocks. As you progress, you unlock more advanced crafting recipes and gain access to better materials, allowing you to construct more elaborate bases and improve your chances of survival. The world is often vast and filled with different biomes, encouraging exploration and discovery, while also presenting minor challenges like managing hunger or defending against simple creatures.
+
+Controls:
+- WASD or Arrow Keys: Move your character.
+- Mouse: Look around, mine blocks (left-click/hold), place blocks (right-click), and interact with crafting interfaces.
+- Number Keys (1-9): Select items in your hotbar.
+- E or I: Open inventory/crafting menu.
+
+Special Features:
+- Sandbox Exploration: Discover a procedurally generated world with diverse biomes and resources.
+- Crafting System: Combine raw materials to create tools, weapons, armor, and building components.
+- Resource Gathering: Mine, chop, and gather a wide variety of materials from the environment.
+- Building Mechanics: Construct shelters, bases, and creative structures to your heart's content.
+- Survival Elements: Manage basic needs (if applicable) and fend off minor threats.

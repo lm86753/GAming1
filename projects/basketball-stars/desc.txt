@@ -1,0 +1,21 @@
+"Basketball Stars" is a fast-paced and action-packed 2-player basketball game that brings arcade-style hoops to your browser. Developed by MadPanda Games, this game lets you choose your favorite basketball star and compete in thrilling matches against a friend or the AI. With smooth animations and responsive controls, "Basketball Stars" offers an engaging and competitive experience for basketball fans. The game features realistic physics, allowing for impressive dunks, accurate long-range shots, and strategic defensive plays.
+
+The objective is to outscore your opponent within a time limit. You can play in various game modes, including 1-on-1 matches, 2-on-2 matches, and even a challenging tournament mode. Each player has a unique set of skills and special moves, adding a layer of strategy to character selection. Master your chosen player's abilities to dominate the court. The game's dynamic gameplay ensures that every match is exciting and unpredictable, with plenty of opportunities for highlight-reel plays.
+
+Controls:
+Player 1:
+- WASD: Move
+- B: Shoot / Perform Action
+- S: Pump / Block
+
+Player 2:
+- Arrow Keys: Move
+- L: Shoot / Perform Action
+- Down Arrow: Pump / Block
+
+Special Features:
+- 2-player local multiplayer: Challenge a friend to intense head-to-head basketball action.
+- Realistic physics: Experience dynamic ball movement and player interactions.
+- Multiple game modes: Play 1-on-1, 2-on-2, or test your skills in tournament mode.
+- Unique player skills: Each basketball star has special abilities to master.
+- Engaging arcade style: Fast-paced gameplay with intuitive controls and vibrant graphics.

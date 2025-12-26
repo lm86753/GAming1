@@ -1,0 +1,14 @@
+"Cell Machine" is an innovative and highly creative puzzle/simulation game that challenges players to build intricate contraptions using a variety of specialized "cells." The core concept revolves around designing and programming simple automated systems to solve complex problems or achieve specific goals within a grid-based environment. Each cell possesses a unique function—such as pushing, pulling, rotating, or activating other cells—and understanding their interactions is key to mastering the game.
+
+The gameplay involves placing and configuring these cells on a canvas, then observing their emergent behavior. You start with a blank slate or a specific objective, and it's up to your ingenuity to devise a working solution. Levels often present logical puzzles that require careful thought about timing, sequence, and spatial arrangement of cells. "Cell Machine" fosters a deep sense of satisfaction as you debug your designs and witness your miniature automated factory come to life. It's a game that appeals to those who enjoy logic puzzles, programming concepts, and creative problem-solving.
+
+Controls:
+- Mouse: Used for selecting, placing, rotating, and connecting cells on the grid.
+- Specific Hotkeys (if applicable): May be used for advanced cell manipulation or UI shortcuts.
+
+Special Features:
+- Modular Building System: Create complex machines from simple, interactive components.
+- Creative Problem-Solving: Design unique solutions to a wide range of logical puzzles.
+- Emergent Behavior: Observe how simple rules lead to complex and fascinating interactions between cells.
+- Sandbox Mode: Experiment freely and build without constraints (if available).
+- Programming-like Logic: Appeals to players who enjoy visual programming or automation concepts.

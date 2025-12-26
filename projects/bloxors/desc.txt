@@ -1,0 +1,12 @@
+"Bloxorz" is a classic and challenging puzzle game that tests your spatial reasoning and planning skills. The objective is deceptively simple: guide a rectangular block from a starting point to a designated exit hole on a floating platform. What makes Bloxorz unique is how the block moves. It doesn't slide; instead, it rolls end-over-end, changing its orientation between being flat (covering two tiles) and standing upright (covering one tile). Every move counts, and a single wrong roll can send your block tumbling off the edge.
+
+The gameplay involves navigating intricate levels filled with various traps, switches, and special tiles. Some tiles might be fragile and break if the block stands on them, while others might activate bridges or teleporters. You'll need to carefully plan your moves, anticipating how the block's orientation will affect its interaction with the environment. The game progresses through increasingly complex levels, introducing new mechanics and demanding more precise execution. Bloxorz offers a rewarding experience for puzzle enthusiasts who enjoy a good mental workout.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Roll the block in the corresponding direction.
+
+Special Features:
+- Unique rolling mechanic: The block's changing orientation is central to the puzzles.
+- Challenging levels: Progress through a series of increasingly complex and ingenious puzzles.
+- Various interactive tiles: Encounter switches, teleporters, and fragile tiles that add depth to the gameplay.
+- Spatial reasoning: Sharpen your ability to visualize objects in 3D space and plan multi-step solutions.

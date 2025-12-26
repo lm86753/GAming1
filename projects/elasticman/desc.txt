@@ -1,0 +1,14 @@
+"Elastic Man" is a unique and mesmerizing interactive physics simulation that gained widespread popularity for its bizarre and highly deformable central character. It's less of a traditional game with objectives and scores, and more of a digital toy or experience designed to showcase advanced soft-body physics. Players interact directly with a large, gelatinous, and highly elastic humanoid figure whose face grotesquely stretches, squashes, and wiggles in response to mouse movements and clicks.
+
+The core of "Elastic Man" lies in its incredible real-time physics simulation. The character's face is rendered with remarkable elasticity, allowing for incredibly fluid and organic deformations. You can grab, pull, twist, and poke at various parts of its face, observing the satisfyingly squishy and realistic reactions. The experience is both strangely captivating and humorously disturbing, providing endless minutes of experimental interaction. It's a testament to the power of physics engines in creating engaging, non-linear digital experiences.
+
+Controls:
+- Mouse: Click and drag on any part of the Elastic Man's face to stretch, pull, and manipulate it.
+- Mouse Click: Poke or tap the face for localized reactions.
+
+Special Features:
+- Advanced Soft-Body Physics: Experience highly realistic and fluid deformation of the elastic character.
+- Interactive Simulation: Directly manipulate the character's face with your mouse.
+- Mesmerizing Visuals: Watch the grotesque yet captivating stretching and squashing effects.
+- Unique Digital Toy: Offers a non-traditional gameplay experience focused on experimentation and interaction.
+- Stress Relief/Curiosity: Provides a strangely satisfying and humorous outlet for digital manipulation.

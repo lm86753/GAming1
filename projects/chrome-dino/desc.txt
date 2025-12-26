@@ -1,0 +1,15 @@
+"Chrome Dino" is the iconic, endless runner game that famously appears in the Google Chrome browser when you're offline. This simple yet highly addictive game features a pixelated T-Rex that automatically runs across a side-scrolling desert landscape. Your objective is to help the dinosaur avoid obstacles – primarily cacti and flying pterodactyls – for as long as possible, aiming to achieve the highest score. What starts as a charming distraction quickly becomes a test of reflexes and endurance.
+
+The gameplay is incredibly straightforward: the dinosaur runs autonomously, and your only interaction is to make it jump over obstacles. As your score increases, the game's speed gradually picks up, making the timing of your jumps more critical and challenging. Eventually, the background will even cycle through day and night modes, adding a subtle visual change to the otherwise minimalist aesthetic. "Chrome Dino" is a testament to how simple mechanics, when perfectly executed, can create a universally beloved and endlessly replayable experience, whether you're bored offline or just looking for a quick, fun challenge.
+
+Controls:
+- Spacebar: Make the dinosaur jump.
+- Up Arrow Key: Make the dinosaur jump.
+- Down Arrow Key: Make the dinosaur duck (useful for pterodactyls in later stages).
+
+Special Features:
+- Endless Runner: The game continues indefinitely as long as you avoid obstacles.
+- Offline Accessibility: Playable directly in the Google Chrome browser without an internet connection.
+- Progressive Difficulty: The game speeds up over time, increasing the challenge.
+- Day/Night Cycle: Subtle visual changes as you progress through high scores.
+- Minimalist Pixel Art: Charming retro graphics that contribute to its widespread appeal.

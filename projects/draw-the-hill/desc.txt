@@ -1,0 +1,13 @@
+"Draw the Hill" is a creative and engaging physics-based puzzle game where your artistic skills directly influence your success. The core objective is to guide a vehicle (often a cart, car, or character) across a challenging landscape by drawing lines and shapes that transform into solid terrain. You become both the artist and the engineer, crafting paths, ramps, and bridges to overcome obstacles and reach the finish line.
+
+The gameplay revolves around intuitive drawing mechanics. Using your mouse or touch input, you'll sketch lines on the screen. These lines instantly become part of the game world, affecting the vehicle's movement and interacting with the game's physics engine (like Box2D, as suggested by the file structure). Each level presents a unique set of challenges, from treacherous gaps and steep inclines to dynamic obstacles that require precise and clever drawn solutions. Success depends on understanding basic physics principles and creatively applying them to your drawn terrain. "Draw the Hill" offers a delightful blend of creativity, problem-solving, and physics-based fun.
+
+Controls:
+- Mouse / Touch: Click, drag, and release to draw lines on the screen, which become physical objects.
+
+Special Features:
+- Creative Gameplay: Design your own solutions by drawing terrain directly into the game world.
+- Physics-Based Puzzles: Leverage realistic physics to navigate vehicles across challenging landscapes.
+- Intuitive Drawing Mechanics: Easy-to-use controls for creating interactive terrain.
+- Diverse Levels: Encounter various environmental challenges requiring different drawn strategies.
+- Problem-Solving Focus: Encourages experimentation and ingenuity in overcoming obstacles.

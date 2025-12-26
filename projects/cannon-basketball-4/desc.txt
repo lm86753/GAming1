@@ -1,0 +1,14 @@
+"Cannon Basketball 4" is an engaging physics-based puzzle game that combines the precision of a cannon with the challenge of basketball. As the fourth installment in the series, it offers refined mechanics and new levels that will test your aim, timing, and understanding of physics. The objective of each level is to fire a basketball from a cannon and guide it into the hoop, often navigating around various obstacles, using trampolines, and utilizing environmental elements to your advantage.
+
+The gameplay is intuitive yet requires careful thought and experimentation. You control the cannon's angle and power with your mouse, aiming for the perfect shot. Each level presents a unique puzzle, with hoops placed in increasingly difficult positions and surrounded by new challenges. The game leverages a robust physics engine, making every shot feel realistic and requiring you to account for gravity, momentum, and bounces. As you progress, you'll encounter new types of balls, special power-ups, and more intricate level designs, keeping the gameplay fresh and rewarding.
+
+Controls:
+- Mouse: Aim the cannon (move the mouse to adjust angle).
+- Left Mouse Button: Fire the basketball (hold to adjust power, release to shoot).
+
+Special Features:
+- Physics-based puzzles: Solve challenging levels using realistic ballistics and environmental interactions.
+- Intuitive controls: Easy to learn, allowing players to focus on strategy and precision.
+- Progressive difficulty: Tackle new obstacles and complex level designs as you advance.
+- Engaging visuals: Enjoy vibrant 2D graphics powered by Pixi.js.
+- Multiple levels: A wide array of puzzles to keep you entertained.

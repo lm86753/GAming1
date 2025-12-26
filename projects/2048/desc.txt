@@ -1,0 +1,12 @@
+"2048" is a captivating and addictive puzzle game where the objective is to slide numbered tiles on a 4x4 grid to combine them and create a tile with the number 2048. While easy to grasp, mastering it requires strategic thinking and foresight, challenging your mind to beat your high score.
+
+Gameplay starts with '2' or '4' tiles. Using arrow keys, move all tiles; identical tiles merge to double their value. A new tile appears after each move. The game ends when the board is full with no possible moves. Plan carefully to create merge chains and avoid filling the board.
+
+Controls:
+- Arrow Keys: Move tiles (Up, Down, Left, Right)
+
+Special Features:
+- AI Assistance: "Auto-run" for optimal strategies, "Hint" for next moves.
+- Classic gameplay: Addictive 2048 experience.
+- Score tracking: Improve and compete.
+- Minimalist design: Focus on the puzzle.

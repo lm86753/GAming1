@@ -1,0 +1,13 @@
+"Cupcake 2048" is a delightful and visually appetizing variation of the popular "2048" puzzle game. It takes the addictive number-merging gameplay of the original and sweetens it with a charming cupcake theme. Instead of combining numerical tiles to reach 2048, players merge identical cupcake tiles to evolve them into bigger, more delicious-looking treats. The objective remains the same: strategically slide tiles on a grid to combine them and achieve the ultimate cupcake tile, all while preventing the board from filling up.
+
+The core gameplay mechanics are identical to the classic "2048." You move all tiles on the grid in one of four directions (up, down, left, or right). When two tiles with the same cupcake image collide, they merge into a single tile representing the next stage of cupcake evolution. New, basic cupcake tiles appear on the board after each move. The challenge lies in planning your moves to create large combinations and keep the board open, ensuring you have space to merge until you create the highest-value cupcake. "Cupcake 2048" offers a fresh and appealing aesthetic to a beloved puzzle formula.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Slide all tiles on the board in the chosen direction.
+- WASD Keys: (Alternative) Slide all tiles on the board in the chosen direction.
+
+Special Features:
+- Charming Cupcake Theme: Replaces numbers with appealing cupcake graphics, making the puzzle more visually engaging.
+- Classic 2048 Gameplay: Retains the addictive tile-merging mechanics of the original game.
+- Strategic Puzzle Solving: Requires foresight and planning to combine tiles effectively and achieve high scores.
+- Relaxing and Addictive: Easy to learn but challenging to master, providing hours of engaging gameplay.

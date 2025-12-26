@@ -1,0 +1,14 @@
+"CTR-Holiday" is a festive and exhilarating web-based arcade kart racing game, offering a holiday-themed twist on the classic "CTR" experience. Players dive into a joyous world of competitive racing, taking control of charming characters as they speed through beautifully decorated tracks inspired by various holidays. The main objective remains to outrace opponents, skillfully deploy holiday-themed power-ups, and be the first to cross the finish line, all while soaking in the cheerful atmosphere.
+
+The gameplay is similar to its standard counterpart, combining intuitive racing controls with exciting arcade mechanics. Tracks are adorned with seasonal decorations, and power-ups take on a festive flair, such as throwing snowballs at rivals or deploying a trail of gingerbread cookies for a speed boost. Drifting around icy corners or through snowy shortcuts is key to gaining an advantage. "CTR-Holiday" provides a fun and lighthearted racing experience perfect for celebrating the season, delivering the same competitive thrill with an added layer of holiday cheer.
+
+Controls:
+- Arrow Keys (or WASD): Steer and accelerate/brake.
+- Spacebar (or other designated key): Use power-ups, jump, or activate special abilities.
+
+Special Features:
+- Holiday-Themed Racing: Experience classic kart racing with festive visuals and items.
+- Seasonal Power-ups: Utilize unique, holiday-inspired items to gain an edge over opponents.
+- Themed Tracks: Race through beautifully decorated environments celebrating various holidays.
+- Arcade Fun: Fast-paced gameplay focused on excitement, competition, and quick reflexes.
+- Engaging Visuals: Bright and cheerful graphics that enhance the festive racing experience.

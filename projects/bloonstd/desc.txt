@@ -1,0 +1,13 @@
+"Bloons TD" (Bloons Tower Defense) is the original installment of the highly popular tower defense series, where your mission is to strategically pop every incoming balloon before it can escape the designated path. In this classic Flash game, you'll deploy a variety of monkey towers, each with unique abilities, along a winding track. As balloons (known as "bloons") advance, your towers automatically attack them, earning you in-game money for each successful pop. This money is crucial for purchasing new towers and upgrading your existing defenses to face increasingly challenging waves of bloons.
+
+The gameplay is intuitive yet requires tactical thinking. Bloons come in different colors, indicating varying levels of durability and special properties. Red bloons are the weakest, while stronger bloons might require multiple hits or specialized tower types to pop. You'll need to carefully consider tower placement, range, and attack speed to create an impenetrable defense. The game's charm lies in its simple graphics, addictive mechanics, and the satisfying challenge of perfecting your tower layouts.
+
+Controls:
+- Mouse: Used for all interactions, including selecting and placing towers, upgrading defenses, and navigating menus.
+
+Special Features:
+- Classic Tower Defense: Experience the foundational gameplay of a beloved genre.
+- Strategic Placement: Carefully choose where to build your monkey towers for maximum impact.
+- Tower Upgrades: Enhance your towers' power, range, and abilities to handle tougher bloons.
+- Varied Bloon Types: Encounter different types of bloons, each requiring specific strategies to defeat.
+- Addictive Gameplay: Simple to learn, but challenging and rewarding to master.

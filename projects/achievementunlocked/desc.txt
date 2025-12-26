@@ -1,0 +1,13 @@
+"Achievement Unlocked" is a classic and highly influential meta-game that humorously parodies the concept of achievements in video games. At its core, it's a simple platformer where you control a small blue elephant in a single room. However, the true objective of the game is not to reach a specific goal or defeat enemies, but to unlock a staggering number of achievements. These achievements range from the mundane, like moving left and right, to the absurd, like dying in a specific spot or finding a "pre-pre-alpha" version of the game.
+
+The gameplay is intentionally simple and serves as a vehicle for the main attraction: the achievements. You move your elephant around the small level, jumping on platforms and avoiding a single spike pit. The game constantly rewards you with achievements for almost every action you take, no matter how trivial. This creates a highly addictive and satisfying gameplay loop, as you're always just a few seconds away from your next reward. "Achievement Unlocked" is a clever and witty commentary on the nature of modern gaming, and a must-play for anyone who enjoys a good laugh and a unique gaming experience.
+
+Controls:
+- Arrow Keys: Move the elephant left and right
+- Up Arrow: Jump
+
+Special Features:
+- Meta-gameplay: The game is all about the achievements, with the platforming being a means to an end.
+- Humorous and satirical: Pokes fun at common video game tropes and the obsession with achievements.
+- Addictive and rewarding: The constant stream of achievements provides a satisfying sense of progression.
+- Simple and accessible: The easy-to-learn controls make it a game that anyone can pick up and play.

@@ -1,0 +1,20 @@
+"1v1.space" is an exciting and competitive 2-player action game that combines fast-paced shooting with strategic building elements. The game pits two players against each other in a head-to-head battle where the goal is to eliminate the opponent. What makes "1v1.space" unique is the ability to not only shoot at your rival but also to build structures that can be used for defense or to gain a tactical advantage. This blend of building and combat creates a dynamic and engaging experience that rewards both quick reflexes and clever strategy.
+
+The gameplay is centered around intense one-on-one duels. Each player controls a character with the ability to move, shoot, and build. The "build" mechanic allows players to create walls or other structures on the fly, providing cover from enemy fire or creating platforms to reach higher ground. This adds a layer of depth to the combat, as players must decide when to attack and when to fortify their position. The game is all about outsmarting and outplaying your opponent in a tense and action-packed setting.
+
+Controls:
+Player 1:
+- W, A, D: Movement
+- F: Shoot
+- G: Minion
+
+Player 2:
+- Arrow Keys: Movement
+- M: Shoot
+- N: Build
+
+Special Features:
+- 2-Player local multiplayer: Challenge a friend to a one-on-one duel.
+- Building mechanic: Create structures to defend yourself and outmaneuver your opponent.
+- Fast-paced action: A thrilling experience that will test your reflexes and strategic thinking.
+- Minimalist graphics: A clean and simple art style that keeps the focus on the gameplay.

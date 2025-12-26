@@ -1,0 +1,12 @@
+"Bitlife" is an immersive text-based life simulator game where you guide a character through their entire life, from birth to death. Every decision you make, big or small, shapes their destiny, career, relationships, and overall happiness. The game offers a vast array of choices, allowing for countless unique life paths and endless replayability. Will your character become a successful CEO, a notorious criminal, a loving parent, or something entirely unexpected? The possibilities are as vast as life itself.
+
+The gameplay is presented through a series of choices and events that unfold year by year. You'll interact with family members, go to school, choose a career, build relationships, and make critical decisions that impact your character's stats like happiness, health, smarts, and looks. Random events and scenarios keep the gameplay fresh and unpredictable, often forcing you to react to unexpected challenges. "Bitlife" is a game that encourages experimentation and offers a unique blend of humor, drama, and life lessons, all within a simple and accessible interface.
+
+Controls:
+- Mouse: Click on choices, navigate menus, and interact with various life events.
+
+Special Features:
+- Endless replayability: Experience a different life every time you play, with countless choices and outcomes.
+- Deep simulation: Influence your character's career, relationships, health, and more.
+- Humorous and engaging: The game's writing is witty and often throws unexpected twists your way.
+- Achievements and challenges: Strive to complete various achievements and life challenges for extra replay value.

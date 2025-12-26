@@ -1,0 +1,13 @@
+"Canyon Defense" is a classic Flash tower defense game that challenges players to strategically defend their territory against an relentless invasion. Set in a rugged canyon landscape, your objective is to prevent waves of enemy units from traversing the canyon path and reaching your base. To do this, you'll deploy and upgrade a variety of defensive towers, each with unique abilities and attack patterns, along the designated pathways.
+
+The gameplay requires careful planning and tactical execution. As enemies advance, you'll earn money by destroying them, which can then be reinvested into building new towers, upgrading existing ones, or activating special abilities. Each wave introduces new and stronger enemy types, forcing you to adapt your strategy and optimize your tower placements for maximum efficiency. The game emphasizes resource management, as you must balance your spending between offense and defense to withstand the growing threat. "Canyon Defense" offers an engaging and addictive experience for fans of the tower defense genre, with its straightforward mechanics and increasing difficulty.
+
+Controls:
+- Mouse: Used for all interactions, including selecting and placing towers, upgrading defenses, and navigating menus.
+
+Special Features:
+- Classic Tower Defense: Build a formidable defense against waves of invading enemies.
+- Strategic Placement: Carefully choose tower locations to create effective choke points and overlapping fields of fire.
+- Diverse Towers: Utilize a variety of defensive structures, each with unique strengths and upgrade paths.
+- Progressive Difficulty: Face increasingly challenging enemy waves and types as you advance through levels.
+- Resource Management: Balance your in-game economy to build and upgrade your defenses efficiently.

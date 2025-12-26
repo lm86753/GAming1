@@ -1,0 +1,14 @@
+"Doodle Jump" is an iconic and highly addictive vertical platformer where players guide a charming, four-legged creature known as "The Doodler" up an endless series of platforms. The objective is to achieve the highest possible score by continuously jumping higher and higher, avoiding menacing monsters, dodging black holes, and utilizing various power-ups along the way. Its distinctive hand-drawn, "doodle" art style and simple yet engaging mechanics have made it a global phenomenon.
+
+The gameplay is deceptively simple: The Doodler bounces automatically from one platform to the next. Your primary role is to tilt your device (on mobile) or use the left/right arrow keys (on desktop) to move The Doodler horizontally, guiding it to land on safe platforms. Some platforms move, some break, some disappear, adding layers of challenge. You'll encounter different enemy types that need to be avoided or shot (by tapping the screen or pressing a designated key), as well as helpful items like springs, propeller hats, and jetpacks that propel you rapidly upwards, allowing for massive score gains.
+
+Controls:
+- Left/Right Arrow Keys (or A/D): Move The Doodler horizontally.
+- Mouse Click (or Spacebar): Fire (if applicable to the version).
+
+Special Features:
+- Endless Vertical Platforming: The game continues as long as you can keep jumping higher.
+- Distinctive Doodle Art Style: Unique hand-drawn graphics give the game its charming aesthetic.
+- Varied Platforms and Obstacles: Encounter different platform types, monsters, and environmental hazards.
+- Power-ups: Utilize springs, jetpacks, and other items to aid your ascent.
+- High Score Chasing: Highly addictive gameplay loop focused on beating your personal best.

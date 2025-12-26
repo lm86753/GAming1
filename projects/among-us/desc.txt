@@ -1,0 +1,13 @@
+"Among Us" is a popular online multiplayer social deduction game that has taken the world by storm. The game takes place on a spaceship where a group of crewmates must work together to complete tasks and prepare their ship for departure. However, among the crew are one or more impostors whose goal is to sabotage the ship and eliminate the crewmates without being discovered. It's a game of teamwork, betrayal, and deception that is both thrilling and hilarious.
+
+The gameplay is divided into two main phases. During the task phase, crewmates move around the ship and complete various mini-games to fill up a group task bar. Impostors, on the other hand, pretend to do tasks while looking for opportunities to sabotage the ship or eliminate crewmates. When a body is discovered, or an emergency meeting is called, the game enters the discussion and voting phase. During this phase, players discuss what they've seen and vote on who they think the impostor is. The player with the most votes is ejected from the ship. The crewmates win by either completing all their tasks or by successfully identifying and ejecting all the impostors. The impostors win when they have eliminated enough crewmates to have a majority.
+
+Controls:
+- WASD or Arrow Keys: Move your character
+- Mouse: Interact with tasks, vote, and use the in-game chat
+
+Special Features:
+- Social deduction gameplay: Work with your friends to figure out who the impostors are, or deceive them as an impostor.
+- Online multiplayer: Play with friends or with other players from around the world.
+- Variety of tasks: A wide range of mini-games to complete as a crewmate.
+- Sabotage mechanics: As an impostor, you can sabotage the ship to create chaos and confusion.

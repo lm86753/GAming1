@@ -1,0 +1,13 @@
+"Creative Kill Chamber" is an inventive puzzle/strategy game that challenges players to design elaborate traps and contraptions to eliminate targets within a confined environment. The game embraces a dark humor, inviting you to unleash your inner mad scientist by strategically placing various deadly devices, environmental hazards, and Rube Goldberg-esque mechanisms. Your objective is to ensure the target (often a hapless, unsuspecting character) meets their demise in the most creative and efficient way possible.
+
+The gameplay revolves around a sandbox-style approach to problem-solving. Each level provides a chamber, a target, and a selection of tools and traps at your disposal. You must carefully consider the target's movement patterns, the physics of the environment, and the unique properties of each trap to construct a lethal sequence of events. Success often requires experimentation, trial-and-error, and a keen eye for cause and effect. With its emphasis on creative solutions and a dark comedic tone, "Creative Kill Chamber" offers a unique and satisfying puzzle experience.
+
+Controls:
+- Mouse: Used for selecting, placing, moving, and possibly rotating various traps and environmental elements within the chamber.
+
+Special Features:
+- Sandbox Puzzle Design: Freedom to create unique and elaborate death traps.
+- Variety of Traps: Utilize a wide array of tools, from spikes and lasers to falling objects and complex machinery.
+- Physics-Based Interactions: Design contraptions that leverage in-game physics for realistic (and often comical) outcomes.
+- Dark Humor: A distinctive comedic tone that permeates the game's premise and execution.
+- High Replayability: Experiment with different trap combinations and strategies to find new solutions.

@@ -1,0 +1,15 @@
+"10 Minutes Till Dawn" is a thrilling survival shooter and bullet-hell roguelite game that will keep you on the edge of your seat. In this game, you are thrown into a dark, eerie world teeming with relentless waves of Lovecraftian monsters. Your one and only goal is to survive for 10 minutes against the overwhelming horde. This game is a free demo for the full version, "20 Minutes Till Dawn," and provides a challenging and action-packed experience.
+
+The gameplay is fast-paced and intense. You must constantly move and shoot to keep the creatures at bay. As you defeat enemies, they drop loot that you can collect to gain energy and experience. This energy can be used to unlock a wide variety of powerful upgrades, allowing you to create unique and devastating character builds in each run. The roguelite nature of the game means that every playthrough is different, with new combinations of upgrades and challenges to overcome.
+
+Controls:
+- WASD: Move your character
+- Mouse: Aim your weapon
+- Left Mouse Button: Shoot
+
+Special Features:
+- Roguelite progression: Each run is unique, with a wide array of upgrades to unlock and experiment with.
+- Lovecraftian horror theme: Battle against a horde of grotesque and terrifying monsters inspired by the works of H.P. Lovecraft.
+- Bullet-hell action: Dodge and weave through a storm of projectiles as you fight for your life.
+- Synergistic upgrades: Discover powerful combinations of upgrades to create game-breaking builds.
+- Free demo: A great way to experience the core mechanics of the full game, "20 Minutes Till Dawn."

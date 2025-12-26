@@ -1,0 +1,13 @@
+"Bloons TD 2" is the exciting sequel to the popular tower defense game, bringing back the addictive bloon-popping action with new features and challenges. In this strategy game, your mission is to prevent waves of colorful bloons from navigating a maze-like path and escaping the screen. You'll achieve this by strategically placing a variety of monkey towers, each equipped with unique abilities to pop bloons. With improved graphics, new tower types, and more complex levels, Bloons TD 2 offers an enhanced and deeper tower defense experience.
+
+The core gameplay remains true to its predecessor: earn money by popping bloons, then spend it on new towers or upgrade existing ones. However, Bloons TD 2 introduces new bloon types, such as Camo Bloons that are invisible to some towers, and Regrow Bloons that regenerate if not popped completely. To counter these new threats, you'll gain access to advanced monkey towers with specialized attacks and multiple upgrade paths. Careful planning and adaptation are crucial as you face increasingly challenging waves across diverse maps. Whether you're a veteran of tower defense games or new to the genre, Bloons TD 2 provides hours of engaging strategic fun.
+
+Controls:
+- Mouse: Used for all interactions, including selecting and placing towers, upgrading defenses, and navigating menus.
+
+Special Features:
+- Enhanced graphics: Enjoy a visually improved tower defense experience.
+- New tower types: Discover powerful new monkey towers with unique abilities.
+- Challenging bloon types: Face new enemies like Camo and Regrow Bloons that require fresh strategies.
+- Multiple upgrade paths: Customize your towers with various upgrades to suit your playstyle.
+- Diverse maps: Defend against bloons across a range of new and intricate levels.

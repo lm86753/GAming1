@@ -1,0 +1,14 @@
+"Endless War 3" is a tactical real-time strategy (RTS) Flash game that immerses players in intense, large-scale military conflicts. As the third installment in the series, it expands upon its predecessors with improved graphics, more diverse units, and intricate mission objectives. The objective is to command your forces, deploy units strategically, and achieve victory against a relentless enemy across various battlefields. It combines elements of resource management, tactical combat, and base building (in some modes) to offer a comprehensive wartime experience.
+
+The gameplay places you in control of a military commander on the battlefield. You typically start with a base or a small contingent of units, and your goal is to manage resources to produce more soldiers, tanks, aircraft, and other military assets. Missions often involve objectives such as capturing strategic points, destroying enemy bases, defending your own positions, or escorting VIPs. The real-time nature of the game demands quick decision-making and efficient unit deployment to counter enemy advances and exploit weaknesses. "Endless War 3" provides a challenging and engaging RTS experience for fans of military simulation and tactical warfare.
+
+Controls:
+- Mouse: Used for selecting units, issuing commands (movement, attack), building structures, and navigating the map.
+- Keyboard (if applicable): Hotkeys for unit selection, group commands, or special abilities.
+
+Special Features:
+- Real-Time Strategy Gameplay: Command and control diverse military units in dynamic battles.
+- Varied Units: Deploy infantry, tanks, artillery, aircraft, and more, each with unique strengths.
+- Mission-Based Objectives: Tackle a range of strategic tasks across different maps and scenarios.
+- Resource Management: Gather and utilize resources to expand your army and infrastructure.
+- Tactical Depth: Plan unit movements, formations, and engagements to outsmart the enemy.

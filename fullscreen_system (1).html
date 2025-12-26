@@ -3,29 +3,27 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9486425855482350" crossorigin="anonymous"></script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9486425855482350" crossorigin="anonymous"></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-  
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'personalization_storage': 'denied',
-      'ad_user_data': 'denied',          // Added for v2 compliance
-      'ad_personalization': 'denied',    // Added for v2 compliance
-      'functionality_storage': 'granted', 
-      'wait_for_update': 500
-    });
-  </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'personalization_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'functionality_storage': 'granted', 
+            'wait_for_update': 500
+        });
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Play Game | Penguin Labs - Fullscreen Browser Gaming</title>
     <meta name="description" content="Experience high-performance, fullscreen browser gaming at Penguin Labs. No distractions, just play." />
     <meta name="author" content="Penguin Labs" />
-    <meta name="robots" content="noindex"> <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <meta name="robots" content="noindex"> 
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,66 +34,17 @@
             background-color: #050505; 
             color: white; 
             margin: 0;
-            overflow: hidden; /* Prevent body scroll while gaming */
-            height: 100vh;
+            overflow-y: auto; 
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
         }
 
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
             backdrop-filter: blur(15px); 
             border: 1px solid rgba(255, 255, 255, 0.1); 
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            width: auto;
-            min-width: 420px;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-link:hover {
-            color: #60a5fa;
-            transform: translateY(-1px);
-        }
-
-        .nav-link i { color: #3b82f6; }
-
-        .logo-box {
-            width: 38px;
-            height: 38px;
-            background: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .game-wrapper {
@@ -107,6 +56,7 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
             overflow: hidden;
             z-index: 10;
+            margin-top: 120px; /* Space for the injected navbar */
         }
 
         .game-iframe {
@@ -154,16 +104,25 @@
             transform: translateY(-2px);
         }
 
+        .description-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px 0 80px 0;
+            padding: 30px;
+            border-radius: 2rem;
+        }
+
         /* Fullscreen handling */
         .game-wrapper:fullscreen {
             width: 100vw;
             height: 100vh;
             max-width: none;
             border-radius: 0;
+            margin-top: 0;
         }
 
-        /* Hide Navbar and UI in Fullscreen unless hovering */
-        body:has(.game-wrapper:fullscreen) .navbar { transform: translate(-50%, -150%); }
+        /* Logic to hide injected nav when in fullscreen */
+        body:has(.game-wrapper:fullscreen) #navbar-container { display: none; }
         .game-wrapper:fullscreen .game-overlay { opacity: 0; }
         .game-wrapper:fullscreen:hover .game-overlay { opacity: 1; }
     </style>
@@ -172,28 +131,8 @@
 
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-0"></div>
 
-    <nav class="navbar">
-        <a href="/index.html" class="flex items-center hover:opacity-80 transition-opacity">
-            <div class="logo-box">
-                <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
-            </div>
-        </a>
-
-        <div class="flex gap-8 px-6">
-            <a href="/projects.html" class="nav-link">
-                <i class="fa-solid fa-gamepad"></i> Games
-            </a>
-            <a href="/misc.html" class="nav-link">
-                <i class="fa-solid fa-cog"></i> Settings
-            </a>
-        </div>
-
-        <div style="width: 38px;"></div>
-    </nav>
-
     <div class="game-wrapper glass" id="gameContainer">
-        <div class="w-full h-full" id="gameContent">
-            </div>
+        <div class="w-full h-full" id="gameContent"></div>
 
         <div class="game-overlay">
             <h2 class="text-2xl font-bold tracking-tight drop-shadow-lg" id="gameTitle">Loading Game...</h2>
@@ -209,6 +148,23 @@
             </div>
         </div>
     </div>
+
+    <div class="description-container glass">
+        <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-circle-info text-blue-500"></i>
+            <h3 class="text-xl font-bold uppercase tracking-wider text-gray-200">Game Information</h3>
+        </div>
+        <div id="gameDescription" class="text-gray-400 leading-relaxed whitespace-pre-wrap">
+            <div class="animate-pulse flex space-x-4">
+                <div class="flex-1 space-y-4 py-1">
+                    <div class="h-4 bg-white/10 rounded w-3/4"></div>
+                    <div class="h-4 bg-white/10 rounded"></div>
+                    <div class="h-4 bg-white/10 rounded w-5/6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         class FullscreenController {
@@ -268,6 +224,21 @@
             iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock');
             document.getElementById('gameContent').appendChild(iframe);
             
+            const gameFolder = src.substring(0, src.lastIndexOf('/')) + '/';
+            
+            fetch(gameFolder + 'dec.txt')
+                .then(response => {
+                    if (!response.ok) throw new Error('Description file not found');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('gameDescription').textContent = data;
+                })
+                .catch(err => {
+                    document.getElementById('gameDescription').innerHTML = 
+                        '<span class="text-gray-600 italic">No additional information available for this experiment.</span>';
+                });
+            
             iframe.onload = () => {
                 try {
                     setTimeout(() => {
@@ -285,7 +256,6 @@
             document.getElementById('gameContent').innerHTML = `<div class="flex items-center justify-center h-full text-gray-500">No game source provided.</div>`;
         }
 
-        // F11 Support
         document.addEventListener('keydown', (e) => {
             if (e.key === 'F11') {
                 e.preventDefault();
@@ -293,5 +263,7 @@
             }
         });
     </script>
+
+    <script src="/nav.js"></script>
 </body>
 </html>

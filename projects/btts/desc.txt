@@ -1,0 +1,13 @@
+"BTTS" (Both Teams To Score) is a straightforward and engaging prediction game that simulates a football betting scenario. The objective is to correctly predict whether both teams in a fictional football match will score at least one goal. This game offers a quick and easy way to test your intuition and luck in sports prediction, without any real-world stakes. It's a perfect casual game for football enthusiasts or anyone looking for a simple prediction challenge.
+
+The gameplay loop is simple and repetitive, designed for quick rounds. Each game presents you with two randomly generated team names. You then have to decide if you think "Both Teams To Score" will happen in their match. After you make your prediction, the game generates a random score for the match and reveals the outcome. You'll instantly know if your prediction was correct or incorrect, and your overall score (wins and losses) will be updated. This creates a satisfying feedback loop that encourages you to keep playing and try to improve your prediction streak.
+
+Controls:
+- Mouse: Click on the "YES (BTTS)" or "NO (BTTS)" buttons to make your prediction.
+- Mouse: Click on the "Next Match" button to start a new round.
+
+Special Features:
+- Simple prediction mechanics: Easy to understand and play, focusing on a single betting market.
+- Random match generation: Fictional team names and match scores keep each round fresh.
+- Score tracking: Keep tabs on your correct and incorrect predictions.
+- Quick rounds: Designed for short, repeatable gameplay sessions.

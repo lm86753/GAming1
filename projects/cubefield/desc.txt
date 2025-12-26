@@ -1,0 +1,14 @@
+"Cubefield" is an iconic, minimalist 3D avoidance game that tests your reflexes and focus in a high-speed, ever-changing environment. The premise is stark: you control a small, triangular ship (or cursor) hurtling forward through an endless, flat plane populated by an oncoming field of cubes. The objective is to navigate through gaps in the cube formations, avoiding collisions for as long as possible, as the game's speed and density of obstacles continuously increase.
+
+The gameplay is incredibly simple yet intensely addictive. Your ship automatically moves forward at an accelerating pace. Your only control is to steer left and right, guiding your vessel through the narrow passages that appear in the cube field. The visual style is intentionally abstract, using solid colors and basic geometric shapes to create a sense of overwhelming speed and imminent danger. The minimalist design ensures there are no distractions from the core challenge of avoiding impact, making "Cubefield" a pure test of reaction time and spatial awareness.
+
+Controls:
+- Left Arrow Key: Steer left.
+- Right Arrow Key: Steer right.
+
+Special Features:
+- Endless Runner Concept: Playable indefinitely, with the primary goal of achieving a high score.
+- Progressive Difficulty: The game continuously speeds up and introduces more complex cube patterns.
+- Minimalist 3D Graphics: An abstract visual style that creates a strong sense of speed.
+- Reflex-Based Gameplay: Heavily relies on quick reactions and precise steering.
+- Addictive and Challenging: Easy to learn, difficult to master, keeping players engaged in chasing new high scores.

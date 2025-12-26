@@ -1,0 +1,13 @@
+"Champion Archer" is a thrilling and precise archery game that tests your skill, accuracy, and understanding of physics. As an aspiring archer, your objective is to hit various targets with your arrows, often under challenging conditions. The game emphasizes realistic arrow trajectory, requiring you to account for factors like gravity, wind (in some levels), and the distance to your target. Each successful shot earns you points, pushing you to refine your aim and become the ultimate Champion Archer.
+
+The gameplay is intuitive but demands practice and precision. You typically control the power and angle of your shot using your mouse. A common mechanic involves dragging the mouse back from your archer to increase power and adjusting its vertical position to set the angle. Releasing the mouse button sends the arrow flying. Levels often feature static targets, moving targets, or even puzzle-like scenarios where you need to hit switches or manipulate the environment to reveal your target. The game offers a satisfying blend of strategic aiming and quick reflexes, making each shot a rewarding challenge.
+
+Controls:
+- Mouse: Drag and release to control shot power and angle.
+
+Special Features:
+- Realistic Physics: Experience authentic arrow ballistics, accounting for gravity and other environmental factors.
+- Precision Aiming: Master the art of archery with intuitive mouse controls for power and angle.
+- Diverse Targets: Encounter various static and moving targets, adding variety and challenge to gameplay.
+- Score-Based Progression: Compete for high scores and track your progress as you improve your archery skills.
+- Engaging Challenges: Some levels may include environmental puzzles or obstacles to overcome.

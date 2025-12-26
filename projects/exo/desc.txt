@@ -1,0 +1,15 @@
+"Exo" is a captivating web-based adventure game that transports players to a distant, alien world, inviting them to explore its mysteries and survive its challenges. Often featuring elements of exploration, platforming, and puzzle-solving, the game tasks players with navigating an unknown landscape, uncovering ancient secrets, and perhaps even returning home. Its sci-fi theme, coupled with the sense of isolation on a foreign planet, creates an immersive and thought-provoking experience.
+
+The gameplay typically involves controlling a lone protagonist, often equipped with some form of futuristic suit or technology, as they traverse the alien terrain. This might include jumping across vast canyons, climbing treacherous structures, or solving environmental puzzles that unlock new areas. The minimalist approach to storytelling often encourages players to interpret the narrative through environmental cues and discovered artifacts. "Exo" aims to deliver a compelling journey of discovery and survival, where every step into the unknown holds both beauty and danger, pushing players to adapt and learn about their strange new surroundings.
+
+Controls:
+- Arrow Keys (or WASD): Move the protagonist (left, right, jump).
+- Spacebar (or other designated key): Activate special abilities (e.g., jetpack, interact with objects).
+- Mouse: May be used for camera control or interacting with UI elements.
+
+Special Features:
+- Alien World Exploration: Discover a beautifully rendered and mysterious exoplanet.
+- Platforming Challenges: Navigate intricate environments with precise jumps and movement.
+- Environmental Puzzles: Solve logic-based puzzles that are integrated into the alien landscape.
+- Atmospheric Storytelling: Uncover the narrative through exploration and discovery, fostering a sense of wonder.
+- Sci-Fi Theme: Immerse yourself in a futuristic world with unique flora, fauna, and technology.

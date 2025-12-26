@@ -1,0 +1,25 @@
+2048 Multitask is a challenging twist on the classic 2048 puzzle game that pushes players to think faster and manage multiple boards at the same time. Instead of focusing on a single grid, players must simultaneously play on two, three, or even four 2048 boards, all controlled with the same inputs. The objective remains the same as the original game: combine matching numbered tiles to reach higher values, ideally the 2048 tile or beyond. However, the added multitasking element dramatically increases the difficulty and requires strong concentration and planning skills.
+
+Gameplay is turn-based and strategic. Every move you make applies to all boards at once, meaning a good move on one board could be a mistake on another. Players must constantly balance short-term survival with long-term planning, deciding when to merge tiles, when to create space, and when to sacrifice progress on one board to save another. As boards fill up, the pressure increases, making each decision more critical. The minimalist design keeps distractions low, allowing players to focus fully on logic and multitasking.
+
+2048 Multitask is ideal for players who enjoy puzzle games that test mental flexibility, pattern recognition, and strategic thinking. The game offers high replay value, as mastering multiple boards at once provides a fresh challenge every session.
+
+Controls (Keyboard & Mouse)
+
+Arrow Keys (↑ ↓ ← →) – Move tiles in all boards simultaneously
+
+W, A, S, D (in some versions) – Alternative movement controls
+
+Mouse – Used only for menu navigation
+
+R (if available) – Restart the game
+
+Special Features & Mechanics
+
+Multiple 2048 boards controlled at the same time
+
+Increased difficulty through multitasking mechanics
+
+Classic 2048 merging rules with a unique twist
+
+Focus on strategy, planning, and mental coordination

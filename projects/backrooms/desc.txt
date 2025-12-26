@@ -1,0 +1,15 @@
+"Backrooms" is a first-person survival horror game based on the popular creepypasta of the same name. The game drops you into an endless maze of empty, yellow-walled office rooms, and your goal is to survive and find a way out. The atmosphere is tense and unsettling, with the constant hum of fluorescent lights and the feeling of being watched. You are not alone in the backrooms; a mysterious entity is hunting you, and you'll need to use your wits and stealth to avoid it at all costs.
+
+The gameplay is focused on exploration and survival. You'll need to navigate the labyrinthine corridors of the backrooms, looking for clues and items that might help you escape. The game is designed to be a challenging and immersive horror experience, with a strong emphasis on atmosphere and suspense. You'll need to be constantly aware of your surroundings, as the entity can appear at any moment. The game is a faithful adaptation of the backrooms legend, and it's a must-play for any fan of the creepypasta or the survival horror genre.
+
+Controls:
+- WASD: Move
+- Mouse: Look around
+- Shift: Sprint
+- E or F: Interact with objects
+
+Special Features:
+- Immersive atmosphere: A tense and unsettling experience that will keep you on the edge of your seat.
+- Survival horror gameplay: Explore, survive, and find a way to escape the backrooms.
+- Stealth mechanics: Avoid the entity by hiding and moving quietly.
+- Faithful adaptation: A game that captures the spirit of the original backrooms creepypasta.

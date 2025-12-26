@@ -1,0 +1,12 @@
+"Monkey Mart" is a charming and engaging idle/management game where you take on the role of a hardworking monkey entrepreneur running a supermarket. Your goal is to build a thriving business by planting and harvesting crops, stocking your shelves with fresh produce, and serving a variety of animal customers. As you earn money, you can expand your mart, unlock new products, and hire other monkey employees to help you manage the growing demands of your store.
+
+The gameplay is simple and intuitive, making it easy for players of all ages to jump in and start building their supermarket empire. You control your monkey character with the keyboard or mouse, moving around the mart to perform various tasks. You'll start by planting fruit trees and other crops, and once they're ready, you'll need to harvest them and place them on the shelves for your customers to purchase. As you progress, you'll unlock new products like bananas, corn, and more. You'll also need to manage your cash register, collecting money from your customers and using it to upgrade your facilities and hire staff. The game has a relaxed and satisfying gameplay loop that will keep you coming back to check on your growing business.
+
+Controls:
+- WASD or Arrow Keys: Move your character
+
+Special Features:
+- Idle/management gameplay: Build and grow your own supermarket at your own pace.
+- Charming graphics: A cute and colorful art style with adorable animal characters.
+- Upgrade system: Expand your mart, unlock new products, and hire employees to help you grow your business.
+- Relaxing and addictive: A satisfying and low-stress gameplay experience that's easy to get lost in.

@@ -1,0 +1,25 @@
+YoHoHo.io is a fast-paced multiplayer battle game with a pirate theme, inspired by classic .io mechanics. Players take control of a pirate character armed with a sword and are dropped onto an island arena filled with other players. The main objective is to defeat opponents, collect gold, and grow in size and power while avoiding being eliminated. Only the strongest pirates survive, creating a competitive and action-heavy experience.
+
+Gameplay focuses on movement, positioning, and timing. Players swing their sword to knock enemies off the island or reduce their health. Eliminating opponents causes them to drop gold, which can be collected to increase your pirate’s size, strength, and reach. As you grow larger, your attacks become more powerful, but you also become a bigger target, adding a layer of risk-versus-reward strategy. Matches are quick, intense, and constantly changing due to real-time multiplayer combat.
+
+The game’s art style is simple yet colorful, with smooth animations and clear visual feedback. The shrinking safe area forces players closer together as the match progresses, ensuring nonstop action and preventing camping. YoHoHo.io is easy to learn but challenging to master, making it appealing to both casual players and competitive gamers.
+
+Controls (Keyboard & Mouse)
+
+W, A, S, D – Move your pirate
+
+Mouse Movement – Aim your attack direction
+
+Mouse Left Click – Swing your sword
+
+Spacebar (if available) – Special ability or dash (varies by mode)
+
+Special Features & Mechanics
+
+Real-time multiplayer pirate battles
+
+Gold-based growth system for power progression
+
+Knockback combat mechanics
+
+Shrinking arena to keep matches fast and intense

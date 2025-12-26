@@ -1,0 +1,14 @@
+"Duck Life 1" is the charming original installment of the beloved simulation and racing game series. In this unique game, players embark on a journey to raise and train a duck from a humble duckling into a racing champion. The objective is to train your duck in four key disciplines – running, flying, swimming, and climbing – and then enter it into races to earn money, unlock new challenges, and ultimately become the best duck racer in the world.
+
+The gameplay loop involves a combination of training mini-games and competitive races. Each training activity is a simple, skill-based mini-game designed to improve one of your duck's stats. For instance, running training might involve rapidly clicking to make your duck run faster, while flying might involve navigating obstacles by flapping its wings. Success in these mini-games directly translates to improved stats, which are crucial for winning races. Winning races earns you coins, which can be spent on food to regain energy, or on stylish accessories and seeds to plant to make your duck even stronger. It’s an addictive cycle of training, racing, and upgrading, all wrapped in a delightful and lighthearted package.
+
+Controls:
+- Mouse: Primarily used for navigating menus, purchasing items, and interacting with the training mini-games.
+- Keyboard: Simple key presses (e.g., arrow keys, spacebar) are used for specific actions during training mini-games.
+
+Special Features:
+- Duck Training Simulation: Develop your duck's skills in running, flying, swimming, and climbing through engaging mini-games.
+- Competitive Racing: Enter your trained duck into races against other ducks to prove its superiority.
+- Progression System: Earn money and unlock new training methods, items, and accessories.
+- Character Customization: Personalize your duck with various hats and accessories.
+- Addictive Gameplay Loop: A satisfying cycle of training, racing, and upgrading keeps you coming back for more.

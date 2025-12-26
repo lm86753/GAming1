@@ -1,0 +1,13 @@
+"Avalanche" is a classic and addictive arcade-style game that will test your reflexes and endurance. The premise is simple: you control a character at the bottom of the screen, and your goal is to survive for as long as possible by dodging a relentless avalanche of falling snowballs. The game is a true test of skill and concentration, as the speed and intensity of the avalanche increase over time, making it more and more challenging to stay alive.
+
+The gameplay is straightforward and easy to learn, but difficult to master. You use the arrow keys to move your character left and right, avoiding the falling snowballs that rain down from the top of the screen. The longer you survive, the higher your score will be. The game is all about quick reactions and finding safe spots to navigate the chaotic downpour of snow. It's a game that's easy to pick up and play for a few minutes, but it's also highly addictive and will keep you coming back to beat your high score.
+
+Controls:
+- Left Arrow: Move character left
+- Right Arrow: Move character right
+
+Special Features:
+- Classic arcade gameplay: A simple yet challenging game that's easy to learn and hard to master.
+- Endless survival: See how long you can last against the increasingly intense avalanche.
+- High score tracking: Compete with yourself and your friends to get the highest score.
+- Retro-style graphics: A charming and nostalgic visual style that harkens back to the golden age of Flash games.

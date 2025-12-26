@@ -1,0 +1,12 @@
+"Big Red Button" is a deceptively simple yet highly addictive clicker game that challenges your patience and finger-tapping endurance. The premise couldn't be more straightforward: there's a large, prominent red button on your screen, and your sole objective is to click it as many times as humanly possible. Each click adds to your ever-growing score, providing a satisfying sense of accomplishment with every press. It's a game that strips away complex mechanics and intricate storylines, focusing purely on the primal satisfaction of a repetitive action and the pursuit of a higher number.
+
+The gameplay loop is incredibly easy to understand. You'll be greeted by the titular big red button, often accompanied by a counter displaying your current clicks. The challenge comes from your own determination and the desire to push your score higher and higher. There are no levels to complete, no enemies to defeat, and no puzzles to solve – just you and the button. This minimalist approach creates a surprisingly engaging experience, making it perfect for quick breaks or for when you just want to unwind with a simple, yet compelling, task.
+
+Controls:
+- Mouse: Click the big red button.
+
+Special Features:
+- Pure clicker gameplay: Focused entirely on the act of clicking the button.
+- Endless challenge: Compete with yourself to achieve the highest possible click count.
+- Satisfying feedback: Each click is registered instantly with an incrementing counter.
+- Simple and accessible: Easy to pick up and play for all ages.

@@ -1,0 +1,14 @@
+"CTR-TR" (likely Crash Team Racing - Time Trial/Track Race) is a focused web-based arcade racing game designed for players who love to push their limits and master track layouts. As a variant of the "CTR" experience, this game zeroes in on pure racing skill, offering a streamlined approach often centered around time trials, hot laps, or specific track challenges rather than chaotic item-based combat. The objective is clear: achieve the fastest possible lap times, set new track records, and perfect your racing lines on a diverse selection of courses.
+
+The gameplay emphasizes precision driving, strategic drifting, and memorization of track intricacies. Unlike battle-oriented kart racers, "CTR-TR" often strips away distracting power-ups to focus on the purity of the race. Players will need to hone their cornering techniques, understand optimal acceleration points, and flawlessly execute drifts to shave precious milliseconds off their times. Whether you're competing against ghost data of your best runs, striving for global leaderboard supremacy (if integrated), or simply enjoying the thrill of speed, "CTR-TR" offers a satisfying challenge for racing enthusiasts.
+
+Controls:
+- Arrow Keys (or WASD): Steer and accelerate/brake.
+- Spacebar (or other designated key): Initiate drifts for speed boosts and tight cornering.
+
+Special Features:
+- Pure Racing Focus: Emphasizes driving skill, track mastery, and setting fast times.
+- Time Trial Mode: Compete against the clock to achieve the best possible lap and total race times.
+- Track Mastery: Encourages players to learn every turn, jump, and shortcut on each course.
+- Streamlined Gameplay: Often removes item mechanics to highlight raw racing talent.
+- Competitive Edge: Ideal for players who enjoy chasing records and perfecting their performance.

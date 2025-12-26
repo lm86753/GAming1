@@ -1,0 +1,13 @@
+"DogeMiner" is an engaging idle/incremental game that takes the beloved Doge meme and combines it with the addictive mechanics of a cryptocurrency mining simulator. The objective is simple yet profoundly engrossing: mine vast quantities of Dogecoins, which are then used to purchase increasingly powerful upgrades, hire more miners (Shibes, of course!), and explore new planets to expand your mining operation. It's a game of exponential growth, humor, and the satisfying feeling of watching numbers (and Dogecoins) grow.
+
+The gameplay loop starts with manual clicking to mine initial Dogecoins. Soon, you'll be able to buy tools like shovels and laser drills, and eventually progress to hiring Doge astronauts and building moon bases, all contributing to your passive Dogecoin generation. The game features a wide array of upgrades, from improving click power to boosting your "Doge Per Second" (DPS). The humor, charming pixel art, and references to the Doge meme keep the experience lighthearted, while the deep upgrade paths and endless progression provide hours of addictive gameplay as you strive to become the ultimate Doge trillionaire.
+
+Controls:
+- Mouse: Primarily used for clicking the central Dogecoin (or mining animation), purchasing upgrades, and navigating the various menus and planets.
+
+Special Features:
+- Doge Meme Theme: Infused with the iconic Doge meme aesthetic and humor.
+- Incremental Idle Gameplay: Start with basic clicks and grow your Dogecoin empire exponentially.
+- Vast Upgrade System: Unlock numerous tools, miners, and space ventures to boost production.
+- Endless Progression: The game offers continuous growth, new planets to explore, and higher tiers of upgrades.
+- Satisfying Numbers: Experience the addictive joy of seeing your Dogecoin count rapidly increase.

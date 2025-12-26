@@ -1,0 +1,21 @@
+"Boxhead 2Play" is an action-packed, top-down zombie shooter game that offers intense cooperative and competitive gameplay. As part of the popular Boxhead series, "2Play" emphasizes multiplayer action, allowing two players to team up or compete against each other in a frantic battle against hordes of zombies and other monstrous creatures. The game's minimalist, boxy art style doesn't detract from the thrilling and often gory action as you unleash a wide array of weapons to clear the undead menace.
+
+The primary objective is survival. Players choose from a selection of characters and dive into various maps, each presenting unique tactical opportunities and challenges. Waves of zombies will relentlessly attack, and you'll need to utilize your chosen weapons – from pistols and shotguns to explosive barrels and turrets – to hold them off. The game features a progression system where earning kills grants you currency to unlock more powerful weapons and defensive items. Whether you're strategically setting up traps with a friend or going head-to-head in a deathmatch, "Boxhead 2Play" delivers fast-paced, addictive, and chaotic fun.
+
+Controls:
+Player 1:
+- W, A, S, D: Move
+- J: Shoot
+- K: Action / Place item
+
+Player 2:
+- Arrow Keys: Move
+- Numpad 1: Shoot
+- Numpad 2: Action / Place item
+
+Special Features:
+- 2-player co-op or versus mode: Team up with a friend to survive or compete for the most kills.
+- Extensive arsenal: Unlock and wield a wide variety of weapons, explosives, and defensive items.
+- Wave-based survival: Face increasingly challenging waves of zombies and other monsters.
+- Destructible environments: Use the environment to your advantage by blowing up barrels and creating choke points.
+- Varied maps: Fight across different arenas, each offering unique tactical considerations.

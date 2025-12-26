@@ -1,0 +1,18 @@
+"Basket Random" is a fun and chaotic 2-player basketball game with a unique twist. As the name suggests, everything in this game is randomized, from the players' appearances to the court and even the physics of the ball. This randomness makes every match an unpredictable and hilarious experience. The game is built with a physics engine, which adds to the wacky and unpredictable nature of the gameplay. The objective is simple: score more points than your opponent by getting the ball into the hoop.
+
+The gameplay is fast-paced and easy to pick up, but the random elements ensure that no two games are ever the same. Each player controls a character composed of various body parts, and you'll find yourself in all sorts of amusing situations as you try to control your floppy character and score. The game features different types of balls, including a heavy ball that behaves differently from a regular basketball, adding another layer of unpredictability to the matches. "Basket Random" is a perfect game to play with a friend for some lighthearted and competitive fun.
+
+Controls:
+Player 1:
+- W: Jump / Shoot
+- A, D: Move Left / Right
+
+Player 2:
+- Up Arrow: Jump / Shoot
+- Left / Right Arrow: Move Left / Right
+
+Special Features:
+- Randomized gameplay: Every match is a new experience with random elements affecting the players, the court, and the ball.
+- 2-player local multiplayer: Challenge a friend to a hilarious and chaotic basketball game.
+- Physics-based fun: The game's physics engine leads to all sorts of funny and unpredictable moments.
+- Character customization: The players' appearances are randomized, with different body parts and clothing.

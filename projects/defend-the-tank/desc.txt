@@ -1,0 +1,14 @@
+"Defend the Tank" is an engaging web-based strategy game that combines elements of tower defense and direct combat. Your primary mission is to protect a powerful tank, positioned as your central stronghold, from relentless waves of enemy forces. These enemies, ranging from ground troops to air units, will attempt to destroy your tank, and it's up to your tactical prowess and quick reflexes to ensure its survival.
+
+The gameplay typically involves deploying defensive structures, units, or directly controlling the tank's armaments. You might strategically place turrets, barriers, or support units around your tank to create a defensive perimeter. As you progress, you earn resources for destroying enemies, which can be used to upgrade your tank, enhance existing defenses, or unlock new defensive options. The challenge intensifies with each wave, introducing stronger and more diverse enemy types that require adaptive strategies. "Defend the Tank" offers a satisfying blend of strategic planning and real-time action, pushing players to optimize their defenses and unleash devastating counter-attacks.
+
+Controls:
+- Mouse: Used for placing defensive structures, aiming tank turret, or selecting special abilities.
+- Keyboard (if direct tank control): WASD or Arrow Keys for movement, Spacebar or Left Mouse Button for firing. (Specifics may vary based on implementation).
+
+Special Features:
+- Strategic Defense: Deploy and upgrade a variety of defensive units to protect your tank.
+- Wave-Based Combat: Face increasingly challenging waves of diverse enemy forces.
+- Resource Management: Earn and spend resources to bolster your defenses and tank's capabilities.
+- Upgrade System: Enhance your tank's firepower, armor, and special abilities.
+- Engaging Hybrid Gameplay: Combines strategic planning with real-time combat elements.

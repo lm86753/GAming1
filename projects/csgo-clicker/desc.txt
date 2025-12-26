@@ -1,0 +1,13 @@
+"CS:GO Clicker" is an addictive idle/incremental game that simulates the popular case-opening and skin-collecting aspects of Counter-Strike: Global Offensive, without any of the first-person shooter gameplay. The primary objective is to accumulate in-game currency, open weapon cases, and collect rare and valuable skins, much like the real CS:GO economy. It’s a game of luck, incremental upgrades, and the satisfying thrill of seeing your inventory grow.
+
+The gameplay loop begins with a simple clicking mechanic to earn initial currency. This currency is then used to buy various cases, each with a different set of potential weapon skins of varying rarities. Opening cases is the core appeal, as players hope to unbox highly coveted and visually appealing skins. As you acquire more skins, you can often sell or trade them for more currency, invest in upgrades that boost your passive income, or craft new items. The game captures the excitement of unboxing and the drive to complete your virtual collection, all within a simplified, clicker-style interface.
+
+Controls:
+- Mouse: Primarily used for clicking to earn currency, opening cases, navigating menus, and managing your inventory.
+
+Special Features:
+- Case Opening Simulation: Experience the thrill of unboxing virtual weapon skins.
+- Skin Collection: Collect a wide variety of weapon skins, from common to ultra-rare.
+- Incremental Progression: Earn currency through clicking and passive income sources.
+- Upgrade System: Invest in upgrades to increase your earnings and improve your chances of getting rare items.
+- Inventory Management: Organize, sell, or trade your collected skins.

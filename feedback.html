@@ -3,41 +3,30 @@
 <head>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9486425855482350" crossorigin="anonymous"></script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9486425855482350" crossorigin="anonymous"></script>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-  
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'analytics_storage': 'denied',
-      'personalization_storage': 'denied',
-      'ad_user_data': 'denied',          // Added for v2 compliance
-      'ad_personalization': 'denied',    // Added for v2 compliance
-      'functionality_storage': 'granted', 
-      'wait_for_update': 500
-    });
-  </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'personalization_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'functionality_storage': 'granted', 
+            'wait_for_update': 500
+        });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <title>Request a Game | Penguin Labs - Feedback & Support</title>
     <meta name="description" content="Want a new game added to Penguin Labs? Use our feedback form to request titles, report bugs, or suggest improvements to our browser gaming hub." />
-    <meta name="keywords" content="request games, report bugs, penguin labs support, suggest unblocked games" />
-    <meta name="author" content="Penguin Labs" />
-    <link rel="canonical" href="https://thepenguinlab.netlify.app/feedback.html" />
-
-    <meta property="og:title" content="Game Requests & Feedback | Penguin Labs" />
-    <meta property="og:description" content="Help us make Penguin Labs better. Request your favorite games here!" />
-    <meta property="og:image" content="https://thepenguinlab.netlify.app/logo.ico" />
-    <meta property="og:type" content="website" />
-
+    
     <link rel="icon" type="image/x-icon" href="/logo.ico" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
@@ -60,48 +49,7 @@
             -webkit-text-fill-color: transparent; 
         }
 
-        /* Navbar */
-        .navbar {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            min-width: 420px;
-        }
-
-        .nav-link {
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-        }
-
-        .nav-link:hover { color: #60a5fa; transform: translateY(-1px); }
-        .nav-link i { color: #3b82f6; }
-
-        .logo-box {
-            width: 38px; height: 38px;
-            background: white; border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* Form Styling */
+        /* Form Styling (Unique to this page) */
         input, textarea, select {
             background: rgba(255, 255, 255, 0.05) !important;
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -115,7 +63,6 @@
             outline: none;
         }
 
-        /* FIX: Dropdown White-on-White Issue */
         select {
             appearance: none;
             -webkit-appearance: none;
@@ -126,9 +73,8 @@
         }
 
         select option {
-            background-color: #121212; /* Dark background for the list */
+            background-color: #121212;
             color: white;
-            padding: 10px;
         }
 
         .btn-submit {
@@ -146,23 +92,6 @@
 <body class="selection:bg-blue-500/30">
 
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
-
-    <nav class="navbar">
-        <a href="/index.html" class="flex items-center hover:opacity-80 transition-opacity">
-            <div class="logo-box">
-                <img src="logo.ico" alt="Logo" class="w-full h-full object-cover">
-            </div>
-        </a>
-        <div class="flex gap-8 px-6">
-            <a href="/projects.html" class="nav-link">
-                <i class="fa-solid fa-gamepad"></i> Games
-            </a>
-            <a href="/misc.html" class="nav-link">
-                <i class="fa-solid fa-cog"></i> Settings
-            </a>
-        </div>
-        <div style="width: 38px;"></div>
-    </nav>
 
     <main class="min-h-screen pt-40 pb-20 px-6 flex flex-col items-center">
         <div class="max-w-xl w-full">
@@ -199,7 +128,7 @@
                             class="w-full p-4 rounded-2xl resize-none"></textarea>
                     </div>
 
-                    <button type="submit" class="btn-submit w-full py-4 rounded-2xl font-bold text-lg shadow-lg">
+                    <button type="submit" class="btn-submit w-full py-4 rounded-2xl font-bold text-lg shadow-lg text-white">
                         Send Message
                     </button>
 
@@ -211,6 +140,8 @@
     <footer class="py-10 border-t border-white/5 text-center text-gray-600 text-sm">
         &copy; 2025 Penguin Labs. All rights reserved.
     </footer>
+
+    <script src="/nav.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,13 @@
+"Black Knight" is a classic Flash adventure game that transports players to a medieval world filled with danger, mystery, and challenges. You embody a valiant Black Knight, embarking on a quest to overcome various obstacles, defeat formidable foes, and unravel the secrets of the land. The game typically features side-scrolling platforming mechanics combined with combat and exploration, providing a compelling blend of action and adventure.
+
+The objective often involves navigating treacherous environments, battling different types of enemies, and solving simple puzzles to progress. As you delve deeper into the game, you might discover new abilities, collect powerful artifacts, or interact with intriguing characters who will aid or hinder your journey. The controls are designed to be intuitive, allowing players to focus on the immersive experience of being a knight in a perilous world. With its engaging storyline, challenging gameplay, and atmospheric setting, "Black Knight" delivers a memorable adventure that keeps players on the edge of their seats.
+
+Controls:
+- Arrow Keys: Move left, right, jump, and interact (e.g., climb ladders)
+- A or Spacebar: Attack / Use ability
+
+Special Features:
+- Classic Flash adventure: Experience a nostalgic journey through a medieval setting.
+- Combat and exploration: Engage in sword fights with various enemies and discover hidden paths.
+- Challenging platforming: Overcome environmental hazards and precise jumps.
+- Engaging storyline: Unravel a narrative as you progress through your knight's quest.

@@ -1,0 +1,15 @@
+"Edge Not Found" is a clever and minimalist web-based puzzle platformer that playfully uses the concept of a "404 Not Found" error as its central theme. Players control a small character navigating a fragmented, glitchy, and often unconventional digital landscape. The primary objective is to find the elusive "edge" – the true boundaries or exit points of the corrupted digital world – by solving environmental puzzles, utilizing unique movement mechanics, and piecing together the broken environment.
+
+The gameplay challenges conventional platforming tropes by introducing mechanics related to digital errors and incomplete data. You might encounter platforms that appear and disappear, areas that break apart when touched, or elements that behave in unexpected ways, all reflecting the "not found" aesthetic. Progression often involves trial-and-error, understanding the rules of this broken world, and creative use of your character's abilities to overcome seemingly impossible gaps or illogical layouts. "Edge Not Found" offers a unique and thought-provoking experience, blending puzzle-solving with a distinct digital glitch art style.
+
+Controls:
+- Arrow Keys (Left/Right) or A/D: Move your character horizontally.
+- Up Arrow Key or W: Jump.
+- Other keys (if applicable): May be used for special abilities like phasing through glitches or interacting with corrupted elements.
+
+Special Features:
+- "404 Not Found" Theme: A unique concept that integrates digital errors into gameplay.
+- Puzzle Platforming: Navigate a fragmented world, solving environmental puzzles to progress.
+- Glitch Art Style: Minimalist and abstract visuals that enhance the digital error aesthetic.
+- Unconventional Mechanics: Interact with disappearing platforms, breaking elements, and unpredictable behaviors.
+- Creative Problem Solving: Requires players to think outside the box to overcome digital anomalies.

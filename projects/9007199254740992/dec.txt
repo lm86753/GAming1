@@ -1,0 +1,25 @@
+9007199254740992 is a minimalist incremental clicker game centered around exponential growth and large numbers. The title references JavaScript’s maximum safe integer, setting the tone for a game that is all about pushing values as high as possible. The core objective is simple: increase your number from zero to 9,007,199,254,740,992 through clicking, upgrades, and automation. What starts as a basic clicking experience quickly turns into a strategic idle game focused on efficiency and scaling.
+
+Gameplay revolves around earning points by clicking and investing those points into upgrades that increase how much you gain per click or generate points automatically over time. As numbers grow larger, progress becomes less about constant clicking and more about smart upgrade choices and timing resets. The game encourages patience and optimization, rewarding players who understand exponential progression and compounding growth. There is no traditional “win” screen beyond reaching the target number, making the journey itself the main focus.
+
+The visual style is extremely simple, often consisting of plain text, buttons, and counters. This stripped-down design keeps attention on the mechanics and numbers rather than graphics or story. Despite its simplicity, the game is highly addictive for players who enjoy watching values skyrocket and optimizing systems.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Generate points / interact with buttons
+
+Mouse Cursor – Navigate menus and upgrades
+
+Keyboard – Not required
+
+Refresh / Restart Button – Reset progress (if available)
+
+Special Features & Mechanics
+
+Incremental and idle gameplay progression
+
+Upgrade system focused on exponential scaling
+
+Automation to reduce manual clicking over time
+
+Goal based on reaching the maximum safe integer

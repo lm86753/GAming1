@@ -1,0 +1,13 @@
+"Connect 3" is a classic and engaging puzzle game, a simpler variant of "Connect Four", where two players compete to be the first to get three of their colored game pieces in a row, either horizontally, vertically, or diagonally. Played on a vertical grid, gravity causes pieces to fall to the lowest available space in the chosen column. Its straightforward rules make it easy to learn, but the strategic depth ensures it remains a challenging and enjoyable experience for players of all ages.
+
+The gameplay is turn-based, with players alternating dropping their colored discs into one of the available columns. The objective is to form a line of three of your own pieces while simultaneously blocking your opponent from doing the same. Success requires both offensive moves to create winning opportunities and defensive maneuvers to thwart your opponent's plans. The game often escalates into a tense back-and-forth, as players try to outthink each other several moves in advance. "Connect 3" is a perfect game for quick matches against a friend or to sharpen your tactical thinking.
+
+Controls:
+- Mouse: Click on a desired column to drop your game piece.
+
+Special Features:
+- Classic Puzzle Gameplay: A simple yet deep strategy game.
+- Two-Player Mode: Challenge a friend in head-to-head competition.
+- Turn-Based Strategy: Plan your moves carefully to outwit your opponent.
+- Easy to Learn: Simple rules allow for quick pick-up-and-play.
+- Strategic Depth: Requires foresight and tactical thinking to win.

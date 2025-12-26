@@ -1,0 +1,14 @@
+"Circlo" is a minimalist and highly engaging puzzle-platformer game that centers around the unique movement and interaction of a circular protagonist within a geometric world. The game challenges players to navigate a series of intricate levels, solving environmental puzzles and overcoming obstacles by cleverly manipulating their circular character. With its clean aesthetic and focus on physics-based mechanics, Circlo offers a fresh and thought-provoking experience.
+
+The core gameplay involves moving your circle through a world composed of lines, shapes, and platforms. Your circle adheres to surfaces and can roll, jump, and interact with various elements to progress. Levels are designed as self-contained puzzles, often requiring precise timing, understanding of momentum, and creative problem-solving. As you advance, new mechanics and environmental elements are introduced, increasing the complexity and challenge. Circlo's elegant design and satisfying physics make it a compelling game for players who appreciate logic, precision, and a unique visual style.
+
+Controls:
+- Arrow Keys / WASD: Move the circle (roll left/right, jump).
+- Mouse (if applicable): May be used for specific interactions or camera control in certain versions.
+
+Special Features:
+- Unique Circular Movement: Experience platforming from a fresh perspective with a rolling protagonist.
+- Physics-Based Puzzles: Solve challenges that require understanding and manipulating in-game physics.
+- Minimalist Art Style: Enjoy a clean, uncluttered visual design that focuses on gameplay clarity.
+- Progressive Difficulty: Levels gradually introduce new mechanics and increase in complexity.
+- Engaging Level Design: Navigate cleverly constructed environments with satisfying solutions.

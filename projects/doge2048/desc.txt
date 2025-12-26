@@ -1,0 +1,14 @@
+"Doge 2048" is a charming and meme-filled variant of the highly addictive "2048" puzzle game, infused with the internet's beloved Shiba Inu, Doge. Instead of merging numerical tiles, players slide and combine tiles featuring different Doge memes and phrases (such as "wow," "such game," "very fun") to create progressively more impressive Doge-themed tiles. The core objective remains to strategically combine identical tiles until you reach the ultimate "2048" equivalent tile, all while preventing the game board from completely filling up.
+
+The gameplay adheres to the classic "2048" mechanics: on a grid, you swipe (or use arrow keys) to move all tiles in one of four directions. When two tiles with the same Doge image or phrase collide, they merge into a single tile representing the next stage of Doge evolution. After every move, a new, basic Doge tile appears on a random empty spot. The challenge lies in planning your moves to efficiently merge tiles, create high-value combinations, and maintain open spaces on the board. "Doge 2048" offers a humorous and visually engaging twist on a popular puzzle game, perfect for fans of the Doge meme and brain-teasing challenges.
+
+Controls:
+- Arrow Keys (Up, Down, Left, Right): Slide all tiles on the board in the chosen direction.
+- WASD Keys: (Alternative) Slide all tiles on the board in the chosen direction.
+
+Special Features:
+- Doge Meme Theme: Replaces numbers with iconic Doge images and phrases, adding humor and visual appeal.
+- Classic 2048 Gameplay: Maintains the addictive tile-merging mechanics of the original puzzle.
+- Strategic Puzzle Solving: Requires foresight and planning to combine tiles effectively and achieve high scores.
+- Engaging Visuals: Enjoy the lighthearted and recognizable Doge aesthetic throughout the game.
+- Highly Addictive: Easy to learn but challenging to master, offering endless replayability.

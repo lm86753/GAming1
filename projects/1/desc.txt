@@ -1,0 +1,15 @@
+'1' is a fun and challenging puzzle game that puts a unique spin on the popular 2048 formula. The objective of the game is to reach the '1' tile by strategically dividing numbered tiles on a 4x4 grid. Unlike 2048, where you combine tiles to create larger numbers, in '1', you divide tiles to create smaller numbers. This simple change in mechanics creates a surprisingly deep and engaging experience that will test your planning and problem-solving skills.
+
+The gameplay is straightforward yet addictive. You start with a few numbered tiles on the grid. By using the arrow keys, you can slide all the tiles in one of four directions: up, down, left, or right. When two tiles with the same number collide, they divide into a new tile with half their value. For example, two '8' tiles will divide to create a '4' tile. Your goal is to continue dividing tiles until you create a '1' tile. The game requires careful planning, as each move can have a significant impact on the board. You need to think ahead and set up chains of divisions to reach your goal.
+
+Controls:
+- Up Arrow: Move tiles up
+- Down Arrow: Move tiles down
+- Left Arrow: Move tiles left
+- Right Arrow: Move tiles right
+
+Special Features:
+- Unique division mechanic: A fresh take on the 2048 genre.
+- Minimalist design: A clean and simple interface that keeps the focus on the gameplay.
+- Endless challenge: The game is easy to learn but difficult to master, offering hours of entertainment as you strive to perfect your strategy and reach the coveted '1' tile.
+- Score tracking: The game keeps track of your current score and your best score, encouraging you to improve with each playthrough.

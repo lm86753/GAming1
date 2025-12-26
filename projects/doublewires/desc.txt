@@ -1,0 +1,14 @@
+"Double Wires" is a fast-paced, reflex-testing avoidance game where players navigate a small, agile ship between two parallel "wires" or lines, dodging an endless stream of incoming obstacles. The objective is to survive for as long as possible, weaving through gaps and reacting quickly to the ever-increasing speed and density of hazards. It's a game of pure skill, concentration, and precision, often characterized by its minimalist aesthetic and challenging gameplay.
+
+The gameplay loop is simple: your ship moves automatically along a horizontal or vertical axis (depending on the game's orientation), and your only control is to shift its position to avoid collisions. Obstacles typically appear from one side of the screen, creating narrow passages or requiring split-second maneuvers to pass through. A single touch of an obstacle or one of the "wires" results in instant failure, resetting your score and pushing you to try again. The relentless pace and immediate feedback make it incredibly addictive, as players strive to beat their previous high scores and improve their reaction times.
+
+Controls:
+- Arrow Keys (Left/Right or Up/Down, depending on orientation): Move your ship/player horizontally or vertically.
+- Mouse (if applicable): May be used for direct positioning of the player object.
+
+Special Features:
+- Reflex-Based Avoidance: A pure test of your reaction speed and agility.
+- Endless Runner Concept: The game continues indefinitely, with difficulty increasing over time.
+- Minimalist Visuals: Clean and often abstract graphics focus attention on the gameplay.
+- High Score Chasing: Highly addictive, encouraging players to constantly strive for a new personal best.
+- Instant Feedback: Clear and immediate consequences for mistakes keep the gameplay loop tight.

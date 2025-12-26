@@ -1,0 +1,14 @@
+"Death Run 3D" is an incredibly fast-paced and intensely challenging endless runner game set in a minimalist 3D environment. The objective is to navigate a rapidly accelerating tunnel filled with an onslaught of static and moving obstacles. Players control a small block or ship, and the goal is to survive for as long as possible, pushing their reflexes and concentration to the absolute limit to achieve the highest score. It's a pure test of reaction time, pattern recognition, and endurance.
+
+The gameplay is deceptively simple: your ship constantly moves forward, and you must rapidly shift left or right, or sometimes jump/duck, to avoid colliding with the incoming geometric shapes. The environment is abstract, often featuring glowing lines and blocks that appear out of the darkness, creating a hypnotic and disorienting effect. As the game progresses, the speed increases dramatically, and the complexity of the obstacle patterns intensifies, leaving very little room for error. A single mistake means instant failure, making every run a heart-pounding experience.
+
+Controls:
+- Arrow Keys (Left/Right) or A/D: Move your ship/block left and right.
+- Spacebar (or Up Arrow/W): Jump (if applicable in specific versions).
+
+Special Features:
+- Hyper-Fast Gameplay: Experience an extreme test of reflexes and reaction speed.
+- Endless Challenge: The game continues indefinitely, constantly increasing in difficulty.
+- Minimalist 3D Graphics: Abstract visual design enhances the sense of speed and immersion.
+- Addictive Survival: Highly engaging gameplay loop centered around beating your previous high score.
+- Intense Focus Required: Demands full concentration to navigate the rapidly approaching obstacles.

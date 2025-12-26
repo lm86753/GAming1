@@ -1,0 +1,15 @@
+"Evil Glitch" is a captivating and often unsettling web-based game that masterfully uses digital glitches, visual distortions, and unconventional presentation as core gameplay mechanics. It's less about traditional objectives and more about an experimental experience, challenging players to adapt to a constantly shifting, broken digital world. The objective often involves navigating through environments where the rules are unclear, and the visuals are unreliable, creating a sense of unease and intrigue.
+
+The gameplay is designed to subvert expectations. What might seem like a bug is often a deliberate feature, forcing players to rethink their understanding of how games work. Glitches can manifest as flickering textures, corrupted sounds, unexpected character movements, or sudden changes in the environment. Success in "Evil Glitch" comes from understanding (or at least reacting to) these anomalies, using them to your advantage, or simply surviving the chaos they create. It often blends elements of puzzle-solving, platforming, and atmospheric horror, making for a uniquely memorable and sometimes disorienting experience that pushes the boundaries of interactive media.
+
+Controls:
+- Keyboard: Simple directional inputs (Arrow Keys or WASD) for movement.
+- Mouse: May be used for interactions with UI elements or specific glitch effects.
+- (Specific controls may vary depending on how glitches are implemented).
+
+Special Features:
+- Glitch as Gameplay: Digital errors and distortions are central to the game's mechanics and narrative.
+- Experimental Design: Challenges players with unconventional rules and visual presentations.
+- Atmospheric and Unsettling: Creates a unique mood through its corrupted aesthetics and sound design.
+- Puzzle-Solving: Requires players to decipher the logic of a broken world.
+- Unique Visual Style: Employs pixel art combined with glitch effects for a distinct look.

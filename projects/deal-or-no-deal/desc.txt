@@ -1,0 +1,13 @@
+"Deal or No Deal" is a thrilling game of chance, negotiation, and nerve, based on the popular television game show. The objective is to win the largest possible amount of money by choosing to either accept a banker's offer or continue playing, hoping that your chosen briefcase contains a large sum. It's a game of managing risk and making tough decisions under pressure, as you never know what value lies within your own briefcase or the remaining ones.
+
+The gameplay begins with a selection of numbered briefcases, each containing a hidden cash amount. You first choose one briefcase to be "yours," which will remain unopened until the end (or until you decide to open it). In subsequent rounds, you select a number of other briefcases to be opened, revealing and eliminating their cash values from play. After each round, the enigmatic "Banker" calls with an offer to buy your briefcase, based on the values still in play. You then face the agonizing decision: "Deal" and take the money, or "No Deal" and continue, risking it all for a potentially higher (or lower) prize. The tension builds with every opened case and every new offer.
+
+Controls:
+- Mouse: Used to select briefcases and make decisions ("Deal" or "No Deal").
+
+Special Features:
+- High Stakes Decision Making: Test your nerve and decision-making skills in a game of pure chance.
+- Intuitive Gameplay: Easy to understand rules that mirror the popular TV show format.
+- Randomness and Probability: Each game offers a unique set of circumstances, keeping it fresh.
+- Banker's Offers: Experience the psychological tug-of-war with the mysterious Banker.
+- Addictive Tension: The suspense builds with every opened case and every offer.
