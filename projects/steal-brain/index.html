@@ -2,31 +2,39 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Steal a Brainrot</title>
-    <style>
-        body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        #unity-container { width: 100%; height: 100%; }
-        #unity-canvas { width: 100%; height: 100%; background: #231f20; }
-    </style>
+    <script>
+        // The "Master" Bypass: Intercepts all attempts to read the URL
+        const domainBypass = "8games.net";
+        Object.defineProperty(document, 'domain', { get: () => domainBypass });
+        Object.defineProperty(location, 'hostname', { get: () => domainBypass });
+        Object.defineProperty(location, 'href', { get: () => "https://" + domainBypass + "/" });
+
+        // Fake Yandex SDK Objects
+        window.ysdk = {
+            features: {
+                LoadingAPI: { ready: () => {} },
+                GameplayAPI: { start: () => {}, stop: () => {} }
+            },
+            adv: { showFullscreenAdv: (o) => { if(o.callbacks) o.callbacks.onClose(true); } }
+        };
+        window.initYSDK = true;
+        window.cloudSaves = "{}"; 
+        window.playerData = "{}"; 
+        window.paymentsData = "{}";
+        window.environmentData = JSON.stringify({language: "en", deviceType: "desktop"});
+    </script>
 </head>
 <body>
-    <div id="unity-container">
-        <canvas id="unity-canvas"></canvas>
-    </div>
+    <canvas id="unity-canvas" style="width: 100vw; height: 100vh; background: #000;"></canvas>
     <script src="build/StealBrainrot.loader.js"></script>
     <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "build/data.data",
+            dataUrl: "build/d6ccccaf266bab16bf58f5725e76504e.data.br",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
-            codeUrl: "build/code.wasm",
+            codeUrl: "build/b7cf28e445ff2ecea47d5697909bb345.wasm.br",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
-            productVersion: "1.0",
-        }).then((unityInstance) => {
-            console.log("Game Loaded Successfully");
-        }).catch((message) => {
-            alert(message);
         });
     </script>
 </body>
