@@ -42,6 +42,7 @@ const navbarHTML = `
         .nav-item:hover {
             color: #60a5fa;
             transform: translateY(-1px);
+            text-shadow: 0 0 6px rgba(96, 165, 250, 0.35);
         }
         .nav-item i { color: #3b82f6; }
         
@@ -66,7 +67,7 @@ const navbarHTML = `
         .dropdown-menu {
             position: absolute;
             top: 50px;
-            right: 0;
+            left: 0;
             background: rgba(15, 15, 15, 0.95);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -91,12 +92,20 @@ const navbarHTML = `
             align-items: center;
             gap: 10px;
             transition: all 0.2s;
-        }
-        .dropdown-item:hover {
+         }
+         .dropdown-item:hover {
             background: rgba(255,255,255,0.05);
             color: white;
+            box-shadow: 0 0 10px rgba(59,130,246,0.12);
+            transform: translateY(-1px);
+         }
+         .dropdown-item i { width: 16px; text-align: center; color: #60a5fa; }
+ 
+        .glass:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.12);
+            transform: translateY(-1px);
         }
-        .dropdown-item i { width: 16px; text-align: center; color: #60a5fa; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
