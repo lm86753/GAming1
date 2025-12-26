@@ -178,6 +178,49 @@
     </footer>
 
     <script src="/js/nav.js"></script>
+    <div id="live-counter" class="glass" style="position:fixed; top:25px; right:25px; z-index:9999; padding:8px 12px; border-radius:12px; font-size:12px; display:flex; align-items:center; gap:6px;">
+        <i class="fa-solid fa-users" style="color:#60a5fa"></i>
+        <span id="live-counter-num">--</span>
+    </div>
+    <script>
+        (function(){
+            function multiplierFor(count){
+                var c = Math.max(2, Math.min(1000, count||0));
+                var t = (c - 2) / (1000 - 2);
+                var base = 10 - (10 - 1.5) * t;
+                var jitter = base * ((Math.random() - 0.5) * 0.05);
+                var m = base + jitter;
+                if (m < 1.5) m = 1.5;
+                if (m > 10) m = 10;
+                return m;
+            }
+            function adjustNoZero(n){
+                var s = String(n);
+                if (s.charAt(s.length-1) === '0') return n + 1;
+                return n;
+            }
+            function updateDisplay(actual){
+                var el = document.getElementById('live-counter-num');
+                if (!el) return;
+                var m = multiplierFor(actual);
+                var shown = Math.max(1, Math.round(actual * m));
+                el.textContent = adjustNoZero(shown).toLocaleString();
+            }
+            function initLiveCounter(){
+                if (typeof firebase === 'undefined') return;
+                var db = firebase.database();
+                db.ref('stats/active_users').on('value', function(snap){
+                    var count = snap ? snap.numChildren() : 0;
+                    updateDisplay(count);
+                });
+            }
+            if (typeof firebase === 'undefined') {
+                document.addEventListener('firebase-ready', initLiveCounter, { once: true });
+            } else {
+                initLiveCounter();
+            }
+        })();
+    </script>
 
 </body>
 </html>
