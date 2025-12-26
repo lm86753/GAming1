@@ -2,45 +2,30 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Steal a Brainrot - Unblocked</title>
-    <style>
-        body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        #unity-canvas { width: 100%; height: 100%; background: #000; }
-    </style>
-
     <script>
-        // 1. Fake the Yandex SDK so the game doesn't hang on a black screen
+        // The "Master" Bypass: Intercepts all attempts to read the URL
+        const domainBypass = "8games.net";
+        Object.defineProperty(document, 'domain', { get: () => domainBypass });
+        Object.defineProperty(location, 'hostname', { get: () => domainBypass });
+        Object.defineProperty(location, 'href', { get: () => "https://" + domainBypass + "/" });
+
+        // Fake Yandex SDK Objects
         window.ysdk = {
             features: {
-                LoadingAPI: { ready: () => console.log("SDK Ready Bypass") },
+                LoadingAPI: { ready: () => {} },
                 GameplayAPI: { start: () => {}, stop: () => {} }
             },
-            adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
+            adv: { showFullscreenAdv: (o) => { if(o.callbacks) o.callbacks.onClose(true); } }
         };
         window.initYSDK = true;
-        
-        // 2. Fake the Environment Data the engine is looking for
-        window.cloudSaves = "{}";
-        window.playerData = "{}";
+        window.cloudSaves = "{}"; 
+        window.playerData = "{}"; 
         window.paymentsData = "{}";
-        window.environmentData = JSON.stringify({
-            language: "en",
-            deviceType: "desktop",
-            payload: ""
-        });
-
-        // 3. Fix the "Domain Lock"
-        // This makes the browser think '8games.net' is always in the URL
-        const originalIndexOf = String.prototype.indexOf;
-        String.prototype.indexOf = function(s) {
-            if (s === "8games.net") return 0; 
-            return originalIndexOf.apply(this, arguments);
-        };
+        window.environmentData = JSON.stringify({language: "en", deviceType: "desktop"});
     </script>
 </head>
 <body>
-    <canvas id="unity-canvas"></canvas>
-
+    <canvas id="unity-canvas" style="width: 100vw; height: 100vh; background: #000;"></canvas>
     <script src="build/StealBrainrot.loader.js"></script>
     <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -50,9 +35,6 @@
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
-            productVersion: "1.0",
-        }).then((unityInstance) => {
-            console.log("Game successfully bypassed and loaded!");
         });
     </script>
 </body>
