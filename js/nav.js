@@ -36,12 +36,15 @@ const navbarHTML = `
             gap: 8px;
             text-decoration: none;
             cursor: pointer;
+            border: none;
+            background: none;
         }
         .nav-item:hover {
             color: #60a5fa;
             transform: translateY(-1px);
         }
         .nav-item i { color: #3b82f6; }
+        
         .nav-logo-box {
             width: 38px;
             height: 38px;
@@ -52,6 +55,52 @@ const navbarHTML = `
             justify-content: center;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Dropdown Styles */
+        .nav-dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 10px;
+            min-width: 160px;
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            gap: 5px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            animation: fadeIn 0.2s ease-out;
+        }
+        .dropdown-menu.show { display: flex; }
+        
+        .dropdown-item {
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s;
+        }
+        .dropdown-item:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+        .dropdown-item i { width: 16px; text-align: center; color: #60a5fa; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 
@@ -72,9 +121,23 @@ const navbarHTML = `
             <a href="/misc.html" class="nav-item">
                 <i class="fa-solid fa-cog"></i> Settings
             </a>
-            <a href="/dev.html" class="nav-item">
-                <i class="fa-solid fa-terminal"></i> Dev
-            </a>
+            
+            <div class="nav-dropdown">
+                <button class="nav-item" id="menuBtn">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+                <div class="dropdown-menu" id="navDropdown">
+                    <a href="/dev.html" class="dropdown-item">
+                        <i class="fa-solid fa-terminal"></i> Dev Panel
+                    </a>
+                    <a href="/privacy.html" class="dropdown-item">
+                        <i class="fa-solid fa-shield-halved"></i> Privacy
+                    </a>
+                    <a href="https://github.com/your-repo" target="_blank" class="dropdown-item">
+                        <i class="fa-brands fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div style="width: 38px;"></div>
@@ -84,10 +147,20 @@ const navbarHTML = `
 // Inject Navbar
 document.body.insertAdjacentHTML('afterbegin', navbarHTML);
 
-// --- GLOBAL TRACKING SCRIPT INJECTION ---
-// This ensures every page has access to the tracking logic
+// Dropdown Toggle Script
+document.addEventListener('click', (e) => {
+    const menuBtn = document.getElementById('menuBtn');
+    const dropdown = document.getElementById('navDropdown');
+    
+    if (menuBtn && menuBtn.contains(e.target)) {
+        dropdown.classList.toggle('show');
+    } else if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+    }
+});
+
+// --- GLOBAL TRACKING SCRIPT INJECTION (REMAINS UNCHANGED) ---
 (function() {
-    // Inject Firebase SDKs if not present
     if (!document.querySelector('script[src*="firebase-app-compat"]')) {
         const appScript = document.createElement('script');
         appScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js";
@@ -97,14 +170,12 @@ document.body.insertAdjacentHTML('afterbegin', navbarHTML);
         dbScript.src = "https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js";
         document.head.appendChild(dbScript);
         
-        // Wait for SDKs to load then inject our db.js
         dbScript.onload = function() {
             const myDbScript = document.createElement('script');
             myDbScript.src = "/js/db.js";
             document.head.appendChild(myDbScript);
         };
     } else {
-        // SDKs already there (e.g. dev.html), just ensure db.js is loaded if not
         if (!document.querySelector('script[src="/js/db.js"]')) {
              const myDbScript = document.createElement('script');
             myDbScript.src = "/js/db.js";
@@ -113,30 +184,24 @@ document.body.insertAdjacentHTML('afterbegin', navbarHTML);
     }
 })();
 
-// Game Click Tracking Logic (Global)
+// Game Click Tracking Logic
 document.addEventListener('click', (e) => {
     const link = e.target.closest('a');
     if (!link) return;
-    
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Detect if it's a game link
     if (href.includes('fullscreen_system') || href.includes('projects/')) {
-        // Try to find title
         let title = '';
         const card = link.closest('.game-card');
         if (card) {
             title = card.querySelector('p')?.innerText;
         } else {
-            // URL params fallback
             try {
                 const urlParams = new URLSearchParams(href.split('?')[1]);
                 title = urlParams.get('title');
             } catch(e){}
         }
-
-        // If found, track it via db.js function
         if (title && typeof trackGameClick === 'function') {
             trackGameClick(title);
         }
