@@ -178,7 +178,20 @@
             renderGames(games);
             document.getElementById("loader").style.display = "none";
             loadRecentGames();
-            initPopularGames();
+            (function startPopular(){
+                let done = false;
+                function trigger() {
+                    if (done) return;
+                    if (typeof firebase !== 'undefined' && typeof firebase.database === 'function') {
+                        done = true;
+                        initPopularGames();
+                        document.removeEventListener('firebase-ready', trigger);
+                    }
+                }
+                document.addEventListener('firebase-ready', trigger);
+                setTimeout(trigger, 3000);
+                trigger();
+            })();
         })
         .catch((error) => console.error("Error:", error));
 

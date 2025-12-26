@@ -17,6 +17,7 @@ try {
     app = firebase.initializeApp(firebaseConfig);
     db = firebase.database();
     console.log("Firebase initialized");
+    try { document.dispatchEvent(new Event('firebase-ready')); } catch(e){}
 } catch (e) {
     console.error("Firebase init failed. Make sure you updated firebaseConfig in js/db.js");
 }
