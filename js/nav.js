@@ -127,6 +127,9 @@ const navbarHTML = `
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="dropdown-menu" id="navDropdown">
+                    <a href="/feedback.html" class="dropdown-item">
+                        <i class="fa-solid fa-comment-dots"></i> Feedback
+                    </a>
                     <a href="/dev.html" class="dropdown-item">
                         <i class="fa-solid fa-terminal"></i> Dev Panel
                     </a>
@@ -198,6 +201,5 @@ document.addEventListener('click', (e) => {
         if (title && typeof trackGameClick === 'function') {
             trackGameClick(title);
         }
-        
     }
 });
