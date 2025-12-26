@@ -144,5 +144,27 @@
     <script src="/js/nav.js"></script>
     
 
+    <script>
+        // Intercept form submission to save locally for Dev Panel
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                const formData = new FormData(this);
+                const feedback = {
+                    type: formData.get('type'),
+                    email: formData.get('email'),
+                    message: formData.get('message'),
+                    date: new Date().toISOString()
+                };
+                
+                const existing = JSON.parse(localStorage.getItem('dev_feedback') || '[]');
+                existing.unshift(feedback);
+                // Keep only last 20
+                if (existing.length > 20) existing.pop();
+                localStorage.setItem('dev_feedback', JSON.stringify(existing));
+            });
+        }
+    </script>
+
 </body>
 </html>
