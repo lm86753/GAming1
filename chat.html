@@ -196,7 +196,11 @@
                         var v = child.val()||{};
                         var nm = String(v.name||'').toLowerCase();
                         var nmSafe = nm.replace(/[^a-z0-9_-]/g,'');
-                        if (nmSafe && mutes[nmSafe]) return;
+                        if (nmSafe === 'chiefpenguin' || nmSafe === 'leadpenguin') {
+                            // Never hide admin role messages, even if muted
+                        } else if (nmSafe && mutes[nmSafe]) {
+                            return;
+                        }
                         arr.push({ key: child.key, name: v.name, message: v.message, timestamp: v.timestamp||0 });
                     });
                     arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
