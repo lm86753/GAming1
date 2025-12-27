@@ -560,6 +560,11 @@
     "title": "Push Your Luck"
   },
   {
+    "link": "projects/racing/index.html",
+    "imgSrc": "logo2.png",
+    "title": "Racing Limits"
+  },
+  {
     "link": "projects/retro-bowl/index.html",
     "imgSrc": "projects/retro-bowl/img/icon.jpg",
     "title": "Retro Bowl"
