@@ -1,0 +1,25 @@
+Level Devil is a deceptive 2D platformer designed to test a player’s patience, reflexes, and ability to adapt. At first glance, the game appears to be a simple side-scrolling platformer, but its core twist is that the levels actively try to trick and sabotage the player. The objective is to reach the exit door in each level, but unexpected traps and sudden changes make every step dangerous.
+
+Gameplay revolves around movement and timing, but the real challenge comes from unpredictability. Platforms may disappear, spikes can suddenly emerge, floors collapse without warning, and obstacles move in ways that intentionally defy player expectations. The game relies heavily on trial and error, forcing players to learn from each failure and remember where traps are hidden. Quick restarts keep frustration manageable while encouraging persistence and pattern recognition.
+
+The visual style is clean and minimal, making traps easy to see—once they reveal themselves. Despite its simple look, Level Devil is intentionally punishing and often humorous in how unfair it feels. The game rewards players who stay calm, react quickly, and learn from mistakes rather than rushing blindly through levels.
+
+Controls (Keyboard & Mouse)
+
+A / D or Left / Right Arrow Keys – Move left and right
+
+Spacebar / Up Arrow – Jump
+
+R – Restart the level
+
+Mouse – Menu navigation
+
+Special Features & Mechanics
+
+Levels designed to trick and surprise players
+
+Sudden trap activation and fake-safe platforms
+
+Fast restarts to encourage trial-and-error learning
+
+Difficulty based on memorization and reaction time
