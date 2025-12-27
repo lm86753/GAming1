@@ -3,20 +3,39 @@ console.log("Racing Limits MSGames");
 let interstitial = null;
 let rewarded = null;
 
+function __msstart() {
+  try {
+    return typeof window !== "undefined" ? window.$msstart : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function __sendMessage(objName, methodName) {
+  try {
+    if (!gameInstance) return;
+    if (typeof gameInstance.SendMessage !== "function") return;
+    gameInstance.SendMessage(objName, methodName);
+  } catch (e) {}
+}
+
 function loadAds() {
   console.log("[MSDR] Load ads");
+  if (!__msstart()) return;
   loadInterstitial();
   loadRewarded();
 }
 
 function loadInterstitial() {
   interstitial = null;
-  $msstart
+  const ms = __msstart();
+  if (!ms || typeof ms.loadAdsAsync !== "function") return;
+  ms
     .loadAdsAsync()
     .then((adInstance) => {
       interstitial = adInstance;
       console.log("[MSDR] Interstitial ad loaded!");
-      gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdLoaded");
+      __sendMessage("SBKMSAds", "OnInterstitialAdLoaded");
     })
     .catch((e) => {
       console.error(
@@ -24,51 +43,58 @@ function loadInterstitial() {
           e
         )}. Retrying in 15s`
       );
-      gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdLoadFailed");
+      __sendMessage("SBKMSAds", "OnInterstitialAdLoadFailed");
       setTimeout(loadInterstitial, 15000);
     });
 }
 
 function loadRewarded() {
   rewarded = null;
-  $msstart
+  const ms = __msstart();
+  if (!ms || typeof ms.loadAdsAsync !== "function") return;
+  ms
     .loadAdsAsync(true)
     .then((adInstance) => {
       rewarded = adInstance;
       console.log("[MSDR] Rewarded ad loaded!");
-      gameInstance.SendMessage("SBKMSAds", "OnRewardedAdLoaded");
+      __sendMessage("SBKMSAds", "OnRewardedAdLoaded");
     })
     .catch((e) => {
       console.error(
         `[MSDR] Error loading rewarded: ${JSON.stringify(e)}. Retrying in 15s`
       );
-      gameInstance.SendMessage("SBKMSAds", "OnRewardedAdLoadFailed");
+      __sendMessage("SBKMSAds", "OnRewardedAdLoadFailed");
       setTimeout(loadRewarded, 15000);
     });
 }
 
 function showInterstitial() {
   console.log("[MSDR] Show interstital");
-
-  if (!interstitial) {
-    gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdShowError");
+  const ms = __msstart();
+  if (!ms || typeof ms.showAdsAsync !== "function") {
+    __sendMessage("SBKMSAds", "OnInterstitialAdShowError");
     return;
   }
 
-  $msstart
+  if (!interstitial) {
+    __sendMessage("SBKMSAds", "OnInterstitialAdShowError");
+    return;
+  }
+
+  ms
     .showAdsAsync(interstitial.instanceId)
-    .then((adInstance) => {4
-      gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdStarted");
+    .then((adInstance) => {
+      __sendMessage("SBKMSAds", "OnInterstitialAdStarted");
       adInstance.showAdsCompletedAsync
         .then(() => {
-          gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdClose");
+          __sendMessage("SBKMSAds", "OnInterstitialAdClose");
         })
         .catch((e) => {
           console.error(
             "[MSDR] Error interstitial showAdsCompletedAsync: ",
             JSON.stringify(e)
           );
-          gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdShowError");
+          __sendMessage("SBKMSAds", "OnInterstitialAdShowError");
         })
         .finally(() => {
           loadInterstitial();
@@ -76,33 +102,38 @@ function showInterstitial() {
     })
     .catch((e) => {
       console.error("[MSDR] Error show interstitial ad: ", JSON.stringify(e));
-      gameInstance.SendMessage("SBKMSAds", "OnInterstitialAdShowError");
+      __sendMessage("SBKMSAds", "OnInterstitialAdShowError");
       loadInterstitial();
     });
 }
 
 function showRewarded() {
   console.log("[MSDR] Show rewarded");
-
-  if (rewarded == null) {
-    gameInstance.SendMessage("SBKMSAds", "OnRewardedAdShowError");
+  const ms = __msstart();
+  if (!ms || typeof ms.showAdsAsync !== "function") {
+    __sendMessage("SBKMSAds", "OnRewardedAdShowError");
     return;
   }
 
-  $msstart
+  if (rewarded == null) {
+    __sendMessage("SBKMSAds", "OnRewardedAdShowError");
+    return;
+  }
+
+  ms
     .showAdsAsync(rewarded.instanceId)
     .then((adInstance) => {
-      gameInstance.SendMessage("SBKMSAds", "OnRewardedAdStarted");
+      __sendMessage("SBKMSAds", "OnRewardedAdStarted");
       adInstance.showAdsCompletedAsync
         .then(() => {
-          gameInstance.SendMessage("SBKMSAds", "OnRewardedAdShowSuccess");
+          __sendMessage("SBKMSAds", "OnRewardedAdShowSuccess");
         })
         .catch((e) => {
           console.error(
             "[MSDR] Error rewarded showAdsCompletedAsync: ",
             JSON.stringify(e)
           );
-          gameInstance.SendMessage("SBKMSAds", "OnRewardedAdShowError");
+          __sendMessage("SBKMSAds", "OnRewardedAdShowError");
         })
         .finally(() => {
           loadRewarded();
@@ -110,14 +141,16 @@ function showRewarded() {
     })
     .catch((e) => {
       console.error("[MSDR] Error show rewarded ad: ", JSON.stringify(e));
-      gameInstance.SendMessage("SBKMSAds", "OnRewardedAdShowError");
+      __sendMessage("SBKMSAds", "OnRewardedAdShowError");
       loadRewarded();
     });
 }
 
 function showBanner() {
   console.log("[MSDR] Show banner");
-  $msstart
+  const ms = __msstart();
+  if (!ms || typeof ms.showDisplayAdsAsync !== "function") return;
+  ms
     .showDisplayAdsAsync("top:320x50")
     .then((response) => {
       console.log("[MSDR] " + response);
@@ -141,7 +174,9 @@ function showBanner() {
 
 function hideBanner() {
   console.log("[MSDR] Hide banner");
-  $msstart
+  const ms = __msstart();
+  if (!ms || typeof ms.hideDisplayAdsAsync !== "function") return;
+  ms
     .hideDisplayAdsAsync()
     .then((response) => {
       console.log("[MSDR] " + response);
