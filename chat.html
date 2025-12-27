@@ -184,6 +184,15 @@
                     // Attempt 2: Fallback to anonymous name (satisfies strict DB rules)
                     // New clients will see displayName, old clients will see anonymousID
                     console.log("First attempt failed (likely DB name restriction), retrying with anonymous ID...", err);
+                    
+                    // IMPORTANT: We only send fields that are explicitly expected if the rules are strict.
+                    // If the rules are: ".write": "newData.hasChildren(['name', 'message'])"
+                    // Then sending extra fields like 'displayName' might be causing issues if .validate rules are strict.
+                    // However, standard .write rules don't usually fail on extra children unless .validate forbids them.
+                    
+                    // Let's try sending just the standard payload but with the role in the message itself as a fallback
+                    // OR, we assume the rules allow 'displayName'.
+                    
                     var payload2 = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
                     
                     if (typeof submitGlobalChat === 'function') {
@@ -191,8 +200,13 @@
                         if (p2 && typeof p2.then === 'function') {
                             p2.then(handleSuccess)
                               .catch(function(e){ 
-                                  setError('Error: ' + (e.message||e)); 
-                                  btn.disabled = false; 
+                                  // Final Fallback: If even that failed, just send as pure anonymous
+                                  console.log("Second attempt failed, sending as pure anonymous.");
+                                  var payload3 = { name: anon, message: s.text, type: 'Global Chat' };
+                                  submitGlobalChat(payload3).then(handleSuccess).catch(function(finalErr){
+                                      setError('Error: ' + (finalErr.message||finalErr)); 
+                                      btn.disabled = false;
+                                  });
                               });
                         } else {
                             handleSuccess();
