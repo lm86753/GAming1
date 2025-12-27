@@ -460,11 +460,6 @@
     "title": "Learn To Fly 2"
   },
   {
-    "link": "projects/level-devil-main/index.html",
-    "imgSrc": "projects/level-devil-main/logo.png",
-    "title": "Level devil"
-  },
-  {
     "link": "projects/mario/index.html",
     "imgSrc": "projects/mario/Theme/Mario.gif",
     "title": "Mario"
@@ -604,11 +599,7 @@
     "imgSrc": "projects/push-your-luck/assets/img/push.png",
     "title": "Push Your Luck"
   },
-  {
-    "link": "projects/Ragdoll-Archers-main/index.html",
-    "imgSrc": "projects/Ragdoll-Archers-main/logo.jpeg",
-    "title": "Ragdoll Archers"
-  },
+
  
   {
     "link": "projects/retro-bowl/index.html",
@@ -836,8 +827,8 @@
     "title": "YoHoHo"
   },
   {
-    "link": "projects/cattle3d-main/index.html",
-    "imgSrc": "projects/cattle3d-main/CrazyCattle3D.png",
-    "title": "Cattle 3D"
+    "link": "projects/crazycattle-3D-GAME-main/index.html",
+    "imgSrc": "projects/crazycattle-3D-GAME-main/block-breaker-og.png",
+    "title": "Block Breaker 3D"
   }
 ]
