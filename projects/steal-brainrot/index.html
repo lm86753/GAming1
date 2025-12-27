@@ -9,13 +9,12 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
     <script>
-        // 2. Fake the SDK environment so it doesn't try to "call home" to another website
+        // 2. Fake SDK environment to prevent the game from trying to redirect/call home
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
-        // 3. Prevent the game from checking the domain
-        window.location.ancestorOrigins = ["https://8games.net"]; 
+        window.environmentData = JSON.stringify({ language: "en", deviceType: "desktop", payload: "" });
     </script>
 </head>
 <body>
@@ -24,23 +23,26 @@
     <script src="build/StealBrainrot.loader.js"></script>
     <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: "build/data.data",
+            // Filenames matching your screenshot exactly
+            dataUrl: "build/data.data", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
-            codeUrl: "build/code.wasm",
+            codeUrl: "build/code.wasm", 
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // 4. FIX: This stops the "push" error seen in your console screenshot
+            // --- CRITICAL FIX FOR THE 'PUSH' ERROR ---
+            // These stop the "undefined reading push" crash seen in your console
             deinitializers: [],
             preRun: [],
             postRun: [],
-            
+            // -----------------------------------------
+
             cacheControl: (url) => "no-store",
             decompressor: "br" 
         }).then((unityInstance) => {
-            console.log("Game Loaded Successfully!");
+            console.log("Success! Game loaded.");
         }).catch((err) => {
             console.error("Unity Error:", err);
         });
