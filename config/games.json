@@ -20,8 +20,8 @@
     "title": "2048"
   },
   {
-    "link": "projects/2048-multi-task/index.html",
-    "imgSrc": "projects/3kh0-assets-main-2048-multitask/2048-multitask/favicon.ico",
+    "link": "projects/2048-multitask/index.html",
+    "imgSrc": "projects/2048-multitask/splash.png",
     "title": "2048 Multi Task"
   },
   {
@@ -30,9 +30,14 @@
     "title": "9007199254740992"
   },
   {
-    "link": "projects/99-balls/index.html",
-    "imgSrc": "projects/3kh0-assets-main-99balls/99balls/99-balls-evo.jpg",
+    "link": "projects/99balls/index.html",
+    "imgSrc": "projects/99balls/99-balls-evo.jpg",
     "title": "99 Balls"
+  },
+  {
+    "link": "projects/100ng/index.html",
+    "imgSrc": "projects/100ng/100ng.jpg",
+    "title": "100 Player Pong"
   },
   {
     "link": "projects/achievementunlocked/index.html",
@@ -65,8 +70,8 @@
     "title": "Basketball Stars"
   },
   {
-    "link": "projects/3kh0-assets-main-basket-random/basket-random/index.html",
-    "imgSrc": "projects/3kh0-assets-main-basket-random/basket-random/splash.jpeg",
+    "link": "projects/basket-random/index.html",
+    "imgSrc": "projects/basket-random/splash.jpeg",
     "title": "Basket Random"
   },
   {
@@ -100,6 +105,16 @@
     "title": "Bloons TD 2"
   },
   {
+    "link": "projects/btd4/index.html",
+    "imgSrc": "projects/btd4/lib/bloontowerdefense4/826.png",
+    "title": "Bloons TD 4"
+  },
+  {
+    "link": "projects/btd5/index.html",
+    "imgSrc": "projects/btd5/BT5_Deluxe_logo.png",
+    "title": "Bloons TD 5"
+  },
+  {
     "link": "projects/bloxors/index.html",
     "imgSrc": "projects/bloxors/block.png",
     "title": "Bloxors"
@@ -125,8 +140,8 @@
     "title": "Cannon Basketball 4"
   },
   {
-    "link": "projects/3kh0-assets-main-cars-simulator/cars-simulator/index.html",
-    "imgSrc": "projects/3kh0-assets-main-cars-simulator/cars-simulator/splash.png",
+    "link": "projects/cars-simulator/index.html",
+    "imgSrc": "projects/cars-simulator/splash.png",
     "title": "Cars Simulator"
   },
   {
@@ -235,6 +250,11 @@
     "title": "Doge Miner"
   },
   {
+    "link": "projects/Dogeminer2/index.html",
+    "imgSrc": "projects/Dogeminer2/thumb.jpg",
+    "title": "DogeMiner 2"
+  },
+  {
     "link": "projects/doodle-jump/index.html",
     "imgSrc": "projects/doodle-jump/doodle.png",
     "title": "Doodle Jump"
@@ -300,9 +320,9 @@
     "title": "Factory Balls Forever"
   },
   {
-    "link": "projects/fake-virus/icon.png",
+    "link": "projects/fake-virus/index.html",
     "imgSrc": "projects/fake-virus/icon.png",
-    "title": "Fake Virus"
+    "title": "Fake Virus Screen"
   },
   {
     "link": "projects/flappy-2048/index.html",
@@ -360,6 +380,11 @@
     "title": "Hacker Typer"
   },
   {
+    "link": "projects/happywheels/index.html",
+    "imgSrc": "projects/happywheels/b.png",
+    "title": "Happy Wheels"
+  },
+  {
     "link": "projects/hba/index.html",
     "imgSrc": "projects/hba/hoverbotarena.jpg",
     "title": "Hover Bot Arena"
@@ -368,6 +393,11 @@
     "link": "projects/helicopter/index.html",
     "imgSrc": "projects/helicopter/helicopter.png",
     "title": "Helicopter"
+  },
+  {
+    "link": "projects/hill-climb-racing/index.html",
+    "imgSrc": "projects/hill-climb-racing/splash.jpeg",
+    "title": "Hill Climb Racing 2"
   },
   {
     "link": "projects/hexempire/index.html",
@@ -428,6 +458,11 @@
     "link": "projects/learntofly/index.html",
     "imgSrc": "projects/learntofly/learntofly.png",
     "title": "Learn To Fly"
+  },
+  {
+    "link": "projects/learntofly2/index.html",
+    "imgSrc": "projects/learntofly2/learn-to-fly-2.jpg",
+    "title": "Learn To Fly 2"
   },
   {
     "link": "projects/mario/index.html",
@@ -508,6 +543,11 @@
     "link": "projects/om-bounce/index.html",
     "imgSrc": "projects/om-bounce/assets/icon.jpeg",
     "title": "Om Nom Bounce"
+  },
+  {
+    "link": "projects/ovo/index.html",
+    "imgSrc": "projects/ovo/icon-256.png",
+    "title": "OvO"
   },
   {
     "link": "projects/pandemic2/index.html",
