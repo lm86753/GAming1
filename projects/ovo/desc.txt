@@ -1,0 +1,27 @@
+OvO is a fast-paced 2D platformer focused on precision movement, momentum, and speedrunning. Players control a small stick-figure character and must navigate through a series of increasingly challenging levels filled with spikes, platforms, trampolines, and other obstacles. The main objective is to reach the goal as quickly as possible while mastering advanced movement techniques to overcome hazards.
+
+Gameplay emphasizes fluid motion and skill-based mechanics rather than combat. Players must time jumps perfectly, chain movements together, and use the environment to maintain speed. As levels progress, new mechanics are introduced—such as wall jumps, slides, and launch pads—requiring quick reflexes and strong control. Mistakes are punished instantly, but levels restart quickly, encouraging trial-and-error learning and mastery. While levels can be completed casually, the game strongly rewards players who aim to optimize their routes and improve completion times.
+
+The minimalist visual style keeps the focus on gameplay clarity, making obstacles easy to read even at high speeds. OvO is especially popular among players who enjoy challenging platformers and speedrunning, as nearly every level can be replayed to improve performance. The difficulty curve is steady, making the game accessible to new players while still offering depth for experienced ones.
+
+Controls (Keyboard & Mouse)
+
+A / D or Left / Right Arrow Keys – Move left and right
+
+Spacebar / Up Arrow – Jump
+
+Down Arrow / S – Slide or drop down (when applicable)
+
+R – Restart level
+
+Mouse – Menu navigation
+
+Special Features & Mechanics
+
+Momentum-based platforming gameplay
+
+Advanced movement techniques like wall jumping and sliding
+
+Fast restarts for smooth retries
+
+Strong focus on speed and skill mastery

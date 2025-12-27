@@ -1,0 +1,33 @@
+Cars Simulator is an open-world driving game focused on free exploration, realistic vehicle handling, and sandbox-style gameplay. Players are given access to a large environment where they can drive different vehicles, experiment with physics, and explore without strict objectives or time limits. The main goal is player-driven: practice driving, test vehicle behavior, and enjoy open-ended simulation rather than complete missions or races.
+
+Gameplay emphasizes freedom and realism. Vehicles respond to acceleration, braking, and steering in a way that mimics real-world driving more than traditional arcade racers. Players can cruise through cities, highways, and open areas, experimenting with speed, drifting, and collisions. Some versions of the game include traffic, ramps, or interactive objects that allow for stunts and physics-based experimentation. There is no penalty for crashing, encouraging players to push limits and learn vehicle control through trial and error.
+
+The visual style is typically clean and functional, prioritizing readability and performance over heavy visual effects. Cars Simulator appeals to players who enjoy relaxed driving experiences, testing physics, or simply exploring at their own pace. It is often used as a casual alternative to high-pressure racing games.
+
+Controls (Keyboard & Mouse)
+
+W / Up Arrow – Accelerate
+
+S / Down Arrow – Brake / Reverse
+
+A / Left Arrow – Steer left
+
+D / Right Arrow – Steer right
+
+Spacebar – Handbrake
+
+Mouse Movement – Camera control
+
+R – Reset vehicle position
+
+Esc – Pause menu
+
+Special Features & Mechanics
+
+Open-world sandbox driving
+
+Physics-based vehicle handling
+
+No strict objectives or time limits
+
+Multiple vehicles to drive and test

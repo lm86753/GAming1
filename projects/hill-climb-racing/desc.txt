@@ -1,0 +1,25 @@
+Hill Climb Racing is a physics-based 2D driving game that challenges players to travel as far as possible across uneven and hazardous terrain. Players take control of a vehicle driven by Bill Newton, navigating hills, slopes, and obstacles while managing balance and fuel. The main objective is to cover the maximum distance without crashing or running out of fuel, earning coins along the way to upgrade vehicles and unlock new stages.
+
+Gameplay is simple yet skill-focused. Each level features rough terrain that requires careful control of acceleration and braking to prevent flipping over. Fuel cans are scattered throughout the map, forcing players to plan their route and maintain momentum. Coins collected during runs can be spent on upgrading the engine, suspension, tires, and drivetrain, which significantly improves performance. As players progress, new vehicles and environments become available, each with unique handling and challenges.
+
+The cartoon-style visuals and smooth physics make the game approachable for all ages, while the increasing difficulty keeps it engaging over time. Mastery comes from learning how different upgrades affect vehicle balance and how to conserve fuel efficiently. Hill Climb Racing offers strong replay value through endless levels, upgrades, and unlockables.
+
+Controls (Keyboard & Mouse)
+
+Right Arrow / D – Accelerate
+
+Left Arrow / A – Brake / Reverse
+
+Mouse – Menu navigation
+
+R (if available) – Restart
+
+Special Features & Mechanics
+
+Physics-based vehicle balance and movement
+
+Fuel management as a core challenge
+
+Upgrade system for vehicles and performance
+
+Multiple vehicles and environments

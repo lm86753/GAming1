@@ -1,0 +1,25 @@
+Gun Spin is a physics-based arcade shooter that turns traditional gunplay upside down by making recoil your main method of movement. Instead of walking or running, players fire a gun to launch themselves forward through the air. The objective is to travel as far as possible by carefully managing shots, momentum, and upgrades. Each run rewards distance and performance, which can be used to improve future attempts.
+
+Gameplay is simple but highly skill-based. Every time you shoot, the recoil pushes you backward in the opposite direction of the shot, allowing you to stay airborne and gain distance. Players must time their shots carefully to avoid crashing to the ground too early. As you progress, you unlock stronger weapons, additional bullets, and upgrades that increase power, ammo capacity, and control. Strategy plays a big role—wasting shots too early or firing at the wrong angle can quickly end a run.
+
+The game features a clean, colorful visual style with smooth animations and satisfying physics. Progression feels rewarding as upgrades noticeably change how far and how fast you can travel. While the concept is easy to understand, mastering recoil control and shot timing takes practice, giving Gun Spin strong replay value.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Fire the gun (creates recoil movement)
+
+Mouse Movement – Aim the gun direction
+
+Spacebar (if available) – Start or retry a run
+
+R (if available) – Restart
+
+Special Features & Mechanics
+
+Recoil-based movement instead of traditional controls
+
+Upgrade system that improves distance and efficiency
+
+Multiple guns with different power and behavior
+
+Physics-driven gameplay focused on timing and precision
