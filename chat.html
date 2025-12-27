@@ -29,9 +29,12 @@
                 <p class="text-center text-gray-500 py-10">Connecting…</p>
             </div>
             <div id="admin-tools" class="hidden mt-4 glass rounded-xl p-4">
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 mb-3">
                     <input id="mute-input" type="text" placeholder="Mute name (e.g., anonymous1234)" class="flex-1 glass px-3 py-2 rounded-xl outline-none border border-white/10 focus:border-blue-500/50 text-sm">
                     <button id="mute-btn" class="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-xl text-sm font-bold">Mute</button>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button id="shutdown-btn" class="w-full bg-orange-600 hover:bg-orange-500 px-4 py-2 rounded-xl text-sm font-bold">Shutdown Chat</button>
                 </div>
                 <p class="text-xs text-gray-500 mt-2">Admin tools available only after sending Dev Chat via Feedback.</p>
             </div>
@@ -160,7 +163,33 @@
                     muteInput.value = '';
                 });
             }
+            var isShutdown = false;
+            
+            function updateShutdownUI(){
+                var input = document.getElementById('chat-input');
+                var btn = document.getElementById('chat-send');
+                var shutdownBtn = document.getElementById('shutdown-btn');
+                var isDev = localStorage.getItem('dev_access') === 'true';
+                
+                if (isShutdown) {
+                    if (shutdownBtn) shutdownBtn.textContent = "Open Chat";
+                    if (!isDev) {
+                        if (input) { input.disabled = true; input.placeholder = "Chat is currently disabled by admin."; }
+                        if (btn) { btn.disabled = true; btn.classList.add('opacity-50'); }
+                    } else {
+                        // Admins can still type
+                        if (input) { input.disabled = false; input.placeholder = "Chat disabled for others (You can type)"; }
+                        if (btn) { btn.disabled = false; btn.classList.remove('opacity-50'); }
+                    }
+                } else {
+                    if (shutdownBtn) shutdownBtn.textContent = "Shutdown Chat";
+                    if (input) { input.disabled = false; input.placeholder = "Type a message"; }
+                    if (btn) { btn.disabled = false; btn.classList.remove('opacity-50'); }
+                }
+            }
+
             function send(){
+                if (isShutdown && localStorage.getItem('dev_access') !== 'true') return;
                 var input = document.getElementById('chat-input');
                 var btn = document.getElementById('chat-send');
                 if (!input || !btn) return;
@@ -232,9 +261,24 @@
             }
             document.getElementById('chat-send').addEventListener('click', send);
             document.getElementById('chat-input').addEventListener('keypress', function(e){ if (e.key === 'Enter'){ e.preventDefault(); send(); } });
+            
+            var shutBtn = document.getElementById('shutdown-btn');
+            if (shutBtn) {
+                shutBtn.addEventListener('click', function(){
+                    if (localStorage.getItem('dev_access') !== 'true') return;
+                    firebase.database().ref('chat_shutdown').set(!isShutdown);
+                });
+            }
+
             function startListen(){
                 if (typeof firebase === 'undefined') return;
                 var db = firebase.database();
+                
+                db.ref('chat_shutdown').on('value', function(s){
+                    isShutdown = s.val() === true;
+                    updateShutdownUI();
+                });
+
                 var mutes = {};
                 db.ref('global_chat_mutes').on('value', function(s){ mutes = (s.val()||{}); renderMutes(mutes); });
                 db.ref('global_chat').limitToLast(100).on('value', function(snap){
