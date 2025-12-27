@@ -9,13 +9,20 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
     <script>
-        // 2. Fake the SDK environment so it doesn't try to "call home" to another website
+        // GLOBAL FIX: This defines the 'push' targets the engine is missing in your screenshot
+        var Module = {
+            preRun: [],
+            postRun: [],
+            deinitializers: [],
+            print: function(text) { console.log(text); },
+            canvas: (function() { return document.querySelector("#unity-canvas"); })()
+        };
+
+        // SDK Bypasses
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
-        // 3. Prevent the game from checking the domain
-        window.location.ancestorOrigins = ["https://8games.net"]; 
     </script>
 </head>
 <body>
@@ -32,11 +39,11 @@
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // 4. FIX: This stops the "push" error seen in your console screenshot
-            deinitializers: [],
-            preRun: [],
-            postRun: [],
-            
+            // Redundant fix to ensure 'push' doesn't fail
+            deinitializers: Module.deinitializers,
+            preRun: Module.preRun,
+            postRun: Module.postRun,
+
             cacheControl: (url) => "no-store",
             decompressor: "br" 
         }).then((unityInstance) => {
