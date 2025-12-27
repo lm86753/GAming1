@@ -279,12 +279,59 @@ document.addEventListener('click', (e) => {
     }
     function goToRandomGame(){
         var repoRoot = computeRepoRoot();
-        fetch(repoRoot + "config/games.json?v=" + Date.now())
-        .then(function(r){ return r.json(); })
-        .then(function(list){
-            if (!Array.isArray(list) || list.length === 0) return;
-            var idx = Math.floor(Math.random() * list.length);
-            var g = list[idx] || {};
+        function getRecent(){
+            try { return JSON.parse(localStorage.getItem('recentlyPlayed')||'[]'); } catch(e){ return []; }
+        }
+        function norm(s){ return String(s||'').toLowerCase().trim(); }
+        function recentTitlesSet(){
+            var s = {};
+            getRecent().slice(0, 10).forEach(function(r){ if (r && r.title) s[norm(r.title)] = true; });
+            return s;
+        }
+        function getSmartHistSet(){
+            var s = {};
+            try {
+                var h = JSON.parse(localStorage.getItem('smartRandomHistory')||'[]');
+                h.slice(0, 8).forEach(function(t){ if (t) s[norm(t)] = true; });
+            } catch(e){}
+            return s;
+        }
+        function weightFor(title, counts, recentSet, histSet, lastPickNorm){
+            var base = 1;
+            var c = counts[norm(title)] || 0;
+            base += Math.log(1 + c);
+            if (recentSet[norm(title)]) base *= 0.3;
+            if (histSet[norm(title)]) base *= 0.1;
+            if (lastPickNorm && lastPickNorm === norm(title)) base *= 0.05;
+            base = Math.pow(base, 0.7);
+            return Math.max(0.01, base);
+        }
+        function pickWeighted(list, counts){
+            var recentSet = recentTitlesSet();
+            var histSet = getSmartHistSet();
+            var lastPickNorm = null;
+            try { lastPickNorm = norm(localStorage.getItem('smartRandomLast') || ''); } catch(e){}
+            var pool = list.filter(function(g){
+                var t = norm(g.title||'');
+                if (!t) return false;
+                if (t === lastPickNorm) return false;
+                if (histSet[t]) return false;
+                return true;
+            });
+            var source = pool.length >= 10 ? pool : list;
+            var weights = source.map(function(g){ return weightFor(g.title||'', counts||{}, recentSet, histSet, lastPickNorm); });
+            var sum = weights.reduce(function(a,b){ return a+b; }, 0);
+            if (sum <= 0) return source[Math.floor(Math.random()*source.length)] || {};
+            var r = Math.random() * sum;
+            var acc = 0;
+            for (var i=0;i<source.length;i++){
+                acc += weights[i];
+                if (r <= acc) return source[i];
+            }
+            return source[source.length-1] || {};
+        }
+        function navigateTo(g){
+            if (!g) return;
             var raw = g.link || '';
             var isExternal = /^https?:\/\//.test(raw);
             var link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
@@ -294,8 +341,43 @@ document.addEventListener('click', (e) => {
                 if (g.title && typeof trackGameClick === 'function') {
                     trackGameClick(g.title);
                 }
+                try { 
+                    localStorage.setItem('smartRandomLast', g.title||''); 
+                    var h = [];
+                    try { h = JSON.parse(localStorage.getItem('smartRandomHistory')||'[]'); } catch(e){}
+                    h = h.filter(function(t){ return t && norm(t) !== norm(g.title||''); });
+                    h.unshift(g.title||'');
+                    if (h.length > 8) h = h.slice(0,8);
+                    localStorage.setItem('smartRandomHistory', JSON.stringify(h));
+                } catch(e){}
             } catch(e){}
             window.location.href = href;
+        }
+        fetch(repoRoot + "config/games.json?v=" + Date.now())
+        .then(function(r){ return r.json(); })
+        .then(function(list){
+            if (!Array.isArray(list) || list.length === 0) return;
+            function fallback(){
+                var g = pickWeighted(list, {});
+                navigateTo(g);
+            }
+            if (typeof firebase !== 'undefined' && typeof firebase.database === 'function') {
+                firebase.database().ref('stats/games').once('value').then(function(snap){
+                    var counts = {};
+                    snap.forEach(function(child){
+                        var v = child.val()||{};
+                        if (v && v.title) counts[norm(v.title)] = v.count || 0;
+                    });
+                    var g = pickWeighted(list, counts);
+                    navigateTo(g);
+                }).catch(fallback);
+            } else {
+                var recent = getRecent();
+                var counts = {};
+                recent.forEach(function(r){ if (r && r.title) counts[norm(r.title)] = (counts[norm(r.title)]||0) + 1; });
+                var g = pickWeighted(list, counts);
+                navigateTo(g);
+            }
         })
         .catch(function(){});
     }
