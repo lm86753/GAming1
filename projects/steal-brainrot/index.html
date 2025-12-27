@@ -5,57 +5,42 @@
     <title>Steal a Brainrot - Unblocked</title>
     <style>
         body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        #unity-canvas { width: 100%; height: 100%; background: #231f20; }
+        #unity-canvas { width: 100%; height: 100%; background: #000; }
     </style>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
-
     <script>
-        // 1. SDK Bypasses
+        // 2. Fake the SDK environment so it doesn't try to "call home" to another website
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
-        window.environmentData = JSON.stringify({ language: "en", deviceType: "desktop", payload: "" });
-
-        // 2. Domain Lock Bypass
-        const originalIndexOf = String.prototype.indexOf;
-        String.prototype.indexOf = function(s) {
-            if (s === "8games.net") return 0; 
-            return originalIndexOf.apply(this, arguments);
-        };
+        // 3. Prevent the game from checking the domain
+        window.location.ancestorOrigins = ["https://8games.net"]; 
     </script>
 </head>
 <body>
     <canvas id="unity-canvas"></canvas>
 
     <script src="build/StealBrainrot.loader.js"></script>
-    
     <script>
-        const canvas = document.querySelector("#unity-canvas");
-        
-        createUnityInstance(canvas, {
-            // Filenames matching your screenshot exactly
-            dataUrl: "build/data.data", 
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "build/data.data",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
-            codeUrl: "build/code.wasm", 
+            codeUrl: "build/code.wasm",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // --- CRITICAL FIX: Initializes arrays to prevent 'reading push' error ---
+            // 4. FIX: This stops the "push" error seen in your console screenshot
             deinitializers: [],
             preRun: [],
             postRun: [],
-            // -----------------------------------------------------------------------
-
-            cacheControl: (url) => "no-store",
             
-            // TRY THIS: Change "br" to "none" if the loading bar doesn't appear
-            decompressor: "br", 
+            cacheControl: (url) => "no-store",
+            decompressor: "br" 
         }).then((unityInstance) => {
-            console.log("Game successfully initialized!");
+            console.log("Game Loaded Successfully!");
         }).catch((err) => {
             console.error("Unity Error:", err);
         });
