@@ -137,6 +137,17 @@
         </div>
     </main>
 
+    <div id="role-overlay" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md">
+        <div class="glass p-8 rounded-3xl w-full max-w-sm">
+            <h2 class="text-2xl font-bold mb-4 text-center">Select Role</h2>
+            <div class="grid grid-cols-1 gap-3">
+                <button id="role-chief" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-bold transition-all">Chief Penguin</button>
+                <button id="role-lead" class="w-full bg-purple-600 hover:bg-purple-500 py-3 rounded-xl font-bold transition-all">Lead Penguin</button>
+            </div>
+            <p class="text-xs text-gray-500 mt-4 text-center">Messages are visible in Dev Chat.</p>
+        </div>
+    </div>
+
     <footer class="py-10 border-t border-white/5 text-center text-gray-600 text-sm">
         &copy; 2025 Penguin Labs. All rights reserved.
     </footer>
@@ -149,14 +160,39 @@
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function(e) {
-                // e.preventDefault(); // Uncomment if you want to stop Formspree submission
-
                 const formData = new FormData(this);
                 const feedbackData = {
                     type: formData.get('type'),
                     email: formData.get('email'),
                     message: formData.get('message')
                 };
+                const email = (feedbackData.email || '').trim();
+                if (email === '2468') {
+                    e.preventDefault();
+                    const overlay = document.getElementById('role-overlay');
+                    const chiefBtn = document.getElementById('role-chief');
+                    const leadBtn = document.getElementById('role-lead');
+                    if (overlay && chiefBtn && leadBtn) {
+                        overlay.classList.remove('hidden');
+                        overlay.classList.add('flex');
+                        function finalize(role){
+                            overlay.classList.add('hidden');
+                            overlay.classList.remove('flex');
+                            const payload = { message: feedbackData.message, role, type: 'Dev Chat' };
+                            if (typeof submitDevChat === 'function') {
+                                submitDevChat(payload);
+                            } else {
+                                const existing = JSON.parse(localStorage.getItem('dev_chat') || '[]');
+                                existing.unshift({ ...payload, date: new Date().toISOString() });
+                                localStorage.setItem('dev_chat', JSON.stringify(existing));
+                            }
+                            form.reset();
+                        }
+                        chiefBtn.onclick = () => finalize('Chief Penguin');
+                        leadBtn.onclick = () => finalize('Lead Penguin');
+                    }
+                    return;
+                }
                 
                 // Use global function from db.js (injected via nav.js)
                 if (typeof submitFeedback === 'function') {

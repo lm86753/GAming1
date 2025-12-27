@@ -89,6 +89,16 @@ function submitFeedback(data) {
     });
 }
 
+function submitDevChat(data) {
+    if (!db) return;
+    const chatRef = db.ref('dev_chat');
+    const newPostRef = chatRef.push();
+    newPostRef.set({
+        ...data,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
+    });
+}
+
 // --- DASHBOARD LOGIC (For dev.html) ---
 function initDashboard() {
     if (!db) {
@@ -159,6 +169,27 @@ function initDashboard() {
                     </div>
                     <p class="text-gray-300 text-sm leading-relaxed">${f.message}</p>
                     ${f.email ? `<p class="text-xs text-gray-600 mt-2 block truncate">${f.email}</p>` : ''}
+                </div>
+            `).join('');
+        }
+    });
+
+    db.ref('dev_chat').limitToLast(100).on('value', (snap) => {
+        const data = snap.val() || {};
+        const chatArray = Object.values(data).sort((a, b) => b.timestamp - a.timestamp);
+        const listEl = document.getElementById('dev-chat-list');
+        if (listEl) {
+            if (chatArray.length === 0) {
+                listEl.innerHTML = '<p class="text-center text-gray-500">No messages yet.</p>';
+                return;
+            }
+            listEl.innerHTML = chatArray.map(m => `
+                <div class="p-4 bg-white/5 rounded-xl border border-white/5">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-pink-400 font-bold text-sm uppercase tracking-wider">${m.role || 'Developer'}</span>
+                        <span class="text-xs text-gray-500">${new Date(m.timestamp).toLocaleDateString()}</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">${m.message}${m.role ? ` — ${m.role}` : ''}</p>
                 </div>
             `).join('');
         }
