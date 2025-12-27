@@ -163,6 +163,47 @@ function initDashboard() {
             `).join('');
         }
     });
+
+    const chatRef = db.ref('dev_chat');
+    const chatList = document.getElementById('chat-list');
+    chatRef.limitToLast(100).on('value', (snap) => {
+        const data = snap.val() || {};
+        const arr = Object.values(data).sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
+        if (chatList) {
+            if (arr.length === 0) {
+                chatList.innerHTML = '<p class="text-center text-gray-500">No messages yet.</p>';
+            } else {
+                const esc = (s) => String(s || '').replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+                chatList.innerHTML = arr.map(m => `
+                    <div class="p-3 bg-white/5 rounded-xl border border-white/5">
+                        <p class="text-gray-200 text-sm">${esc(m.text)} <span class="text-gray-500">-${m.role}</span></p>
+                        <span class="text-xs text-gray-600">${m.timestamp ? new Date(m.timestamp).toLocaleString() : ''}</span>
+                    </div>
+                `).join('');
+                chatList.scrollTop = chatList.scrollHeight;
+            }
+        }
+    });
+
+    const sendBtn = document.getElementById('chat-send');
+    const inputEl = document.getElementById('chat-input');
+    const roleEl = document.getElementById('chat-role');
+    const errEl = document.getElementById('chat-error');
+    if (sendBtn && inputEl) {
+        sendBtn.addEventListener('click', () => {
+            const text = inputEl.value.trim();
+            const role = roleEl ? roleEl.value.trim() : '';
+            if (!text) return;
+            if (!role) { if (errEl) errEl.classList.remove('hidden'); return; }
+            if (errEl) errEl.classList.add('hidden');
+            chatRef.push({
+                text,
+                role,
+                timestamp: firebase.database.ServerValue.TIMESTAMP
+            });
+            inputEl.value = '';
+        });
+    }
 }
 
 // --- AUTO-INIT ON LOAD ---
