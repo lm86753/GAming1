@@ -99,6 +99,11 @@ function submitDevChat(data) {
     });
 }
 
+function deleteDevChatMessage(key) {
+    if (!db || !key) return;
+    db.ref(`dev_chat/${key}`).remove();
+}
+
 // --- DASHBOARD LOGIC (For dev.html) ---
 function initDashboard() {
     if (!db) {
@@ -175,8 +180,12 @@ function initDashboard() {
     });
 
     db.ref('dev_chat').limitToLast(100).on('value', (snap) => {
-        const data = snap.val() || {};
-        const chatArray = Object.values(data).sort((a, b) => b.timestamp - a.timestamp);
+        const chatArray = [];
+        snap.forEach(child => {
+            const val = child.val() || {};
+            chatArray.push({ key: child.key, ...val });
+        });
+        chatArray.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
         const listEl = document.getElementById('dev-chat-list');
         if (listEl) {
             if (chatArray.length === 0) {
@@ -187,7 +196,10 @@ function initDashboard() {
                 <div class="p-4 bg-white/5 rounded-xl border border-white/5">
                     <div class="flex justify-between items-start mb-2">
                         <span class="text-pink-400 font-bold text-sm uppercase tracking-wider">${m.role || 'Developer'}</span>
-                        <span class="text-xs text-gray-500">${new Date(m.timestamp).toLocaleDateString()}</span>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs text-gray-500">${new Date(m.timestamp).toLocaleDateString()}</span>
+                            <button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteDevChatMessage('${m.key}')">Delete</button>
+                        </div>
                     </div>
                     <p class="text-gray-300 text-sm leading-relaxed">${m.message}${m.role ? ` — ${m.role}` : ''}</p>
                 </div>
