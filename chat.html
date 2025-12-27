@@ -168,17 +168,47 @@
                 setError('');
                 if (!rateOk()){ setError('Slow down'); return; }
                 btn.disabled = true;
+                
                 var nameToUse = role || anon;
-                var payload = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
-                if (typeof submitGlobalChat === 'function') {
-                    var p = submitGlobalChat(payload);
-                    if (p && typeof p.then === 'function') {
-                        p.then(function(){ input.value=''; })
-                         .catch(function(e){ setError('Error: ' + (e.message||e)); })
-                         .finally(function(){ btn.disabled = false; });
+                
+                // Attempt 1: Try to use the role as the name (for backward compatibility with old clients)
+                // If the DB rules block this (e.g. name must be anonymousXXX), we fallback.
+                var payload1 = { name: nameToUse, displayName: nameToUse, message: s.text, type: 'Global Chat' };
+                
+                function handleSuccess(){
+                    input.value='';
+                    btn.disabled = false;
+                }
+                
+                function handleFail(err){
+                    // Attempt 2: Fallback to anonymous name (satisfies strict DB rules)
+                    // New clients will see displayName, old clients will see anonymousID
+                    console.log("First attempt failed (likely DB name restriction), retrying with anonymous ID...", err);
+                    var payload2 = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
+                    
+                    if (typeof submitGlobalChat === 'function') {
+                        var p2 = submitGlobalChat(payload2);
+                        if (p2 && typeof p2.then === 'function') {
+                            p2.then(handleSuccess)
+                              .catch(function(e){ 
+                                  setError('Error: ' + (e.message||e)); 
+                                  btn.disabled = false; 
+                              });
+                        } else {
+                            handleSuccess();
+                        }
                     } else {
-                        input.value='';
                         btn.disabled = false;
+                        setError('Connection unavailable');
+                    }
+                }
+
+                if (typeof submitGlobalChat === 'function') {
+                    var p = submitGlobalChat(payload1);
+                    if (p && typeof p.then === 'function') {
+                        p.then(handleSuccess).catch(handleFail);
+                    } else {
+                        handleSuccess();
                     }
                 } else {
                     btn.disabled = false;
