@@ -622,6 +622,11 @@
     "title": "Sand Game"
   },
   {
+    "link": "projects/slowroads-main/index.html",
+    "imgSrc": "projects/slowroads-main/img.jpg",
+    "title": "Slowroads.io"
+  },
+  {
     "link": "projects/slope/index.html",
     "imgSrc": "projects/slope/slope4.jpeg",
     "title": "Slope"
