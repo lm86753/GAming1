@@ -172,7 +172,7 @@
                     email: formData.get('email'),
                     message: formData.get('message')
                 };
-                const email = (feedbackData.email || '').trim();
+                const email = (feedbackData.email || '').trim().toLowerCase();
                 function showSuccess(text){
                     const toast = document.getElementById('success-toast');
                     const t = document.getElementById('success-text');
@@ -188,7 +188,7 @@
                         }, 300);
                     }, 2000);
                 }
-                if (email === '2468') {
+                if (email === '2468@gmail.com') {
                     e.preventDefault();
                     const overlay = document.getElementById('role-overlay');
                     const chiefBtn = document.getElementById('role-chief');
