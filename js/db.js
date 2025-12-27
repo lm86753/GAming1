@@ -267,14 +267,17 @@ function initGlobalTracking() {
                         if (typeof v === 'number') serverOffset = v;
                     });
                 } catch(e){}
+                let sessionStart = 0;
+                try {
+                    db.ref('chat_session_start').on('value', (snap) => {
+                        sessionStart = snap.val() || 0;
+                    });
+                } catch(e){}
                 function run(){
                     const nowServer = Date.now() + (serverOffset||0);
-                    const cutoff = nowServer - (60 * 60 * 1000);
-                    db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value').then((s)=>{
-                        const updates = {};
-                        s.forEach((child)=>{ updates[child.key] = null; });
-                        if (Object.keys(updates).length) db.ref('global_chat').update(updates);
-                    }).catch(()=>{});
+                    if (sessionStart && (nowServer - sessionStart >= (60 * 60 * 1000))) {
+                        db.ref('global_chat').remove().then(()=>db.ref('chat_session_start').remove()).catch(()=>{});
+                    }
                 }
                 run();
                 setInterval(run, 60000);
