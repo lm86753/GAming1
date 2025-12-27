@@ -277,10 +277,8 @@
                     if (!ok) return;
                     if (typeof clearGlobalChat === 'function') {
                         clearGlobalChat();
-                        firebase.database().ref('chat_session_start').remove();
                     } else {
                         firebase.database().ref('global_chat').remove();
-                        firebase.database().ref('chat_session_start').remove();
                     }
                 });
             }
@@ -307,18 +305,14 @@
                         var off = snap.val();
                         if (typeof off === 'number') serverOffset = off; 
                     });
-                    var sessionStart = 0;
-                    db.ref('chat_session_start').on('value', function(s){
-                        sessionStart = s.val()||0;
-                        updateClock();
-                    });
+                    var earliestStart = 0;
                     var clockEl = document.getElementById('auto-clear-clock');
                     var clockTimer = null;
                     function updateClock(){
                         if (!clockEl) return;
-                        if (!sessionStart) { clockEl.textContent = 'Auto clear in: —'; return; }
+                        if (!earliestStart) { clockEl.textContent = 'Auto clear in: —'; return; }
                         var nowServer = Date.now() + (serverOffset||0);
-                        var target = sessionStart + (60*60*1000);
+                        var target = earliestStart + (60*60*1000);
                         var remain = Math.max(0, target - nowServer);
                         var hrs = Math.floor(remain / 3600000);
                         var mins = Math.floor((remain % 3600000) / 60000);
@@ -377,9 +371,7 @@
                         });
                         arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
                         renderChat(arr);
-                        if (!sessionStart && earliest) {
-                            db.ref('chat_session_start').set(earliest);
-                        }
+                        earliestStart = earliest || 0;
                         updateClock();
                         if (!clockTimer) clockTimer = setInterval(updateClock, 1000);
                     }, function(error){
@@ -390,9 +382,9 @@
                     function cleanupOldMessages(){
                         try {
                             var nowServer = Date.now() + (serverOffset||0);
-                            if (sessionStart && (nowServer - sessionStart >= (60 * 60 * 1000))) {
+                            if (earliestStart && (nowServer - earliestStart >= (60 * 60 * 1000))) {
                                 db.ref('global_chat').remove().then(function(){
-                                    db.ref('chat_session_start').remove();
+                                    // cleared
                                 });
                             }
                         } catch(e){}
