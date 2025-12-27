@@ -10,23 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
 
     <script>
-        // 1. STUBBING: This is the specific fix for the 'push' error.
-        // We define the arrays on the window so the framework script (8b2e24a...) can find them.
+        // FIX FOR THE 'PUSH' ERROR:
+        // We define these on the window immediately so the framework doesn't find them 'undefined'
         window.deinitializers = [];
         window.preRun = [];
         window.postRun = [];
 
-        // 2. MODULE DEFINITION: Defining the Module before the loader script is fetched.
-        var Module = {
-            preRun: window.preRun,
-            postRun: window.postRun,
-            deinitializers: window.deinitializers,
-            canvas: document.querySelector("#unity-canvas"),
-            print: function(text) { console.log(text); },
-            setStatus: function(text) { console.log(text); }
-        };
-
-        // 3. SDK BYPASS
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
@@ -41,7 +30,7 @@
     <script>
         const canvas = document.querySelector("#unity-canvas");
         
-        // This function call is what the StealBrainrot.loader.js provides
+        // Use the paths based on your folder structure: projects/steal-brainrot/build/
         createUnityInstance(canvas, {
             dataUrl: "build/data.data",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
@@ -51,7 +40,7 @@
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // Feeding the stubbed arrays into the config
+            // Passing the pre-defined arrays to stop the crash
             deinitializers: window.deinitializers,
             preRun: window.preRun,
             postRun: window.postRun,
@@ -59,9 +48,9 @@
             cacheControl: (url) => "no-store",
             decompressor: "br" 
         }).then((unityInstance) => {
-            console.log("Unity loaded and push error bypassed!");
+            console.log("Game Loaded Successfully");
         }).catch((err) => {
-            console.error("Unity failed to load:", err);
+            console.error("Unity Loading Error:", err);
         });
     </script>
 </body>
