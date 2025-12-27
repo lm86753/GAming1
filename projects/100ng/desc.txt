@@ -1,0 +1,25 @@
+100 Player Pong is a chaotic multiplayer twist on the classic Pong arcade game. Instead of two paddles, up to 100 players control paddles arranged around a large circular arena, all trying to survive as one or more balls bounce endlessly around the screen. The main objective is to avoid being eliminated by keeping the ball from passing your paddle. When a player misses, their paddle is removed, shrinking the arena and increasing the intensity.
+
+Gameplay is fast, unpredictable, and heavily skill-based. As players are eliminated, the ball moves faster and angles become harder to predict, forcing quicker reactions and better positioning. Matches can be short or surprisingly long depending on player skill, and no two games play out the same. The simple mechanics make it easy for anyone to jump in, while the large number of players creates constant tension and excitement.
+
+The visual style is minimal and clean, making it easy to track the ball even during hectic moments. The shrinking arena mechanic ensures the action never slows down and keeps players engaged until the very end. 100 Player Pong works especially well as a competitive party-style game or online multiplayer experience.
+
+Controls (Keyboard & Mouse)
+
+Mouse Movement – Move your paddle along the arena edge
+
+A / D or Left / Right Arrow Keys – Move paddle left or right
+
+Mouse Left Click (if available) – Ready up / interact with menus
+
+Esc – Pause or exit menu
+
+Special Features & Mechanics
+
+Up to 100 players in a single Pong match
+
+Circular arena instead of traditional side-to-side layout
+
+Player elimination that increases difficulty over time
+
+Simple controls with highly competitive gameplay

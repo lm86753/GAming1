@@ -1,0 +1,33 @@
+Happy Wheels is a physics-based side-scrolling game known for its dark humor, exaggerated ragdoll physics, and creative level design. Players choose from a variety of unique characters, each with their own vehicle, and attempt to navigate through dangerous obstacle courses filled with spikes, mines, traps, and moving hazards. The primary objective is to reach the finish line while surviving the level, though crashes and failures are a major part of the experience.
+
+Gameplay focuses on controlling momentum, balance, and timing. Because of the realistic physics and fragile characters, even small mistakes can result in dramatic crashes or dismemberment. This trial-and-error style encourages players to experiment with speed and movement to find the safest—or funniest—way through a level. In addition to official levels, Happy Wheels is famous for its massive collection of user-created levels, offering endless variety and creativity.
+
+The visual style is simple and cartoonish, which contrasts with the over-the-top physics and humor. This balance keeps the game entertaining rather than disturbing. Happy Wheels appeals to players who enjoy challenging physics gameplay, creative level design, and unpredictable outcomes.
+
+Controls (Keyboard & Mouse)
+
+Arrow Keys – Lean and control movement
+
+Up Arrow – Accelerate
+
+Down Arrow – Brake / Reverse
+
+Left / Right Arrow – Lean backward or forward
+
+Spacebar – Special ability (varies by character)
+
+Shift / Ctrl – Secondary actions (character-specific)
+
+Z (if available) – Eject from vehicle
+
+Mouse – Menu navigation
+
+Special Features & Mechanics
+
+Ragdoll physics with exaggerated reactions
+
+Multiple playable characters with unique abilities
+
+Huge library of user-generated levels
+
+Physics-based puzzles and obstacle courses

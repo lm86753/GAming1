@@ -1,0 +1,29 @@
+Learn to Fly 2 is a physics-based arcade and upgrade game that follows a determined penguin on a mission to prove that penguins can fly. The goal is to launch, glide, and fly as far and as high as possible, earning money from each attempt to purchase upgrades and unlock new equipment. Through persistence and smart upgrading, players gradually improve their performance and reach new heights.
+
+Gameplay revolves around launching the penguin from a ramp and controlling flight using boosts and gliding mechanics. Each run earns money based on distance, height, and airtime, which can be spent on upgrading engines, fuel tanks, gliders, sleds, and boosters. Timing is key—using boosts at the right moment can dramatically increase distance, while poor control can quickly end a run. Multiple game modes and challenges add variety and long-term goals beyond simple distance records.
+
+The game features a charming cartoon art style and humorous tone, keeping the experience light and entertaining. Progression feels rewarding, as each upgrade noticeably improves performance. Learn to Fly 2 is easy to pick up but offers depth for players who enjoy optimization, physics, and gradual improvement.
+
+Controls (Keyboard & Mouse)
+
+Right Arrow / D – Boost / Throttle forward
+
+Left Arrow / A – Tilt backward / Adjust angle
+
+Up Arrow / W – Use special equipment (if available)
+
+Down Arrow / S – Dive downward
+
+Spacebar – Activate boosters
+
+Mouse – Menu navigation and upgrades
+
+Special Features & Mechanics
+
+Upgrade-based progression system
+
+Multiple launch platforms, sleds, and gliders
+
+Physics-driven flight and momentum control
+
+Different game modes and challenges
