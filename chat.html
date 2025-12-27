@@ -174,12 +174,22 @@
                 });
             }
             var isShutdown = false;
+            var isMuted = false;
             
             function updateShutdownUI(){
                 var input = document.getElementById('chat-input');
                 var btn = document.getElementById('chat-send');
                 var shutdownBtn = document.getElementById('shutdown-btn');
                 var isDev = localStorage.getItem('dev_access') === 'true';
+                
+                if (isMuted) {
+                    if (input) { input.disabled = true; input.placeholder = "You are muted by admin."; }
+                    if (btn) { btn.disabled = true; btn.classList.add('opacity-50'); }
+                    setError('You are muted by admin');
+                    return;
+                } else {
+                    setError('');
+                }
                 
                 if (isShutdown) {
                     if (shutdownBtn) shutdownBtn.textContent = "Open Chat";
@@ -203,6 +213,7 @@
                 var input = document.getElementById('chat-input');
                 var btn = document.getElementById('chat-send');
                 if (!input || !btn) return;
+                if (isMuted) { setError('You are muted by admin'); return; }
                 var s = sanitize(input.value||'');
                 if (!s.ok){ setError(s.reason); return; }
                 setError('');
@@ -264,7 +275,13 @@
                     });
     
                     var mutes = {};
-                    db.ref('global_chat_mutes').on('value', function(s){ mutes = (s.val()||{}); renderMutes(mutes); });
+                    db.ref('global_chat_mutes').on('value', function(s){ 
+                        mutes = (s.val()||{}); 
+                        renderMutes(mutes); 
+                        var mySafe = String(anon||'').toLowerCase().replace(/[^a-z0-9_-]/g,'');
+                        isMuted = !!(mySafe && mutes[mySafe]);
+                        updateShutdownUI();
+                    });
                     
                     var chatRef = db.ref('global_chat').limitToLast(100);
                     
@@ -286,11 +303,8 @@
                             var nm = String(v.name||'').toLowerCase();
                             var nmSafe = nm.replace(/[^a-z0-9_-]/g,'');
                             
-                            if (realSafe === 'chiefpenguin' || realSafe === 'leadpenguin') {
-                                // Never hide admin role messages
-                            } else if (nmSafe && mutes[nmSafe]) {
-                                return;
-                            }
+                            // Do not hide muted users' past messages
+                            // Admin role messages are always shown
                             arr.push({ key: child.key, name: v.name, displayName: v.displayName, message: v.message, timestamp: v.timestamp||0 });
                         });
                         arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
@@ -299,6 +313,18 @@
                          clearTimeout(loadTimeout);
                          if(log) log.innerHTML = '<p class="text-center text-red-500 py-10">Error loading chat: '+escapeHtml(error.message)+'</p>';
                     });
+                    
+                    function cleanupOldMessages(){
+                        try {
+                            var cutoff = Date.now() - (10 * 60 * 1000);
+                            db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value', function(s){
+                                s.forEach(function(child){
+                                    db.ref('global_chat/'+child.key).remove();
+                                });
+                            });
+                        } catch(e){}
+                    }
+                    setInterval(cleanupOldMessages, 60000);
                 } catch(e) {
                     if(log) log.innerHTML = '<p class="text-center text-red-500 py-10">Init Error: '+escapeHtml(e.message)+'</p>';
                 }
