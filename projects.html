@@ -171,6 +171,7 @@
 
     <script>
         let games = [];
+        let popularHasShown = false;
         const repoRoot = (function(){
             var parts = location.pathname.split('/');
             return (parts.length > 2 && parts[1]) ? ('/' + parts[1] + '/') : '/';
@@ -197,6 +198,9 @@
                 document.addEventListener('firebase-ready', trigger);
                 setTimeout(trigger, 3000);
                 trigger();
+                setTimeout(function(){
+                    if (!popularHasShown) renderPopularFallback();
+                }, 2500);
             })();
         })
         .catch((error) => console.error("Error:", error));
@@ -360,41 +364,101 @@
                 }
             } catch(e) { console.error("Recent games error:", e); }
         }
+
+        function renderPopularSection(entries, tagText, tagClass, borderClass) {
+            const section = document.getElementById('popular-section');
+            const grid = document.getElementById('popular-grid');
+            if (!section || !grid) return false;
+
+            const safe = (entries || []).filter(function(e){
+                return e && e.href && e.title;
+            }).slice(0, 4);
+            if (safe.length === 0) return false;
+
+            popularHasShown = true;
+            section.classList.remove('hidden');
+            grid.innerHTML = safe.map(function(e){
+                var img = e.img || e.imgSrc || '';
+                return `
+                        <a href="${e.href}" class="glass p-3 rounded-2xl block no-underline group hover:bg-white/10 transition-all border ${borderClass}">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-black/20">
+                                    <img src="${img}" alt="${e.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <p class="font-bold truncate text-sm text-gray-100">${e.title}</p>
+                                    <p class="text-[10px] uppercase tracking-wider ${tagClass} mt-1 font-bold">${tagText}</p>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+            }).join('');
+            return true;
+        }
+
+        function renderPopularFallback() {
+            if (!Array.isArray(games) || games.length === 0) return;
+            if (popularHasShown) return;
+
+            try {
+                const recent = JSON.parse(localStorage.getItem('recentlyPlayed') || '[]');
+                if (Array.isArray(recent) && recent.length) {
+                    const counts = {};
+                    recent.forEach(function(r){
+                        const t = (r && r.title) ? String(r.title) : '';
+                        if (!t) return;
+                        counts[t] = (counts[t] || 0) + 1;
+                    });
+                    const ranked = Object.keys(counts)
+                        .map(function(t){ return { title: t, count: counts[t] }; })
+                        .sort(function(a,b){ return (b.count||0) - (a.count||0); })
+                        .slice(0, 4);
+
+                    const byTitle = {};
+                    recent.forEach(function(r){
+                        if (r && r.title && !byTitle[r.title]) byTitle[r.title] = r;
+                    });
+                    const entries = ranked.map(function(x){
+                        const r = byTitle[x.title] || {};
+                        return { href: r.href, title: x.title, img: r.img || '' };
+                    }).filter(Boolean);
+
+                    if (renderPopularSection(entries, 'Trending', 'text-yellow-400', 'border-yellow-500/30')) return;
+                }
+            } catch(e) {}
+
+            const picks = games.slice().sort(function(){ return Math.random() - 0.5; }).slice(0, 4);
+            const entries = picks.map(function(p){
+                const raw = (p && p.link) ? p.link : '';
+                const isExternal = /^https?:\/\//.test(raw);
+                const link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
+                const wrapper = encodeURIComponent('fullscreen_system (1).html');
+                const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(p.title||'') + '&img=' + encodeURIComponent(p.imgSrc||'');
+                return { href: href, title: p.title || 'Game', img: p.imgSrc || '' };
+            });
+            renderPopularSection(entries, 'Suggested', 'text-yellow-400', 'border-yellow-500/30');
+        }
         
         function initPopularGames() {
             if (typeof firebase === 'undefined') return;
             const database = firebase.database();
-            const section = document.getElementById('popular-section');
-            const grid = document.getElementById('popular-grid');
             const byTitle = {};
             games.forEach(g => { byTitle[(g.title||'').toUpperCase()] = g; });
             database.ref('stats/games').on('value', (snap) => {
                 const data = snap.val() || {};
                 const arr = Object.values(data).sort((a,b) => (b.count||0) - (a.count||0)).slice(0,4);
                 if (arr.length === 0) return;
-                section.classList.remove('hidden');
-                grid.innerHTML = arr.map(item => {
+                const entries = arr.map(item => {
                     const p = byTitle[(item.title||'').toUpperCase()];
-                    if (!p) return '';
+                    if (!p) return null;
                     const raw = p.link || '';
                     const isExternal = /^https?:\/\//.test(raw);
                     const link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
                     const wrapper = encodeURIComponent('fullscreen_system (1).html');
                     const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(p.title||'') + '&img=' + encodeURIComponent(p.imgSrc||'');
-                    return `
-                        <a href="${href}" class="glass p-3 rounded-2xl block no-underline group hover:bg-white/10 transition-all border border-yellow-500/30">
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-black/20">
-                                    <img src="${p.imgSrc}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
-                                </div>
-                                <div class="min-w-0 flex-1">
-                                    <p class="font-bold truncate text-sm text-gray-100">${p.title}</p>
-                                    <p class="text-[10px] uppercase tracking-wider text-yellow-400 mt-1 font-bold">Popular</p>
-                                </div>
-                            </div>
-                        </a>
-                    `;
-                }).join('');
+                    return { href: href, title: p.title || '', img: p.imgSrc || '' };
+                }).filter(Boolean);
+                renderPopularSection(entries, 'Popular', 'text-yellow-400', 'border-yellow-500/30');
             });
         }
 
