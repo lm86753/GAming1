@@ -125,6 +125,11 @@
     "title": "Cannon Basketball 4"
   },
   {
+    "link": "projects/3kh0-assets-main-cars-simulator/cars-simulator/index.html",
+    "imgSrc": "projects/3kh0-assets-main-cars-simulator/cars-simulator/splash.png",
+    "title": "Cars Simulator"
+  },
+  {
     "link": "projects/canyondefense/index.html",
     "imgSrc": "projects/canyondefense/canyondefense.png",
     "title": "Canyon Defense"
@@ -559,11 +564,8 @@
     "imgSrc": "projects/push-your-luck/assets/img/push.png",
     "title": "Push Your Luck"
   },
-  {
-    "link": "projects/racing/index.html",
-    "imgSrc": "projects/racing/Logo512x512.png",
-    "title": "Racing Limits"
-  },
+
+ 
   {
     "link": "projects/retro-bowl/index.html",
     "imgSrc": "projects/retro-bowl/img/icon.jpg",
