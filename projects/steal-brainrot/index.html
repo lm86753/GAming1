@@ -5,7 +5,7 @@
     <title>Steal a Brainrot - Unblocked</title>
     <style>
         body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        #unity-canvas { width: 100%; height: 100%; background: #000; }
+        #unity-canvas { width: 100%; height: 100%; background: #231f20; }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
@@ -32,27 +32,30 @@
     <script src="build/StealBrainrot.loader.js"></script>
     
     <script>
-        createUnityInstance(document.querySelector("#unity-canvas"), {
+        const canvas = document.querySelector("#unity-canvas");
+        
+        createUnityInstance(canvas, {
             // Filenames matching your screenshot exactly
             dataUrl: "build/data.data", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/code.wasm", 
-            
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // --- CRITICAL FIXES FOR THE 'PUSH' ERROR ---
+            // --- CRITICAL FIX: Initializes arrays to prevent 'reading push' error ---
             deinitializers: [],
             preRun: [],
             postRun: [],
-            // -------------------------------------------
+            // -----------------------------------------------------------------------
 
             cacheControl: (url) => "no-store",
+            
+            // TRY THIS: Change "br" to "none" if the loading bar doesn't appear
             decompressor: "br", 
         }).then((unityInstance) => {
-            console.log("Game Loaded!");
+            console.log("Game successfully initialized!");
         }).catch((err) => {
             console.error("Unity Error:", err);
         });
