@@ -9,20 +9,19 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
     <script>
+        // GLOBAL FIX: This defines the 'push' targets the engine is missing in your screenshot
+        var Module = {
+            preRun: [],
+            postRun: [],
+            deinitializers: [],
+            print: function(text) { console.log(text); },
+            canvas: (function() { return document.querySelector("#unity-canvas"); })()
+        };
+
         // SDK Bypasses
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
-        };
-        
-        // --- THE ENGINE FIX ---
-        // This creates the 'push' targets Unity is missing in your screenshot
-        var Module = {
-            preRun: [],
-            postRun: [],
-            print: function(text) { console.log(text); },
-            canvas: (function() { return document.querySelector("#unity-canvas"); })(),
-            deinitializers: []
         };
     </script>
 </head>
@@ -40,17 +39,17 @@
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // Critical initialization arrays
-            deinitializers: [],
-            preRun: [],
-            postRun: [],
+            // Redundant fix to ensure 'push' doesn't fail
+            deinitializers: Module.deinitializers,
+            preRun: Module.preRun,
+            postRun: Module.postRun,
 
             cacheControl: (url) => "no-store",
             decompressor: "br" 
         }).then((unityInstance) => {
-            console.log("Game successfully loaded!");
+            console.log("Game Loaded Successfully!");
         }).catch((err) => {
-            console.error("Unity Loading Error:", err);
+            console.error("Unity Error:", err);
         });
     </script>
 </body>
