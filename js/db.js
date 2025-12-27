@@ -118,10 +118,18 @@ function muteGlobalName(name) {
     if (!db || !name) return;
     const safe = String(name).replace(/[^a-zA-Z0-9_-]/g, '').toLowerCase();
     if (!safe) return;
+    if (safe === 'chiefpenguin' || safe === 'leadpenguin') return;
     return db.ref(`global_chat_mutes/${safe}`).set({
         name: safe,
         timestamp: firebase.database.ServerValue.TIMESTAMP
     });
+}
+
+function deleteGlobalMute(name) {
+    if (!db || !name) return;
+    const safe = String(name).replace(/[^a-zA-Z0-9_-]/g, '').toLowerCase();
+    if (!safe) return;
+    return db.ref(`global_chat_mutes/${safe}`).remove();
 }
 
 function deleteDevChatMessage(key) {
