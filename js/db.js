@@ -192,10 +192,13 @@ function initDashboard() {
                 listEl.innerHTML = '<p class="text-center text-gray-500">No messages yet.</p>';
                 return;
             }
-            listEl.innerHTML = chatArray.map(m => `
+            listEl.innerHTML = chatArray.map(m => {
+                const role = m.role || 'Developer';
+                const roleClass = role === 'Lead Penguin' ? 'text-blue-400' : (role === 'Chief Penguin' ? 'text-pink-400' : 'text-gray-400');
+                return `
                 <div class="p-4 bg-white/5 rounded-xl border border-white/5">
                     <div class="flex justify-between items-start mb-2">
-                        <span class="text-pink-400 font-bold text-sm uppercase tracking-wider">${m.role || 'Developer'}</span>
+                        <span class="${roleClass} font-bold text-sm uppercase tracking-wider">${role}</span>
                         <div class="flex items-center gap-3">
                             <span class="text-xs text-gray-500">${new Date(m.timestamp).toLocaleDateString()}</span>
                             <button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteDevChatMessage('${m.key}')">Delete</button>
@@ -203,7 +206,8 @@ function initDashboard() {
                     </div>
                     <p class="text-gray-300 text-sm leading-relaxed">${m.message}${m.role ? ` — ${m.role}` : ''}</p>
                 </div>
-            `).join('');
+            `;
+            }).join('');
         }
     });
 }
