@@ -11,17 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
 
     <script>
-        // 1. SDK & Domain Bypasses
+        // SDK Bypasses
         window.ysdk = {
-            features: { 
-                LoadingAPI: { ready: () => console.log("SDK Ready") }, 
-                GameplayAPI: { start: () => {}, stop: () => {} } 
-            },
+            features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
         window.environmentData = JSON.stringify({ language: "en", deviceType: "desktop", payload: "" });
 
-        // 2. Domain Lock Bypass
+        // Domain Lock Bypass
         const originalIndexOf = String.prototype.indexOf;
         String.prototype.indexOf = function(s) {
             if (s === "8games.net") return 0; 
@@ -37,29 +34,33 @@
     <script>
         const canvas = document.querySelector("#unity-canvas");
         
-        createUnityInstance(canvas, {
-            // Filenames matching your screenshot
+        const config = {
+            // Filenames matching your screenshot exactly
             dataUrl: "build/data.data", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/code.wasm", 
-            
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // FIX: This solves the "reading 'push'" error from your console screenshot
-            deinitializers: [], 
+            // FIX for the 'push' error in your console:
+            // We manually provide the arrays the framework is trying to push into
+            deinitializers: [],
+            preRun: [],
+            postRun: [],
             
-            // FIX: Force decompression if files were originally .br
-            decompressor: "br",
+            // Fix for renamed .br files
             cacheControl: (url) => "no-store",
-            
+            decompressor: "br"
+        };
+
+        createUnityInstance(canvas, config, (progress) => {
+            console.log("Loading: " + (progress * 100) + "%");
         }).then((unityInstance) => {
-            console.log("Game successfully initialized!");
+            console.log("Game Loaded!");
         }).catch((err) => {
-            // This will show a popup if there is still a file path or loading error
-            console.error("Unity Loading Error:", err);
+            console.error("Unity Error: ", err);
         });
     </script>
 </body>
