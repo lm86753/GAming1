@@ -271,36 +271,73 @@
             }
 
             function startListen(){
-                if (typeof firebase === 'undefined') return;
-                var db = firebase.database();
-                
-                db.ref('chat_shutdown').on('value', function(s){
-                    isShutdown = s.val() === true;
-                    updateShutdownUI();
-                });
+                var log = document.getElementById('chat-list');
+                if (typeof firebase === 'undefined') {
+                    if(log) log.innerHTML = '<p class="text-center text-red-500 py-10">Error: Firebase SDK not loaded.</p>';
+                    return;
+                }
+                if (typeof firebase.database !== 'function') {
+                     // Database SDK might not be loaded yet even if App SDK is. Wait for it.
+                     console.log("firebase.database not found, waiting...");
+                     setTimeout(startListen, 500);
+                     return;
+                }
 
-                var mutes = {};
-                db.ref('global_chat_mutes').on('value', function(s){ mutes = (s.val()||{}); renderMutes(mutes); });
-                db.ref('global_chat').limitToLast(100).on('value', function(snap){
-                    var arr = [];
-                    snap.forEach(function(child){
-                        var v = child.val()||{};
-                        var realName = String(v.displayName || v.name || '').toLowerCase();
-                        var realSafe = realName.replace(/[^a-z0-9_-]/g,'');
-                        
-                        var nm = String(v.name||'').toLowerCase();
-                        var nmSafe = nm.replace(/[^a-z0-9_-]/g,'');
-                        
-                        if (realSafe === 'chiefpenguin' || realSafe === 'leadpenguin') {
-                            // Never hide admin role messages
-                        } else if (nmSafe && mutes[nmSafe]) {
-                            return;
+                try {
+                    var db = firebase.database();
+                    var connectedRef = db.ref('.info/connected');
+                    connectedRef.on('value', function(snap){
+                        if (snap.val() === true) {
+                            // Connected
+                        } else {
+                            // Disconnected or connecting
                         }
-                        arr.push({ key: child.key, name: v.name, displayName: v.displayName, message: v.message, timestamp: v.timestamp||0 });
                     });
-                    arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
-                    renderChat(arr);
-                });
+
+                    db.ref('chat_shutdown').on('value', function(s){
+                        isShutdown = s.val() === true;
+                        updateShutdownUI();
+                    });
+    
+                    var mutes = {};
+                    db.ref('global_chat_mutes').on('value', function(s){ mutes = (s.val()||{}); renderMutes(mutes); });
+                    
+                    var chatRef = db.ref('global_chat').limitToLast(100);
+                    
+                    // Set a timeout to warn if data doesn't load
+                    var loadTimeout = setTimeout(function(){
+                        if(log && log.textContent.includes('Connecting')) {
+                            log.innerHTML = '<p class="text-center text-yellow-500 py-10">Connection slow... check your internet or firewall.</p>';
+                        }
+                    }, 5000);
+
+                    chatRef.on('value', function(snap){
+                        clearTimeout(loadTimeout);
+                        var arr = [];
+                        snap.forEach(function(child){
+                            var v = child.val()||{};
+                            var realName = String(v.displayName || v.name || '').toLowerCase();
+                            var realSafe = realName.replace(/[^a-z0-9_-]/g,'');
+                            
+                            var nm = String(v.name||'').toLowerCase();
+                            var nmSafe = nm.replace(/[^a-z0-9_-]/g,'');
+                            
+                            if (realSafe === 'chiefpenguin' || realSafe === 'leadpenguin') {
+                                // Never hide admin role messages
+                            } else if (nmSafe && mutes[nmSafe]) {
+                                return;
+                            }
+                            arr.push({ key: child.key, name: v.name, displayName: v.displayName, message: v.message, timestamp: v.timestamp||0 });
+                        });
+                        arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
+                        renderChat(arr);
+                    }, function(error){
+                         clearTimeout(loadTimeout);
+                         if(log) log.innerHTML = '<p class="text-center text-red-500 py-10">Error loading chat: '+escapeHtml(error.message)+'</p>';
+                    });
+                } catch(e) {
+                    if(log) log.innerHTML = '<p class="text-center text-red-500 py-10">Init Error: '+escapeHtml(e.message)+'</p>';
+                }
             }
             if (typeof firebase === 'undefined') {
                 document.addEventListener('firebase-ready', startListen, { once: true });
