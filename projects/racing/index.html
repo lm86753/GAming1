@@ -26,6 +26,18 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var warningBanner = document.querySelector("#unity-warning");
 
+      window.addEventListener("error", (event) => {
+        try {
+          unityShowBanner(event.message || "Unknown error", "error");
+        } catch (e) {}
+      });
+      window.addEventListener("unhandledrejection", (event) => {
+        try {
+          var reason = event && event.reason ? String(event.reason) : "Unhandled promise rejection";
+          unityShowBanner(reason, "error");
+        } catch (e) {}
+      });
+
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -34,7 +46,7 @@
       // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          //warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
         var div = document.createElement('div');
         div.innerHTML = msg;
@@ -43,8 +55,8 @@
         else {
           if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
           setTimeout(function() {
-           // warningBanner.removeChild(div);
-            //updateBannerVisibility();
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
           }, 5000);
         }
         updateBannerVisibility();
@@ -95,7 +107,8 @@
           loadingBar.style.display = "none";
           gameInstance = unityInstance;
         }).catch((message) => {
-          alert(message);
+          console.error(message);
+          unityShowBanner(message, "error");
         });
       };
       document.body.appendChild(script);
