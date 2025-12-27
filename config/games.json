@@ -105,16 +105,6 @@
     "title": "Bloons TD 2"
   },
   {
-    "link": "projects/btd4/index.html",
-    "imgSrc": "projects/btd4/lib/bloontowerdefense4/826.png",
-    "title": "Bloons TD 4"
-  },
-  {
-    "link": "projects/btd5/index.html",
-    "imgSrc": "projects/btd5/BT5_Deluxe_logo.png",
-    "title": "Bloons TD 5"
-  },
-  {
     "link": "projects/bloxors/index.html",
     "imgSrc": "projects/bloxors/block.png",
     "title": "Bloxors"
@@ -373,6 +363,11 @@
     "link": "projects/grindcraft/index.html",
     "imgSrc": "projects/grindcraft/img/splash.png",
     "title": "Grind Craft"
+  },
+  {
+    "link": "projects/GunSpin-gh-pages/index.html",
+    "imgSrc": "projects/GunSpin-gh-pages/logo.png",
+    "title": "Gun Spin"
   },
   {
     "link": "projects/hackertype/index.html",
