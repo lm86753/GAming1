@@ -159,7 +159,7 @@
 
     </main>
 
-    <script src="/nav.js"></script>
+    <script src="/js/nav.js"></script>
     <script src="/js/db.js"></script> <!-- New DB Logic -->
 
     <script>
@@ -176,7 +176,19 @@
                 setTimeout(() => {
                     loginOverlay.style.display = 'none';
                     dashboard.classList.remove('hidden');
-                    initDashboard(); // Function from db.js (to be created)
+                    try {
+                        if (typeof initDashboard === 'function') {
+                            initDashboard();
+                        } else {
+                            document.addEventListener('firebase-ready', () => {
+                                if (typeof initDashboard === 'function') initDashboard();
+                            }, { once: true });
+                        }
+                    } catch(e) {
+                        document.addEventListener('firebase-ready', () => {
+                            if (typeof initDashboard === 'function') initDashboard();
+                        }, { once: true });
+                    }
                 }, 500);
             } else {
                 errorMsg.classList.remove('hidden');
