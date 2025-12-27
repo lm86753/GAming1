@@ -124,6 +124,13 @@ function muteGlobalName(name) {
     });
 }
 
+function deleteGlobalMute(name) {
+    if (!db || !name) return;
+    const safe = String(name).replace(/[^a-zA-Z0-9_-]/g, '').toLowerCase();
+    if (!safe) return;
+    return db.ref(`global_chat_mutes/${safe}`).remove();
+}
+
 function deleteDevChatMessage(key) {
     if (!db || !key) return;
     db.ref(`dev_chat/${key}`).remove();
