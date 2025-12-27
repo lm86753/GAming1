@@ -1,0 +1,33 @@
+2 Minute Football is a fast-paced, arcade-style soccer game where each match lasts only two minutes, emphasizing quick thinking, rapid gameplay, and precision. Players control a single soccer player in a top-down view and compete to score as many goals as possible before time runs out. The short match duration creates a high-energy, frantic environment, perfect for quick sessions or casual competitive play.
+
+Gameplay is simple but skill-based. Players dribble the ball, pass, and shoot while avoiding defenders and the goalkeeper. Timing and positioning are key—one mistake can quickly cost a goal. The game rewards aggressive yet controlled play, encouraging players to balance offense and defense efficiently. Despite its simplicity, the game is highly replayable thanks to the short match times and unpredictable ball physics.
+
+The visual style is minimalistic, featuring clean, colorful graphics that keep the focus on the ball and player movements. Sound effects add excitement to goals, hits, and saves, enhancing the arcade feel. 2 Minute Football is easy to pick up for casual players but still offers depth for those aiming to master timing, angles, and quick strategies.
+
+Controls (Keyboard & Mouse)
+
+W / Up Arrow – Move forward
+
+A / Left Arrow – Move left
+
+S / Down Arrow – Move backward
+
+D / Right Arrow – Move right
+
+Spacebar – Shoot / Kick
+
+Mouse – Menu navigation
+
+Esc – Pause / Exit
+
+Special Features & Mechanics
+
+Ultra-short, two-minute matches for fast gameplay
+
+Physics-based ball control and shots
+
+Simple, intuitive controls with strategic depth
+
+Arcade-style graphics and sound effects
+
+Focus on quick reflexes, timing, and positioning
