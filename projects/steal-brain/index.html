@@ -8,14 +8,20 @@
         #unity-canvas { width: 100%; height: 100%; background: #000; }
     </style>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
+
     <script>
-        // SDK & Domain Bypasses
+        // 1. SDK & Domain Bypasses
         window.ysdk = {
-            features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
+            features: { 
+                LoadingAPI: { ready: () => console.log("SDK Ready") }, 
+                GameplayAPI: { start: () => {}, stop: () => {} } 
+            },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
         window.environmentData = JSON.stringify({ language: "en", deviceType: "desktop", payload: "" });
 
+        // 2. Domain Lock Bypass
         const originalIndexOf = String.prototype.indexOf;
         String.prototype.indexOf = function(s) {
             if (s === "8games.net") return 0; 
@@ -29,8 +35,10 @@
     <script src="build/StealBrainrot.loader.js"></script>
     
     <script>
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-            // FIXED TO MATCH YOUR SCREENSHOT
+        const canvas = document.querySelector("#unity-canvas");
+        
+        createUnityInstance(canvas, {
+            // Filenames matching your screenshot
             dataUrl: "build/data.data", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/code.wasm", 
@@ -40,12 +48,18 @@
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // Helpful for web hosting
+            // FIX: This solves the "reading 'push'" error from your console screenshot
+            deinitializers: [], 
+            
+            // FIX: Force decompression if files were originally .br
+            decompressor: "br",
             cacheControl: (url) => "no-store",
+            
         }).then((unityInstance) => {
-            console.log("Game loaded!");
+            console.log("Game successfully initialized!");
         }).catch((err) => {
-            console.error(err);
+            // This will show a popup if there is still a file path or loading error
+            console.error("Unity Loading Error:", err);
         });
     </script>
 </body>
