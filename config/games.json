@@ -460,6 +460,11 @@
     "title": "Learn To Fly 2"
   },
   {
+    "link": "projects/level-devil-main/index.html",
+    "imgSrc": "projects/level-devil-main/logo.png",
+    "title": "Level devil"
+  },
+  {
     "link": "projects/mario/index.html",
     "imgSrc": "projects/mario/Theme/Mario.gif",
     "title": "Mario"
