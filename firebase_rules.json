@@ -2,11 +2,8 @@
   "rules": {
     "global_chat": {
       ".read": true,
-      ".write": "newData.hasChildren(['name', 'message']) && newData.child('message').val().length > 0 && newData.child('message').val().length < 500",
       "$message_id": {
-        // Allow ANY children as long as name and message exist. 
-        // Removing the specific .validate rule that might be too strict or adding 'displayName' to it.
-        ".validate": "newData.hasChildren(['name', 'message'])" 
+        ".write": "newData.hasChildren(['name', 'message']) && newData.child('message').val().length > 0 && newData.child('message').val().length < 500"
       }
     },
     "global_chat_mutes": {
