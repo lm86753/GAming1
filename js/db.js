@@ -83,7 +83,7 @@ function submitFeedback(data) {
     if (!db) return;
     const feedbackRef = db.ref('feedback');
     const newPostRef = feedbackRef.push();
-    newPostRef.set({
+    return newPostRef.set({
         ...data,
         timestamp: firebase.database.ServerValue.TIMESTAMP
     });
@@ -93,7 +93,7 @@ function submitDevChat(data) {
     if (!db) return;
     const chatRef = db.ref('dev_chat');
     const newPostRef = chatRef.push();
-    newPostRef.set({
+    return newPostRef.set({
         ...data,
         timestamp: firebase.database.ServerValue.TIMESTAMP
     });
