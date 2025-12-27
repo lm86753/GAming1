@@ -830,5 +830,10 @@
     "link": "projects/YoHoHo.io/index.html",
     "imgSrc": "projects/YoHoHo.io/favicon/apple-touch-icon.png",
     "title": "YoHoHo"
+  },
+  {
+    "link": "projects/crazycattle-3D-GAME-main/index.html",
+    "imgSrc": "projects/crazycattle-3D-GAME-main/block-breaker-og.png",
+    "title": "Block Breaker 3D"
   }
 ]
