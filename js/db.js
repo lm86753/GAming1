@@ -258,6 +258,28 @@ function initGlobalTracking() {
             trackVisit();
             sessionStorage.setItem('visited', 'true');
         }
+        if (db) {
+            (function startGlobalChatCleanup(){
+                let serverOffset = 0;
+                try {
+                    db.ref('.info/serverTimeOffset').on('value', (snap) => {
+                        const v = snap.val();
+                        if (typeof v === 'number') serverOffset = v;
+                    });
+                } catch(e){}
+                function run(){
+                    const nowServer = Date.now() + (serverOffset||0);
+                    const cutoff = nowServer - (60 * 60 * 1000);
+                    db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value').then((s)=>{
+                        const updates = {};
+                        s.forEach((child)=>{ updates[child.key] = null; });
+                        if (Object.keys(updates).length) db.ref('global_chat').update(updates);
+                    }).catch(()=>{});
+                }
+                run();
+                setInterval(run, 60000);
+            })();
+        }
     }
 }
 
