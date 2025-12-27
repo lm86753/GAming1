@@ -98,7 +98,7 @@
                 </div>
                 
                 <div class="space-y-4">
-                    <p class="text-gray-400 text-sm">Set a key and a URL. Pressing the key instantly redirects you to safety.</p>
+                    <p class="text-gray-400 text-sm">Configure your escape key. This works on <b>every page</b> of the site.</p>
                     
                     <div class="grid grid-cols-2 gap-4">
                         <div>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
 
-                    <button id="save-panic" onclick="savePanicSettings()" class="btn-red w-full py-4 rounded-2xl font-bold shadow-lg shadow-red-500/20">
+                    <button onclick="savePanicSettings()" class="btn-red w-full py-4 rounded-2xl font-bold shadow-lg shadow-red-500/20">
                         Save Panic Settings
                     </button>
                     <p id="panic-status" class="text-center text-xs text-red-400 italic h-2"></p>
@@ -172,27 +172,17 @@
     </footer>
 
     <script>
-        // Panic Button Logic
+        // Saving Logic
         function savePanicSettings() {
             const url = document.getElementById('panic-url').value || 'https://classroom.google.com';
             const key = document.getElementById('panic-key').value || '`';
             localStorage.setItem('panicUrl', url);
             localStorage.setItem('panicKey', key);
             
-            document.getElementById('panic-status').innerText = `Saved! Press "${key}" to panic.`;
+            document.getElementById('panic-status').innerText = `Saved! Press "${key}" on any page to panic.`;
             setTimeout(() => { document.getElementById('panic-status').innerText = ''; }, 3000);
         }
 
-        window.addEventListener('keydown', function(e) {
-            const savedKey = localStorage.getItem('panicKey') || '`';
-            const savedUrl = localStorage.getItem('panicUrl') || 'https://classroom.google.com';
-            
-            if (e.key === savedKey) {
-                window.location.href = savedUrl;
-            }
-        });
-
-        // Initialize Panic Inputs from storage
         window.onload = function() {
             if(localStorage.getItem('panicUrl')) document.getElementById('panic-url').value = localStorage.getItem('panicUrl');
             if(localStorage.getItem('panicKey')) document.getElementById('panic-key').value = localStorage.getItem('panicKey');
