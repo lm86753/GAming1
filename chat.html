@@ -11,44 +11,44 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; margin: 0; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .msg { padding: 6px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
-        .name { font-weight: 700; font-size: 10px; }
-        .text { font-size: 12px; color: #d1d5db; }
-        .error { color: #ef4444; font-weight: 700; font-size: 12px; }
+        .msg { padding: 4px; border-radius: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
+        .name { font-weight: 700; font-size: 9px; }
+        .text { font-size: 11px; color: #d1d5db; }
+        .error { color: #ef4444; font-weight: 700; font-size: 11px; }
     </style>
 </head>
 <body class="selection:bg-blue-500/30">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
-    <main class="min-h-screen pt-32 pb-20 px-6">
+    <main class="min-h-screen pt-24 pb-16 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="text-center space-y-3 mb-8">
                 <h1 class="text-4xl md:text-5xl font-black tracking-tight">Global <span class="text-blue-400">Chat</span></h1>
                 <p class="text-gray-400 text-sm">Anonymous, global chat with strong filtering</p>
             </div>
-            <div class="glass rounded-[2rem] p-5 h-[80vh] overflow-y-auto" id="chat-list">
+            <div class="glass rounded-[2rem] p-4 h-[72vh] overflow-y-auto" id="chat-list">
                 <p class="text-center text-gray-500 py-10">Connecting…</p>
             </div>
-            <div id="admin-tools" class="hidden mt-4 glass rounded-xl p-4">
+            <div id="admin-tools" class="hidden mt-3 glass rounded-xl p-3">
                 <div class="flex items-center gap-3 mb-3">
-                    <input id="mute-input" type="text" placeholder="Mute name (e.g., anonymous1234)" class="flex-1 glass px-3 py-2 rounded-xl outline-none border border-white/10 focus:border-blue-500/50 text-sm">
-                    <button id="mute-btn" class="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-xl text-sm font-bold">Mute</button>
+                    <input id="mute-input" type="text" placeholder="Mute name (e.g., anonymous1234)" class="flex-1 glass px-2.5 py-1.5 rounded-xl outline-none border border-white/10 focus:border-blue-500/50 text-xs">
+                    <button id="mute-btn" class="bg-red-600 hover:bg-red-500 px-3 py-1.5 rounded-xl text-xs font-bold">Mute</button>
                 </div>
                 <div class="flex items-center gap-3">
-                    <button id="shutdown-btn" class="w-full bg-orange-600 hover:bg-orange-500 px-4 py-2 rounded-xl text-sm font-bold">Shutdown Chat</button>
+                    <button id="shutdown-btn" class="w-full bg-orange-600 hover:bg-orange-500 px-3 py-1.5 rounded-xl text-xs font-bold">Shutdown Chat</button>
                 </div>
-                <div class="flex items-center gap-3 mt-3">
-                    <button id="clearall-btn" class="w-full bg-red-700 hover:bg-red-600 px-4 py-2 rounded-xl text-sm font-bold">Clear All Messages</button>
+                <div class="flex items-center gap-3 mt-2">
+                    <button id="clearall-btn" class="w-full bg-red-700 hover:bg-red-600 px-3 py-1.5 rounded-xl text-xs font-bold">Clear All Messages</button>
                 </div>
                 <p class="text-xs text-gray-500 mt-2">Admin tools available only after sending Dev Chat via Feedback.</p>
             </div>
-            <div id="mute-panel" class="hidden fixed top-32 right-6 glass rounded-2xl p-4 w-64">
+            <div id="mute-panel" class="hidden fixed top-28 right-4 glass rounded-2xl p-3 w-56">
                 <div class="flex items-center justify-between">
                     <h2 class="text-sm font-bold text-gray-300">Muted Users</h2>
                     <span class="text-xs text-gray-500">Global</span>
                 </div>
                 <div id="mute-list" class="mt-3 space-y-2"></div>
             </div>
-            <div id="rules-panel" class="hidden md:block fixed top-32 left-6 glass rounded-2xl p-4 w-64">
+            <div id="rules-panel" class="hidden md:block fixed top-28 left-4 glass rounded-2xl p-3 w-56">
                 <div class="flex items-center justify-between">
                     <h2 class="text-sm font-bold text-gray-300">Chat Rules</h2>
                     <span class="text-xs text-gray-500">All Users</span>
@@ -70,10 +70,10 @@
                 </div>
                 <div id="auto-clear-clock" class="mt-3 text-xs text-gray-400">Auto clear in: calculating…</div>
             </div>
-            <div class="flex items-center gap-3 mt-4">
-                <div id="anon-name" class="glass px-3 py-2 rounded-xl text-xs font-bold text-gray-300"></div>
-                <input id="chat-input" type="text" placeholder="Type a message" class="flex-1 glass px-4 py-3 rounded-xl outline-none border border-white/10 focus:border-blue-500/50">
-                <button id="chat-send" class="bg-blue-600 hover:bg-blue-500 px-5 py-3 rounded-xl text-sm font-bold">Send</button>
+            <div class="flex items-center gap-2 mt-3">
+                <div id="anon-name" class="glass px-2 py-1.5 rounded-xl text-[10px] font-bold text-gray-300"></div>
+                <input id="chat-input" type="text" placeholder="Type a message" class="flex-1 glass px-3 py-2 rounded-xl outline-none border border-white/10 focus:border-blue-500/50 text-sm">
+                <button id="chat-send" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-xl text-xs font-bold">Send</button>
             </div>
             <div id="chat-error" class="error mt-2 hidden"></div>
         </div>
@@ -90,22 +90,111 @@
             } catch(e) { return 'anonymous' + String(Math.floor(1000 + Math.random()*9000)); }
         }
         function normalize(s){ return (s||'').replace(/\s+/g,' ').trim(); }
-        function hasUrl(s){ return /(https?:\/\/|www\.|\.com|\.net|\.org|\.io|discord\.|@)/i.test(s); }
+        function collapseRepeats(s){ return String(s||'').replace(/(.)\1+/g,'$1'); }
+        function leet(s){
+            return String(s||'').replace(/\$/g,'s').replace(/@/g,'a').replace(/0/g,'o').replace(/[1!]/g,'i').replace(/3/g,'e').replace(/4/g,'a').replace(/5/g,'s').replace(/7/g,'t').replace(/\+/g,'t');
+        }
+        function alphaNum(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+        function compact(s){ return String(s||'').toLowerCase().replace(/[\s\.\-\_\(\)\[\]\{\},;:'"`~\\\/]+/g,''); }
+        function dist1(a,b){
+            var m=a.length,n=b.length;
+            if (Math.abs(m-n)>1) return 2;
+            var i=0,j=0,d=0;
+            while(i<m && j<n){
+                if(a.charCodeAt(i)===b.charCodeAt(j)){ i++; j++; }
+                else {
+                    d++;
+                    if(d>1) return d;
+                    if(m>n){ i++; }
+                    else if(n>m){ j++; }
+                    else {
+                        if(i+1<m && j+1<n && a.charCodeAt(i+1)===b.charCodeAt(j) && a.charCodeAt(i)===b.charCodeAt(j+1)){ i+=2; j+=2; }
+                        else { i++; j++; }
+                    }
+                }
+            }
+            if(i<m || j<n) d++;
+            return d;
+        }
+        function nearContains(h, term){
+            var L = term.length;
+            for (var len=Math.max(1,L-1); len<=L+1; len++){
+                if (len>h.length) break;
+                for (var k=0; k<=h.length-len; k++){
+                    var sub = h.slice(k, k+len);
+                    if (sub === term) return true;
+                    if (dist1(sub, term) <= 1) return true;
+                }
+            }
+            return false;
+        }
+        function hasUrl(s){
+            var l = String(s||'').toLowerCase();
+            var c = compact(l);
+            var a = alphaNum(leet(l));
+            if (/(http|https|www|discord|mailto)/i.test(c)) return true;
+            if (/@/.test(l)) return true;
+            if (/\b(at|dot)\b/.test(l)) return true;
+            var tlds = ['com','net','org','io','gg','xyz','ru','cn','de','uk','us','co','edu','gov','me','app','dev','shop','info','tv','ly','tk'];
+            for (var i=0;i<tlds.length;i++){
+                var t = tlds[i];
+                if (c.indexOf(t) !== -1) return true;
+            }
+            if (/[a-z0-9]+@[a-z0-9]+\.[a-z0-9]+/.test(a)) return true;
+            return false;
+        }
         function tooShort(s){ return s.length < 2; }
         function tooLong(s){ return s.length > 240; }
         function banned(s){
-            var w = ['idiot','stupid','dumb','hate','kill','trash','noob','loser','racist','sex','porn','nsfw','slur','kys','suicide','die','ugly','fat','retard','retarded','bitch','fuck','shit','asshole','damn','nigger','fag','faggot','cunt','whore'];
-            var t = s.toLowerCase();
-            for (var i=0;i<w.length;i++){ if (t.indexOf(w[i]) !== -1) return true; }
+            var base = String(s||'').toLowerCase();
+            var t = collapseRepeats(base);
+            var a = alphaNum(t);
+            var l = alphaNum(leet(t));
+            var w = [
+                'idiot','stupid','dumb','hate','kill','murder','rape','trash','noob','loser','racist','sex','porn','nsfw','slur','kys','suicide','die','ugly','fat',
+                'retard','retarded','bitch','btch','biatch','fuck','shit','asshole','damn','nigger','fag','faggot','cunt','whore','dick','cock','pussy','boobs','tits','cum','sext',
+                'bloody','gore','knife','gun','shoot','bomb','terror','drugs','weed','vape','meth','cocaine','heroin','lsd',
+                'discord','invite','server','dm','link','http','https','www','email','gmail','yahoo','outlook','snap','instagram','tiktok','kik','whatsapp','telegram'
+            ];
+            for (var i=0;i<w.length;i++){
+                var k = w[i];
+                if (base.indexOf(k) !== -1) return true;
+                if (a.indexOf(k) !== -1) return true;
+                if (l.indexOf(k) !== -1) return true;
+                if (nearContains(a, k)) return true;
+                if (nearContains(l, k)) return true;
+            }
             return false;
         }
         function sanitize(s){
             var x = normalize(s);
             if (tooShort(x)) return { ok:false, reason:'Message too short' };
             if (tooLong(x)) return { ok:false, reason:'Message too long' };
-            if (hasUrl(x)) return { ok:false, reason:'Links, emails, or handles blocked' };
-            if (banned(x)) return { ok:false, reason:'Message blocked by filter' };
+            if (hasUrl(x)) return { ok:false, reason:'Blocked by strict filter' };
+            if (banned(x)) return { ok:false, reason:'Blocked by strict filter' };
             return { ok:true, text:x };
+        }
+        function checkHistoryViolation(anon, text){
+            return new Promise(function(resolve){
+                try {
+                    var fallback = function(){
+                        var combined = String(text||'');
+                        if (hasUrl(combined) || banned(combined)) return resolve({ ok:false, reason:'Blocked by strict multi-message filter' });
+                        resolve({ ok:true });
+                    };
+                    if (typeof firebase === 'undefined' || typeof firebase.database !== 'function') return fallback();
+                    firebase.database().ref('global_chat').limitToLast(50).once('value', function(snap){
+                        var arr = [];
+                        snap.forEach(function(child){
+                            var v = child.val()||{};
+                            if (String(v.name||'') === String(anon)) arr.push(String(v.message||''));
+                        });
+                        var combined = (arr.join(' ') + ' ' + String(text||'')).slice(0, 2000);
+                        if (hasUrl(combined) || banned(combined)) return resolve({ ok:false, reason:'Blocked by strict multi-message filter' });
+                        resolve({ ok:true });
+                    }, function(){ fallback(); });
+                } catch(e){ resolve({ ok:true }); }
+            });
         }
         function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,function(m){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]);}); }
         function renderChat(items){
@@ -133,7 +222,7 @@
                         admin = '<div class="mt-2 flex gap-3"><button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteGlobalChatMessage(\''+(m.key||'')+'\')">Delete</button><button class="text-xs text-yellow-400 hover:text-yellow-300 font-bold" onclick="muteGlobalName(\''+anonName+'\')">Mute '+anonName+'</button></div>';
                     }
                 }
-                return '<div class="msg mb-2"><div class="name '+nameClass+'">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
+                return '<div class="msg mb-1"><div class="name '+nameClass+'">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
             }).join('');
             list.innerHTML = html;
             list.scrollTop = list.scrollHeight;
@@ -241,23 +330,26 @@
                 if (isMuted) { setError('You are muted by admin'); return; }
                 var s = sanitize(input.value||'');
                 if (!s.ok){ setError(s.reason); return; }
-                setError('');
-                if (!rateOk()){ setError('Slow down'); return; }
-                btn.disabled = true;
-                var nameToUse = role || anon;
-                var payload = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
-                function handleSuccess(){ input.value=''; btn.disabled = false; }
-                if (typeof submitGlobalChat === 'function') {
-                    var p = submitGlobalChat(payload);
-                    if (p && typeof p.then === 'function') {
-                        p.then(handleSuccess).catch(function(e){ setError('Error: ' + (e && e.message ? e.message : e)); btn.disabled = false; });
+                checkHistoryViolation(anon, s.text).then(function(h){
+                    if (!h.ok){ setError(h.reason); return; }
+                    setError('');
+                    if (!rateOk()){ setError('Slow down'); return; }
+                    btn.disabled = true;
+                    var nameToUse = role || anon;
+                    var payload = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
+                    function handleSuccess(){ input.value=''; btn.disabled = false; }
+                    if (typeof submitGlobalChat === 'function') {
+                        var p = submitGlobalChat(payload);
+                        if (p && typeof p.then === 'function') {
+                            p.then(handleSuccess).catch(function(e){ setError('Error: ' + (e && e.message ? e.message : e)); btn.disabled = false; });
+                        } else {
+                            handleSuccess();
+                        }
                     } else {
-                        handleSuccess();
+                        btn.disabled = false;
+                        setError('Connection unavailable');
                     }
-                } else {
-                    btn.disabled = false;
-                    setError('Connection unavailable');
-                }
+                });
             }
             document.getElementById('chat-send').addEventListener('click', send);
             document.getElementById('chat-input').addEventListener('keypress', function(e){ if (e.key === 'Enter'){ e.preventDefault(); send(); } });
