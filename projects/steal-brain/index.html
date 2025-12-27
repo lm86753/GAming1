@@ -9,27 +9,13 @@
     </style>
 
     <script>
-        // 1. SDK Bypass
+        // SDK & Domain Bypasses
         window.ysdk = {
-            features: {
-                LoadingAPI: { ready: () => console.log("SDK Ready Bypass") },
-                GameplayAPI: { start: () => {}, stop: () => {} }
-            },
+            features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
-        window.initYSDK = true;
-        
-        // 2. Fake Environment
-        window.cloudSaves = "{}";
-        window.playerData = "{}";
-        window.paymentsData = "{}";
-        window.environmentData = JSON.stringify({
-            language: "en",
-            deviceType: "desktop",
-            payload: ""
-        });
+        window.environmentData = JSON.stringify({ language: "en", deviceType: "desktop", payload: "" });
 
-        // 3. Domain Lock Bypass
         const originalIndexOf = String.prototype.indexOf;
         String.prototype.indexOf = function(s) {
             if (s === "8games.net") return 0; 
@@ -44,21 +30,22 @@
     
     <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
-            // UPDATED FILENAMES BELOW
-            dataUrl: "build/data.date", 
+            // FIXED TO MATCH YOUR SCREENSHOT
+            dataUrl: "build/data.data", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
-            codeUrl: "build/cod.wasm", 
+            codeUrl: "build/code.wasm", 
+            
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // Important for .wasm and .date files that were originally .br
+            // Helpful for web hosting
             cacheControl: (url) => "no-store",
         }).then((unityInstance) => {
-            console.log("Game successfully loaded!");
+            console.log("Game loaded!");
         }).catch((err) => {
-            console.error("Unity Loading Error:", err);
+            console.error(err);
         });
     </script>
 </body>
