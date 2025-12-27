@@ -8,29 +8,36 @@
         #unity-canvas { width: 100%; height: 100%; background: #000; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
+</head>
+<body>
+    <canvas id="unity-canvas"></canvas>
+
     <script>
-        // GLOBAL FIX: This defines the 'push' targets the engine is missing in your screenshot
+        // 1. ABSOLUTE FIRST PRIORITY: Define the arrays that are causing the "push" error.
+        // We attach them to the window object so the framework script can see them immediately.
+        window.deinitializers = window.deinitializers || [];
+        window.preRun = window.preRun || [];
+        window.postRun = window.postRun || [];
+
         var Module = {
-            preRun: [],
-            postRun: [],
-            deinitializers: [],
+            preRun: window.preRun,
+            postRun: window.postRun,
+            deinitializers: window.deinitializers,
             print: function(text) { console.log(text); },
-            canvas: (function() { return document.querySelector("#unity-canvas"); })()
+            canvas: document.querySelector("#unity-canvas")
         };
 
-        // SDK Bypasses
+        // 2. Fake SDK to stop redirects
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
     </script>
-</head>
-<body>
-    <canvas id="unity-canvas"></canvas>
 
     <script src="build/StealBrainrot.loader.js"></script>
+    
     <script>
-        createUnityInstance(document.querySelector("#unity-canvas"), {
+        const config = {
             dataUrl: "build/data.data",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/code.wasm",
@@ -39,15 +46,17 @@
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // Redundant fix to ensure 'push' doesn't fail
-            deinitializers: Module.deinitializers,
-            preRun: Module.preRun,
-            postRun: Module.postRun,
+            // Re-confirming the arrays in the config object itself
+            deinitializers: window.deinitializers,
+            preRun: window.preRun,
+            postRun: window.postRun,
 
             cacheControl: (url) => "no-store",
             decompressor: "br" 
-        }).then((unityInstance) => {
-            console.log("Game Loaded Successfully!");
+        };
+
+        createUnityInstance(document.querySelector("#unity-canvas"), config).then((instance) => {
+            console.log("Unity Instance Created Successfully");
         }).catch((err) => {
             console.error("Unity Error:", err);
         });
