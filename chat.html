@@ -68,6 +68,7 @@
                         <li>Clear all messages.</li>
                     </ul>
                 </div>
+                <div id="auto-clear-clock" class="mt-3 text-xs text-gray-400">Auto clear in: calculating…</div>
             </div>
             <div class="flex items-center gap-3 mt-4">
                 <div id="anon-name" class="glass px-3 py-2 rounded-xl text-xs font-bold text-gray-300"></div>
@@ -298,6 +299,28 @@
                 try {
                     var db = firebase.database();
                     var connectedRef = db.ref('.info/connected');
+                    var offsetRef = db.ref('.info/serverTimeOffset');
+                    var serverOffset = 0;
+                    offsetRef.on('value', function(snap){ 
+                        var off = snap.val();
+                        if (typeof off === 'number') serverOffset = off; 
+                    });
+                    var latestMessageTs = 0;
+                    var clockEl = document.getElementById('auto-clear-clock');
+                    var clockTimer = null;
+                    function updateClock(){
+                        if (!clockEl) return;
+                        if (!latestMessageTs) { clockEl.textContent = 'Auto clear in: —'; return; }
+                        var nowServer = Date.now() + (serverOffset||0);
+                        var target = latestMessageTs + (60*60*1000);
+                        var remain = Math.max(0, target - nowServer);
+                        var hrs = Math.floor(remain / 3600000);
+                        var mins = Math.floor((remain % 3600000) / 60000);
+                        var secs = Math.floor((remain % 60000) / 1000);
+                        function pad(n){ return n<10 ? ('0'+n) : String(n); }
+                        var s = (hrs>0 ? (hrs + ':' + pad(mins) + ':' + pad(secs)) : (mins + ':' + pad(secs)));
+                        clockEl.textContent = 'Auto clear in: ' + s;
+                    }
                     connectedRef.on('value', function(snap){
                         if (snap.val() === true) {
                             // Connected
@@ -332,6 +355,7 @@
                     chatRef.on('value', function(snap){
                         clearTimeout(loadTimeout);
                         var arr = [];
+                        var latest = 0;
                         snap.forEach(function(child){
                             var v = child.val()||{};
                             var realName = String(v.displayName || v.name || '').toLowerCase();
@@ -343,9 +367,13 @@
                             // Do not hide muted users' past messages
                             // Admin role messages are always shown
                             arr.push({ key: child.key, name: v.name, displayName: v.displayName, message: v.message, timestamp: v.timestamp||0 });
+                            if (v.timestamp && v.timestamp > latest) latest = v.timestamp;
                         });
                         arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
                         renderChat(arr);
+                        latestMessageTs = latest || 0;
+                        updateClock();
+                        if (!clockTimer) clockTimer = setInterval(updateClock, 1000);
                     }, function(error){
                          clearTimeout(loadTimeout);
                          if(log) log.innerHTML = '<p class="text-center text-red-500 py-10">Error loading chat: '+escapeHtml(error.message)+'</p>';
@@ -353,7 +381,8 @@
                     
                     function cleanupOldMessages(){
                         try {
-                            var cutoff = Date.now() - (60 * 60 * 1000);
+                            var nowServer = Date.now() + (serverOffset||0);
+                            var cutoff = nowServer - (60 * 60 * 1000);
                             db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value', function(s){
                                 s.forEach(function(child){
                                     db.ref('global_chat/'+child.key).remove();
