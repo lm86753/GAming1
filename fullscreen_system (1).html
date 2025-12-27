@@ -265,5 +265,119 @@
     </script>
 
     <script src="/js/nav.js"></script>
+    <div id="live-counter" class="glass" style="position:fixed; top:25px; right:25px; z-index:9999; padding:10px 14px; border-radius:14px; font-size:13px; display:flex; align-items:center; gap:8px;">
+        <i class="fa-solid fa-users" style="color:#60a5fa"></i>
+        <span style="color:#9ca3af; font-weight:600;">Players Online</span>
+        <span id="live-counter-arrow" style="color:#9ca3af;"><i class="fa-solid fa-minus"></i></span>
+        <span id="live-counter-num" style="font-weight:700">--</span>
+    </div>
+    <script>
+        (function(){
+            function multiplierFor(count){
+                var c = Math.max(1, Math.min(15, count||0));
+                var t = (15 - c) / 14;
+                var p = 4.7;
+                var base = 1.5 + (10 - 1.5) * Math.pow(t, p);
+                var jitter = base * ((Math.random() - 0.5) * 0.04);
+                var m = base + jitter;
+                if (m < 1.5) m = 1.5;
+                if (m > 10) m = 10;
+                return m;
+            }
+            function adjustNoZero(n){
+                var s = String(n);
+                if (s.charAt(s.length-1) === '0') return n + 1;
+                return n;
+            }
+            function getHistory(){
+                try {
+                    var h = JSON.parse(localStorage.getItem('liveCounterHistory')||'[]');
+                    var now = Date.now();
+                    return h.filter(function(it){ return (now - (it.ts||0)) < (3*60*60*1000); });
+                } catch(e){ return []; }
+            }
+            function saveHistory(val){
+                var h = getHistory();
+                h.push({ ts: Date.now(), value: val });
+                try { localStorage.setItem('liveCounterHistory', JSON.stringify(h)); } catch(e){}
+            }
+            function getPrevValue(){
+                var h = getHistory();
+                if (h.length) return h[h.length-1].value;
+                return null;
+            }
+            function getBaseline(){
+                var h = getHistory();
+                var now = Date.now();
+                var target = now - (60*60*1000);
+                var older = h.filter(function(it){ return it.ts <= target; });
+                if (older.length) return older[older.length-1].value;
+                var fiveMin = now - (5*60*1000);
+                var recent = h.filter(function(it){ return it.ts <= fiveMin; });
+                if (recent.length) return recent[recent.length-1].value;
+                return null;
+            }
+            function updateDisplay(actual){
+                var numEl = document.getElementById('live-counter-num');
+                var arrowEl = document.getElementById('live-counter-arrow');
+                if (!numEl || !arrowEl) return;
+                var m = multiplierFor(actual);
+                var shown = Math.max(1, Math.round(actual * m));
+                shown = adjustNoZero(shown);
+                var ref = getPrevValue();
+                if (ref === null) ref = getBaseline();
+                var color = '#9ca3af';
+                var arrow = 'minus';
+                if (ref !== null) {
+                    if (shown > ref) { color = '#22c55e'; arrow = 'arrow-up'; }
+                    else if (shown < ref) { color = '#ef4444'; arrow = 'arrow-down'; }
+                }
+                numEl.textContent = shown.toLocaleString();
+                numEl.style.color = color;
+                arrowEl.style.color = color;
+                arrowEl.innerHTML = '<i class="fa-solid fa-' + arrow + '"></i>';
+                saveHistory(shown);
+                window.__liveShown = shown;
+            }
+            function fluctuate(){
+                var numEl = document.getElementById('live-counter-num');
+                var arrowEl = document.getElementById('live-counter-arrow');
+                if (!numEl || !arrowEl) return;
+                var cur = window.__liveShown || 0;
+                if (cur <= 0) return;
+                var step = (Math.random() < 0.5 ? -1 : 1) * (Math.random() < 0.5 ? 1 : 2);
+                var next = Math.max(1, cur + step);
+                next = adjustNoZero(next);
+                var ref = getPrevValue();
+                if (ref === null) ref = cur;
+                var color = '#9ca3af';
+                var arrow = 'minus';
+                if (ref !== null) {
+                    if (next > ref) { color = '#22c55e'; arrow = 'arrow-up'; }
+                    else if (next < ref) { color = '#ef4444'; arrow = 'arrow-down'; }
+                }
+                numEl.textContent = next.toLocaleString();
+                numEl.style.color = color;
+                arrowEl.style.color = color;
+                arrowEl.innerHTML = '<i class="fa-solid fa-' + arrow + '"></i>';
+                saveHistory(next);
+                window.__liveShown = next;
+            }
+            function initLiveCounter(){
+                if (typeof firebase === 'undefined') return;
+                var db = firebase.database();
+                db.ref('stats/active_users').on('value', function(snap){
+                    var count = snap ? snap.numChildren() : 0;
+                    updateDisplay(count);
+                });
+            }
+            if (typeof firebase === 'undefined') {
+                document.addEventListener('firebase-ready', initLiveCounter, { once: true });
+            } else {
+                initLiveCounter();
+            }
+            setInterval(fluctuate, 30000);
+        })();
+    </script>
 </body>
 </html>

@@ -225,6 +225,11 @@
                 if (recent.length) return recent[recent.length-1].value;
                 return null;
             }
+            function getPrevValue(){
+                var h = getHistory();
+                if (h.length) return h[h.length-1].value;
+                return null;
+            }
             function updateDisplay(actual){
                 var numEl = document.getElementById('live-counter-num');
                 var arrowEl = document.getElementById('live-counter-arrow');
@@ -232,12 +237,13 @@
                 var m = multiplierFor(actual);
                 var shown = Math.max(1, Math.round(actual * m));
                 shown = adjustNoZero(shown);
-                var baseline = getBaseline();
+                var ref = getPrevValue();
+                if (ref === null) ref = getBaseline();
                 var color = '#9ca3af';
                 var arrow = 'minus';
-                if (baseline !== null) {
-                    if (shown > baseline) { color = '#22c55e'; arrow = 'arrow-up'; }
-                    else if (shown < baseline) { color = '#ef4444'; arrow = 'arrow-down'; }
+                if (ref !== null) {
+                    if (shown > ref) { color = '#22c55e'; arrow = 'arrow-up'; }
+                    else if (shown < ref) { color = '#ef4444'; arrow = 'arrow-down'; }
                 }
                 numEl.textContent = shown.toLocaleString();
                 numEl.style.color = color;
@@ -255,12 +261,13 @@
                 var step = (Math.random() < 0.5 ? -1 : 1) * (Math.random() < 0.5 ? 1 : 2);
                 var next = Math.max(1, cur + step);
                 next = adjustNoZero(next);
-                var baseline = getBaseline();
+                var ref = getPrevValue();
+                if (ref === null) ref = cur;
                 var color = '#9ca3af';
                 var arrow = 'minus';
-                if (baseline !== null) {
-                    if (next > baseline) { color = '#22c55e'; arrow = 'arrow-up'; }
-                    else if (next < baseline) { color = '#ef4444'; arrow = 'arrow-down'; }
+                if (ref !== null) {
+                    if (next > ref) { color = '#22c55e'; arrow = 'arrow-up'; }
+                    else if (next < ref) { color = '#ef4444'; arrow = 'arrow-down'; }
                 }
                 numEl.textContent = next.toLocaleString();
                 numEl.style.color = color;
