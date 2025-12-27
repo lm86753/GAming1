@@ -11,21 +11,21 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; margin: 0; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .msg { padding: 10px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
-        .name { font-weight: 700; font-size: 12px; }
-        .text { font-size: 14px; color: #d1d5db; }
+        .msg { padding: 6px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
+        .name { font-weight: 700; font-size: 10px; }
+        .text { font-size: 12px; color: #d1d5db; }
         .error { color: #ef4444; font-weight: 700; font-size: 12px; }
     </style>
 </head>
 <body class="selection:bg-blue-500/30">
     <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
     <main class="min-h-screen pt-32 pb-20 px-6">
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-4xl mx-auto">
             <div class="text-center space-y-3 mb-8">
                 <h1 class="text-4xl md:text-5xl font-black tracking-tight">Global <span class="text-blue-400">Chat</span></h1>
                 <p class="text-gray-400 text-sm">Anonymous, global chat with strong filtering</p>
             </div>
-            <div class="glass rounded-[2rem] p-6 h-[60vh] overflow-y-auto" id="chat-list">
+            <div class="glass rounded-[2rem] p-5 h-[80vh] overflow-y-auto" id="chat-list">
                 <p class="text-center text-gray-500 py-10">Connecting…</p>
             </div>
             <div id="admin-tools" class="hidden mt-4 glass rounded-xl p-4">
@@ -133,7 +133,7 @@
                         admin = '<div class="mt-2 flex gap-3"><button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteGlobalChatMessage(\''+(m.key||'')+'\')">Delete</button><button class="text-xs text-yellow-400 hover:text-yellow-300 font-bold" onclick="muteGlobalName(\''+anonName+'\')">Mute '+anonName+'</button></div>';
                     }
                 }
-                return '<div class="msg mb-3"><div class="name '+nameClass+'">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
+                return '<div class="msg mb-2"><div class="name '+nameClass+'">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
             }).join('');
             list.innerHTML = html;
             list.scrollTop = list.scrollHeight;
