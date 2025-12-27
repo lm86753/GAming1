@@ -88,10 +88,11 @@
             var html = items.map(function(m){
                 var name = escapeHtml(m.name||'anonymous');
                 var text = escapeHtml(m.message||'');
-                var nlow = String(m.name||'').toLowerCase();
+                var nlow = String(rawName).toLowerCase();
                 var nameClass = (nlow === 'chief penguin' || nlow === 'lead penguin') ? 'text-red-500' : 'text-blue-400';
+                var isAdminMsg = (nlow === 'chief penguin' || nlow === 'lead penguin');
                 var admin = '';
-                if (isDev) {
+                if (isDev && !isAdminMsg) {
                     admin = '<div class="mt-2 flex gap-3"><button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteGlobalChatMessage(\''+(m.key||'')+'\')">Delete</button><button class="text-xs text-yellow-400 hover:text-yellow-300 font-bold" onclick="muteGlobalName(\''+name+'\')">Mute '+name+'</button></div>';
                 }
                 return '<div class="msg mb-3"><div class="name '+nameClass+'">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
