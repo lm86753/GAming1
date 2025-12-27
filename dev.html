@@ -154,6 +154,20 @@
                 <div id="dev-chat-list" class="overflow-y-auto pr-2 space-y-4 flex-1">
                     <p class="text-center text-gray-500 py-10">Connecting to database...</p>
                 </div>
+                <div class="mt-4 flex items-center gap-3">
+                    <select id="dev-chat-role" class="bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-sm">
+                        <option value="Chief Penguin">Chief Penguin</option>
+                        <option value="Lead Penguin">Lead Penguin</option>
+                    </select>
+                    <input id="dev-chat-input" type="text" placeholder="Type a message" class="flex-1 bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-sm" />
+                    <button id="dev-chat-send" class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-xl text-sm font-bold">Send</button>
+                </div>
+                <div id="dev-toast" class="hidden mt-3">
+                    <div class="glass px-3 py-2 rounded-lg border border-white/10 text-xs inline-flex items-center gap-2">
+                        <i class="fa-solid fa-check text-green-400"></i>
+                        <span id="dev-toast-text">Sent</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -188,6 +202,59 @@
                         document.addEventListener('firebase-ready', () => {
                             if (typeof initDashboard === 'function') initDashboard();
                         }, { once: true });
+                    }
+                    function showDevToast(text){
+                        const toast = document.getElementById('dev-toast');
+                        const t = document.getElementById('dev-toast-text');
+                        if (!toast || !t) return;
+                        t.textContent = text || 'Sent';
+                        toast.classList.remove('hidden');
+                        toast.style.opacity = '1';
+                        setTimeout(() => {
+                            toast.style.opacity = '0';
+                            setTimeout(() => {
+                                toast.classList.add('hidden');
+                                toast.style.opacity = '1';
+                            }, 300);
+                        }, 2000);
+                    }
+                    function wireDevChat(){
+                        const input = document.getElementById('dev-chat-input');
+                        const roleSel = document.getElementById('dev-chat-role');
+                        const btn = document.getElementById('dev-chat-send');
+                        if (!input || !roleSel || !btn) return;
+                        const savedRole = localStorage.getItem('dev_chat_role');
+                        if (savedRole) roleSel.value = savedRole;
+                        roleSel.addEventListener('change', () => {
+                            localStorage.setItem('dev_chat_role', roleSel.value || 'Developer');
+                        });
+                        function send(){
+                            const msg = (input.value || '').trim();
+                            const role = roleSel.value || 'Developer';
+                            if (!msg) return;
+                            btn.disabled = true;
+                            localStorage.setItem('dev_chat_role', role);
+                            if (typeof submitDevChat === 'function') {
+                                const p = submitDevChat({ message: msg, role, type: 'Dev Chat' });
+                                if (p && typeof p.then === 'function') {
+                                    p.then(() => { showDevToast('Sent'); input.value=''; }).catch(() => { showDevToast('Failed'); }).finally(() => { btn.disabled = false; });
+                                } else {
+                                    showDevToast('Sent');
+                                    input.value = '';
+                                    btn.disabled = false;
+                                }
+                            } else {
+                                showDevToast('Unavailable');
+                                btn.disabled = false;
+                            }
+                        }
+                        btn.addEventListener('click', send);
+                        input.addEventListener('keypress', (e) => { if (e.key === 'Enter') { e.preventDefault(); send(); } });
+                    }
+                    if (typeof submitDevChat === 'function') {
+                        wireDevChat();
+                    } else {
+                        document.addEventListener('firebase-ready', wireDevChat, { once: true });
                     }
                 }, 500);
             } else {
