@@ -2,9 +2,9 @@
   "rules": {
     "global_chat": {
       ".read": true,
-      ".write": "newData.hasChildren(['name', 'message']) || !newData.exists()", 
+      ".write": true,
       "$message_id": {
-         ".validate": "newData.hasChildren(['name', 'message'])"
+         ".validate": "newData.hasChildren(['message'])"
       }
     },
     "chat_shutdown": {
