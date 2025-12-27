@@ -203,10 +203,11 @@
 
         (function(){
             function multiplierFor(count){
-                var c = Math.max(2, Math.min(1000, count||0));
-                var t = (c - 2) / (1000 - 2);
-                var base = 10 - (10 - 1.5) * t;
-                var jitter = base * ((Math.random() - 0.5) * 0.05);
+                var c = Math.max(1, Math.min(15, count||0));
+                var t = (15 - c) / 14;
+                var p = 4.7;
+                var base = 1.5 + (10 - 1.5) * Math.pow(t, p);
+                var jitter = base * ((Math.random() - 0.5) * 0.04);
                 var m = base + jitter;
                 if (m < 1.5) m = 1.5;
                 if (m > 10) m = 10;
