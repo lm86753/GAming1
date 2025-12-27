@@ -1,0 +1,35 @@
+Awesome Tanks 2 is a fast-paced, top-down multiplayer shooter where players control tanks and battle other players in real-time arenas. The main objective is to destroy enemy tanks, avoid getting hit, and score points to climb the leaderboard. Each match is action-packed, requiring both strategic positioning and quick reflexes.
+
+Gameplay emphasizes mobility, aiming, and situational awareness. Players navigate their tanks around the arena, dodging incoming fire while lining up shots on opponents. Power-ups and health pickups spawn periodically, giving players temporary advantages or recovery opportunities. Matches are typically short, making them perfect for quick sessions, but skillful play and map awareness can make a huge difference in outcomes. The game combines simple controls with deep strategy, as positioning, teamwork (in team modes), and timing your shots are crucial for victory.
+
+The visual style is clean and colorful, with simple animations that clearly convey tank movements, projectiles, and explosions. The game’s fast-paced nature and accessible design make it appealing to both casual players and competitive gamers seeking quick multiplayer action.
+
+Controls (Keyboard & Mouse)
+
+W / Up Arrow – Move forward
+
+S / Down Arrow – Move backward
+
+A / Left Arrow – Turn left
+
+D / Right Arrow – Turn right
+
+Mouse Movement – Aim turret / aim shooting direction
+
+Mouse Left Click – Fire cannon
+
+Spacebar – Activate special ability or power-up (if available)
+
+R – Respawn or restart (if available)
+
+Special Features & Mechanics
+
+Real-time multiplayer tank battles
+
+Power-ups and health pickups for strategic advantage
+
+Multiple arena maps with varying obstacles
+
+Leaderboard ranking for competitive play
+
+Simple but responsive controls with physics-based movement

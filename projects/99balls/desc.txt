@@ -1,0 +1,13 @@
+99 Balls Evo" is an addictive and challenging arcade game that combines elements of classic bubble shooters and brick-breaker games. The objective is to clear the screen of numbered balls before they reach the bottom. You control a shooter at the bottom of the screen and fire a volley of balls to hit the numbered balls. Each hit decreases the number on the ball, and when the number reaches zero, the ball is destroyed. The "Evo" in the title suggests an evolution or upgrade system, where you can improve your shooter or unlock new abilities as you progress.
+
+The gameplay is simple to learn but requires skill and strategy to master. You aim your shooter with the mouse and click to fire. The balls you shoot will bounce off the walls, allowing you to set up trick shots and hit multiple balls in a single turn. After each shot, all the numbered balls on the screen move down one level, and a new row of balls appears at the top. The game ends if any of the balls reach the bottom of the screen. As you play, you can collect stars that can be used to unlock new skins for your shooter, adding a fun customization element to the game.
+
+Controls:
+- Mouse: Aim your shooter
+- Left Mouse Button: Fire your balls
+
+Special Features:
+- Addictive gameplay: A fun and challenging mix of bubble shooter and brick-breaker mechanics.
+- Upgrade system: Collect stars to unlock new skins and potentially other upgrades.
+- Physics-based puzzles: Use the bouncing physics of the balls to your advantage to clear the screen.
+- Endless challenge: The game gets progressively harder as you play, offering a high level of replayability.

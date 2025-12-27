@@ -1,0 +1,12 @@
+"2048 Multitasking" expands on the classic 2048 puzzle game, offering a more challenging experience on a larger 7x7 grid. The objective is to merge numbered tiles to create both a 2048 tile and a 3072 tile, demanding strategic thinking and the ability to manage different sections of the board simultaneously.
+
+The core mechanics are familiar: slide tiles with arrow keys, and identical tiles merge to double their value. A new '2' or '4' tile appears after each move. The expanded grid provides more space but also increases the complexity of setting up merges. Careful planning is essential to avoid filling the board and ending the game.
+
+Controls:
+- Arrow Keys: Move tiles (Up, Down, Left, Right)
+
+Special Features:
+- Expanded 7x7 grid: For a more complex and strategic experience.
+- Dual objectives: Aim for both 2048 and 3072 tiles.
+- Classic 2048 gameplay: Addictive tile-merging with added depth.
+- Score tracking: Monitor your progress and beat your personal best
