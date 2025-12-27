@@ -460,11 +460,6 @@
     "title": "Learn To Fly 2"
   },
   {
-    "link": "projects/level-devil-main/index.html",
-    "imgSrc": "projects/level-devil-main/logo.png",
-    "title": "Level devil"
-  },
-  {
     "link": "projects/mario/index.html",
     "imgSrc": "projects/mario/Theme/Mario.gif",
     "title": "Mario"
@@ -604,11 +599,7 @@
     "imgSrc": "projects/push-your-luck/assets/img/push.png",
     "title": "Push Your Luck"
   },
-  {
-    "link": "projects/Ragdoll-Archers-main/index.html",
-    "imgSrc": "projects/Ragdoll-Archers-main/logo.jpeg",
-    "title": "Ragdoll Archers"
-  },
+
  
   {
     "link": "projects/retro-bowl/index.html",
@@ -836,128 +827,8 @@
     "title": "YoHoHo"
   },
   {
-    "link": "projects/cattle3d-main/index.html",
-    "imgSrc": "projects/cattle3d-main/CrazyCattle3D.png",
-    "title": "Cattle 3D"
-  },
-  {
-    "link": "projects/1v1-lol/index.html",
-    "imgSrc": "projects/1v1-lol/logo.png",
-    "title": "1v1 Lol"
-  },
-  {
-    "link": "projects/btts/index.html",
-    "imgSrc": "projects/btts/icon.png",
-    "title": "Btts"
-  },
-  {
-    "link": "projects/burgers-and-frights/index.html",
-    "imgSrc": "projects/burgers-and-frights/icon.png",
-    "title": "Burgers And Frights"
-  },
-  {
-    "link": "projects/ctr/index.html",
-    "imgSrc": "projects/ctr/logo.png",
-    "title": "Ctr"
-  },
-  {
-    "link": "projects/ctr-tr/index.html",
-    "imgSrc": "projects/ctr-tr/logo.png",
-    "title": "Ctr Tr"
-  },
-  {
-    "link": "projects/fake-virus/index.html",
-    "imgSrc": "projects/fake-virus/icon.png",
-    "title": "Fake Virus"
-  },
-  {
-    "link": "projects/FNAF-1/index.html",
-    "imgSrc": "projects/FNAF-1/logo.jpg",
-    "title": "FNAF 1"
-  },
-  {
-    "link": "projects/Funny-Shooter-2/index.html",
-    "imgSrc": "projects/Funny-Shooter-2/logo.png",
-    "title": "Funny Shooter 2"
-  },
-  {
-    "link": "projects/goofy-ahh-dune/index.html",
-    "imgSrc": "projects/goofy-ahh-dune/logo.jpg",
-    "title": "Goofy Ahh Dune"
-  },
-  {
-    "link": "projects/gun-spin-main/index.html",
-    "imgSrc": "projects/gun-spin-main/logo.png",
-    "title": "Gun Spin Main"
-  },
-  {
-    "link": "projects/level-devil-main/index.html",
-    "imgSrc": "projects/level-devil-main/favicon.png",
-    "title": "Level Devil Main"
-  },
-  {
-    "link": "projects/om-bounce/index.html",
-    "imgSrc": "projects/om-bounce/assets/icon.jpeg",
-    "title": "Om Bounce"
-  },
-  {
-    "link": "projects/other-tag/index.html",
-    "imgSrc": "projects/other-tag/icons/icon-512.png",
-    "title": "Other Tag"
-  },
-  {
-    "link": "projects/precision-client/index.html",
-    "imgSrc": "projects/precision-client/logo.png",
-    "title": "Precision Client"
-  },
-  {
-    "link": "projects/retro-bowl-collage/index.html",
-    "imgSrc": "projects/retro-bowl-collage/favicon.png",
-    "title": "Retro Bowl Collage"
-  },
-  {
-    "link": "projects/rusty-submarine/index.html",
-    "imgSrc": "projects/rusty-submarine/splash.png",
-    "title": "Rusty Submarine"
-  },
-  {
-    "link": "projects/sm64/index.html",
-    "imgSrc": "projects/sm64/logo.png",
-    "title": "Sm64"
-  },
-  {
-    "link": "projects/smashkarts/index.html",
-    "imgSrc": "projects/smashkarts/images/icon-512.png",
-    "title": "Smashkarts"
-  },
-  {
-    "link": "projects/time-shooter-2/index.html",
-    "imgSrc": "projects/time-shooter-2/logo.png",
-    "title": "Time Shooter 2"
-  },
-  {
-    "link": "projects/time-shooter-3/index.html",
-    "imgSrc": "projects/time-shooter-3/logo.png",
-    "title": "Time Shooter 3"
-  },
-  {
-    "link": "projects/volley-random/index.html",
-    "imgSrc": "projects/volley-random/splash.png",
-    "title": "Volley Random"
-  },
-  {
-    "link": "projects/10minutestilldawn/index.html",
-    "imgSrc": "projects/10minutestilldawn/10-minutes-till-dawn/icon.png",
-    "title": "10 Minutes Till Dawn"
-  },
-  {
-    "link": "projects/nintendo-64/index.html",
-    "imgSrc": "projects/nintendo-64/res/logo.png",
-    "title": "Nintendo 64"
-  },
-  {
-    "link": "projects/shapez-io/index.html",
-    "imgSrc": "projects/shapez-io/res/logo.png",
-    "title": "Shapez.io"
+    "link": "projects/crazycattle-3D-GAME-main/index.html",
+    "imgSrc": "projects/crazycattle-3D-GAME-main/block-breaker-og.png",
+    "title": "Block Breaker 3D"
   }
 ]
