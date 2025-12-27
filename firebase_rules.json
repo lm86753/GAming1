@@ -1,0 +1,27 @@
+{
+  "rules": {
+    "global_chat": {
+      ".read": true,
+      ".write": "newData.hasChildren(['name', 'message']) && newData.child('message').val().length > 0 && newData.child('message').val().length < 500",
+      "$message_id": {
+        ".validate": "newData.hasChildren(['name', 'message'])"
+      }
+    },
+    "global_chat_mutes": {
+      ".read": true,
+      ".write": true
+    },
+    "stats": {
+      ".read": true,
+      ".write": true
+    },
+    "feedback": {
+      ".read": true,
+      ".write": true
+    },
+    "dev_chat": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}
