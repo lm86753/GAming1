@@ -232,7 +232,7 @@
             iframe.className = 'game-iframe';
             iframe.src = src;
             iframe.allowFullscreen = true;
-            iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock');
+            iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock allow-modals');
             document.getElementById('gameContent').appendChild(iframe);
             
             const gameFolder = src.substring(0, src.lastIndexOf('/')) + '/';
