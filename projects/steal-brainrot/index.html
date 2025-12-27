@@ -8,36 +8,41 @@
         #unity-canvas { width: 100%; height: 100%; background: #000; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
-</head>
-<body>
-    <canvas id="unity-canvas"></canvas>
 
     <script>
-        // 1. ABSOLUTE FIRST PRIORITY: Define the arrays that are causing the "push" error.
-        // We attach them to the window object so the framework script can see them immediately.
-        window.deinitializers = window.deinitializers || [];
-        window.preRun = window.preRun || [];
-        window.postRun = window.postRun || [];
+        // 1. STUBBING: This is the specific fix for the 'push' error.
+        // We define the arrays on the window so the framework script (8b2e24a...) can find them.
+        window.deinitializers = [];
+        window.preRun = [];
+        window.postRun = [];
 
+        // 2. MODULE DEFINITION: Defining the Module before the loader script is fetched.
         var Module = {
             preRun: window.preRun,
             postRun: window.postRun,
             deinitializers: window.deinitializers,
+            canvas: document.querySelector("#unity-canvas"),
             print: function(text) { console.log(text); },
-            canvas: document.querySelector("#unity-canvas")
+            setStatus: function(text) { console.log(text); }
         };
 
-        // 2. Fake SDK to stop redirects
+        // 3. SDK BYPASS
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
     </script>
+</head>
+<body>
+    <canvas id="unity-canvas"></canvas>
 
     <script src="build/StealBrainrot.loader.js"></script>
     
     <script>
-        const config = {
+        const canvas = document.querySelector("#unity-canvas");
+        
+        // This function call is what the StealBrainrot.loader.js provides
+        createUnityInstance(canvas, {
             dataUrl: "build/data.data",
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/code.wasm",
@@ -46,19 +51,17 @@
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // Re-confirming the arrays in the config object itself
+            // Feeding the stubbed arrays into the config
             deinitializers: window.deinitializers,
             preRun: window.preRun,
             postRun: window.postRun,
 
             cacheControl: (url) => "no-store",
             decompressor: "br" 
-        };
-
-        createUnityInstance(document.querySelector("#unity-canvas"), config).then((instance) => {
-            console.log("Unity Instance Created Successfully");
+        }).then((unityInstance) => {
+            console.log("Unity loaded and push error bypassed!");
         }).catch((err) => {
-            console.error("Unity Error:", err);
+            console.error("Unity failed to load:", err);
         });
     </script>
 </body>
