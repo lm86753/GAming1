@@ -89,14 +89,16 @@
             if (!items.length){ list.innerHTML = '<p class="text-center text-gray-500 py-10">No messages yet.</p>'; return; }
             var isDev = localStorage.getItem('dev_access') === 'true';
             var html = items.map(function(m){
-                var name = escapeHtml(m.name||'anonymous');
+                var rawName = m.displayName || m.name || 'anonymous';
+                var name = escapeHtml(rawName);
+                var anonName = escapeHtml(m.name||'anonymous');
                 var text = escapeHtml(m.message||'');
                 var nlow = String(rawName).toLowerCase();
                 var nameClass = (nlow === 'chief penguin' || nlow === 'lead penguin') ? 'text-red-500' : 'text-blue-400';
                 var isAdminMsg = (nlow === 'chief penguin' || nlow === 'lead penguin');
                 var admin = '';
                 if (isDev && !isAdminMsg) {
-                    admin = '<div class="mt-2 flex gap-3"><button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteGlobalChatMessage(\''+(m.key||'')+'\')">Delete</button><button class="text-xs text-yellow-400 hover:text-yellow-300 font-bold" onclick="muteGlobalName(\''+name+'\')">Mute '+name+'</button></div>';
+                    admin = '<div class="mt-2 flex gap-3"><button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteGlobalChatMessage(\''+(m.key||'')+'\')">Delete</button><button class="text-xs text-yellow-400 hover:text-yellow-300 font-bold" onclick="muteGlobalName(\''+anonName+'\')">Mute '+anonName+'</button></div>';
                 }
                 return '<div class="msg mb-3"><div class="name '+nameClass+'">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
             }).join('');
@@ -198,59 +200,13 @@
                 setError('');
                 if (!rateOk()){ setError('Slow down'); return; }
                 btn.disabled = true;
-                
                 var nameToUse = role || anon;
-                
-                // Attempt 1: Try to use the role as the name (for backward compatibility with old clients)
-                // If the DB rules block this (e.g. name must be anonymousXXX), we fallback.
-                var payload1 = { name: nameToUse, displayName: nameToUse, message: s.text, type: 'Global Chat' };
-                
-                function handleSuccess(){
-                    input.value='';
-                    btn.disabled = false;
-                }
-                
-                function handleFail(err){
-                    // Attempt 2: Fallback to anonymous name (satisfies strict DB rules)
-                    // New clients will see displayName, old clients will see anonymousID
-                    console.log("First attempt failed (likely DB name restriction), retrying with anonymous ID...", err);
-                    
-                    // IMPORTANT: We only send fields that are explicitly expected if the rules are strict.
-                    // If the rules are: ".write": "newData.hasChildren(['name', 'message'])"
-                    // Then sending extra fields like 'displayName' might be causing issues if .validate rules are strict.
-                    // However, standard .write rules don't usually fail on extra children unless .validate forbids them.
-                    
-                    // Let's try sending just the standard payload but with the role in the message itself as a fallback
-                    // OR, we assume the rules allow 'displayName'.
-                    
-                    var payload2 = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
-                    
-                    if (typeof submitGlobalChat === 'function') {
-                        var p2 = submitGlobalChat(payload2);
-                        if (p2 && typeof p2.then === 'function') {
-                            p2.then(handleSuccess)
-                              .catch(function(e){ 
-                                  // Final Fallback: If even that failed, just send as pure anonymous
-                                  console.log("Second attempt failed, sending as pure anonymous.");
-                                  var payload3 = { name: anon, message: s.text, type: 'Global Chat' };
-                                  submitGlobalChat(payload3).then(handleSuccess).catch(function(finalErr){
-                                      setError('Error: ' + (finalErr.message||finalErr)); 
-                                      btn.disabled = false;
-                                  });
-                              });
-                        } else {
-                            handleSuccess();
-                        }
-                    } else {
-                        btn.disabled = false;
-                        setError('Connection unavailable');
-                    }
-                }
-
+                var payload = { name: anon, displayName: nameToUse, message: s.text, type: 'Global Chat' };
+                function handleSuccess(){ input.value=''; btn.disabled = false; }
                 if (typeof submitGlobalChat === 'function') {
-                    var p = submitGlobalChat(payload1);
+                    var p = submitGlobalChat(payload);
                     if (p && typeof p.then === 'function') {
-                        p.then(handleSuccess).catch(handleFail);
+                        p.then(handleSuccess).catch(function(e){ setError('Error: ' + (e && e.message ? e.message : e)); btn.disabled = false; });
                     } else {
                         handleSuccess();
                     }
