@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Chat | Penguin Labs</title>
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: white; margin: 0; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .msg { padding: 10px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
+        .name { font-weight: 700; font-size: 12px; }
+        .text { font-size: 14px; color: #d1d5db; }
+        .error { color: #ef4444; font-weight: 700; font-size: 12px; }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+    <div class="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/10 blur-[120px] rounded-full -z-10"></div>
+    <main class="min-h-screen pt-32 pb-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center space-y-3 mb-8">
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight">Global <span class="text-blue-400">Chat</span></h1>
+                <p class="text-gray-400 text-sm">Anonymous, global chat with strong filtering</p>
+            </div>
+            <div class="glass rounded-[2rem] p-6 h-[60vh] overflow-y-auto" id="chat-list">
+                <p class="text-center text-gray-500 py-10">Connecting…</p>
+            </div>
+            <div id="admin-tools" class="hidden mt-4 glass rounded-xl p-4">
+                <div class="flex items-center gap-3">
+                    <input id="mute-input" type="text" placeholder="Mute name (e.g., anonymous1234)" class="flex-1 glass px-3 py-2 rounded-xl outline-none border border-white/10 focus:border-blue-500/50 text-sm">
+                    <button id="mute-btn" class="bg-red-600 hover:bg-red-500 px-4 py-2 rounded-xl text-sm font-bold">Mute</button>
+                </div>
+                <p class="text-xs text-gray-500 mt-2">Admin tools available only after sending Dev Chat via Feedback.</p>
+            </div>
+            <div class="flex items-center gap-3 mt-4">
+                <div id="anon-name" class="glass px-3 py-2 rounded-xl text-xs font-bold text-gray-300"></div>
+                <input id="chat-input" type="text" placeholder="Type a message" class="flex-1 glass px-4 py-3 rounded-xl outline-none border border-white/10 focus:border-blue-500/50">
+                <button id="chat-send" class="bg-blue-600 hover:bg-blue-500 px-5 py-3 rounded-xl text-sm font-bold">Send</button>
+            </div>
+            <div id="chat-error" class="error mt-2 hidden"></div>
+        </div>
+    </main>
+    <script src="/js/nav.js"></script>
+    <script>
+        function getAnon() {
+            try {
+                var v = localStorage.getItem('anon_name');
+                if (v) return v;
+                var n = 'anonymous' + String(Math.floor(1000 + Math.random()*9000));
+                localStorage.setItem('anon_name', n);
+                return n;
+            } catch(e) { return 'anonymous' + String(Math.floor(1000 + Math.random()*9000)); }
+        }
+        function normalize(s){ return (s||'').replace(/\s+/g,' ').trim(); }
+        function hasUrl(s){ return /(https?:\/\/|www\.|\.com|\.net|\.org|\.io|discord\.|@)/i.test(s); }
+        function tooShort(s){ return s.length < 2; }
+        function tooLong(s){ return s.length > 240; }
+        function banned(s){
+            var w = ['idiot','stupid','dumb','hate','kill','trash','noob','loser','racist','sex','porn','nsfw','slur','kys','suicide','die','ugly','fat','retard','retarded','bitch','fuck','shit','asshole','damn','nigger','fag','faggot','cunt','whore'];
+            var t = s.toLowerCase();
+            for (var i=0;i<w.length;i++){ if (t.indexOf(w[i]) !== -1) return true; }
+            return false;
+        }
+        function sanitize(s){
+            var x = normalize(s);
+            if (tooShort(x)) return { ok:false, reason:'Message too short' };
+            if (tooLong(x)) return { ok:false, reason:'Message too long' };
+            if (hasUrl(x)) return { ok:false, reason:'Links, emails, or handles blocked' };
+            if (banned(x)) return { ok:false, reason:'Message blocked by filter' };
+            return { ok:true, text:x };
+        }
+        function escapeHtml(s){ return (s||'').replace(/[&<>"']/g,function(m){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]);}); }
+        function renderChat(items){
+            var list = document.getElementById('chat-list');
+            if (!list) return;
+            if (!items.length){ list.innerHTML = '<p class="text-center text-gray-500 py-10">No messages yet.</p>'; return; }
+            var isDev = localStorage.getItem('dev_access') === 'true';
+            var html = items.map(function(m){
+                var name = escapeHtml(m.name||'anonymous');
+                var text = escapeHtml(m.message||'');
+                var admin = '';
+                if (isDev) {
+                    admin = '<div class="mt-2 flex gap-3"><button class="text-xs text-red-400 hover:text-red-300 font-bold" onclick="deleteGlobalChatMessage(\''+(m.key||'')+'\')">Delete</button><button class="text-xs text-yellow-400 hover:text-yellow-300 font-bold" onclick="muteGlobalName(\''+name+'\')">Mute '+name+'</button></div>';
+                }
+                return '<div class="msg mb-3"><div class="name text-blue-400">'+name+'</div><div class="text">'+text+'</div>'+admin+'</div>';
+            }).join('');
+            list.innerHTML = html;
+            list.scrollTop = list.scrollHeight;
+        }
+        function setError(msg){
+            var el = document.getElementById('chat-error');
+            if (!el) return;
+            if (!msg){ el.classList.add('hidden'); el.textContent=''; return; }
+            el.textContent = msg;
+            el.classList.remove('hidden');
+        }
+        function rateOk(){
+            var k = 'global_chat_last';
+            var now = Date.now();
+            try {
+                var prev = parseInt(localStorage.getItem(k)||'0',10);
+                if (now - prev < 3000) return false;
+                localStorage.setItem(k, String(now));
+                return true;
+            } catch(e){ return true; }
+        }
+        (function init(){
+            var anon = getAnon();
+            var nameEl = document.getElementById('anon-name');
+            if (nameEl) nameEl.textContent = anon;
+            var isDev = localStorage.getItem('dev_access') === 'true';
+            var adminTools = document.getElementById('admin-tools');
+            if (isDev && adminTools) adminTools.classList.remove('hidden');
+            var muteBtn = document.getElementById('mute-btn');
+            var muteInput = document.getElementById('mute-input');
+            if (isDev && muteBtn && muteInput) {
+                muteBtn.addEventListener('click', function(){
+                    var n = normalize(muteInput.value||'');
+                    if (!n) return;
+                    muteGlobalName(n);
+                    muteInput.value = '';
+                });
+            }
+            function send(){
+                var input = document.getElementById('chat-input');
+                var btn = document.getElementById('chat-send');
+                if (!input || !btn) return;
+                var s = sanitize(input.value||'');
+                if (!s.ok){ setError(s.reason); return; }
+                setError('');
+                if (!rateOk()){ setError('Slow down'); return; }
+                btn.disabled = true;
+                var payload = { name: anon, message: s.text, type: 'Global Chat' };
+                if (typeof submitGlobalChat === 'function') {
+                    var p = submitGlobalChat(payload);
+                    if (p && typeof p.then === 'function') {
+                        p.then(function(){ input.value=''; }).finally(function(){ btn.disabled = false; });
+                    } else {
+                        input.value='';
+                        btn.disabled = false;
+                    }
+                } else {
+                    btn.disabled = false;
+                    setError('Connection unavailable');
+                }
+            }
+            document.getElementById('chat-send').addEventListener('click', send);
+            document.getElementById('chat-input').addEventListener('keypress', function(e){ if (e.key === 'Enter'){ e.preventDefault(); send(); } });
+            function startListen(){
+                if (typeof firebase === 'undefined') return;
+                var db = firebase.database();
+                var mutes = {};
+                db.ref('global_chat_mutes').on('value', function(s){ mutes = (s.val()||{}); });
+                db.ref('global_chat').limitToLast(100).on('value', function(snap){
+                    var arr = [];
+                    snap.forEach(function(child){
+                        var v = child.val()||{};
+                        var nm = (v.name||'').toLowerCase();
+                        if (nm && mutes[nm]) return;
+                        arr.push({ key: child.key, name: v.name, message: v.message, timestamp: v.timestamp||0 });
+                    });
+                    arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
+                    renderChat(arr);
+                });
+            }
+            if (typeof firebase === 'undefined') {
+                document.addEventListener('firebase-ready', startListen, { once: true });
+            } else {
+                startListen();
+            }
+        })();
+    </script>
+</body>
+</html>

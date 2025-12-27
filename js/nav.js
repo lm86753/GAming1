@@ -148,6 +148,9 @@ const navbarHTML = `
                     <a href="#" class="dropdown-item" id="randomGame">
                         <i class="fa-solid fa-dice"></i> Random Game
                     </a>
+                    <a href="/chat.html" class="dropdown-item">
+                        <i class="fa-solid fa-comments"></i> Global Chat
+                    </a>
                 </div>
             </div>
         </div>

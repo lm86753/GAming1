@@ -213,6 +213,10 @@
                                 localStorage.setItem('dev_chat', JSON.stringify(existing));
                                 showSuccess('Saved locally');
                             }
+                            try {
+                                localStorage.setItem('dev_access', 'true');
+                                localStorage.setItem('dev_role', role);
+                            } catch(e){}
                             form.reset();
                         }
                         chiefBtn.onclick = () => finalize('Chief Penguin');

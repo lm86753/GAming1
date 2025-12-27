@@ -99,6 +99,31 @@ function submitDevChat(data) {
     });
 }
 
+function submitGlobalChat(data) {
+    if (!db) return;
+    const chatRef = db.ref('global_chat');
+    const newPostRef = chatRef.push();
+    return newPostRef.set({
+        ...data,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
+    });
+}
+
+function deleteGlobalChatMessage(key) {
+    if (!db || !key) return;
+    db.ref(`global_chat/${key}`).remove();
+}
+
+function muteGlobalName(name) {
+    if (!db || !name) return;
+    const safe = String(name).replace(/[^a-zA-Z0-9_-]/g, '').toLowerCase();
+    if (!safe) return;
+    return db.ref(`global_chat_mutes/${safe}`).set({
+        name: safe,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
+    });
+}
+
 function deleteDevChatMessage(key) {
     if (!db || !key) return;
     db.ref(`dev_chat/${key}`).remove();
