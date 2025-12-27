@@ -1,12 +1,13 @@
-<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Racing Limits</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/utils.js" type="rl-text/javascript"></script>
+    <link rel="manifest" href="manifest.json">
+    <script src="msstart-v1.0.0-rc.19.min.js" type="0f2779bc4a20c00b424296e0-text/javascript"></script>
+    <script src="TemplateData/utils.js" type="0f2779bc4a20c00b424296e0-text/javascript"></script>
   </head>
   <body>
     <div id="unity-container">
@@ -19,7 +20,13 @@
       </div>
       <div id="unity-warning"> </div>
     </div>
-    <script type="rl-text/javascript">
+    <script type="0f2779bc4a20c00b424296e0-text/javascript">
+      window.addEventListener("load", function () {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("ServiceWorker.js");
+        }
+      });
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -50,7 +57,7 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "build";
+      var buildUrl = "Build";
       var loaderUrl = buildUrl + "/d10afa744f0ed7116068cdeef1757eb5.loader.js";
       var config = {
         arguments: [],
@@ -84,10 +91,6 @@
       var script = document.createElement("script");
       var gameInstance = null;
       script.src = loaderUrl;
-      script.setAttribute("data-cfasync", "false");
-      script.onerror = () => {
-        unityShowBanner("Failed to load Unity loader: " + loaderUrl, "error");
-      };
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
@@ -100,6 +103,6 @@
       };
       document.body.appendChild(script);
     </script>
-    <script src="rocket-loader.min.js" data-cf-settings="rl-|0"></script>
+  <script src="./rocket-loader.min.js" data-cf-settings="0f2779bc4a20c00b424296e0-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;95c544faab8209c0&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfEdge&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}},&quot;version&quot;:&quot;2025.6.2&quot;,&quot;token&quot;:&quot;ed2dfea5b12742119a991dede5091622&quot;}" crossorigin="anonymous"></script>
 </body>
 </html>
