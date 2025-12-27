@@ -1,0 +1,27 @@
+Ragdoll Archers is a physics-based archery combat game that blends skill, timing, and unpredictable ragdoll movement. Players control a floppy stick-figure archer and must defeat opponents by landing accurate shots while maintaining balance. The main objective is to eliminate enemies before they knock you off the platform or deplete your health, using precise aim and smart positioning.
+
+Gameplay focuses on drawing and releasing arrows while accounting for gravity, distance, and character instability. Because characters move with ragdoll physics, even small actions can throw off balance, making each shot feel dynamic and challenging. Players must carefully time their attacks, adjust aim on the fly, and manage stamina or health depending on the game mode. As you progress, enemies become tougher and smarter, requiring more accurate shots and better control.
+
+The visual style is simple and cartoon-like, which helps keep the focus on physics and gameplay. The unpredictability of ragdoll movement adds both difficulty and humor, making every battle feel unique. Ragdoll Archers can be played solo against AI or in local multiplayer, adding replay value and competitive fun.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click (Hold & Release) – Draw and shoot arrows
+
+Mouse Movement – Aim direction and angle
+
+A / D or Left / Right Arrow Keys – Shift position / balance
+
+Spacebar (if available) – Jump or reposition
+
+R – Restart match
+
+Special Features & Mechanics
+
+Ragdoll physics affecting movement and aiming
+
+Gravity-based archery mechanics
+
+Single-player and local multiplayer modes
+
+Skill-based combat with humorous outcomes
