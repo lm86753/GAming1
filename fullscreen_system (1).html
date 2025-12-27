@@ -213,8 +213,19 @@
         const params = new URLSearchParams(window.location.search);
         const src = params.get('src');
         const title = params.get('title');
+        const img = params.get('img');
 
         if (title) document.getElementById('gameTitle').textContent = title;
+        (function(){
+            try {
+                var href = location.pathname + location.search;
+                var recent = JSON.parse(localStorage.getItem('recentlyPlayed')||'[]');
+                recent = recent.filter(function(r){ return r && r.href !== href && r.title !== title; });
+                recent.unshift({ title: title||'Unknown', img: img||'', href: href });
+                if (recent.length > 50) recent = recent.slice(0,50);
+                localStorage.setItem('recentlyPlayed', JSON.stringify(recent));
+            } catch(e){}
+        })();
         
         if (src) {
             const iframe = document.createElement('iframe');

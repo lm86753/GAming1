@@ -380,7 +380,7 @@
                     const isExternal = /^https?:\/\//.test(raw);
                     const link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
                     const wrapper = encodeURIComponent('fullscreen_system (1).html');
-                    const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(p.title||'');
+                    const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(p.title||'') + '&img=' + encodeURIComponent(p.imgSrc||'');
                     return `
                         <a href="${href}" class="glass p-3 rounded-2xl block no-underline group hover:bg-white/10 transition-all border border-yellow-500/30">
                             <div class="flex items-center gap-4">
@@ -406,7 +406,7 @@
                 const isExternal = /^https?:\/\//.test(raw);
                 const link = isExternal ? raw : (repoRoot + raw.replace(/^\//,''));
                 const wrapper = encodeURIComponent('fullscreen_system (1).html');
-                const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(project.title||'');
+                const href = repoRoot + wrapper + '?src=' + encodeURIComponent(link) + '&title=' + encodeURIComponent(project.title||'') + '&img=' + encodeURIComponent(project.imgSrc||'');
 
                 const card = document.createElement("a");
                 card.href = href;
