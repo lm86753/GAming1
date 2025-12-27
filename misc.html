@@ -11,8 +11,8 @@
       'ad_storage': 'denied',
       'analytics_storage': 'denied',
       'personalization_storage': 'denied',
-      'ad_user_data': 'denied',          // Added for v2 compliance
-      'ad_personalization': 'denied',    // Added for v2 compliance
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
       'functionality_storage': 'granted', 
       'wait_for_update': 500
     });
@@ -46,7 +46,6 @@
             overflow-x: hidden;
         }
 
-        /* Utility Classes */
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
             backdrop-filter: blur(10px); 
@@ -66,17 +65,14 @@
             background: #d436ec;
             transform: translateY(-2px);
         }
-
-        .logo-box {
-            width: 38px;
-            height: 38px;
-            background: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .btn-red {
+            background: #ef4444;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        .btn-red:hover {
+            background: #f87171;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -93,6 +89,37 @@
 
         <div class="max-w-2xl w-full space-y-8">
             
+            <div class="glass p-8 rounded-[2.5rem] shadow-2xl border-red-500/20">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="p-3 bg-red-500/20 rounded-2xl text-red-400">
+                        <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold">Panic Button</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <p class="text-gray-400 text-sm">Set a key and a URL. Pressing the key instantly redirects you to safety.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-xs text-gray-500 ml-2">Panic URL</label>
+                            <input id="panic-url" type="text" placeholder="https://classroom.google.com" 
+                                class="w-full p-4 glass rounded-2xl outline-none border border-white/10 focus:border-red-500/50 transition-all text-sm" />
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-500 ml-2">Panic Key (e.g. ` or p)</label>
+                            <input id="panic-key" type="text" maxlength="1" placeholder="`" 
+                                class="w-full p-4 glass rounded-2xl outline-none border border-white/10 focus:border-red-500/50 transition-all text-sm text-center" />
+                        </div>
+                    </div>
+
+                    <button id="save-panic" onclick="savePanicSettings()" class="btn-red w-full py-4 rounded-2xl font-bold shadow-lg shadow-red-500/20">
+                        Save Panic Settings
+                    </button>
+                    <p id="panic-status" class="text-center text-xs text-red-400 italic h-2"></p>
+                </div>
+            </div>
+
             <div class="glass p-8 rounded-[2.5rem] shadow-2xl">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="p-3 bg-blue-500/20 rounded-2xl text-blue-400">
@@ -144,8 +171,35 @@
         &copy; 2025 Penguin Labs. All rights reserved.
     </footer>
 
-    <script src="/js/nav.js"></script>
+    <script>
+        // Panic Button Logic
+        function savePanicSettings() {
+            const url = document.getElementById('panic-url').value || 'https://classroom.google.com';
+            const key = document.getElementById('panic-key').value || '`';
+            localStorage.setItem('panicUrl', url);
+            localStorage.setItem('panicKey', key);
+            
+            document.getElementById('panic-status').innerText = `Saved! Press "${key}" to panic.`;
+            setTimeout(() => { document.getElementById('panic-status').innerText = ''; }, 3000);
+        }
 
+        window.addEventListener('keydown', function(e) {
+            const savedKey = localStorage.getItem('panicKey') || '`';
+            const savedUrl = localStorage.getItem('panicUrl') || 'https://classroom.google.com';
+            
+            if (e.key === savedKey) {
+                window.location.href = savedUrl;
+            }
+        });
+
+        // Initialize Panic Inputs from storage
+        window.onload = function() {
+            if(localStorage.getItem('panicUrl')) document.getElementById('panic-url').value = localStorage.getItem('panicUrl');
+            if(localStorage.getItem('panicKey')) document.getElementById('panic-key').value = localStorage.getItem('panicKey');
+        }
+    </script>
+
+    <script src="/js/nav.js"></script>
     <script src="/js/misc.js"></script>
     <script src="/js/main.js"></script>
 </body>
