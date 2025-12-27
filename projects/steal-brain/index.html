@@ -2,64 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Steal a Brainrot - Fixed</title>
+    <title>Steal a Brainrot - Unblocked</title>
     <style>
-        body { margin: 0; padding: 0; background-color: #000; overflow: hidden; width: 100vw; height: 100vh; }
-        #unity-canvas { width: 100%; height: 100%; display: block; }
+        body { margin: 0; background: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        #unity-canvas { width: 100%; height: 100%; background: #000; }
     </style>
 
     <script>
-        // --- STEP 1: THE ULTIMATE DOMAIN SPOOFER ---
-        // We create a fake 'location' object and try to trick the engine
-        const fakeDomain = "8games.net";
-        
-        try {
-            // Overriding at the prototype level is often more effective
-            Object.defineProperty(window, 'location', {
-                value: new Proxy(window.location, {
-                    get: (target, prop) => {
-                        if (prop === 'hostname' || prop === 'host') return fakeDomain;
-                        if (prop === 'origin') return `https://${fakeDomain}`;
-                        if (prop === 'href') return `https://${fakeDomain}/`;
-                        return target[prop];
-                    }
-                }),
-                configurable: true
-            });
-        } catch (e) {
-            console.warn("Standard location override failed, applying fallback...");
-        }
-
-        // --- STEP 2: YANDEX SDK MOCKING ---
-        // This ensures the game doesn't hang waiting for Yandex servers
+        // 1. SDK Bypass
         window.ysdk = {
             features: {
-                LoadingAPI: { ready: () => console.log("Unity: Game Ready Signal Received") },
+                LoadingAPI: { ready: () => console.log("SDK Ready Bypass") },
                 GameplayAPI: { start: () => {}, stop: () => {} }
             },
-            adv: { showFullscreenAdv: (o) => { if(o && o.callbacks) o.callbacks.onClose(true); } },
-            getStorage: () => Promise.resolve({}),
-            getPlayer: () => Promise.resolve({ getName: () => "User", getPhoto: () => "" })
+            adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
-        
-        // Setup global environment variables the framework code looks for
         window.initYSDK = true;
-        window.cloudSaves = "{}"; 
-        window.playerData = "{}"; 
+        
+        // 2. Fake Environment
+        window.cloudSaves = "{}";
+        window.playerData = "{}";
         window.paymentsData = "{}";
         window.environmentData = JSON.stringify({
-            language: "en", 
+            language: "en",
             deviceType: "desktop",
-            isMobile: false,
-            isDesktop: true,
-            browser: "Chrome"
+            payload: ""
         });
 
-        // Forced bypass for the .indexOf check
+        // 3. Domain Lock Bypass
         const originalIndexOf = String.prototype.indexOf;
-        String.prototype.indexOf = function(val) {
-            if (val === "8games.net") return 0;
+        String.prototype.indexOf = function(s) {
+            if (s === "8games.net") return 0; 
             return originalIndexOf.apply(this, arguments);
         };
     </script>
@@ -68,27 +41,24 @@
     <canvas id="unity-canvas"></canvas>
 
     <script src="build/StealBrainrot.loader.js"></script>
-
+    
     <script>
-        // --- STEP 3: INITIALIZE UNITY ---
-        const canvas = document.querySelector("#unity-canvas");
-        const config = {
-            dataUrl: "build/d6ccccaf266bab16bf58f5725e76504e.data.br",
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            // UPDATED FILENAMES BELOW
+            dataUrl: "build/data.date", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
-            codeUrl: "build/b7cf28e445ff2ecea47d5697909bb345.wasm.br",
+            codeUrl: "build/cod.wasm", 
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
-        };
-
-        createUnityInstance(canvas, config, (progress) => {
-            // Loading progress can be handled here
+            
+            // Important for .wasm and .date files that were originally .br
+            cacheControl: (url) => "no-store",
         }).then((unityInstance) => {
-            console.log("Unity Instance Created Successfully");
-            window.unityInstance = unityInstance;
-        }).catch((message) => {
-            alert("Error loading game: " + message);
+            console.log("Game successfully loaded!");
+        }).catch((err) => {
+            console.error("Unity Loading Error:", err);
         });
     </script>
 </body>
