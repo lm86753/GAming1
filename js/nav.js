@@ -171,6 +171,53 @@ document.addEventListener('click', (e) => {
     }
 });
 
+(function(){
+    if (window.__panicInstalled) return;
+    window.__panicInstalled = true;
+
+    function getPanicKey(){
+        var k = null;
+        try { k = localStorage.getItem('panicKey'); } catch(e) {}
+        if (!k) return '`';
+        return String(k).slice(0, 1);
+    }
+
+    function getPanicUrl(){
+        var u = null;
+        try { u = localStorage.getItem('panicUrl'); } catch(e) {}
+        if (!u) return 'https://classroom.google.com';
+        return String(u);
+    }
+
+    function isEditableTarget(target){
+        if (!target) return false;
+        if (target.isContentEditable) return true;
+        var tag = (target.tagName || '').toLowerCase();
+        return tag === 'input' || tag === 'textarea' || tag === 'select';
+    }
+
+    function triggerPanic(){
+        var url = getPanicUrl();
+        try { window.location.href = url; } catch(e) {}
+    }
+
+    window.triggerPanic = triggerPanic;
+
+    document.addEventListener('keydown', function(e){
+        if (!e) return;
+        if (e.repeat) return;
+        if (e.altKey || e.ctrlKey || e.metaKey) return;
+        if (isEditableTarget(e.target)) return;
+
+        var configured = getPanicKey();
+        var pressed = e.key;
+        if (!pressed) return;
+
+        if (pressed === configured) return triggerPanic();
+        if (String(pressed).toLowerCase() === String(configured).toLowerCase()) return triggerPanic();
+    }, true);
+})();
+
 (function() {
     function load(src, cb){
         const s = document.createElement('script');
