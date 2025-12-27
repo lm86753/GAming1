@@ -11,14 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/coi-serviceworker/0.1.7/coi-serviceworker.min.js"></script>
 
     <script>
-        // SDK Bypasses
+        // 1. SDK Bypasses
         window.ysdk = {
             features: { LoadingAPI: { ready: () => {} }, GameplayAPI: { start: () => {}, stop: () => {} } },
             adv: { showFullscreenAdv: (opts) => { if(opts.callbacks) opts.callbacks.onClose(true); } }
         };
         window.environmentData = JSON.stringify({ language: "en", deviceType: "desktop", payload: "" });
 
-        // Domain Lock Bypass
+        // 2. Domain Lock Bypass
         const originalIndexOf = String.prototype.indexOf;
         String.prototype.indexOf = function(s) {
             if (s === "8games.net") return 0; 
@@ -32,35 +32,29 @@
     <script src="build/StealBrainrot.loader.js"></script>
     
     <script>
-        const canvas = document.querySelector("#unity-canvas");
-        
-        const config = {
+        createUnityInstance(document.querySelector("#unity-canvas"), {
             // Filenames matching your screenshot exactly
             dataUrl: "build/data.data", 
             frameworkUrl: "build/8b2e24a34eb309de7efc1aeb6e648233.js",
             codeUrl: "build/code.wasm", 
+            
             streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
             productName: "Steal a Brainrot",
             productVersion: "1.0",
             
-            // FIX for the 'push' error in your console:
-            // We manually provide the arrays the framework is trying to push into
+            // --- CRITICAL FIXES FOR THE 'PUSH' ERROR ---
             deinitializers: [],
             preRun: [],
             postRun: [],
-            
-            // Fix for renamed .br files
-            cacheControl: (url) => "no-store",
-            decompressor: "br"
-        };
+            // -------------------------------------------
 
-        createUnityInstance(canvas, config, (progress) => {
-            console.log("Loading: " + (progress * 100) + "%");
+            cacheControl: (url) => "no-store",
+            decompressor: "br", 
         }).then((unityInstance) => {
             console.log("Game Loaded!");
         }).catch((err) => {
-            console.error("Unity Error: ", err);
+            console.error("Unity Error:", err);
         });
     </script>
 </body>
