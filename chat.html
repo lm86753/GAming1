@@ -36,6 +36,9 @@
                 <div class="flex items-center gap-3">
                     <button id="shutdown-btn" class="w-full bg-orange-600 hover:bg-orange-500 px-4 py-2 rounded-xl text-sm font-bold">Shutdown Chat</button>
                 </div>
+                <div class="flex items-center gap-3 mt-3">
+                    <button id="clearall-btn" class="w-full bg-red-700 hover:bg-red-600 px-4 py-2 rounded-xl text-sm font-bold">Clear All Messages</button>
+                </div>
                 <p class="text-xs text-gray-500 mt-2">Admin tools available only after sending Dev Chat via Feedback.</p>
             </div>
             <div id="mute-panel" class="hidden fixed top-32 right-6 glass rounded-2xl p-4 w-64">
@@ -44,6 +47,27 @@
                     <span class="text-xs text-gray-500">Global</span>
                 </div>
                 <div id="mute-list" class="mt-3 space-y-2"></div>
+            </div>
+            <div id="rules-panel" class="hidden md:block fixed top-32 left-6 glass rounded-2xl p-4 w-64">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-sm font-bold text-gray-300">Chat Rules</h2>
+                    <span class="text-xs text-gray-500">All Users</span>
+                </div>
+                <div class="mt-3 space-y-2 text-xs text-gray-400">
+                    <p>No links, emails, or handles.</p>
+                    <p>No hate speech or profanity.</p>
+                    <p>Keep messages under 240 characters.</p>
+                    <p>Be respectful and helpful.</p>
+                </div>
+                <div class="mt-3">
+                    <h3 class="text-xs font-bold text-gray-300">Admin Actions</h3>
+                    <ul class="mt-2 space-y-1 text-xs text-gray-400">
+                        <li>Mute users (blocks sending only).</li>
+                        <li>Delete rule-breaking messages.</li>
+                        <li>Shutdown or reopen chat.</li>
+                        <li>Clear all messages.</li>
+                    </ul>
+                </div>
             </div>
             <div class="flex items-center gap-3 mt-4">
                 <div id="anon-name" class="glass px-3 py-2 rounded-xl text-xs font-bold text-gray-300"></div>
@@ -244,6 +268,19 @@
                     firebase.database().ref('chat_shutdown').set(!isShutdown);
                 });
             }
+            var clearBtn = document.getElementById('clearall-btn');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function(){
+                    if (localStorage.getItem('dev_access') !== 'true') return;
+                    var ok = confirm('Clear all global messages? This cannot be undone.');
+                    if (!ok) return;
+                    if (typeof clearGlobalChat === 'function') {
+                        clearGlobalChat();
+                    } else {
+                        firebase.database().ref('global_chat').remove();
+                    }
+                });
+            }
 
             function startListen(){
                 var log = document.getElementById('chat-list');
@@ -316,7 +353,7 @@
                     
                     function cleanupOldMessages(){
                         try {
-                            var cutoff = Date.now() - (10 * 60 * 1000);
+                            var cutoff = Date.now() - (60 * 60 * 1000);
                             db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value', function(s){
                                 s.forEach(function(child){
                                     db.ref('global_chat/'+child.key).remove();

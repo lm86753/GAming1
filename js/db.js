@@ -114,6 +114,11 @@ function deleteGlobalChatMessage(key) {
     db.ref(`global_chat/${key}`).remove();
 }
 
+function clearGlobalChat() {
+    if (!db) return;
+    return db.ref('global_chat').remove();
+}
+
 function muteGlobalName(name) {
     if (!db || !name) return;
     const safe = String(name).replace(/[^a-zA-Z0-9_-]/g, '').toLowerCase();
