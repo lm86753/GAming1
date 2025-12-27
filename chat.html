@@ -305,14 +305,14 @@
                         var off = snap.val();
                         if (typeof off === 'number') serverOffset = off; 
                     });
-                    var latestMessageTs = 0;
+                    var earliestStart = 0;
                     var clockEl = document.getElementById('auto-clear-clock');
                     var clockTimer = null;
                     function updateClock(){
                         if (!clockEl) return;
-                        if (!latestMessageTs) { clockEl.textContent = 'Auto clear in: —'; return; }
+                        if (!earliestStart) { clockEl.textContent = 'Auto clear in: —'; return; }
                         var nowServer = Date.now() + (serverOffset||0);
-                        var target = latestMessageTs + (60*60*1000);
+                        var target = earliestStart + (60*60*1000);
                         var remain = Math.max(0, target - nowServer);
                         var hrs = Math.floor(remain / 3600000);
                         var mins = Math.floor((remain % 3600000) / 60000);
@@ -355,7 +355,7 @@
                     chatRef.on('value', function(snap){
                         clearTimeout(loadTimeout);
                         var arr = [];
-                        var latest = 0;
+                        var earliest = 0;
                         snap.forEach(function(child){
                             var v = child.val()||{};
                             var realName = String(v.displayName || v.name || '').toLowerCase();
@@ -367,11 +367,11 @@
                             // Do not hide muted users' past messages
                             // Admin role messages are always shown
                             arr.push({ key: child.key, name: v.name, displayName: v.displayName, message: v.message, timestamp: v.timestamp||0 });
-                            if (v.timestamp && v.timestamp > latest) latest = v.timestamp;
+                            if (v.timestamp && (earliest === 0 || v.timestamp < earliest)) earliest = v.timestamp;
                         });
                         arr.sort(function(a,b){ return (a.timestamp||0) - (b.timestamp||0); });
                         renderChat(arr);
-                        latestMessageTs = latest || 0;
+                        earliestStart = earliest || 0;
                         updateClock();
                         if (!clockTimer) clockTimer = setInterval(updateClock, 1000);
                     }, function(error){
@@ -382,12 +382,11 @@
                     function cleanupOldMessages(){
                         try {
                             var nowServer = Date.now() + (serverOffset||0);
-                            var cutoff = nowServer - (60 * 60 * 1000);
-                            db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value', function(s){
-                                s.forEach(function(child){
-                                    db.ref('global_chat/'+child.key).remove();
+                            if (earliestStart && (nowServer - earliestStart >= (60 * 60 * 1000))) {
+                                db.ref('global_chat').remove().then(function(){
+                                    // cleared
                                 });
-                            });
+                            }
                         } catch(e){}
                     }
                     setInterval(cleanupOldMessages, 60000);

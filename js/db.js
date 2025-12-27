@@ -269,11 +269,12 @@ function initGlobalTracking() {
                 } catch(e){}
                 function run(){
                     const nowServer = Date.now() + (serverOffset||0);
-                    const cutoff = nowServer - (60 * 60 * 1000);
-                    db.ref('global_chat').orderByChild('timestamp').endAt(cutoff).once('value').then((s)=>{
-                        const updates = {};
-                        s.forEach((child)=>{ updates[child.key] = null; });
-                        if (Object.keys(updates).length) db.ref('global_chat').update(updates);
+                    db.ref('global_chat').orderByChild('timestamp').limitToFirst(1).once('value').then((s)=>{
+                        let earliest = 0;
+                        s.forEach((child)=>{ const v = child.val()||{}; if (v.timestamp) earliest = v.timestamp; });
+                        if (earliest && (nowServer - earliest >= (60 * 60 * 1000))) {
+                            db.ref('global_chat').remove().catch(()=>{});
+                        }
                     }).catch(()=>{});
                 }
                 run();
