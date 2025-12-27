@@ -259,6 +259,30 @@
                 arrowEl.style.color = color;
                 arrowEl.innerHTML = '<i class="fa-solid fa-' + arrow + '"></i>';
                 saveHistory(shown);
+                window.__liveShown = shown;
+            }
+            function fluctuate(){
+                var numEl = document.getElementById('live-counter-num');
+                var arrowEl = document.getElementById('live-counter-arrow');
+                if (!numEl || !arrowEl) return;
+                var cur = window.__liveShown || 0;
+                if (cur <= 0) return;
+                var step = (Math.random() < 0.5 ? -1 : 1) * (Math.random() < 0.5 ? 1 : 2);
+                var next = Math.max(1, cur + step);
+                next = adjustNoZero(next);
+                var baseline = getBaseline();
+                var color = '#9ca3af';
+                var arrow = 'minus';
+                if (baseline !== null) {
+                    if (next > baseline) { color = '#22c55e'; arrow = 'arrow-up'; }
+                    else if (next < baseline) { color = '#ef4444'; arrow = 'arrow-down'; }
+                }
+                numEl.textContent = next.toLocaleString();
+                numEl.style.color = color;
+                arrowEl.style.color = color;
+                arrowEl.innerHTML = '<i class="fa-solid fa-' + arrow + '"></i>';
+                saveHistory(next);
+                window.__liveShown = next;
             }
             function initLiveCounter(){
                 if (typeof firebase === 'undefined') return;
@@ -273,6 +297,7 @@
             } else {
                 initLiveCounter();
             }
+            setInterval(fluctuate, 30000);
         })();
 
         function loadRecentGames() {
