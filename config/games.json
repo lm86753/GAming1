@@ -40,7 +40,7 @@
     "title": "9007199254740992"
   },
   {
-    "link": "projects/99balls/index.html",
+    "link": "https://html5.gamedistribution.com/14a6a32cd96f4acaa04f5440ffe9a865/",
     "imgSrc": "projects/99balls/99-balls-evo.jpg",
     "title": "99 Balls"
   },
@@ -793,11 +793,6 @@
     "title": "This Is The Only Level"
   },
   {
-    "link": "projects/tiny-fishing/tiny-fishing/index.html",
-    "imgSrc": "projects/tiny-fishing/tiny-fishing/thumb.png",
-    "title": "Tiny fishing"
-  },
-  {
     "link": "projects/tosstheturtle/index.html",
     "imgSrc": "projects/tosstheturtle/tosstheturtle.png",
     "title": "Toss The Turtle"
@@ -836,6 +831,11 @@
     "link": "projects/vex6/index.html",
     "imgSrc": "projects/vex6/assets/icon.jpeg",
     "title": "Vex 6"
+  },
+  {
+    "link": "projects/We-Become-What/index.html",
+    "imgSrc": "projects/We-Become-What/logo.png",
+    "title": "We Become What We Behold"
   },
   {
     "link": "projects/webretro-local/index.html",
