@@ -1,0 +1,25 @@
+Stickman Hook is a fast-paced physics-based arcade game where players swing through levels using a grappling hook. The main objective is to reach the finish line of each level as quickly as possible by attaching your hook to anchor points and maintaining momentum. Timing and rhythm are essential, as smooth swings allow players to soar across gaps and avoid obstacles.
+
+Gameplay is simple to learn but challenging to master. Players tap to attach the hook and release at the right moment to build speed and control their trajectory. Levels introduce moving platforms, spikes, and tricky layouts that require precise timing and smart use of momentum. The physics-based swinging creates a satisfying flow when executed correctly, rewarding players who master timing and angles. While levels can be completed casually, the game strongly encourages replaying to achieve faster times and cleaner swings.
+
+The visual style is clean and colorful with minimalistic stickman characters, keeping the focus on motion and readability. Animations are smooth, and instant retries make the game addictive rather than frustrating. Stickman Hook is suitable for all ages and offers strong replay value through short, skill-based levels.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click (Hold) – Attach grappling hook
+
+Release Left Click – Let go of the hook
+
+Spacebar (in some versions) – Jump / release hook
+
+Mouse – Menu navigation
+
+Special Features & Mechanics
+
+Physics-based swinging and momentum
+
+One-touch / one-button control design
+
+Fast-paced, short levels ideal for quick play
+
+Increasing difficulty with new obstacles
