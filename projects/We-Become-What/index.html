@@ -9,7 +9,7 @@
     <div id="stage"></div>
     <div id="modal_shade"></div>
     
-    <div class="overlay" id="warning">
+    <div class="overlay" id="warning" style="display:none;">
         <div dir="rtl">ای بابا!</div>
         <div dir="rtl">
             Your browser/folder structure has an issue.<br>
@@ -86,25 +86,29 @@
 
     <script>
         Game.stats = false;
-        window.onload = function(){
-            // Verify textStrings loaded
-            if(typeof textStrings === 'undefined'){
-                console.error("CRITICAL: js/textStrings.js failed to load. Check capitalization!");
-                document.getElementById("warning").style.display = "block";
-                return;
-            }
-
-            try {
-                // Try to force Canvas if WebGL has issues
-                if(window.PIXI) {
-                    PIXI.utils.skipHello();
+        
+        // Wait for everything to be ready
+        window.addEventListener('load', function() {
+            // Give it 100ms extra to ensure textStrings variable is parsed
+            setTimeout(function() {
+                if(typeof textStrings === 'undefined'){
+                    console.error("CRITICAL: textStrings is not defined!");
+                    document.getElementById("warning").style.display = "block";
+                    return;
                 }
-                Game.init();
-            } catch(e) {
-                console.error("Game Init Failed:", e);
-                document.getElementById("warning").style.display = "block";
-            }
-        };
+
+                try {
+                    if(window.PIXI) {
+                        PIXI.utils.skipHello();
+                    }
+                    Game.init();
+                } catch(e) {
+                    console.error("Game Init Failed:", e);
+                    document.getElementById("warning").style.display = "block";
+                }
+            }, 100);
+        });
+
         window.SHARE_TEXT = 'همین الان یه بازی خیلی خفن رو بازی کردم';
         window.SHARE_URL = "";
     </script>
