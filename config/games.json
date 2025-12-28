@@ -110,6 +110,11 @@
     "title": "Black Knight"
   },
   {
+    "link": "projects/block-blast/index.html",
+    "imgSrc": "projects/block-blast/logo.png",
+    "title": "Block Blast"
+  },
+  {
     "link": "projects/bloonstd/index.html",
     "imgSrc": "projects/bloonstd/bloonstd.jpg",
     "title": "Bloons TD"
