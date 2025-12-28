@@ -1,0 +1,15 @@
+One Trillion Free Draws is a minimalist, probability-based idle and luck game centered around drawing items from an enormous randomized pool. The premise is simple but addictive: players are given an absurd number of free draws and must keep drawing to unlock rarer items, higher tiers, and milestones. The objective is to progress through rarity levels, discover ultra-rare outcomes, and experience the satisfaction of exponential odds slowly paying off.
+
+Gameplay focuses on repetition, chance, and progression tracking. Each draw produces a result based on rarity tiers, with common results appearing frequently and extremely rare ones appearing after many attempts. As players continue drawing, they unlock achievements, new rarity brackets, and sometimes automation features that allow faster or hands-free progress. There is no punishment for failure—every draw contributes to overall progression, encouraging patience and persistence rather than skill.
+
+The game’s appeal comes from watching statistics grow, odds improve, and milestones unlock over time. The visual style is extremely simple, often using clean text, counters, and buttons to keep attention on numbers and rarity rather than graphics. This makes the game ideal for players who enjoy idle games, probability systems, and long-term progression without pressure or complexity.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Draw / interact with buttons
+
+Mouse Cursor – Navigate menus and upgrades
+
+Spacebar / Enter (if available) – Perform draw
+
+Keyboard – Minimal or optional depending on version
