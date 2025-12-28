@@ -1,0 +1,29 @@
+Cluster Rush is a fast-paced first-person parkour platformer that challenges players to survive by jumping across speeding trucks. The game focuses on reaction time, precision movement, and momentum, placing the player in constantly shifting environments where the ground is never stable. The objective is to reach the end of each level without falling, using quick reflexes and smart movement to stay on top of the moving vehicles.
+
+Gameplay is intense and unforgiving. Trucks swerve, crash, explode, and change speed without warning, forcing players to adapt instantly. Each level introduces new hazards such as sharp turns, sudden drops, collapsing trucks, swinging obstacles, and environmental dangers. There are no enemies—your greatest threat is the environment itself. The first-person perspective enhances immersion and speed, making every jump feel risky and rewarding. Levels are short but challenging, encouraging repeated attempts and mastery through practice.
+
+The visual style is clean and minimal, keeping focus on movement and readability. Smooth animations and fast restarts make failures less frustrating and keep the action flowing. Cluster Rush rewards skill and persistence, making it especially appealing to players who enjoy speedrunning and high-difficulty platformers.
+
+Controls (Keyboard & Mouse)
+
+W, A, S, D – Move forward, left, backward, and right
+
+Mouse Movement – Look around / control camera
+
+Spacebar – Jump
+
+Shift – Sprint
+
+R – Restart level
+
+Esc – Pause menu
+
+Special Features & Mechanics
+
+First-person parkour on moving vehicles
+
+Physics-based truck movement and collisions
+
+Instant restarts for fast-paced retry gameplay
+
+Increasing difficulty with new obstacles each level
