@@ -1,0 +1,43 @@
+1v1.LOL is a fast-paced online multiplayer shooter and building game inspired by popular battle royale mechanics. Players face off in 1v1 duels or other small-scale battles, testing their reflexes, aiming, and building skills. The main objective is simple: eliminate your opponent before they eliminate you, using a combination of shooting, building, and quick thinking.
+
+Gameplay combines shooting and construction mechanics. Players collect resources, build walls, ramps, and platforms, and use weapons to outplay their opponent. Matches are typically short, emphasizing quick reflexes and strategic building. Timing, aim accuracy, and creative construction are key to gaining an advantage. The game also includes a practice mode where players can improve shooting and building skills, making it appealing to both casual players and competitive gamers.
+
+The visual style is clean and minimalistic, prioritizing clarity and responsiveness. Smooth controls and instant actions allow for intense, fast-paced duels. The simplicity of the design makes the game easy to pick up, while the depth of strategy comes from mastering building techniques and combat timing.
+
+Controls (Keyboard & Mouse)
+
+W / Up Arrow – Move forward
+
+A / Left Arrow – Move left
+
+S / Down Arrow – Move backward
+
+D / Right Arrow – Move right
+
+Mouse Movement – Aim / look around
+
+Mouse Left Click – Shoot
+
+Mouse Right Click – Build / place structures
+
+1, 2, 3, 4, 5 – Select weapons or building pieces
+
+Spacebar – Jump
+
+Shift – Sprint
+
+R – Reload
+
+Esc – Pause / menu
+
+Special Features & Mechanics
+
+Real-time 1v1 duels with building and shooting
+
+Customizable weapons and building pieces
+
+Practice mode for improving skills
+
+Physics-based building mechanics
+
+Fast-paced matches emphasizing reflexes and strategy

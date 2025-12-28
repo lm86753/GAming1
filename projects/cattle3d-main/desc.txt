@@ -1,0 +1,25 @@
+Crazy Cattle 3D is a quirky, physics‑driven multiplayer arena game where players control animated cows and compete in chaotic matches against others. The core objective is to survive and dominate the arena by knocking other cows out, collecting points, and avoiding hazards. The game blends bouncy movement, unpredictable physics, and light combat for fast‑paced, humorous gameplay that’s easy to pick up and play.
+
+In each match, players run, jump, and dash around 3D arenas filled with obstacles, platforms, and power‑ups. The physics engine gives cows weight and momentum, making movement feel floaty and dynamic—collisions send characters bouncing unpredictably, which adds a layer of chaotic fun. Matches are short and frantic, with constant action as players jostle for control and try to outmaneuver opponents. The simplistic cartoon visuals and exaggerated animations give the game a playful, party‑game vibe.
+
+Controls (Keyboard & Mouse)
+
+W / Up Arrow – Move forward
+
+A / Left Arrow – Move left
+
+S / Down Arrow – Move backward
+
+D / Right Arrow – Move right
+
+Mouse Movement – Look / aim direction
+
+Mouse Left Click – Dash / primary action
+
+Spacebar – Jump
+
+Shift – Sprint (if available)
+
+R – Respawn or restart (if available)
+
+Esc – Pause / menu
