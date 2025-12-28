@@ -1,0 +1,15 @@
+Tiny Fishing is a relaxing arcade-style fishing game that focuses on progression, upgrades, and collecting rare fish. Players cast their fishing line into the water and try to catch as many fish as possible in a single cast, earning money based on the value of the fish they collect. The main objective is to upgrade your gear, reach deeper waters, and unlock new species.
+
+Gameplay is split into two phases. First, players choose how far to cast the line, which determines the depth and types of fish available. As the hook rises back to the surface, players move it left and right to catch fish. Each fish has a different value, encouraging players to aim for rarer species. Money earned from each run can be spent on upgrades such as line depth, number of fish caught per cast, and offline earnings. Progression is steady and rewarding, making the game easy to play in short sessions.
+
+The visual style is colorful and minimalistic, with charming animations and simple effects. There is no time pressure or failure condition, creating a calm and stress-free experience. Tiny Fishing is ideal for players who enjoy idle or incremental games with light skill elements.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click (Hold & Release) – Cast fishing line
+
+Mouse Movement / A & D – Move hook left and right
+
+Mouse Left Click – Select upgrades and menu options
+
+Keyboard – Minimal or not required

@@ -788,6 +788,11 @@
     "title": "This Is The Only Level"
   },
   {
+    "link": "projects/tiny-fishing-main/index.html",
+    "imgSrc": "projects/tiny-fishing-main/thumb.png",
+    "title": "Tiny fishing"
+  },
+  {
     "link": "projects/tosstheturtle/index.html",
     "imgSrc": "projects/tosstheturtle/tosstheturtle.png",
     "title": "Toss The Turtle"
