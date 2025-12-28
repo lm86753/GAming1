@@ -264,11 +264,7 @@
     "imgSrc": "projects/DogeMiner/img/dogeminer_300x300.png",
     "title": "Doge Miner"
   },
-  {
-    "link": "projects/Dogeminer2/index.html",
-    "imgSrc": "projects/Dogeminer2/thumb.jpg",
-    "title": "DogeMiner 2"
-  },
+  
   {
     "link": "projects/doodle-jump/index.html",
     "imgSrc": "projects/doodle-jump/doodle.png",
