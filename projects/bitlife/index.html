@@ -2,71 +2,100 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BitLife | Penguin Labs</title>
     <style>
+      /* 1. Reset everything to black */
       body, html {
-        margin: 0; padding: 0; width: 100%; height: 100%;
-        background: #000 !important;
-        overflow: hidden;
-        display: flex; justify-content: center; align-items: center;
-      }
-
-      /* This is the magic container */
-      #game-wrapper {
+        margin: 0;
+        padding: 0;
         width: 100%;
         height: 100%;
+        background-color: #000 !important;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      #gameContainer {
-        /* We force the game to load at a high resolution so it's not blurry */
-        width: 1080px !important;
-        height: 1920px !important;
-        
-        /* Then we shrink it to fit your specific screen height */
-        transform: scale(calc(var(--scale-factor, 0.5)));
+      /* 2. This is the "Virtual Phone" */
+      /* We force it to be HUGE (1080p) so the UI layout is perfect */
+      #game-scaler {
+        width: 1080px;
+        height: 1920px;
+        position: relative;
+        /* The origin allows us to scale it from the center out */
         transform-origin: center center;
+        background: #000;
+        box-shadow: 0 0 50px rgba(0,0,0,0.5);
+      }
+
+      /* 3. The actual game fills the Virtual Phone */
+      #gameContainer {
+        width: 100% !important;
+        height: 100% !important;
       }
 
       canvas {
         width: 100% !important;
         height: 100% !important;
+        display: block;
       }
     </style>
   </head>
   <body>
 
-    <div id="game-wrapper">
+    <div id="game-scaler">
         <div id="gameContainer"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // Function to calculate exactly how much to shrink the game
-      function updateScale() {
-        const screenHeight = window.innerHeight;
-        // BitLife natural height is 1920. We want it to be 95% of your screen.
-        const scale = (screenHeight * 0.95) / 1920;
-        document.documentElement.style.setProperty('--scale-factor', scale);
-      }
-
-      window.addEventListener('resize', updateScale);
-      updateScale();
-
+      // 1. Start the game normally
       var gameInstance = UnityLoader.instantiate(
         "gameContainer", 
         "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
         {
-            onProgress: function(instance, progress) {
-                if (progress === 1) {
-                    updateScale();
-                    window.dispatchEvent(new Event('resize'));
-                }
+          onProgress: function(instance, progress) {
+            if (progress === 1) {
+               console.log("Game Loaded");
+               // Force a resize calculation once loaded
+               resizeGame();
             }
+          }
         }
       );
+
+      // 2. The Magic Scaler Function
+      function resizeGame() {
+        var scaler = document.getElementById("game-scaler");
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        // We want to fit a 1080x1920 box into the current screen
+        // Calculate the scale ratio for width and height
+        var scaleX = width / 1080;
+        var scaleY = height / 1920;
+
+        // Pick the smaller scale so it fits perfectly without cutting off
+        var scaleToFit = Math.min(scaleX, scaleY);
+
+        // Limit the max size so it doesn't get pixelated on huge screens
+        // (Optional: remove this line if you want it to get massive)
+        if (scaleToFit > 1) scaleToFit = 1;
+
+        // Apply the scale transform
+        scaler.style.transform = "scale(" + scaleToFit + ")";
+      }
+
+      // 3. Listen for window resizing (and run it immediately)
+      window.addEventListener('resize', resizeGame);
+      
+      // Run it every 100ms for a second to catch any loading jitters
+      var checkInterval = setInterval(resizeGame, 100);
+      setTimeout(function() { clearInterval(checkInterval); }, 2000);
+      
+      resizeGame();
     </script>
   </body>
 </html>
