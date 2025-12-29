@@ -40,11 +40,6 @@
     "title": "9007199254740992"
   },
   {
-    "link": "projects/99balls/99balls/index.html",
-    "imgSrc": "projects/99balls/99balls/99-balls-evo.jpg ",
-    "title": "99 Balls"
-  },
-  {
     "link": "projects/100ng/index.html",
     "imgSrc": "projects/100ng/100ng.jpg",
     "title": "100 Player Pong"
@@ -139,6 +134,11 @@
     "link": "projects/btts/index.html",
     "imgSrc": "projects/btts/images.png",
     "title": "Big Tower Tiny Square"
+  },
+  {
+    "link": "projects/bullet-force-main/index.html",
+    "imgSrc": "projects/bullet-force-main/logo.png",
+    "title": "Bullet Force"
   },
 
   {

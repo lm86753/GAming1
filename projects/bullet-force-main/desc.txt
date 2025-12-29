@@ -1,0 +1,45 @@
+Bullet Force is a fast-paced first-person shooter that delivers classic military-style combat in both multiplayer and offline modes. Players engage in intense gunfights across a variety of maps, using realistic weapons and tactical movement. The main objective depends on the mode—eliminate opponents, complete objectives, or outscore the enemy team—while staying alive and managing resources.
+
+Gameplay emphasizes smooth gunplay, map awareness, and reflexes. Players can customize their loadouts with different rifles, pistols, attachments, and perks, allowing for flexible playstyles such as aggressive rushing or careful positioning. The game includes popular modes like Team Deathmatch, Free-For-All, Conquest, and Gun Game. Killstreaks and perks reward skilled play, encouraging players to stay active and strategic during matches.
+
+Visually, Bullet Force features realistic 3D environments, detailed weapon models, and fluid animations. Controls are responsive, making it accessible to new players while still offering depth for competitive ones. The ability to play offline against bots also makes it a strong choice for practice or solo play.
+
+Controls (Keyboard & Mouse)
+
+W, A, S, D – Move
+
+Mouse Movement – Look around / aim
+
+Mouse Left Click – Shoot
+
+Mouse Right Click – Aim down sights
+
+R – Reload
+
+Spacebar – Jump
+
+Shift – Sprint
+
+C – Crouch
+
+F – Use / interact
+
+1–5 – Switch weapons
+
+G – Throw grenade
+
+Esc – Pause menu
+
+Special Features & Mechanics
+
+Online multiplayer and offline bot modes
+
+Customizable weapons and attachments
+
+Multiple game modes and maps
+
+Smooth, skill-based FPS combat
+
+Killstreaks and perk system
+
+Bullet Force offers a polished FPS experience with flexible play options, making it popular among fans of competitive and casual shooter gameplay alike.
