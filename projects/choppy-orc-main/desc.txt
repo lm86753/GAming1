@@ -1,0 +1,27 @@
+Choppy Orc is a fast-paced arcade action game that tests players’ reflexes, timing, and precision. You play as an energetic orc wielding a massive axe, and your goal is to chop as much as possible while avoiding obstacles and hazards. The game is built around short, intense runs where one mistake can end your attempt, encouraging players to retry and improve their timing.
+
+Gameplay is simple but demanding. The orc automatically moves forward, and players must react quickly to incoming obstacles by chopping at the right moment or avoiding danger. As the game progresses, the speed increases and patterns become more complex, making each run more challenging than the last. Success depends on learning rhythms, reacting fast, and staying focused under pressure. The difficulty curve keeps the game engaging and highly replayable.
+
+The art style is colorful and cartoon-like, with exaggerated animations that add personality and humor to the action. Sound effects and visual feedback make each successful chop feel satisfying. Choppy Orc is designed for quick play sessions, making it perfect for arcade-style gaming and high-score chasing.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click / Spacebar – Chop / attack
+
+Mouse – Menu navigation
+
+Keyboard – Minimal or optional depending on version
+
+R (if available) – Restart run
+
+Special Features & Mechanics
+
+Reflex-based, one-button gameplay
+
+Increasing speed and difficulty
+
+High-score focused arcade progression
+
+Quick restarts for repeated attempts
+
+Choppy Orc delivers simple but intense action built around timing and reflexes, offering a fun and challenging arcade experience that rewards persistence and precision.

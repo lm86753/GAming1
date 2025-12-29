@@ -172,6 +172,11 @@
     "title": "Champion Archer"
   },
   {
+    "link": "projects/choppy-orc-main/index.html",
+    "imgSrc": "projects/choppy-orc-main/logo.png",
+    "title": "Choppy Orc"
+  },
+  {
     "link": "projects/chrome-dino/index.html",
     "imgSrc": "projects/chrome-dino/icons/icon-256.png",
     "title": "Chrome Dino"
