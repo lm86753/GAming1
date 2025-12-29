@@ -2,63 +2,86 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <title>BitLife Isolated</title>
+    <title>BitLife | Penguin Labs</title>
     <style>
+      /* 1. Reset background to black */
       body, html {
         margin: 0; padding: 0; width: 100%; height: 100%;
-        background: #000;
+        background: #000 !important;
+        overflow: hidden;
         display: flex; justify-content: center; align-items: center;
-        overflow: hidden;
       }
 
-      /* This is your physical 'Phone' on the screen */
-      #game-frame {
-        width: 450px; 
-        height: 800px;
-        border: 4px solid #333;
-        border-radius: 20px; /* Makes it look like a phone */
+      /* 2. The Dynamic Container */
+      #game-wrapper {
+        /* This forces the game to always be a 9:16 rectangle */
+        /* It will grow to fit the height of the screen automatically */
+        height: 100vh;
+        aspect-ratio: 9 / 16;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         background: #000;
-        overflow: hidden;
       }
 
-      iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
+      /* 3. The Actual Unity Container */
+      #gameContainer {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      /* 4. The Canvas Lock */
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
       }
     </style>
   </head>
   <body>
 
-    <div id="game-frame">
-      <iframe id="bitlife-box" sandbox="allow-scripts allow-same-origin"></iframe>
+    <div id="game-wrapper">
+      <div id="gameContainer"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // We are building a "Fake" HTML file and injecting it into the iframe.
-      // This forces the game to think its 'Screen' is only 450x800 pixels.
-      const gameCode = `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <style>
-              body, html { margin: 0; padding: 0; width: 100vw; height: 100vh; background: #000; overflow: hidden; }
-              #container { width: 100%; height: 100%; }
-              canvas { width: 100% !important; height: 100% !important; }
-            </style>
-          </head>
-          <body>
-            <div id="container"></div>
-            <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></scr` + `ipt>
-            <script>
-              var inst = UnityLoader.instantiate("container", "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json");
-            </scr` + `ipt>
-          </body>
-        </html>
-      `;
+      // Instantiate the game
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer", 
+        "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
+        {
+          onProgress: function(instance, progress) {
+            if (progress === 1) {
+              console.log("Loaded");
+              // Force a layout refresh
+              syncResolution();
+            }
+          }
+        }
+      );
 
-      const blob = new Blob([gameCode], { type: 'text/html' });
-      document.getElementById('bitlife-box').src = URL.createObjectURL(blob);
+      // This function fixes the "Zoomed In" look by telling Unity 
+      // the exact pixels it should be using internally.
+      function syncResolution() {
+        const canvas = document.querySelector('canvas');
+        if (canvas) {
+          // We set internal resolution to High Definition (1080p)
+          // The CSS 'aspect-ratio' handles the stretching/bars.
+          canvas.width = 1080;
+          canvas.height = 1920;
+          window.dispatchEvent(new Event('resize'));
+        }
+      }
+
+      // Listen for the Fullscreen change event
+      window.addEventListener('resize', syncResolution);
+      document.addEventListener('fullscreenchange', syncResolution);
+      
+      // Run every few seconds to prevent Unity from breaking the ratio
+      setInterval(syncResolution, 2000);
     </script>
   </body>
 </html>
