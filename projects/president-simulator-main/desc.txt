@@ -1,0 +1,29 @@
+President Simulator is a strategy and decision-making simulation game where players take on the role of a country’s president. The objective is to lead the nation successfully by making political, economic, and social decisions while maintaining public approval and balancing limited resources. Every choice affects different groups within the country, and poor decisions can lead to unrest, economic collapse, or removal from office.
+
+Gameplay revolves around reading scenarios, responding to events, and managing key national indicators such as money, popularity, security, and public happiness. Players are regularly presented with dilemmas—ranging from policy changes and budget decisions to emergencies and public demands—and must choose how to respond. Each decision has consequences, sometimes immediate and sometimes long-term, forcing players to think strategically rather than react emotionally. There is no single correct path to success, and different playstyles can lead to very different outcomes.
+
+The visual style is simple and clean, focusing on text, icons, and meters rather than complex graphics. This design keeps attention on decision-making and cause-and-effect relationships. President Simulator is especially appealing to players who enjoy strategy games, management systems, and experimenting with different leadership approaches.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Select decisions and interact with menus
+
+Mouse Cursor – Navigate options and information panels
+
+Keyboard – Not required
+
+Menu Buttons – Review stats, progress, and game information
+
+Special Features & Mechanics
+
+Choice-driven political simulation
+
+Multiple endings based on player decisions
+
+Resource and approval management
+
+Random events that change each playthrough
+
+Emphasis on strategy and long-term planning
+
+President Simulator offers a thoughtful and engaging experience that challenges players to consider the consequences of leadership and decision-making in a dynamic political environment.

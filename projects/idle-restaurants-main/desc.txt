@@ -1,0 +1,29 @@
+Idle Restaurants is an incremental management game where players build and grow a successful food business from the ground up. Starting with a small restaurant, the objective is to serve customers, earn money, and expand into a restaurant empire through smart upgrades and automation. The game focuses on long-term progression rather than fast reflexes, making it ideal for relaxed, idle-style play.
+
+Gameplay revolves around managing food production, customer flow, and staff efficiency. Players invest earnings into upgrading kitchens, dining areas, and equipment to serve customers faster and increase profits. As the restaurant grows, new menu items, locations, and features unlock, adding depth and variety. Hiring managers and staff allows restaurants to operate automatically, generating income even when the player is not actively playing. Strategic decisions—such as which upgrades to prioritize—play a major role in maximizing efficiency and revenue.
+
+The visual style is colorful and approachable, with simple animations that make the restaurant feel lively without being overwhelming. Clear menus and progress indicators help players track growth easily. Idle Restaurants rewards patience and planning, offering a satisfying sense of progression as small businesses evolve into large, automated operations.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Interact with stations, serve customers, purchase upgrades
+
+Mouse Cursor – Navigate menus and manage restaurants
+
+Keyboard – Not required
+
+Menu Buttons – Hire staff, unlock upgrades, and expand locations
+
+Special Features & Mechanics
+
+Idle and offline earnings system
+
+Upgrade-based restaurant expansion
+
+Automation through staff and managers
+
+Multiple restaurants and unlockable locations
+
+Incremental progression focused on efficiency
+
+Idle Restaurants delivers a calm, rewarding idle management experience centered on growth, automation, and strategic decision-making.

@@ -1,0 +1,29 @@
+Idle Mining Empire is an incremental idle management game where players build and expand a mining operation to generate massive profits. Starting with a small mine, the objective is to extract resources, upgrade production, and automate operations to earn money even while you’re away. Progression is driven by strategic upgrades, reinvestment, and long-term optimization rather than fast reflexes.
+
+Gameplay centers on managing multiple layers of production. Players invest in miners, shafts, elevators, and warehouses to increase efficiency and output. As income grows, new mines and deeper levels unlock, offering higher rewards and new challenges. Automation managers can be hired to keep operations running without constant input, allowing the game to function as both an active clicker and a passive idle experience. Deciding when and where to spend money is key to maximizing profits and accelerating growth.
+
+The visual style is clean and colorful, with simple animations that clearly show mining progress. The interface is designed to make numbers, upgrades, and production chains easy to understand. Idle Mining Empire appeals to players who enjoy watching numbers grow, optimizing systems, and gradually building something massive over time.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Interact with mines, collect rewards, purchase upgrades
+
+Mouse Cursor – Navigate menus and manage operations
+
+Keyboard – Not required
+
+Buttons / Menus – Hire managers, upgrade equipment, unlock new areas
+
+Special Features & Mechanics
+
+Idle and offline income generation
+
+Upgrade-based production scaling
+
+Automation through managers
+
+Multiple mines and progression layers
+
+Long-term incremental growth
+
+Idle Mining Empire offers a satisfying idle progression loop focused on automation, efficiency, and steady expansion, making it ideal for fans of incremental and management-style games.

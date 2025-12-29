@@ -1,0 +1,25 @@
+Sprinter is a fast-paced, timing-based running game where players compete in short sprint races that test reflexes, rhythm, and consistency. The objective is to outrun your opponents by accelerating faster and maintaining top speed, advancing through increasingly difficult races against stronger competitors. What starts as a simple sprint quickly becomes a challenge of perfect timing and endurance.
+
+Gameplay is centered around rapid input rather than movement controls. Players must alternate key presses in a steady rhythm to build and maintain speed. Pressing too slowly causes you to fall behind, while pressing out of rhythm can reduce efficiency. As you progress, opponents become faster and more demanding, requiring tighter timing and better focus. There are no shortcuts—winning depends entirely on your ability to keep a consistent pace under pressure.
+
+The visual style is simple and minimal, keeping attention on the race and competitors. Short race lengths make the game ideal for quick play sessions, while the increasing difficulty encourages repeated attempts to improve performance. Sprinter rewards practice, coordination, and persistence.
+
+Controls (Keyboard)
+
+Left Arrow + Right Arrow – Alternate rapidly to run faster
+
+Keyboard Only – Mouse not required
+
+Restart Button – Retry race after finishing or losing
+
+Special Features & Mechanics
+
+Rhythm-based sprinting mechanic
+
+Increasing difficulty with faster opponents
+
+Short, intense races focused on timing
+
+Simple design with skill-based progression
+
+Sprinter delivers a straightforward but challenging racing experience that turns speed into a test of rhythm and precision, making it both addictive and competitive.

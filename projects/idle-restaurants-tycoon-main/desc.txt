@@ -1,0 +1,29 @@
+Idle Restaurants Tycoon is an idle management and simulation game where players build and expand a chain of restaurants into a profitable food empire. Starting with a small, basic restaurant, the objective is to serve customers efficiently, earn money, and reinvest profits into upgrades and expansion. The game emphasizes long-term growth, automation, and smart decision-making rather than fast-paced action.
+
+Gameplay centers on managing different parts of the restaurant, including kitchens, serving stations, seating areas, and staff. As customers arrive, players earn money that can be used to upgrade equipment, unlock new menu items, and improve service speed. Hiring managers and employees allows the restaurant to run automatically, generating income even while the player is idle or offline. As progress continues, new restaurants and locations unlock, each with higher earning potential and fresh challenges.
+
+The visual style is colorful and friendly, with smooth animations that make the restaurant feel busy and alive. Clear progress indicators and upgrade menus help players track growth and optimize efficiency. Idle Restaurants Tycoon is designed for casual play sessions, offering steady progression and satisfying expansion over time.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click – Collect money, interact with stations, purchase upgrades
+
+Mouse Cursor – Navigate menus and manage restaurants
+
+Keyboard – Not required
+
+Menu Buttons – Hire staff, assign managers, and unlock new locations
+
+Special Features & Mechanics
+
+Idle and offline income generation
+
+Automation through managers and employees
+
+Multiple restaurants and expansion areas
+
+Upgrade-based progression system
+
+Long-term tycoon-style management gameplay
+
+Idle Restaurants Tycoon provides a relaxed but engaging idle experience focused on building, automating, and optimizing a growing restaurant empire.

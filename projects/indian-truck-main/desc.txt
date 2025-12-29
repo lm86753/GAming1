@@ -1,0 +1,37 @@
+Indian Truck is a driving and transport simulation game that puts players behind the wheel of heavy trucks inspired by Indian roads and cargo transport. The main objective is to drive safely across long routes, deliver cargo, and navigate challenging roads while maintaining control of your vehicle. The game focuses on realistic driving conditions rather than fast racing, emphasizing patience, balance, and precision.
+
+Gameplay involves steering large trucks through uneven terrain, narrow roads, sharp turns, and traffic-filled highways. Because of the truck’s weight and size, players must carefully manage speed, braking, and steering to avoid tipping over or crashing. Some levels or modes require delivering cargo intact, adding an extra challenge as sudden movements can cause damage or loss. Progression may include unlocking new trucks, routes, or environments, each offering different handling and difficulty.
+
+The visual style is simple but immersive, often featuring rural roads, highways, and landscapes inspired by India. The slower pace makes the game more about control and realism than reflexes. Indian Truck appeals to players who enjoy driving simulators, cargo transport games, and relaxed but challenging vehicle control.
+
+Controls (Keyboard & Mouse)
+
+W / Up Arrow – Accelerate
+
+S / Down Arrow – Brake / Reverse
+
+A / Left Arrow – Steer left
+
+D / Right Arrow – Steer right
+
+Spacebar – Handbrake
+
+Mouse Movement – Camera control (if available)
+
+R – Reset truck position
+
+Esc – Pause menu
+
+Special Features & Mechanics
+
+Truck driving inspired by Indian transport routes
+
+Physics-based vehicle handling
+
+Cargo delivery and balance management
+
+Multiple trucks and routes
+
+Focus on realistic, controlled driving
+
+Indian Truck delivers a grounded driving experience centered on heavy vehicles, careful navigation, and the challenge of transporting cargo across demanding roads.

@@ -1,0 +1,43 @@
+Masked Forces is a fast-paced first-person shooter that focuses on close-quarters combat, weapon variety, and skill-based gunplay. Players enter masked-soldier arenas and compete in action-packed matches against AI or other players. The main objective depends on the mode, but generally involves eliminating enemies, surviving waves, or achieving the highest score.
+
+Gameplay emphasizes quick reactions, movement, and accuracy. Players can choose from a wide range of weapons, including pistols, assault rifles, shotguns, sniper rifles, and heavy weapons. Different game modes such as Deathmatch, Survival, and PvP offer varied challenges, while the ability to play offline against bots makes it accessible for practice or solo play. Health packs and ammo pickups are scattered around maps, rewarding map awareness and aggressive play.
+
+The game features clean 3D environments and smooth animations designed to keep combat readable and responsive. Customization options allow players to adjust loadouts and difficulty, adding replay value. Masked Forces is easy to pick up but provides enough depth to satisfy fans of classic arcade-style shooters.
+
+Controls (Keyboard & Mouse)
+
+W, A, S, D – Move
+
+Mouse Movement – Look around / aim
+
+Mouse Left Click – Shoot
+
+Mouse Right Click – Aim down sights
+
+R – Reload
+
+Spacebar – Jump
+
+Shift – Sprint
+
+C – Crouch
+
+1–5 – Switch weapons
+
+F – Pick up items / interact
+
+Esc – Pause menu
+
+Special Features & Mechanics
+
+Multiple FPS game modes (Deathmatch, Survival, PvP)
+
+Wide selection of weapons
+
+Offline play against AI bots
+
+Fast-paced, arcade-style combat
+
+Customizable difficulty and loadouts
+
+Masked Forces delivers straightforward, action-heavy FPS gameplay with flexible modes, making it a solid choice for players who enjoy quick, accessible shooter experiences.

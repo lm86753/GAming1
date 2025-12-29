@@ -1,0 +1,29 @@
+Jetpack Joyride is a fast-paced side-scrolling endless runner where players control Barry Steakfries as he escapes a secret laboratory using experimental jetpacks. The main objective is to fly as far as possible, collecting coins while avoiding deadly obstacles like lasers, missiles, and zappers. Each run ends when Barry crashes, but progress carries over through upgrades and unlocks.
+
+Gameplay is based on simple, responsive controls. Barry automatically moves forward, and players tap or hold to control the jetpack’s height. Timing is crucial, as obstacles appear quickly and often in complex patterns. Throughout runs, players can collect coins, complete missions, and grab power-ups such as vehicles and special jetpacks that temporarily change gameplay. Coins are used to purchase upgrades that improve survivability, coin collection, and performance, encouraging long-term progression.
+
+The game’s visual style is colorful and cartoonish, with smooth animations and humorous effects that keep the action lively. Frequent missions, achievements, and cosmetic unlocks provide strong replay value. Jetpack Joyride is easy to learn but challenging to master, making it enjoyable for both casual players and those aiming for high scores.
+
+Controls (Keyboard & Mouse)
+
+Mouse Left Click / Spacebar (Hold) – Fly upward with jetpack
+
+Release – Descend
+
+Mouse – Menu navigation
+
+Keyboard – Minimal beyond basic control
+
+Special Features & Mechanics
+
+Endless runner gameplay with increasing difficulty
+
+Simple one-button control system
+
+Power-ups and vehicles that alter gameplay
+
+Upgrade and mission system for progression
+
+Lighthearted humor and cartoon visuals
+
+Jetpack Joyride delivers a classic, addictive endless-runner experience built around tight controls, constant action, and rewarding progression.
