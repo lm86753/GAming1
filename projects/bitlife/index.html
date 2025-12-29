@@ -11,32 +11,28 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background: #000 !important; /* Side and top/bottom bars */
+        background: #000 !important;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
+      /* THE LOCK: We use px values to stop the "Too Wide" stretching */
       #gameContainer {
-        /* FIX: Set height to 90% of screen so it's guaranteed to fit vertically */
-        height: 90vh !important; 
-        /* FIX: Set width based on that height (9:16 ratio) */
-        width: calc(90vh * 9 / 16) !important;
-        max-width: 95vw;
-        max-height: 95vh;
+        width: 450px !important; 
+        height: 800px !important;
+        /* Safety for smaller screens/laptops */
+        max-width: 95vw !important;
+        max-height: 90vh !important;
         background: #000;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        box-shadow: 0 0 20px rgba(255,255,255,0.1);
       }
 
       canvas {
-        /* This forces the game graphics to stay inside our sized box */
         width: 100% !important;
         height: 100% !important;
         display: block;
-        object-fit: contain !important;
       }
     </style>
   </head>
@@ -52,25 +48,25 @@
         {
           onProgress: function(instance, progress) {
             if (progress === 1) {
-                // Ensure the canvas respects the container immediately on load
-                applyScaleFix();
+                // Force a resize check when it finishes loading
+                setTimeout(forcePhoneRatio, 500);
             }
           }
         }
       );
 
-      function applyScaleFix() {
+      function forcePhoneRatio() {
         const canvas = document.querySelector('canvas');
         if (canvas) {
-            canvas.style.width = "100%";
-            canvas.style.height = "100%";
-            // This triggers Unity to rethink its internal UI scale
+            // Force the canvas attributes to match our 9:16 ratio
+            canvas.setAttribute('width', '450');
+            canvas.setAttribute('height', '800');
             window.dispatchEvent(new Event('resize'));
         }
       }
 
-      // Check every second to make sure it hasn't popped out of place
-      setInterval(applyScaleFix, 1000);
+      // Keep the "Too Wide" bug from coming back
+      setInterval(forcePhoneRatio, 2000);
     </script>
   </body>
 </html>
