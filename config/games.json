@@ -454,11 +454,6 @@
     "title": "Idle Restaurants"
   },
   {
-    "link": "projects/idle-restaurants-tycoon-main/index.html",
-    "imgSrc": "projects/idle-restaurants-tycoon-main/logo.png",
-    "title": "Idle Restaurants Tycoon"
-  },
-  {
     "link": "projects/impossiblequiz/index.html",
     "imgSrc": "projects/impossiblequiz/impossiblequiz.png",
     "title": "Impossible Quiz"
@@ -472,11 +467,6 @@
     "link": "projects/interactivebuddy/index.html",
     "imgSrc": "projects/interactivebuddy/interactivebuddy.jpg",
     "title": "Interactive Buddy"
-  },
-  {
-    "link": "projects/jetpack-joyride-main/index.html",
-    "imgSrc": "projects/jetpack-joyride-main/splash.jpg",
-    "title": "Jetpack Joyride"
   },
   {
     "link": "projects/just-one-boss/index.html",

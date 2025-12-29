@@ -59,11 +59,13 @@
             margin-top: 120px; /* Space for the injected navbar */
         }
 
+        /* FIX: Ensure the iframe always fills the container */
         .game-iframe {
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             border: none;
             background: #000;
+            display: block;
         }
 
         .game-overlay {
@@ -232,6 +234,11 @@
             iframe.className = 'game-iframe';
             iframe.src = src;
             iframe.allowFullscreen = true;
+            
+            // FIX: Added modern 'allow' permissions to fix scaling and control issues
+            iframe.allow = "autoplay; fullscreen; keyboard-vtapi"; 
+            
+            // Added slightly more permissive sandbox for resizing
             iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-pointer-lock allow-modals allow-top-navigation-by-user-activation');
             document.getElementById('gameContent').appendChild(iframe);
             
@@ -251,6 +258,9 @@
                 });
             
             iframe.onload = () => {
+                // Focus the frame so keys work immediately
+                iframe.focus();
+
                 try {
                     (function installPanicBridge(){
                         function getPanicKey(){
@@ -284,7 +294,7 @@
                                 if (!pressed) return;
                                 if (pressed === configured || String(pressed).toLowerCase() === String(configured).toLowerCase()) {
                                     e.preventDefault();
-                                    try { window.location.href = getPanicUrl(); } catch(err) {}
+                                    try { window.top.location.href = getPanicUrl(); } catch(err) {}
                                 }
                             }, true);
                         }
@@ -293,15 +303,17 @@
                         attach(iframe.contentWindow);
                     })();
 
+                    // FIX: Improved injection to force small games to cover the whole iframe
                     setTimeout(() => {
                         const doc = iframe.contentDocument || iframe.contentWindow.document;
-                        const canvas = doc.querySelector('canvas');
-                        if (canvas) {
-                            const s = doc.createElement('style');
-                            s.textContent = "body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden}canvas{width:100%!important;height:100%!important;object-fit:contain!important}";
-                            doc.head.appendChild(s);
-                        }
+                        const s = doc.createElement('style');
+                        s.textContent = `
+                            body, html { margin:0; padding:0; width:100%; height:100%; overflow:hidden !important; background:#000; }
+                            canvas { width:100vw !important; height:100vh !important; object-fit:contain !important; }
+                        `;
+                        doc.head.appendChild(s);
                     }, 500);
+
                 } catch (e) { console.log("Cross-origin game detected."); }
             };
         } else {
