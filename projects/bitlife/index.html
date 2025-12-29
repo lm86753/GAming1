@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>BitLife | Penguin Labs</title>
     <style>
-      /* 1. Black background for the whole screen */
       body, html {
         margin: 0; padding: 0; width: 100%; height: 100%;
         background: #000 !important;
@@ -12,23 +11,23 @@
         display: flex; justify-content: center; align-items: center;
       }
 
-      /* 2. The "Outer Box" - This is your hitbox/visual frame */
-      #scaler-box {
-        width: 400px; /* Small width */
-        height: 711px; /* 9:16 Ratio */
-        position: relative;
-        overflow: hidden;
-        background: #000;
-        border: 2px solid #333; /* Visual border to see the box */
+      /* This is the magic container */
+      #game-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* 3. The "Inner Game" - We let Unity THINK it's big, then shrink it */
       #gameContainer {
-        width: 100% !important;
-        height: 100% !important;
-        position: absolute;
-        top: 0;
-        left: 0;
+        /* We force the game to load at a high resolution so it's not blurry */
+        width: 1080px !important;
+        height: 1920px !important;
+        
+        /* Then we shrink it to fit your specific screen height */
+        transform: scale(calc(var(--scale-factor, 0.5)));
+        transform-origin: center center;
       }
 
       canvas {
@@ -39,31 +38,35 @@
   </head>
   <body>
 
-    <div id="scaler-box">
+    <div id="game-wrapper">
         <div id="gameContainer"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // Instantiate normally. The CSS 'scaler-box' will now do the heavy lifting.
+      // Function to calculate exactly how much to shrink the game
+      function updateScale() {
+        const screenHeight = window.innerHeight;
+        // BitLife natural height is 1920. We want it to be 95% of your screen.
+        const scale = (screenHeight * 0.95) / 1920;
+        document.documentElement.style.setProperty('--scale-factor', scale);
+      }
+
+      window.addEventListener('resize', updateScale);
+      updateScale();
+
       var gameInstance = UnityLoader.instantiate(
         "gameContainer", 
         "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
         {
             onProgress: function(instance, progress) {
                 if (progress === 1) {
-                    // Final force to ensure the canvas stays inside the 400px box
-                    document.querySelector('canvas').style.position = "static";
+                    updateScale();
                     window.dispatchEvent(new Event('resize'));
                 }
             }
         }
       );
-      
-      // Force a resize event every few seconds to keep the UI buttons from drifting
-      setInterval(function() {
-          window.dispatchEvent(new Event('resize'));
-      }, 3000);
     </script>
   </body>
 </html>
