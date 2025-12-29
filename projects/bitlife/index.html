@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>BitLife</title>
+    <title>BitLife | Penguin Labs</title>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       
+      /* This centers everything on the screen */
       body, html {
         width: 100%;
         height: 100%;
@@ -17,41 +18,49 @@
         align-items: center;
       }
 
-      #gameContainer {
-        /* This prevents the "zoomed in" look by locking the width relative to height */
-        height: 100vh;
-        width: 56.25vh; /* This is 9/16 of the height */
-        max-width: 100vw;
-        background: #000;
+      /* This is the "Anchor" that stays centered and square/portrait */
+      .game-screen-fixed {
         position: relative;
+        height: 100vh;
+        width: 56.25vh; /* This forces the 9:16 phone ratio */
+        max-width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+      }
+
+      /* The actual element Unity attaches to */
+      #gameContainer {
+        width: 100% !important;
+        height: 100% !important;
       }
 
       canvas {
         width: 100% !important;
         height: 100% !important;
         display: block;
-        /* object-fit ensures the game content stays inside the bounds */
-        object-fit: contain;
       }
     </style>
   </head>
   <body>
-    <div id="gameContainer"></div>
+
+    <div class="game-screen-fixed">
+        <div id="gameContainer"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // We pass the explicit width/height to the loader to stop the auto-zoom
       var gameInstance = UnityLoader.instantiate(
         "gameContainer", 
         "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
         {
           onProgress: function(instance, progress) {
             if (progress === 1) {
-              // Once loaded, we double-check the canvas size
-              const canvas = document.querySelector('canvas');
+              // Forced check to ensure the canvas didn't jump out of its container
+              var canvas = document.querySelector('canvas');
               if (canvas) {
-                canvas.style.width = "100%";
-                canvas.style.height = "100%";
+                canvas.style.position = "relative";
               }
             }
           }
