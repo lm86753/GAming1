@@ -5,37 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BitLife</title>
     <style>
-      /* 1. Basic Reset */
       * { margin: 0; padding: 0; box-sizing: border-box; }
       
-      /* 2. Full screen black background */
       body, html {
         width: 100%;
         height: 100%;
-        background-color: #000;
+        background-color: #000; /* Black background */
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      /* 3. The Phone Container 
-         We set this to a fixed "Phone Aspect Ratio" relative to your screen height.
-         This creates the visual "box" for the game. */
+      /* THE PHONE CONTAINER */
       #gameContainer {
-        height: 95vh;            /* Takes up 95% of screen height */
-        width: 53.44vh;          /* (95 * 9 / 16) = Keeps it perfectly 9:16 ratio */
+        /* 1. Size Logic: Always fit on screen, maintain 9:16 phone ratio */
+        height: 95vh;
+        width: calc(95vh * 9 / 16); 
+        
+        /* 2. The Cage Logic: Nothing can leave this box */
+        position: relative !important; 
+        overflow: hidden !important;
+        
+        /* Visuals */
         background: #000;
-        position: relative;
-        box-shadow: 0 0 30px rgba(50, 50, 50, 0.5); /* Adds a glow so you see the border */
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+        border: 2px solid #222;
       }
 
-      /* 4. Canvas Styling 
-         We force the canvas to fit into the container visually, 
-         even if the internal resolution is huge. */
+      /* THE CANVAS (The Red Game Screen) */
       canvas {
+        /* 3. Force it to sit at 0,0 inside the box */
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        
+        /* 4. Force it to fill the box exactly */
         width: 100% !important;
         height: 100% !important;
+        
+        /* 5. Object Fit ensures it doesn't stretch weirdly */
+        object-fit: fill !important;
         display: block;
       }
     </style>
@@ -52,29 +62,29 @@
         {
           onProgress: function(instance, progress) {
             if (progress === 1) {
-               console.log("Game Loaded - Applying HD Fix");
-               forceHDResolution();
+               console.log("Game Loaded");
+               // Run the layout fixer
+               fixLayout();
             }
           }
         }
       );
 
-      // THIS IS THE FIX FOR THE "ZOOMED IN" BUTTONS
-      function forceHDResolution() {
-        var canvas = document.querySelector("#gameContainer canvas");
-        if (!canvas) return;
-
-        // 1. We tell the game: "You are running on a 1080p Phone screen"
-        // This makes the text and buttons small and sharp.
-        canvas.width = 1080;
-        canvas.height = 1920;
-
-        // 2. We trigger a resize event to make Unity accept the new size
-        window.dispatchEvent(new Event('resize'));
+      function fixLayout() {
+        var canvas = document.querySelector('canvas');
+        if (canvas) {
+            // FIX: We manually set the internal resolution to High Quality (1080p)
+            // But the CSS above forces it to visually shrink to fit the box.
+            canvas.width = 1080;
+            canvas.height = 1920;
+            
+            // Trigger a resize to update the UI
+            window.dispatchEvent(new Event('resize'));
+        }
       }
 
-      // Run the fix repeatedly for the first few seconds to ensure Unity doesn't override it
-      setInterval(forceHDResolution, 2000);
+      // Keep checking to ensure Unity doesn't break out again
+      setInterval(fixLayout, 1000);
     </script>
   </body>
 </html>
