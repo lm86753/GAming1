@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BitLife | Penguin Labs</title>
     <style>
-      /* 1. Force the background to be black so you don't see the stretch */
+      /* Force the page to be black to create the side bars */
       html, body {
-        margin: 0; padding: 0; width: 100%; height: 100%;
-        background: #000 !important;
-        display: flex; justify-content: center; align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000 !important;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* 2. Create a 'Phone' shaped container that cannot grow wider than 56vh */
       #gameContainer {
-        width: 56.25vh !important; 
-        height: 100vh !important;
-        max-width: 100vw !important;
-        margin: auto;
-        position: relative;
-        background: #000;
-        box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* 3. The 'Nuclear Option' for CSS: force the canvas to match the container */
+      /* THE CRITICAL FIX: object-fit contain forces black bars on the sides */
       canvas {
-        width: 100% !important;
-        height: 100% !important;
-        position: absolute !important;
-        top: 0; left: 0;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 9 / 16 !important; /* Forces the phone shape */
+        object-fit: contain !important; 
+        background: #000;
       }
     </style>
   </head>
@@ -39,36 +42,30 @@
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // 4. THE REAL FIX: Tell the UnityLoader exactly what size to be in pixels
-      // This stops it from guessing the width of your monitor.
       var gameInstance = UnityLoader.instantiate(
         "gameContainer", 
         "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
         {
           onProgress: function(instance, progress) {
             if (progress === 1) {
-              console.log("Loaded");
-              fixSize();
+              applyStyleFix();
             }
           }
         }
       );
 
-      // 5. This function runs repeatedly to fight the Unity auto-stretcher
-      function fixSize() {
-        var canvas = document.querySelector('canvas');
+      function applyStyleFix() {
+        const canvas = document.querySelector('canvas');
         if (canvas) {
-            canvas.style.width = "100%";
-            canvas.style.height = "100%";
-            // Force Unity to report the correct aspect ratio internally
-            window.dispatchEvent(new Event('resize'));
+          // This overrides the internal Unity width/height settings
+          canvas.style.width = "auto";
+          canvas.style.height = "100%";
+          canvas.style.aspectRatio = "9/16";
         }
       }
-      
-      // Run the fix every second for the first 5 seconds just in case
-      for(let i=1; i<=5; i++) {
-        setTimeout(fixSize, i * 1000);
-      }
+
+      // Run the fix repeatedly to prevent Unity from "resetting" to full width
+      setInterval(applyStyleFix, 1000);
     </script>
   </body>
 </html>
