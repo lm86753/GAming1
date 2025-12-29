@@ -3,39 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>BitLife | Penguin Labs</title>
+    <title>BitLife</title>
     <style>
-      /* 1. Reset everything to black */
+      /* 1. Basic Reset */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      /* 2. Full screen black background */
       body, html {
-        margin: 0;
-        padding: 0;
         width: 100%;
         height: 100%;
-        background-color: #000 !important;
+        background-color: #000;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      /* 2. This is the "Virtual Phone" */
-      /* We force it to be HUGE (1080p) so the UI layout is perfect */
-      #game-scaler {
-        width: 1080px;
-        height: 1920px;
-        position: relative;
-        /* The origin allows us to scale it from the center out */
-        transform-origin: center center;
-        background: #000;
-        box-shadow: 0 0 50px rgba(0,0,0,0.5);
-      }
-
-      /* 3. The actual game fills the Virtual Phone */
+      /* 3. The Phone Container 
+         We set this to a fixed "Phone Aspect Ratio" relative to your screen height.
+         This creates the visual "box" for the game. */
       #gameContainer {
-        width: 100% !important;
-        height: 100% !important;
+        height: 95vh;            /* Takes up 95% of screen height */
+        width: 53.44vh;          /* (95 * 9 / 16) = Keeps it perfectly 9:16 ratio */
+        background: #000;
+        position: relative;
+        box-shadow: 0 0 30px rgba(50, 50, 50, 0.5); /* Adds a glow so you see the border */
       }
 
+      /* 4. Canvas Styling 
+         We force the canvas to fit into the container visually, 
+         even if the internal resolution is huge. */
       canvas {
         width: 100% !important;
         height: 100% !important;
@@ -45,57 +42,39 @@
   </head>
   <body>
 
-    <div id="game-scaler">
-        <div id="gameContainer"></div>
-    </div>
+    <div id="gameContainer"></div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // 1. Start the game normally
       var gameInstance = UnityLoader.instantiate(
         "gameContainer", 
         "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
         {
           onProgress: function(instance, progress) {
             if (progress === 1) {
-               console.log("Game Loaded");
-               // Force a resize calculation once loaded
-               resizeGame();
+               console.log("Game Loaded - Applying HD Fix");
+               forceHDResolution();
             }
           }
         }
       );
 
-      // 2. The Magic Scaler Function
-      function resizeGame() {
-        var scaler = document.getElementById("game-scaler");
-        var width = window.innerWidth;
-        var height = window.innerHeight;
+      // THIS IS THE FIX FOR THE "ZOOMED IN" BUTTONS
+      function forceHDResolution() {
+        var canvas = document.querySelector("#gameContainer canvas");
+        if (!canvas) return;
 
-        // We want to fit a 1080x1920 box into the current screen
-        // Calculate the scale ratio for width and height
-        var scaleX = width / 1080;
-        var scaleY = height / 1920;
+        // 1. We tell the game: "You are running on a 1080p Phone screen"
+        // This makes the text and buttons small and sharp.
+        canvas.width = 1080;
+        canvas.height = 1920;
 
-        // Pick the smaller scale so it fits perfectly without cutting off
-        var scaleToFit = Math.min(scaleX, scaleY);
-
-        // Limit the max size so it doesn't get pixelated on huge screens
-        // (Optional: remove this line if you want it to get massive)
-        if (scaleToFit > 1) scaleToFit = 1;
-
-        // Apply the scale transform
-        scaler.style.transform = "scale(" + scaleToFit + ")";
+        // 2. We trigger a resize event to make Unity accept the new size
+        window.dispatchEvent(new Event('resize'));
       }
 
-      // 3. Listen for window resizing (and run it immediately)
-      window.addEventListener('resize', resizeGame);
-      
-      // Run it every 100ms for a second to catch any loading jitters
-      var checkInterval = setInterval(resizeGame, 100);
-      setTimeout(function() { clearInterval(checkInterval); }, 2000);
-      
-      resizeGame();
+      // Run the fix repeatedly for the first few seconds to ensure Unity doesn't override it
+      setInterval(forceHDResolution, 2000);
     </script>
   </body>
 </html>
