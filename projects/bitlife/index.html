@@ -2,71 +2,68 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>BitLife | Penguin Labs</title>
     <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      
+      /* 1. Black background for the whole screen */
       body, html {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+        margin: 0; padding: 0; width: 100%; height: 100%;
         background: #000 !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        overflow: hidden;
+        display: flex; justify-content: center; align-items: center;
       }
 
-      /* THE LOCK: We use px values to stop the "Too Wide" stretching */
-      #gameContainer {
-        width: 450px !important; 
-        height: 800px !important;
-        /* Safety for smaller screens/laptops */
-        max-width: 95vw !important;
-        max-height: 90vh !important;
-        background: #000;
+      /* 2. The "Outer Box" - This is your hitbox/visual frame */
+      #scaler-box {
+        width: 400px; /* Small width */
+        height: 711px; /* 9:16 Ratio */
         position: relative;
-        box-shadow: 0 0 20px rgba(255,255,255,0.1);
+        overflow: hidden;
+        background: #000;
+        border: 2px solid #333; /* Visual border to see the box */
+      }
+
+      /* 3. The "Inner Game" - We let Unity THINK it's big, then shrink it */
+      #gameContainer {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       canvas {
         width: 100% !important;
         height: 100% !important;
-        display: block;
       }
     </style>
   </head>
   <body>
 
-    <div id="gameContainer"></div>
+    <div id="scaler-box">
+        <div id="gameContainer"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
+      // Instantiate normally. The CSS 'scaler-box' will now do the heavy lifting.
       var gameInstance = UnityLoader.instantiate(
         "gameContainer", 
         "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
         {
-          onProgress: function(instance, progress) {
-            if (progress === 1) {
-                // Force a resize check when it finishes loading
-                setTimeout(forcePhoneRatio, 500);
+            onProgress: function(instance, progress) {
+                if (progress === 1) {
+                    // Final force to ensure the canvas stays inside the 400px box
+                    document.querySelector('canvas').style.position = "static";
+                    window.dispatchEvent(new Event('resize'));
+                }
             }
-          }
         }
       );
-
-      function forcePhoneRatio() {
-        const canvas = document.querySelector('canvas');
-        if (canvas) {
-            // Force the canvas attributes to match our 9:16 ratio
-            canvas.setAttribute('width', '450');
-            canvas.setAttribute('height', '800');
-            window.dispatchEvent(new Event('resize'));
-        }
-      }
-
-      // Keep the "Too Wide" bug from coming back
-      setInterval(forcePhoneRatio, 2000);
+      
+      // Force a resize event every few seconds to keep the UI buttons from drifting
+      setInterval(function() {
+          window.dispatchEvent(new Event('resize'));
+      }, 3000);
     </script>
   </body>
 </html>
