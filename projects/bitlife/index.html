@@ -6,77 +6,64 @@
     <style>
       body, html {
         margin: 0; padding: 0; width: 100%; height: 100%;
-        background: #000 !important;
+        background: #000;
         overflow: hidden;
+        /* Flex ensures the game is centered without using 'transform' */
         display: flex; justify-content: center; align-items: center;
       }
 
-      /* This container acts as the 'Anchor' */
-      #game-box {
+      /* 1. We create a container that keeps the 9:16 shape naturally */
+      #game-area {
         position: relative;
         height: 100vh;
-        aspect-ratio: 9 / 16;
+        width: calc(100vh * 9 / 16);
+        max-width: 100vw;
         background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
+      /* 2. Unity attaches here. We force it to fill the box 100% */
       #gameContainer {
-        width: 100%;
-        height: 100%;
-      }
-
-      /* We force the canvas to be a 'Slave' to the game-box */
-      canvas {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        object-fit: contain !important;
+      }
+
+      /* 3. This ensures the mouse 'hits' the right spot */
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+        pointer-events: auto !important;
+        cursor: pointer !important;
       }
     </style>
   </head>
   <body>
 
-    <div id="game-box">
+    <div id="game-area">
       <div id="gameContainer"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // 1. Start the game
-      var gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json");
-
-      // 2. The Mutation Observer: This watches for Unity trying to glitch the size
-      const lockStyle = () => {
-        const canvas = document.querySelector('canvas');
-        if (canvas) {
-          // Force internal resolution to HD to stop the 'Zoomed UI' glitch
-          if (canvas.width !== 1080) canvas.width = 1080;
-          if (canvas.height !== 1920) canvas.height = 1920;
-          
-          // Force CSS to stay mapped to the center box
-          canvas.style.setProperty('width', '100%', 'important');
-          canvas.style.setProperty('height', '100%', 'important');
-          canvas.style.setProperty('position', 'absolute', 'important');
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer", 
+        "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
+        {
+          onProgress: function(instance, progress) {
+            if (progress === 1) {
+              // Trigger a resize so Unity maps the mouse clicks correctly
+              setTimeout(() => {
+                window.dispatchEvent(new Event('resize'));
+              }, 500);
+            }
+          }
         }
-      };
+      );
 
-      // Create the observer to catch glitches in real-time
-      const observer = new MutationObserver(lockStyle);
-      
-      // Start watching the game container for any changes
-      observer.observe(document.getElementById('game-box'), { 
-        attributes: true, 
-        childList: true, 
-        subtree: true 
+      // Force click focus: clicking the page ensures Unity 'grabs' your mouse
+      window.addEventListener('mousedown', function() {
+          window.focus();
       });
-
-      // Also run the fix on a loop just in case
-      setInterval(lockStyle, 500);
-      window.addEventListener('resize', lockStyle);
     </script>
   </body>
 </html>
