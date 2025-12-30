@@ -1,0 +1,43 @@
+Drift Hunters is a 3D driving and racing game focused entirely on drifting and car control. Players take the wheel of high-performance cars and aim to score as many drift points as possible by maintaining long, smooth drifts around tracks and open areas. The objective is to earn points and money through drifting, which can then be used to unlock new cars and upgrade performance.
+
+Gameplay rewards precision and style over speed. Players must control throttle, steering, and braking to keep the car sliding at the right angle without spinning out. Longer drifts, higher speeds, and clean transitions between turns earn more points. Multiple tracks are available, each designed with wide corners and layouts ideal for drifting. Money earned from successful runs can be spent on engine upgrades, turbo, brakes, suspension, and visual customization, allowing players to fine-tune handling and performance.
+
+The visual style is realistic and clean, with detailed cars and environments that enhance immersion. The physics system provides a satisfying balance between realism and arcade fun, making the game approachable for beginners while still rewarding skilled drivers. Drift Hunters is popular with players who enjoy car tuning, drifting mechanics, and free driving.
+
+Controls (Keyboard & Mouse)
+
+W – Accelerate
+
+S – Brake / Reverse
+
+A – Steer left
+
+D – Steer right
+
+Spacebar – Handbrake (initiate drift)
+
+Shift – Gear up (manual transmission)
+
+Ctrl – Gear down (manual transmission)
+
+Mouse Movement – Camera control
+
+C – Change camera view
+
+R – Reset car position
+
+Esc – Pause menu
+
+Special Features & Mechanics
+
+Drift-focused scoring system
+
+Multiple cars with realistic handling
+
+Extensive upgrade and tuning options
+
+Several tracks designed for drifting
+
+Free drive and practice modes
+
+Drift Hunters delivers a satisfying drifting experience with deep customization, smooth physics, and strong replay value for car and racing enthusiasts.
