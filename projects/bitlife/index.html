@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>BitLife | Penguin Labs</title>
     <style>
-      /* 1. Reset background to black */
       body, html {
         margin: 0; padding: 0; width: 100%; height: 100%;
         background: #000 !important;
@@ -12,76 +11,72 @@
         display: flex; justify-content: center; align-items: center;
       }
 
-      /* 2. The Dynamic Container */
-      #game-wrapper {
-        /* This forces the game to always be a 9:16 rectangle */
-        /* It will grow to fit the height of the screen automatically */
+      /* This container acts as the 'Anchor' */
+      #game-box {
+        position: relative;
         height: 100vh;
         aspect-ratio: 9 / 16;
-        
+        background: #000;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        background: #000;
       }
 
-      /* 3. The Actual Unity Container */
       #gameContainer {
-        width: 100% !important;
-        height: 100% !important;
+        width: 100%;
+        height: 100%;
       }
 
-      /* 4. The Canvas Lock */
+      /* We force the canvas to be a 'Slave' to the game-box */
       canvas {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        display: block;
+        object-fit: contain !important;
       }
     </style>
   </head>
   <body>
 
-    <div id="game-wrapper">
+    <div id="game-box">
       <div id="gameContainer"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/UnityLoader.js"></script>
     <script>
-      // Instantiate the game
-      var gameInstance = UnityLoader.instantiate(
-        "gameContainer", 
-        "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json",
-        {
-          onProgress: function(instance, progress) {
-            if (progress === 1) {
-              console.log("Loaded");
-              // Force a layout refresh
-              syncResolution();
-            }
-          }
-        }
-      );
+      // 1. Start the game
+      var gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/bitlife-life-simulator/bitlife-life-simulator.github.io/Build/BitLife.json");
 
-      // This function fixes the "Zoomed In" look by telling Unity 
-      // the exact pixels it should be using internally.
-      function syncResolution() {
+      // 2. The Mutation Observer: This watches for Unity trying to glitch the size
+      const lockStyle = () => {
         const canvas = document.querySelector('canvas');
         if (canvas) {
-          // We set internal resolution to High Definition (1080p)
-          // The CSS 'aspect-ratio' handles the stretching/bars.
-          canvas.width = 1080;
-          canvas.height = 1920;
-          window.dispatchEvent(new Event('resize'));
+          // Force internal resolution to HD to stop the 'Zoomed UI' glitch
+          if (canvas.width !== 1080) canvas.width = 1080;
+          if (canvas.height !== 1920) canvas.height = 1920;
+          
+          // Force CSS to stay mapped to the center box
+          canvas.style.setProperty('width', '100%', 'important');
+          canvas.style.setProperty('height', '100%', 'important');
+          canvas.style.setProperty('position', 'absolute', 'important');
         }
-      }
+      };
 
-      // Listen for the Fullscreen change event
-      window.addEventListener('resize', syncResolution);
-      document.addEventListener('fullscreenchange', syncResolution);
+      // Create the observer to catch glitches in real-time
+      const observer = new MutationObserver(lockStyle);
       
-      // Run every few seconds to prevent Unity from breaking the ratio
-      setInterval(syncResolution, 2000);
+      // Start watching the game container for any changes
+      observer.observe(document.getElementById('game-box'), { 
+        attributes: true, 
+        childList: true, 
+        subtree: true 
+      });
+
+      // Also run the fix on a loop just in case
+      setInterval(lockStyle, 500);
+      window.addEventListener('resize', lockStyle);
     </script>
   </body>
 </html>
