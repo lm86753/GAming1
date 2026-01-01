@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+# Keep the 404 page out of search results
+Disallow: /404.html
+# Keep internal config files out of search results
+Disallow: /firebase-rules.json
 
 Sitemap: https://thepenguinlab.netlify.app/sitemap.xml
