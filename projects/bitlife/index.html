@@ -4,31 +4,28 @@
     <meta charset="utf-8">
     <title>BitLife | Penguin Labs</title>
     <style>
-      /* 1. Center the game in a black void */
-      body, html {
-        margin: 0; padding: 0; width: 100%; height: 100%;
-        background: #000 !important;
-        overflow: hidden;
-        display: flex; justify-content: center; align-items: center;
-      }
+  body, html {
+    margin: 0; padding: 0; width: 100%; height: 100%;
+    background: #000 !important;
+    overflow: hidden;
+    display: flex; justify-content: center; align-items: center;
+  }
 
-      /* 2. Create a HARD-CODED phone box. 
-         If this is too small, change 400 to 450 and 700 to 800. */
-      #gameContainer {
-        width: 400px !important; 
-        height: 700px !important;
-        background: #000;
-        position: relative;
-        border: 1px solid #333;
-      }
+  /* Changed: Use max-height and aspect-ratio instead of fixed 400px */
+  #gameContainer {
+    height: 100vh !important; 
+    aspect-ratio: 9 / 16; /* Keeps the phone shape */
+    background: #000;
+    position: relative;
+    max-width: 100vw;
+  }
 
-      /* 3. Force the game graphics to stay INSIDE that box */
-      canvas {
-        width: 400px !important;
-        height: 700px !important;
-        display: block;
-      }
-    </style>
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+</style>
   </head>
   <body>
 

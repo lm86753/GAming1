@@ -56,10 +56,9 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
             overflow: hidden;
             z-index: 10;
-            margin-top: 120px; /* Space for the injected navbar */
+            margin-top: 120px; 
         }
 
-        /* FIX: Ensure the iframe always fills the container */
         .game-iframe {
             width: 100% !important;
             height: 100% !important;
@@ -114,7 +113,6 @@
             border-radius: 2rem;
         }
 
-        /* Fullscreen handling */
         .game-wrapper:fullscreen {
             width: 100vw;
             height: 100vh;
@@ -123,7 +121,6 @@
             margin-top: 0;
         }
 
-        /* Logic to hide injected nav when in fullscreen */
         body:has(.game-wrapper:fullscreen) #navbar-container { display: none; }
         .game-wrapper:fullscreen .game-overlay { opacity: 0; }
         .game-wrapper:fullscreen:hover .game-overlay { opacity: 1; }
@@ -211,7 +208,6 @@
         const fs = new FullscreenController('gameContainer');
         document.getElementById('fullscreenBtn').addEventListener('click', () => fs.toggle());
 
-        // URL Parameter Logic
         const params = new URLSearchParams(window.location.search);
         const src = params.get('src');
         const title = params.get('title');
@@ -234,11 +230,7 @@
             iframe.className = 'game-iframe';
             iframe.src = src;
             iframe.allowFullscreen = true;
-            
-            // FIX: Added modern 'allow' permissions to fix scaling and control issues
             iframe.allow = "autoplay; fullscreen; keyboard-vtapi"; 
-            
-            // Added slightly more permissive sandbox for resizing
             iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox allow-forms allow-pointer-lock allow-modals allow-top-navigation-by-user-activation');
             document.getElementById('gameContent').appendChild(iframe);
             
@@ -258,7 +250,6 @@
                 });
             
             iframe.onload = () => {
-                // Focus the frame so keys work immediately
                 iframe.focus();
 
                 try {
@@ -303,18 +294,28 @@
                         attach(iframe.contentWindow);
                     })();
 
-                    // FIX: Improved injection to force small games to cover the whole iframe
+                    // THE SPECIFIC FIX: Ensure aspect-ratio games center instead of stretch
                     setTimeout(() => {
                         const doc = iframe.contentDocument || iframe.contentWindow.document;
                         const s = doc.createElement('style');
                         s.textContent = `
-                            body, html { margin:0; padding:0; width:100%; height:100%; overflow:hidden !important; background:#000; }
-                            canvas { width:100vw !important; height:100vh !important; object-fit:contain !important; }
+                            body, html { 
+                                margin:0; padding:0; width:100%; height:100%; 
+                                overflow:hidden !important; background:#000; 
+                                display: flex; justify-content: center; align-items: center; 
+                            }
+                            canvas { 
+                                max-width:100% !important; 
+                                max-height:100% !important; 
+                                width: auto !important; 
+                                height: auto !important; 
+                                object-fit:contain !important; 
+                            }
                         `;
                         doc.head.appendChild(s);
                     }, 500);
 
-                } catch (e) { console.log("Cross-origin game detected."); }
+                } catch (e) { console.log("Cross-origin frame; style injection skipped."); }
             };
         } else {
             document.getElementById('gameContent').innerHTML = `<div class="flex items-center justify-center h-full text-gray-500">No game source provided.</div>`;
